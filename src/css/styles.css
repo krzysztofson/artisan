@@ -1,0 +1,139 @@
+/* 
+    Write your custom CSS here and also abstract your Tailwind css using @apply
+*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply text-stone-700;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 2;
+  @apply font-heading;
+}
+
+p,
+span,
+li {
+  font-weight: 300;
+  @apply text-lg;
+}
+
+a:hover {
+  @apply underline;
+}
+
+ul {
+  @apply list-disc;
+  @apply pl-8;
+}
+
+tr {
+  @apply transition;
+  @apply duration-300;
+}
+
+tr:hover {
+  @apply bg-orange-50;
+}
+
+.content {
+  @apply max-w-3xl;
+  @apply mx-auto;
+}
+
+.content h2 {
+  @apply pt-6;
+  @apply pb-3;
+  @apply text-accent;
+  @apply text-2xl;
+  @apply font-bold;
+}
+
+.content h3 {
+  @apply pt-6;
+  @apply pb-3;
+  @apply text-accent;
+  @apply text-2xl;
+  @apply font-bold;
+}
+
+.content a {
+  @apply text-accent;
+  @apply underline;
+}
+
+.content a.block {
+  @apply text-white;
+  @apply no-underline;
+}
+
+/* Define the keyframes for #person1 animation */
+@keyframes person1Animation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Define the keyframes for #person2 animation */
+@keyframes person2Animation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-40px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Define the keyframes for #head animation */
+@keyframes headAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Apply the animation to #person1 */
+#person1 {
+  animation: person1Animation 5s ease-in-out infinite;
+}
+
+/* Apply the animation to #person2 */
+#person2 {
+  animation: person2Animation 3s ease-in-out infinite;
+}
+
+#medfile-register-widget > div {
+  display: none;
+}
+
+/* Apply the animation to #head */
+/* #head {
+  animation: headAnimation 4s ease-in-out infinite;
+  transform-origin: bottom;
+} */
+@font-face {
+  font-family: "Melodrama";
+  src: url("../Melodrama-Semibold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
