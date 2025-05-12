@@ -853,6 +853,10 @@ tr:hover {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
+.py-36 {
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+}
 .pb-10 {
   padding-bottom: 2.5rem;
 }
