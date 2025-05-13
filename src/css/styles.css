@@ -161,3 +161,13 @@ tr:hover {
     animation: fadeIn 0.5s ease-out 0.4s forwards; /* 0.4s delay */
   }
 }
+
+.frame {
+  @apply after:absolute;
+  @apply after:bottom-4;
+  @apply after:left-5;
+  @apply after:-z-10;
+  @apply after:h-full;
+  @apply after:w-full;
+  @apply after:bg-accent;
+}

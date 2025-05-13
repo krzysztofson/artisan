@@ -566,6 +566,17 @@ video {
   }
 }
 @tailwind utilities;
+.frame::after{
+  position: absolute;
+  bottom: 1rem;
+  left: 1.25rem;
+  z-index: -10;
+  height: 100%;
+  width: 100%;
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(64 60 36 / var(--tw-bg-opacity));
+}
 /* Custom CSS. Ensure this comes before the tailwind utilities*/
 /* purgecss end ignore */
 .fixed{
@@ -649,6 +660,9 @@ video {
 .mt-8{
   margin-top: 2rem;
 }
+.block{
+  display: block;
+}
 .flex{
   display: flex;
 }
@@ -673,6 +687,12 @@ video {
 .h-screen{
   height: 100vh;
 }
+.h-24{
+  height: 6rem;
+}
+.max-h-20{
+  max-height: 5rem;
+}
 .min-h-screen{
   min-height: 100vh;
 }
@@ -685,8 +705,11 @@ video {
 .w-full{
   width: 100%;
 }
-.max-w-3xl{
-  max-width: 48rem;
+.w-40{
+  width: 10rem;
+}
+.w-96{
+  width: 24rem;
 }
 .max-w-4xl{
   max-width: 56rem;
@@ -723,6 +746,9 @@ video {
 }
 .gap-8{
   gap: 2rem;
+}
+.gap-12{
+  gap: 3rem;
 }
 .gap-x-16{
   -moz-column-gap: 4rem;
@@ -954,13 +980,6 @@ video {
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
-.invert{
-  --tw-invert: invert(100%);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-.filter{
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
 .transition{
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -968,19 +987,8 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
-.transition-all{
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
 .duration-200{
   transition-duration: 200ms;
-}
-.duration-300{
-  transition-duration: 300ms;
-}
-.ease-in-out{
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 @keyframes fadeIn {
     from {
@@ -1032,11 +1040,6 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(64 60 36 / var(--tw-bg-opacity));
 }
-.hover\:scale-105:hover{
-  --tw-scale-x: 1.05;
-  --tw-scale-y: 1.05;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
 .hover\:bg-gray-200:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
@@ -1057,9 +1060,6 @@ video {
 }
 .hover\:opacity-75:hover{
   opacity: 0.75;
-}
-.hover\:opacity-90:hover{
-  opacity: 0.9;
 }
 @media (min-width: 768px){
   .md\:grid{
@@ -1170,10 +1170,6 @@ video {
   }
   .lg\:text-right{
     text-align: right;
-  }
-  .lg\:text-3xl{
-    font-size: 1.875rem;
-    line-height: 2.25rem;
   }
   .lg\:text-7xl{
     font-size: 4.5rem;
