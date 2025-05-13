@@ -131,9 +131,3 @@ tr:hover {
   animation: headAnimation 4s ease-in-out infinite;
   transform-origin: bottom;
 } */
-@font-face {
-  font-family: "Melodrama";
-  src: url("../Melodrama-Semibold.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
