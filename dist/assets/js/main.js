@@ -46,6 +46,25 @@ if (mobileNavBtns) {
 const year = new Date().getFullYear();
 document.querySelector("#year").textContent = year;
 
+const navigation = document.querySelectorAll("nav");
+let lastScrollY = window.scrollY;
+
+window.addEventListener("scroll", () => {
+  console.log(navigation);
+
+  const currentScrollY = window.scrollY;
+
+  navigation.forEach((nav) => {
+    if (currentScrollY > lastScrollY) {
+      nav.style.transform = "translateY(-300%)";
+    } else {
+      nav.style.transform = "translateY(0)";
+    }
+  });
+
+  lastScrollY = currentScrollY;
+});
+
 // const navOffer = document.querySelector("#js-offer");
 // if (navOffer) {
 //   navOffer.addEventListener("mouseover", () => {
