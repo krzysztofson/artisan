@@ -771,6 +771,11 @@ video {
   margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
 }
+.space-y-3 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+}
 .self-start{
   align-self: flex-start;
 }
@@ -848,6 +853,10 @@ video {
 .bg-no-repeat{
   background-repeat: no-repeat;
 }
+.object-cover{
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .p-1{
   padding: 0.25rem;
 }
@@ -920,14 +929,15 @@ video {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
+.py-3{
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
 .pb-10{
   padding-bottom: 2.5rem;
 }
 .pb-12{
   padding-bottom: 3rem;
-}
-.pb-14{
-  padding-bottom: 3.5rem;
 }
 .pb-24{
   padding-bottom: 6rem;
@@ -962,11 +972,26 @@ video {
 .pt-36{
   padding-top: 9rem;
 }
-.pb-3{
-  padding-bottom: 0.75rem;
+.pb-28{
+  padding-bottom: 7rem;
+}
+.pb-20{
+  padding-bottom: 5rem;
+}
+.pt-40{
+  padding-top: 10rem;
+}
+.pt-2{
+  padding-top: 0.5rem;
+}
+.pb-2{
+  padding-bottom: 0.5rem;
 }
 .text-center{
   text-align: center;
+}
+.text-right{
+  text-align: right;
 }
 .text-justify{
   text-align: justify;
@@ -1014,9 +1039,6 @@ video {
 .lowercase{
   text-transform: lowercase;
 }
-.capitalize{
-  text-transform: capitalize;
-}
 .italic{
   font-style: italic;
 }
@@ -1027,6 +1049,10 @@ video {
   --tw-text-opacity: 1;
   color: rgb(64 60 36 / var(--tw-text-opacity));
 }
+.text-gray-800{
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity));
+}
 .text-stone-700{
   --tw-text-opacity: 1;
   color: rgb(68 64 60 / var(--tw-text-opacity));
@@ -1035,9 +1061,8 @@ video {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
-.text-gray-800{
-  --tw-text-opacity: 1;
-  color: rgb(31 41 55 / var(--tw-text-opacity));
+.opacity-50{
+  opacity: 0.5;
 }
 .shadow{
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
@@ -1248,14 +1273,14 @@ video {
     padding-top: 9rem;
     padding-bottom: 9rem;
   }
+  .lg\:pb-0{
+    padding-bottom: 0px;
+  }
   .lg\:pr-6{
     padding-right: 1.5rem;
   }
   .lg\:pt-20{
     padding-top: 5rem;
-  }
-  .lg\:pb-0{
-    padding-bottom: 0px;
   }
   .lg\:text-right{
     text-align: right;
@@ -1270,6 +1295,9 @@ video {
   }
 }
 @media (min-width: 1280px){
+  .xl\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
   .xl\:gap-6{
     gap: 1.5rem;
   }
