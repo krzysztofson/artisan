@@ -192,6 +192,14 @@ tr:hover {
   @apply invert filter;
 }
 
+.nav-visit-btn {
+  @apply border-accent;
+}
+
+.is-transparent .nav-visit-btn {
+  @apply border-white text-white;
+}
+
 h2 {
   @apply mb-6 text-4xl text-accent;
 }
