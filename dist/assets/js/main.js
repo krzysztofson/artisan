@@ -60,9 +60,26 @@ window.addEventListener("scroll", () => {
     } else {
       nav.style.transform = "translateY(0)";
     }
+
+    if (currentScrollY < 30) {
+      nav.classList.add("is-transparent");
+    } else {
+      nav.classList.remove("is-transparent");
+    }
   });
 
   lastScrollY = currentScrollY;
+});
+
+window.addEventListener("load", () => {
+  const currentScrollY = window.scrollY;
+  const navigation = document.querySelector("nav");
+
+  if (currentScrollY < 30) {
+    navigation.classList.add("is-transparent");
+  } else {
+    navigation.classList.remove("is-transparent");
+  }
 });
 
 // const navOffer = document.querySelector("#js-offer");
