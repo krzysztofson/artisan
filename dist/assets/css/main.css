@@ -683,6 +683,14 @@ h3{
   font-size: 1.875rem;
   line-height: 2.25rem;
 }
+.content h2{
+  margin-bottom: 0.5rem;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  --tw-text-opacity: 1;
+  color: rgb(64 60 36 / var(--tw-text-opacity));
+}
 /* Custom CSS. Ensure this comes before the tailwind utilities*/
 /* purgecss end ignore */
 .fixed{
@@ -787,9 +795,6 @@ h3{
 }
 .hidden{
   display: none;
-}
-.aspect-square{
-  aspect-ratio: 1 / 1;
 }
 .h-16{
   height: 4rem;
@@ -1046,10 +1051,6 @@ h3{
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
-.py-7{
-  padding-top: 1.75rem;
-  padding-bottom: 1.75rem;
-}
 .pb-10{
   padding-bottom: 2.5rem;
 }
@@ -1061,9 +1062,6 @@ h3{
 }
 .pb-4{
   padding-bottom: 1rem;
-}
-.pb-6{
-  padding-bottom: 1.5rem;
 }
 .pb-8{
   padding-bottom: 2rem;
@@ -1089,20 +1087,14 @@ h3{
 .pt-20{
   padding-top: 5rem;
 }
+.pt-24{
+  padding-top: 6rem;
+}
 .pt-4{
   padding-top: 1rem;
 }
 .pt-40{
   padding-top: 10rem;
-}
-.pt-24{
-  padding-top: 6rem;
-}
-.pt-6{
-  padding-top: 1.5rem;
-}
-.pt-28{
-  padding-top: 7rem;
 }
 .text-center{
   text-align: center;

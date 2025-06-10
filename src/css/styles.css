@@ -207,3 +207,7 @@ h2 {
 h3 {
   @apply mb-6 text-3xl;
 }
+
+.content h2 {
+  @apply mb-2 mt-8 text-2xl text-accent;
+}
