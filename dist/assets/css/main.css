@@ -691,6 +691,10 @@ h3{
   --tw-text-opacity: 1;
   color: rgb(64 60 36 / var(--tw-text-opacity));
 }
+.content ul{
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
 /* Custom CSS. Ensure this comes before the tailwind utilities*/
 /* purgecss end ignore */
 .fixed{
@@ -803,6 +807,9 @@ h3{
 .hidden{
   display: none;
 }
+.aspect-video{
+  aspect-ratio: 16 / 9;
+}
 .h-16{
   height: 4rem;
 }
@@ -866,6 +873,9 @@ h3{
 }
 .cursor-pointer{
   cursor: pointer;
+}
+.list-disc{
+  list-style-type: disc;
 }
 .grid-cols-2{
   grid-template-columns: repeat(2, minmax(0, 1fr));

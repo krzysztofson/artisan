@@ -211,3 +211,7 @@ h3 {
 .content h2 {
   @apply mb-2 mt-8 text-2xl text-accent;
 }
+
+.content ul {
+  @apply list-disc pl-6;
+}
