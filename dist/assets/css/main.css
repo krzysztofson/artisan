@@ -856,6 +856,12 @@ h3{
 .w-full{
   width: 100%;
 }
+.w-10{
+  width: 2.5rem;
+}
+.w-32{
+  width: 8rem;
+}
 .max-w-3xl{
   max-width: 48rem;
 }
