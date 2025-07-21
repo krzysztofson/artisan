@@ -1156,6 +1156,10 @@ h3{
   font-size: 3rem;
   line-height: 1;
 }
+.text-7xl{
+  font-size: 4.5rem;
+  line-height: 1;
+}
 .text-lg{
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -1167,10 +1171,6 @@ h3{
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
-}
-.text-7xl{
-  font-size: 4.5rem;
-  line-height: 1;
 }
 .font-bold{
   font-weight: 700;
