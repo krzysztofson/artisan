@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+    <script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script>
   </head>
 
   <body class="font-main">
@@ -183,7 +184,11 @@
 
     <section class="content py-12" id="twarz">
       <div class="container mx-auto max-w-3xl px-4">
-        <form class="space-y-6 rounded-lg bg-white p-8 shadow-lg">
+        <form
+          class="space-y-6 rounded-lg bg-white p-8 shadow-lg"
+          action="https://submit-form.com/T7CqMt15"
+          method="POST"
+        >
           <h2>Formularz zgłoszeniowy</h2>
           <!-- Personal Information -->
           <div class="space-y-4">
@@ -244,68 +249,44 @@
                   <span class="block font-medium text-gray-900">Deep Plane Facelift</span>
                   <div class="mt-2 hidden space-y-3" data-uploads="deep-plane">
                     <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
-                      <div
-                        class="upload-area rounded-lg border-2 border-dashed border-gray-300 p-4 text-center transition duration-200 hover:border-accent"
-                      >
-                        <input type="file" name="face_front[]" accept="image/*" class="hidden" multiple />
-                        <div class="upload-content">
-                          <svg
-                            class="mx-auto h-8 w-8 text-gray-400"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-                            ></path>
-                          </svg>
-                          <p class="mt-2 text-sm text-gray-600">Zdjęcie twarzy - en face</p>
-                        </div>
+                      <div class="space-y-2">
+                        <label class="text-sm text-gray-600">Zdjęcie twarzy - en face</label>
+                        <input
+                          type="hidden"
+                          name="face_front"
+                          role="uploadcare-uploader"
+                          data-public-key="YOUR_UPLOADCARE_PUBLIC_KEY"
+                          data-multiple="false"
+                          data-images-only="true"
+                          data-preview-step="true"
+                          data-clearable="true"
+                        />
                       </div>
-                      <div
-                        class="upload-area rounded-lg border-2 border-dashed border-gray-300 p-4 text-center transition duration-200 hover:border-accent"
-                      >
-                        <input type="file" name="face_left[]" accept="image/*" class="hidden" multiple />
-                        <div class="upload-content">
-                          <svg
-                            class="mx-auto h-8 w-8 text-gray-400"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-                            ></path>
-                          </svg>
-                          <p class="mt-2 text-sm text-gray-600">Zdjęcie twarzy - lewy profil</p>
-                        </div>
+                      <div class="space-y-2">
+                        <label class="text-sm text-gray-600">Zdjęcie twarzy - lewy profil</label>
+                        <input
+                          type="hidden"
+                          name="face_left"
+                          role="uploadcare-uploader"
+                          data-public-key="YOUR_UPLOADCARE_PUBLIC_KEY"
+                          data-multiple="false"
+                          data-images-only="true"
+                          data-preview-step="true"
+                          data-clearable="true"
+                        />
                       </div>
-                      <div
-                        class="upload-area rounded-lg border-2 border-dashed border-gray-300 p-4 text-center transition duration-200 hover:border-accent"
-                      >
-                        <input type="file" name="face_right[]" accept="image/*" class="hidden" multiple />
-                        <div class="upload-content">
-                          <svg
-                            class="mx-auto h-8 w-8 text-gray-400"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-                            ></path>
-                          </svg>
-                          <p class="mt-2 text-sm text-gray-600">Zdjęcie twarzy - prawy profil</p>
-                        </div>
+                      <div class="space-y-2">
+                        <label class="text-sm text-gray-600">Zdjęcie twarzy - prawy profil</label>
+                        <input
+                          type="hidden"
+                          name="face_right"
+                          role="uploadcare-uploader"
+                          data-public-key="YOUR_UPLOADCARE_PUBLIC_KEY"
+                          data-multiple="false"
+                          data-images-only="true"
+                          data-preview-step="true"
+                          data-clearable="true"
+                        />
                       </div>
                     </div>
                   </div>
@@ -333,47 +314,31 @@
                   <span class="block font-medium text-gray-900">Korekcja powiek górnych</span>
                   <div class="mt-2 hidden space-y-3" data-uploads="upper-eyelid">
                     <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-                      <div
-                        class="upload-area rounded-lg border-2 border-dashed border-gray-300 p-4 text-center transition duration-200 hover:border-accent"
-                      >
-                        <input type="file" name="eyes_closed[]" accept="image/*" class="hidden" multiple />
-                        <div class="upload-content">
-                          <svg
-                            class="mx-auto h-8 w-8 text-gray-400"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-                            ></path>
-                          </svg>
-                          <p class="mt-2 text-sm text-gray-600">Zdjęcie oczu zamkniętych</p>
-                        </div>
+                      <div class="space-y-2">
+                        <label class="text-sm text-gray-600">Zdjęcie oczu zamkniętych</label>
+                        <input
+                          type="hidden"
+                          name="eyes_closed"
+                          role="uploadcare-uploader"
+                          data-public-key="YOUR_UPLOADCARE_PUBLIC_KEY"
+                          data-multiple="false"
+                          data-images-only="true"
+                          data-preview-step="true"
+                          data-clearable="true"
+                        />
                       </div>
-                      <div
-                        class="upload-area rounded-lg border-2 border-dashed border-gray-300 p-4 text-center transition duration-200 hover:border-accent"
-                      >
-                        <input type="file" name="eyes_open[]" accept="image/*" class="hidden" multiple />
-                        <div class="upload-content">
-                          <svg
-                            class="mx-auto h-8 w-8 text-gray-400"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-                            ></path>
-                          </svg>
-                          <p class="mt-2 text-sm text-gray-600">Zdjęcie oczu otwartych</p>
-                        </div>
+                      <div class="space-y-2">
+                        <label class="text-sm text-gray-600">Zdjęcie oczu otwartych</label>
+                        <input
+                          type="hidden"
+                          name="eyes_open"
+                          role="uploadcare-uploader"
+                          data-public-key="YOUR_UPLOADCARE_PUBLIC_KEY"
+                          data-multiple="false"
+                          data-images-only="true"
+                          data-preview-step="true"
+                          data-clearable="true"
+                        />
                       </div>
                     </div>
                   </div>
@@ -401,47 +366,31 @@
                   <span class="block font-medium text-gray-900">Korekcja powiek dolnych</span>
                   <div class="mt-2 hidden space-y-3" data-uploads="lower-eyelid">
                     <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-                      <div
-                        class="upload-area rounded-lg border-2 border-dashed border-gray-300 p-4 text-center transition duration-200 hover:border-accent"
-                      >
-                        <input type="file" name="eyes_closed_lower[]" accept="image/*" class="hidden" multiple />
-                        <div class="upload-content">
-                          <svg
-                            class="mx-auto h-8 w-8 text-gray-400"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-                            ></path>
-                          </svg>
-                          <p class="mt-2 text-sm text-gray-600">Zdjęcie oczu zamkniętych</p>
-                        </div>
+                      <div class="space-y-2">
+                        <label class="text-sm text-gray-600">Zdjęcie oczu zamkniętych</label>
+                        <input
+                          type="hidden"
+                          name="eyes_closed_lower"
+                          role="uploadcare-uploader"
+                          data-public-key="YOUR_UPLOADCARE_PUBLIC_KEY"
+                          data-multiple="false"
+                          data-images-only="true"
+                          data-preview-step="true"
+                          data-clearable="true"
+                        />
                       </div>
-                      <div
-                        class="upload-area rounded-lg border-2 border-dashed border-gray-300 p-4 text-center transition duration-200 hover:border-accent"
-                      >
-                        <input type="file" name="eyes_open_lower[]" accept="image/*" class="hidden" multiple />
-                        <div class="upload-content">
-                          <svg
-                            class="mx-auto h-8 w-8 text-gray-400"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-                            ></path>
-                          </svg>
-                          <p class="mt-2 text-sm text-gray-600">Zdjęcie oczu otwartych</p>
-                        </div>
+                      <div class="space-y-2">
+                        <label class="text-sm text-gray-600">Zdjęcie oczu otwartych</label>
+                        <input
+                          type="hidden"
+                          name="eyes_open_lower"
+                          role="uploadcare-uploader"
+                          data-public-key="YOUR_UPLOADCARE_PUBLIC_KEY"
+                          data-multiple="false"
+                          data-images-only="true"
+                          data-preview-step="true"
+                          data-clearable="true"
+                        />
                       </div>
                     </div>
                   </div>
@@ -469,89 +418,57 @@
                   <span class="block font-medium text-gray-900">Korekcja nosa</span>
                   <div class="mt-2 hidden space-y-3" data-uploads="nose">
                     <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
-                      <div
-                        class="upload-area rounded-lg border-2 border-dashed border-gray-300 p-4 text-center transition duration-200 hover:border-accent"
-                      >
-                        <input type="file" name="nose_left[]" accept="image/*" class="hidden" multiple />
-                        <div class="upload-content">
-                          <svg
-                            class="mx-auto h-8 w-8 text-gray-400"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-                            ></path>
-                          </svg>
-                          <p class="mt-2 text-sm text-gray-600">Lewy profil</p>
-                        </div>
+                      <div class="space-y-2">
+                        <label class="text-sm text-gray-600">Lewy profil</label>
+                        <input
+                          type="hidden"
+                          name="nose_left"
+                          role="uploadcare-uploader"
+                          data-public-key="YOUR_UPLOADCARE_PUBLIC_KEY"
+                          data-multiple="false"
+                          data-images-only="true"
+                          data-preview-step="true"
+                          data-clearable="true"
+                        />
                       </div>
-                      <div
-                        class="upload-area rounded-lg border-2 border-dashed border-gray-300 p-4 text-center transition duration-200 hover:border-accent"
-                      >
-                        <input type="file" name="nose_right[]" accept="image/*" class="hidden" multiple />
-                        <div class="upload-content">
-                          <svg
-                            class="mx-auto h-8 w-8 text-gray-400"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-                            ></path>
-                          </svg>
-                          <p class="mt-2 text-sm text-gray-600">Prawy profil</p>
-                        </div>
+                      <div class="space-y-2">
+                        <label class="text-sm text-gray-600">Prawy profil</label>
+                        <input
+                          type="hidden"
+                          name="nose_right"
+                          role="uploadcare-uploader"
+                          data-public-key="YOUR_UPLOADCARE_PUBLIC_KEY"
+                          data-multiple="false"
+                          data-images-only="true"
+                          data-preview-step="true"
+                          data-clearable="true"
+                        />
                       </div>
-                      <div
-                        class="upload-area rounded-lg border-2 border-dashed border-gray-300 p-4 text-center transition duration-200 hover:border-accent"
-                      >
-                        <input type="file" name="nose_front[]" accept="image/*" class="hidden" multiple />
-                        <div class="upload-content">
-                          <svg
-                            class="mx-auto h-8 w-8 text-gray-400"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-                            ></path>
-                          </svg>
-                          <p class="mt-2 text-sm text-gray-600">Z przodu</p>
-                        </div>
+                      <div class="space-y-2">
+                        <label class="text-sm text-gray-600">Z przodu</label>
+                        <input
+                          type="hidden"
+                          name="nose_front"
+                          role="uploadcare-uploader"
+                          data-public-key="YOUR_UPLOADCARE_PUBLIC_KEY"
+                          data-multiple="false"
+                          data-images-only="true"
+                          data-preview-step="true"
+                          data-clearable="true"
+                        />
                       </div>
-                      <div
-                        class="upload-area rounded-lg border-2 border-dashed border-gray-300 p-4 text-center transition duration-200 hover:border-accent"
-                      >
-                        <input type="file" name="nose_bottom[]" accept="image/*" class="hidden" multiple />
-                        <div class="upload-content">
-                          <svg
-                            class="mx-auto h-8 w-8 text-gray-400"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-                            ></path>
-                          </svg>
-                          <p class="mt-2 text-sm text-gray-600">Z dołu</p>
-                        </div>
+                      <div class="space-y-2">
+                        <label class="text-sm text-gray-600">Z dołu</label>
+                        <input
+                          type="hidden"
+                          name="nose_bottom"
+                          role="uploadcare-uploader"
+                          data-public-key="YOUR_UPLOADCARE_PUBLIC_KEY"
+                          data-multiple="false"
+                          data-images-only="true"
+                          data-preview-step="true"
+                          data-clearable="true"
+                        />
                       </div>
                     </div>
                   </div>
@@ -579,47 +496,31 @@
                   <span class="block font-medium text-gray-900">Korekcja uszu</span>
                   <div class="mt-2 hidden space-y-3" data-uploads="ears">
                     <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-                      <div
-                        class="upload-area rounded-lg border-2 border-dashed border-gray-300 p-4 text-center transition duration-200 hover:border-accent"
-                      >
-                        <input type="file" name="ear_left[]" accept="image/*" class="hidden" multiple />
-                        <div class="upload-content">
-                          <svg
-                            class="mx-auto h-8 w-8 text-gray-400"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-                            ></path>
-                          </svg>
-                          <p class="mt-2 text-sm text-gray-600">Lewe ucho</p>
-                        </div>
+                      <div class="space-y-2">
+                        <label class="text-sm text-gray-600">Lewe ucho</label>
+                        <input
+                          type="hidden"
+                          name="ear_left"
+                          role="uploadcare-uploader"
+                          data-public-key="YOUR_UPLOADCARE_PUBLIC_KEY"
+                          data-multiple="false"
+                          data-images-only="true"
+                          data-preview-step="true"
+                          data-clearable="true"
+                        />
                       </div>
-                      <div
-                        class="upload-area rounded-lg border-2 border-dashed border-gray-300 p-4 text-center transition duration-200 hover:border-accent"
-                      >
-                        <input type="file" name="ear_right[]" accept="image/*" class="hidden" multiple />
-                        <div class="upload-content">
-                          <svg
-                            class="mx-auto h-8 w-8 text-gray-400"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-                            ></path>
-                          </svg>
-                          <p class="mt-2 text-sm text-gray-600">Prawe ucho</p>
-                        </div>
+                      <div class="space-y-2">
+                        <label class="text-sm text-gray-600">Prawe ucho</label>
+                        <input
+                          type="hidden"
+                          name="ear_right"
+                          role="uploadcare-uploader"
+                          data-public-key="YOUR_UPLOADCARE_PUBLIC_KEY"
+                          data-multiple="false"
+                          data-images-only="true"
+                          data-preview-step="true"
+                          data-clearable="true"
+                        />
                       </div>
                     </div>
                   </div>
@@ -653,89 +554,57 @@
                       class="w-full rounded-md border border-gray-300 px-4 py-3 text-gray-900 placeholder-gray-500 transition duration-200 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-opacity-50"
                     ></textarea>
                     <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
-                      <div
-                        class="upload-area rounded-lg border-2 border-dashed border-gray-300 p-4 text-center transition duration-200 hover:border-accent"
-                      >
-                        <input type="file" name="other_images[]" accept="image/*" class="hidden" multiple />
-                        <div class="upload-content">
-                          <svg
-                            class="mx-auto h-8 w-8 text-gray-400"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-                            ></path>
-                          </svg>
-                          <p class="mt-2 text-sm text-gray-600">Zdjęcie</p>
-                        </div>
+                      <div class="space-y-2">
+                        <label class="text-sm text-gray-600">Zdjęcie 1</label>
+                        <input
+                          type="hidden"
+                          name="other_image_1"
+                          role="uploadcare-uploader"
+                          data-public-key="YOUR_UPLOADCARE_PUBLIC_KEY"
+                          data-multiple="false"
+                          data-images-only="true"
+                          data-preview-step="true"
+                          data-clearable="true"
+                        />
                       </div>
-                      <div
-                        class="upload-area rounded-lg border-2 border-dashed border-gray-300 p-4 text-center transition duration-200 hover:border-accent"
-                      >
-                        <input type="file" name="other_images[]" accept="image/*" class="hidden" multiple />
-                        <div class="upload-content">
-                          <svg
-                            class="mx-auto h-8 w-8 text-gray-400"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-                            ></path>
-                          </svg>
-                          <p class="mt-2 text-sm text-gray-600">Zdjęcie</p>
-                        </div>
+                      <div class="space-y-2">
+                        <label class="text-sm text-gray-600">Zdjęcie 2</label>
+                        <input
+                          type="hidden"
+                          name="other_image_2"
+                          role="uploadcare-uploader"
+                          data-public-key="YOUR_UPLOADCARE_PUBLIC_KEY"
+                          data-multiple="false"
+                          data-images-only="true"
+                          data-preview-step="true"
+                          data-clearable="true"
+                        />
                       </div>
-                      <div
-                        class="upload-area rounded-lg border-2 border-dashed border-gray-300 p-4 text-center transition duration-200 hover:border-accent"
-                      >
-                        <input type="file" name="other_images[]" accept="image/*" class="hidden" multiple />
-                        <div class="upload-content">
-                          <svg
-                            class="mx-auto h-8 w-8 text-gray-400"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-                            ></path>
-                          </svg>
-                          <p class="mt-2 text-sm text-gray-600">Zdjęcie</p>
-                        </div>
+                      <div class="space-y-2">
+                        <label class="text-sm text-gray-600">Zdjęcie 3</label>
+                        <input
+                          type="hidden"
+                          name="other_image_3"
+                          role="uploadcare-uploader"
+                          data-public-key="YOUR_UPLOADCARE_PUBLIC_KEY"
+                          data-multiple="false"
+                          data-images-only="true"
+                          data-preview-step="true"
+                          data-clearable="true"
+                        />
                       </div>
-                      <div
-                        class="upload-area rounded-lg border-2 border-dashed border-gray-300 p-4 text-center transition duration-200 hover:border-accent"
-                      >
-                        <input type="file" name="other_images[]" accept="image/*" class="hidden" multiple />
-                        <div class="upload-content">
-                          <svg
-                            class="mx-auto h-8 w-8 text-gray-400"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-                            ></path>
-                          </svg>
-                          <p class="mt-2 text-sm text-gray-600">Zdjęcie</p>
-                        </div>
+                      <div class="space-y-2">
+                        <label class="text-sm text-gray-600">Zdjęcie 4</label>
+                        <input
+                          type="hidden"
+                          name="other_image_4"
+                          role="uploadcare-uploader"
+                          data-public-key="YOUR_UPLOADCARE_PUBLIC_KEY"
+                          data-multiple="false"
+                          data-images-only="true"
+                          data-preview-step="true"
+                          data-clearable="true"
+                        />
                       </div>
                     </div>
                   </div>
@@ -1013,48 +882,6 @@
                 }
               });
             });
-
-            // Handle file upload areas
-            const uploadAreas = document.querySelectorAll(".upload-area");
-
-            uploadAreas.forEach((area) => {
-              const input = area.querySelector('input[type="file"]');
-              const content = area.querySelector(".upload-content");
-
-              area.addEventListener("click", () => input.click());
-
-              area.addEventListener("dragover", (e) => {
-                e.preventDefault();
-                area.classList.add("border-accent", "bg-accent", "bg-opacity-5");
-              });
-
-              area.addEventListener("dragleave", () => {
-                area.classList.remove("border-accent", "bg-accent", "bg-opacity-5");
-              });
-
-              area.addEventListener("drop", (e) => {
-                e.preventDefault();
-                area.classList.remove("border-accent", "bg-accent", "bg-opacity-5");
-                input.files = e.dataTransfer.files;
-                updateUploadDisplay(area, input.files);
-              });
-
-              input.addEventListener("change", () => {
-                updateUploadDisplay(area, input.files);
-              });
-            });
-
-            function updateUploadDisplay(area, files) {
-              const content = area.querySelector(".upload-content");
-              if (files.length > 0) {
-                content.innerHTML = `
-                  <svg class="mx-auto h-8 w-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  <p class="mt-2 text-sm text-green-600">${files.length} plik(ów) wybrano</p>
-                `;
-              }
-            }
           });
         </script>
       </div>
