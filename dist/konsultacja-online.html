@@ -182,14 +182,36 @@
       </div>
     </header>
 
-    <section class="content py-12" id="twarz">
-      <div class="container mx-auto max-w-3xl px-4">
+    <section class="py-12" id="twarz">
+      <div class="container mx-auto max-w-4xl px-4">
         <form
+          id="consultation-form"
           class="space-y-6 rounded-lg bg-white p-8 shadow-lg"
-          action="https://submit-form.com/T7CqMt15"
+          action="process-form.php"
           method="POST"
+          enctype="multipart/form-data"
         >
           <h2>Formularz zgłoszeniowy</h2>
+          <div class="mb-6 border-l-4 border-blue-400 bg-blue-50 p-4">
+            <div class="flex">
+              <div class="flex-shrink-0">
+                <svg class="h-5 w-5 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    fill-rule="evenodd"
+                    d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+              <div class="ml-3">
+                <p class="text-sm text-blue-700">
+                  <strong>Informacja o zdjęciach:</strong> Wybierz interesujący Cię zabieg i prześlij odpowiednie
+                  zdjęcia zgodnie z wytycznymi. Wszystkie zdjęcia są bezpiecznie przesyłane i używane wyłącznie do celów
+                  konsultacji medycznej.
+                </p>
+              </div>
+            </div>
+          </div>
           <!-- Personal Information -->
           <div class="space-y-4">
             <div>
@@ -248,44 +270,37 @@
                 <div class="flex-1">
                   <span class="block font-medium text-gray-900">Deep Plane Facelift</span>
                   <div class="mt-2 hidden space-y-3" data-uploads="deep-plane">
+                    <p class="mb-3 text-sm text-gray-600">Prześlij zdjęcia twarzy zgodnie z wytycznymi:</p>
                     <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
-                      <div class="space-y-2">
-                        <label class="text-sm text-gray-600">Zdjęcie twarzy - en face</label>
+                      <div>
+                        <label class="mb-1 block text-xs font-medium text-gray-700">Zdjęcie twarzy - en face *</label>
                         <input
-                          type="hidden"
-                          name="face_front"
-                          role="uploadcare-uploader"
-                          data-public-key="YOUR_UPLOADCARE_PUBLIC_KEY"
-                          data-multiple="false"
-                          data-images-only="true"
-                          data-preview-step="true"
-                          data-clearable="true"
+                          type="file"
+                          name="deep_plane_front"
+                          accept="image/*"
+                          class="w-full text-sm text-gray-500 file:mr-4 file:rounded-md file:border-0 file:bg-accent file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white hover:file:bg-opacity-90"
                         />
                       </div>
-                      <div class="space-y-2">
-                        <label class="text-sm text-gray-600">Zdjęcie twarzy - lewy profil</label>
+                      <div>
+                        <label class="mb-1 block text-xs font-medium text-gray-700"
+                          >Zdjęcie twarzy - lewy profil *</label
+                        >
                         <input
-                          type="hidden"
-                          name="face_left"
-                          role="uploadcare-uploader"
-                          data-public-key="YOUR_UPLOADCARE_PUBLIC_KEY"
-                          data-multiple="false"
-                          data-images-only="true"
-                          data-preview-step="true"
-                          data-clearable="true"
+                          type="file"
+                          name="deep_plane_left"
+                          accept="image/*"
+                          class="w-full text-sm text-gray-500 file:mr-4 file:rounded-md file:border-0 file:bg-accent file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white hover:file:bg-opacity-90"
                         />
                       </div>
-                      <div class="space-y-2">
-                        <label class="text-sm text-gray-600">Zdjęcie twarzy - prawy profil</label>
+                      <div>
+                        <label class="mb-1 block text-xs font-medium text-gray-700"
+                          >Zdjęcie twarzy - prawy profil *</label
+                        >
                         <input
-                          type="hidden"
-                          name="face_right"
-                          role="uploadcare-uploader"
-                          data-public-key="YOUR_UPLOADCARE_PUBLIC_KEY"
-                          data-multiple="false"
-                          data-images-only="true"
-                          data-preview-step="true"
-                          data-clearable="true"
+                          type="file"
+                          name="deep_plane_right"
+                          accept="image/*"
+                          class="w-full text-sm text-gray-500 file:mr-4 file:rounded-md file:border-0 file:bg-accent file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white hover:file:bg-opacity-90"
                         />
                       </div>
                     </div>
@@ -313,31 +328,24 @@
                 <div class="flex-1">
                   <span class="block font-medium text-gray-900">Korekcja powiek górnych</span>
                   <div class="mt-2 hidden space-y-3" data-uploads="upper-eyelid">
+                    <p class="mb-3 text-sm text-gray-600">Prześlij zdjęcia oczu zgodnie z wytycznymi:</p>
                     <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-                      <div class="space-y-2">
-                        <label class="text-sm text-gray-600">Zdjęcie oczu zamkniętych</label>
+                      <div>
+                        <label class="mb-1 block text-xs font-medium text-gray-700">Zdjęcie oczu zamkniętych *</label>
                         <input
-                          type="hidden"
-                          name="eyes_closed"
-                          role="uploadcare-uploader"
-                          data-public-key="YOUR_UPLOADCARE_PUBLIC_KEY"
-                          data-multiple="false"
-                          data-images-only="true"
-                          data-preview-step="true"
-                          data-clearable="true"
+                          type="file"
+                          name="upper_eyelid_closed"
+                          accept="image/*"
+                          class="w-full text-sm text-gray-500 file:mr-4 file:rounded-md file:border-0 file:bg-accent file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white hover:file:bg-opacity-90"
                         />
                       </div>
-                      <div class="space-y-2">
-                        <label class="text-sm text-gray-600">Zdjęcie oczu otwartych</label>
+                      <div>
+                        <label class="mb-1 block text-xs font-medium text-gray-700">Zdjęcie oczu otwartych *</label>
                         <input
-                          type="hidden"
-                          name="eyes_open"
-                          role="uploadcare-uploader"
-                          data-public-key="YOUR_UPLOADCARE_PUBLIC_KEY"
-                          data-multiple="false"
-                          data-images-only="true"
-                          data-preview-step="true"
-                          data-clearable="true"
+                          type="file"
+                          name="upper_eyelid_open"
+                          accept="image/*"
+                          class="w-full text-sm text-gray-500 file:mr-4 file:rounded-md file:border-0 file:bg-accent file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white hover:file:bg-opacity-90"
                         />
                       </div>
                     </div>
@@ -365,31 +373,24 @@
                 <div class="flex-1">
                   <span class="block font-medium text-gray-900">Korekcja powiek dolnych</span>
                   <div class="mt-2 hidden space-y-3" data-uploads="lower-eyelid">
+                    <p class="mb-3 text-sm text-gray-600">Prześlij zdjęcia oczu zgodnie z wytycznymi:</p>
                     <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-                      <div class="space-y-2">
-                        <label class="text-sm text-gray-600">Zdjęcie oczu zamkniętych</label>
+                      <div>
+                        <label class="mb-1 block text-xs font-medium text-gray-700">Zdjęcie oczu zamkniętych *</label>
                         <input
-                          type="hidden"
-                          name="eyes_closed_lower"
-                          role="uploadcare-uploader"
-                          data-public-key="YOUR_UPLOADCARE_PUBLIC_KEY"
-                          data-multiple="false"
-                          data-images-only="true"
-                          data-preview-step="true"
-                          data-clearable="true"
+                          type="file"
+                          name="lower_eyelid_closed"
+                          accept="image/*"
+                          class="w-full text-sm text-gray-500 file:mr-4 file:rounded-md file:border-0 file:bg-accent file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white hover:file:bg-opacity-90"
                         />
                       </div>
-                      <div class="space-y-2">
-                        <label class="text-sm text-gray-600">Zdjęcie oczu otwartych</label>
+                      <div>
+                        <label class="mb-1 block text-xs font-medium text-gray-700">Zdjęcie oczu otwartych *</label>
                         <input
-                          type="hidden"
-                          name="eyes_open_lower"
-                          role="uploadcare-uploader"
-                          data-public-key="YOUR_UPLOADCARE_PUBLIC_KEY"
-                          data-multiple="false"
-                          data-images-only="true"
-                          data-preview-step="true"
-                          data-clearable="true"
+                          type="file"
+                          name="lower_eyelid_open"
+                          accept="image/*"
+                          class="w-full text-sm text-gray-500 file:mr-4 file:rounded-md file:border-0 file:bg-accent file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white hover:file:bg-opacity-90"
                         />
                       </div>
                     </div>
@@ -417,57 +418,44 @@
                 <div class="flex-1">
                   <span class="block font-medium text-gray-900">Korekcja nosa</span>
                   <div class="mt-2 hidden space-y-3" data-uploads="nose">
-                    <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
-                      <div class="space-y-2">
-                        <label class="text-sm text-gray-600">Lewy profil</label>
+                    <p class="mb-3 text-sm text-gray-600">Prześlij zdjęcia nosa zgodnie z wytycznymi:</p>
+                    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+                      <div>
+                        <label class="mb-1 block text-xs font-medium text-gray-700">Zdjęcie nosa - lewy profil *</label>
                         <input
-                          type="hidden"
+                          type="file"
                           name="nose_left"
-                          role="uploadcare-uploader"
-                          data-public-key="YOUR_UPLOADCARE_PUBLIC_KEY"
-                          data-multiple="false"
-                          data-images-only="true"
-                          data-preview-step="true"
-                          data-clearable="true"
+                          accept="image/*"
+                          class="w-full text-sm text-gray-500 file:mr-4 file:rounded-md file:border-0 file:bg-accent file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white hover:file:bg-opacity-90"
                         />
                       </div>
-                      <div class="space-y-2">
-                        <label class="text-sm text-gray-600">Prawy profil</label>
+                      <div>
+                        <label class="mb-1 block text-xs font-medium text-gray-700"
+                          >Zdjęcie nosa - prawy profil *</label
+                        >
                         <input
-                          type="hidden"
+                          type="file"
                           name="nose_right"
-                          role="uploadcare-uploader"
-                          data-public-key="YOUR_UPLOADCARE_PUBLIC_KEY"
-                          data-multiple="false"
-                          data-images-only="true"
-                          data-preview-step="true"
-                          data-clearable="true"
+                          accept="image/*"
+                          class="w-full text-sm text-gray-500 file:mr-4 file:rounded-md file:border-0 file:bg-accent file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white hover:file:bg-opacity-90"
                         />
                       </div>
-                      <div class="space-y-2">
-                        <label class="text-sm text-gray-600">Z przodu</label>
+                      <div>
+                        <label class="mb-1 block text-xs font-medium text-gray-700">Zdjęcie nosa - z przodu *</label>
                         <input
-                          type="hidden"
+                          type="file"
                           name="nose_front"
-                          role="uploadcare-uploader"
-                          data-public-key="YOUR_UPLOADCARE_PUBLIC_KEY"
-                          data-multiple="false"
-                          data-images-only="true"
-                          data-preview-step="true"
-                          data-clearable="true"
+                          accept="image/*"
+                          class="w-full text-sm text-gray-500 file:mr-4 file:rounded-md file:border-0 file:bg-accent file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white hover:file:bg-opacity-90"
                         />
                       </div>
-                      <div class="space-y-2">
-                        <label class="text-sm text-gray-600">Z dołu</label>
+                      <div>
+                        <label class="mb-1 block text-xs font-medium text-gray-700">Zdjęcie nosa - z dołu *</label>
                         <input
-                          type="hidden"
+                          type="file"
                           name="nose_bottom"
-                          role="uploadcare-uploader"
-                          data-public-key="YOUR_UPLOADCARE_PUBLIC_KEY"
-                          data-multiple="false"
-                          data-images-only="true"
-                          data-preview-step="true"
-                          data-clearable="true"
+                          accept="image/*"
+                          class="w-full text-sm text-gray-500 file:mr-4 file:rounded-md file:border-0 file:bg-accent file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white hover:file:bg-opacity-90"
                         />
                       </div>
                     </div>
@@ -495,31 +483,24 @@
                 <div class="flex-1">
                   <span class="block font-medium text-gray-900">Korekcja uszu</span>
                   <div class="mt-2 hidden space-y-3" data-uploads="ears">
+                    <p class="mb-3 text-sm text-gray-600">Prześlij zdjęcia uszu zgodnie z wytycznymi:</p>
                     <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-                      <div class="space-y-2">
-                        <label class="text-sm text-gray-600">Lewe ucho</label>
+                      <div>
+                        <label class="mb-1 block text-xs font-medium text-gray-700">Zdjęcie lewego ucha *</label>
                         <input
-                          type="hidden"
-                          name="ear_left"
-                          role="uploadcare-uploader"
-                          data-public-key="YOUR_UPLOADCARE_PUBLIC_KEY"
-                          data-multiple="false"
-                          data-images-only="true"
-                          data-preview-step="true"
-                          data-clearable="true"
+                          type="file"
+                          name="ears_left"
+                          accept="image/*"
+                          class="w-full text-sm text-gray-500 file:mr-4 file:rounded-md file:border-0 file:bg-accent file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white hover:file:bg-opacity-90"
                         />
                       </div>
-                      <div class="space-y-2">
-                        <label class="text-sm text-gray-600">Prawe ucho</label>
+                      <div>
+                        <label class="mb-1 block text-xs font-medium text-gray-700">Zdjęcie prawego ucha *</label>
                         <input
-                          type="hidden"
-                          name="ear_right"
-                          role="uploadcare-uploader"
-                          data-public-key="YOUR_UPLOADCARE_PUBLIC_KEY"
-                          data-multiple="false"
-                          data-images-only="true"
-                          data-preview-step="true"
-                          data-clearable="true"
+                          type="file"
+                          name="ears_right"
+                          accept="image/*"
+                          class="w-full text-sm text-gray-500 file:mr-4 file:rounded-md file:border-0 file:bg-accent file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white hover:file:bg-opacity-90"
                         />
                       </div>
                     </div>
@@ -553,57 +534,42 @@
                       rows="3"
                       class="w-full rounded-md border border-gray-300 px-4 py-3 text-gray-900 placeholder-gray-500 transition duration-200 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-opacity-50"
                     ></textarea>
-                    <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
-                      <div class="space-y-2">
-                        <label class="text-sm text-gray-600">Zdjęcie 1</label>
+                    <p class="mb-3 text-sm text-gray-600">Prześlij zdjęcia zgodnie z rodzajem zabiegu:</p>
+                    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+                      <div>
+                        <label class="mb-1 block text-xs font-medium text-gray-700">Zdjęcie 1</label>
                         <input
-                          type="hidden"
-                          name="other_image_1"
-                          role="uploadcare-uploader"
-                          data-public-key="YOUR_UPLOADCARE_PUBLIC_KEY"
-                          data-multiple="false"
-                          data-images-only="true"
-                          data-preview-step="true"
-                          data-clearable="true"
+                          type="file"
+                          name="other_photo_1"
+                          accept="image/*"
+                          class="w-full text-sm text-gray-500 file:mr-4 file:rounded-md file:border-0 file:bg-accent file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white hover:file:bg-opacity-90"
                         />
                       </div>
-                      <div class="space-y-2">
-                        <label class="text-sm text-gray-600">Zdjęcie 2</label>
+                      <div>
+                        <label class="mb-1 block text-xs font-medium text-gray-700">Zdjęcie 2</label>
                         <input
-                          type="hidden"
-                          name="other_image_2"
-                          role="uploadcare-uploader"
-                          data-public-key="YOUR_UPLOADCARE_PUBLIC_KEY"
-                          data-multiple="false"
-                          data-images-only="true"
-                          data-preview-step="true"
-                          data-clearable="true"
+                          type="file"
+                          name="other_photo_2"
+                          accept="image/*"
+                          class="w-full text-sm text-gray-500 file:mr-4 file:rounded-md file:border-0 file:bg-accent file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white hover:file:bg-opacity-90"
                         />
                       </div>
-                      <div class="space-y-2">
-                        <label class="text-sm text-gray-600">Zdjęcie 3</label>
+                      <div>
+                        <label class="mb-1 block text-xs font-medium text-gray-700">Zdjęcie 3</label>
                         <input
-                          type="hidden"
-                          name="other_image_3"
-                          role="uploadcare-uploader"
-                          data-public-key="YOUR_UPLOADCARE_PUBLIC_KEY"
-                          data-multiple="false"
-                          data-images-only="true"
-                          data-preview-step="true"
-                          data-clearable="true"
+                          type="file"
+                          name="other_photo_3"
+                          accept="image/*"
+                          class="w-full text-sm text-gray-500 file:mr-4 file:rounded-md file:border-0 file:bg-accent file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white hover:file:bg-opacity-90"
                         />
                       </div>
-                      <div class="space-y-2">
-                        <label class="text-sm text-gray-600">Zdjęcie 4</label>
+                      <div>
+                        <label class="mb-1 block text-xs font-medium text-gray-700">Zdjęcie 4</label>
                         <input
-                          type="hidden"
-                          name="other_image_4"
-                          role="uploadcare-uploader"
-                          data-public-key="YOUR_UPLOADCARE_PUBLIC_KEY"
-                          data-multiple="false"
-                          data-images-only="true"
-                          data-preview-step="true"
-                          data-clearable="true"
+                          type="file"
+                          name="other_photo_4"
+                          accept="image/*"
+                          class="w-full text-sm text-gray-500 file:mr-4 file:rounded-md file:border-0 file:bg-accent file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white hover:file:bg-opacity-90"
                         />
                       </div>
                     </div>
@@ -1053,4 +1019,5 @@
   </body>
 
   <script defer src="./assets/js/main.js"></script>
+  <script defer src="./assets/js/consultation-form.js"></script>
 </html>
