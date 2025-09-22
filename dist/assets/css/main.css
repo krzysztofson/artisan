@@ -697,6 +697,9 @@ h3{
 }
 /* Custom CSS. Ensure this comes before the tailwind utilities*/
 /* purgecss end ignore */
+.visible{
+  visibility: visible;
+}
 .fixed{
   position: fixed;
 }
@@ -708,6 +711,10 @@ h3{
 }
 .inset-0{
   inset: 0px;
+}
+.inset-y-0{
+  top: 0px;
+  bottom: 0px;
 }
 .left-0{
   left: 0px;
@@ -752,6 +759,9 @@ h3{
 .my-4{
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+.mb-1{
+  margin-bottom: 0.25rem;
 }
 .mb-12{
   margin-bottom: 3rem;
@@ -806,9 +816,6 @@ h3{
 }
 .mt-auto{
   margin-top: auto;
-}
-.mb-1{
-  margin-bottom: 0.25rem;
 }
 .block{
   display: block;
@@ -1237,6 +1244,9 @@ h3{
 .pt-6{
   padding-top: 1.5rem;
 }
+.pl-12{
+  padding-left: 3rem;
+}
 .text-center{
   text-align: center;
 }
@@ -1315,6 +1325,10 @@ h3{
   --tw-text-opacity: 1;
   color: rgb(29 78 216 / var(--tw-text-opacity));
 }
+.text-gray-500{
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
 .text-gray-600{
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity));
@@ -1330,6 +1344,10 @@ h3{
 .text-gray-900{
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+.text-green-600{
+  --tw-text-opacity: 1;
+  color: rgb(22 163 74 / var(--tw-text-opacity));
 }
 .text-green-800{
   --tw-text-opacity: 1;
@@ -1351,13 +1369,9 @@ h3{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
-.text-gray-500{
+.text-gray-400{
   --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
-}
-.text-green-600{
-  --tw-text-opacity: 1;
-  color: rgb(22 163 74 / var(--tw-text-opacity));
+  color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 .placeholder-gray-500::-moz-placeholder{
   --tw-placeholder-opacity: 1;
@@ -1383,6 +1397,11 @@ h3{
 .shadow-xl{
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-sm{
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .blur{
@@ -1528,6 +1547,9 @@ h3{
 .focus\:ring-opacity-50:focus{
   --tw-ring-opacity: 0.5;
 }
+.focus\:ring-opacity-20:focus{
+  --tw-ring-opacity: 0.2;
+}
 .group:hover .group-hover\:opacity-0{
   opacity: 0;
 }
@@ -1548,11 +1570,11 @@ h3{
   .md\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .md\:grid-cols-4{
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
   .md\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .md\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
   .md\:flex-row{
     flex-direction: row;

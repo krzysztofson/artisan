@@ -82,6 +82,82 @@ window.addEventListener("load", () => {
   }
 });
 
+// Search functionality for pricing page
+document.addEventListener("DOMContentLoaded", function () {
+  const searchInput = document.querySelector("#searchInput");
+
+  if (searchInput) {
+    searchInput.addEventListener("input", function () {
+      const searchTerm = this.value.toLowerCase().trim();
+
+      // Only filter if 2 or more characters are entered
+      if (searchTerm.length >= 2) {
+        filterPricingItems(searchTerm);
+      } else {
+        // Show all items if less than 2 characters
+        showAllPricingItems();
+      }
+    });
+  }
+});
+
+function filterPricingItems(searchTerm) {
+  // Get all pricing sections (sections with h2 titles and pricing items)
+  const pricingSections = document.querySelectorAll("section[id]:not(#search):not(#hero)");
+
+  pricingSections.forEach((section) => {
+    const sectionTitle = section.querySelector("h2");
+    const pricingItems = section.querySelectorAll(".mx-auto.max-w-3xl a, .mx-auto.max-w-3xl > div");
+    let hasVisibleItems = false;
+
+    // Filter items within this section
+    pricingItems.forEach((item) => {
+      // Check if this is actually a pricing item (has pricing text structure)
+      const itemText = item.querySelector("p.font-semibold");
+      if (!itemText) return;
+
+      const itemContent = itemText.textContent.toLowerCase();
+      const priceElement = item.querySelector("p:not(.font-semibold)");
+      const priceText = priceElement ? priceElement.textContent.toLowerCase() : "";
+
+      // Search in both item name and section title
+      const sectionTitleText = sectionTitle ? sectionTitle.textContent.toLowerCase() : "";
+      const shouldShow =
+        itemContent.includes(searchTerm) || sectionTitleText.includes(searchTerm) || priceText.includes(searchTerm);
+
+      if (shouldShow) {
+        item.style.display = "";
+        hasVisibleItems = true;
+      } else {
+        item.style.display = "none";
+      }
+    });
+
+    // Hide/show section based on whether it has visible items
+    if (sectionTitle) {
+      if (hasVisibleItems) {
+        section.style.display = "";
+      } else {
+        section.style.display = "none";
+      }
+    }
+  });
+}
+
+function showAllPricingItems() {
+  // Show all sections and items
+  const pricingSections = document.querySelectorAll("section[id]:not(#search):not(#hero)");
+
+  pricingSections.forEach((section) => {
+    section.style.display = "";
+
+    const pricingItems = section.querySelectorAll(".mx-auto.max-w-3xl a, .mx-auto.max-w-3xl > div");
+    pricingItems.forEach((item) => {
+      item.style.display = "";
+    });
+  });
+}
+
 // const navOffer = document.querySelector("#js-offer");
 // if (navOffer) {
 //   navOffer.addEventListener("mouseover", () => {

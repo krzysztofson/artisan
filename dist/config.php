@@ -7,7 +7,7 @@
 return [
     // Ustawienia email
     'email' => [
-        'to' => 'mikolaj.janusz@intmail.pl', // Adres email, na który będą wysyłane formularze
+        'to' => 'klinika@artisanclinic.pl ', // Adres email, na który będą wysyłane formularze
         'from' => 'noreply@artisanclinic.pl', // Adres nadawcy
         'from_name' => 'Artisan Clinic - Formularz Konsultacji',
         'subject_prefix' => 'Nowe zgłoszenie konsultacji online - '
