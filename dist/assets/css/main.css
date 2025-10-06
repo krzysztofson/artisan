@@ -58,11 +58,12 @@ tr:hover{
 }
 .content h3{
   padding-top: 1.5rem;
-  padding-bottom: 0.75rem;
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.25rem;
   --tw-text-opacity: 1;
   color: rgb(64 60 36 / var(--tw-text-opacity));
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
   font-weight: 700;
 }
 .content a{
