@@ -164,7 +164,11 @@ document.addEventListener("DOMContentLoaded", function () {
         // Sprawdź czy odpowiedź zawiera JSON
         const contentType = response.headers.get("content-type");
         if (!contentType || !contentType.includes("application/json")) {
-          throw new Error("Serwer nie zwrócił odpowiedzi JSON");
+          // Spróbuj pobrać tekst błędu z odpowiedzi
+          return response.text().then((text) => {
+            console.error("Odpowiedź serwera:", text);
+            throw new Error("Serwer nie zwrócił odpowiedzi JSON. Sprawdź konsolę dla szczegółów.");
+          });
         }
 
         return response.json();
