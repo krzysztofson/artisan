@@ -304,7 +304,11 @@ function createHtmlMessage($messageLines, $attachments) {
             $currentSection = 'procedures';
         } elseif (strpos($line, 'WYBRANY LEKARZ:') !== false) {
             if ($currentSection == 'procedures') $html .= '</ul></div>';
+            $doctorName = trim(str_replace('WYBRANY LEKARZ:', '', $line));
             $html .= '<div class="section"><h3>Wybrany Lekarz</h3>';
+            if ($doctorName !== '') {
+                $html .= '<p>' . htmlspecialchars($doctorName) . '</p>';
+            }
             $currentSection = 'doctor';
         } elseif (strpos($line, 'HISTORIA MEDYCZNA:') !== false) {
             $html .= '</div><div class="section"><h3>Historia Medyczna</h3><table>';
