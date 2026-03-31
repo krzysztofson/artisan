@@ -170,7 +170,7 @@ for (const [enFile, plFile] of Object.entries(GARBLED)) {
   }
 
   // Add PL flag switcher
-  const langSwitcher = `<a href="../${plFile}" class="flex items-center px-2" title="Wersja polska">${PL_FLAG_SVG}</a>`;
+  const langSwitcher = `<a href="../${plFile}" class="flex items-center pr-2 pl-4" title="Wersja polska">${PL_FLAG_SVG}</a>`;
   content = content.replace(
     '<button class="js-nav-btn',
     `${langSwitcher}\n            <button class="js-nav-btn`

@@ -200,7 +200,7 @@ for (const [plFile, enFile] of Object.entries(FILE_MAP)) {
 
   // 2f. Add language switcher (PL flag) to EN pages - before the hamburger button
   const plFileName = plFile === 'index.html' ? '../index.html' : `../${plFile}`;
-  const langSwitcher = `<a href="${plFileName}" class="flex items-center px-2" title="Wersja polska">${PL_FLAG_SVG}</a>`;
+  const langSwitcher = `<a href="${plFileName}" class="flex items-center pr-2 pl-4" title="Wersja polska">${PL_FLAG_SVG}</a>`;
 
   // Insert before the hamburger button (js-nav-btn)
   content = content.replace(
@@ -230,7 +230,7 @@ for (const [plFile, enFile] of Object.entries(FILE_MAP)) {
   }
 
   // Add UK flag before hamburger button
-  const langSwitcher = `<a href="en/${enFile}" class="flex items-center px-2" title="English version">${UK_FLAG_SVG}</a>`;
+  const langSwitcher = `<a href="en/${enFile}" class="flex items-center pr-2 pl-4" title="English version">${UK_FLAG_SVG}</a>`;
   content = content.replace(
     '<button class="js-nav-btn',
     `${langSwitcher}\n            <button class="js-nav-btn`
