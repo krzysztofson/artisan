@@ -1221,6 +1221,9 @@ h3{
 .pl-4{
   padding-left: 1rem;
 }
+.pr-2{
+  padding-right: 0.5rem;
+}
 .pr-8{
   padding-right: 2rem;
 }
@@ -1253,9 +1256,6 @@ h3{
 }
 .pt-6{
   padding-top: 1.5rem;
-}
-.pr-2{
-  padding-right: 0.5rem;
 }
 .text-center{
   text-align: center;
