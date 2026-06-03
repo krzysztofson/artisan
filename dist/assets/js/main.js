@@ -16,10 +16,7 @@ const modalBg = document.querySelector(".js-modal-bg");
 const modalClose = document.querySelector(".js-modal-close-btn");
 const mobileNavBtns = document.querySelectorAll(".js-nav a");
 
-function toggleModal(e) {
-  e.stopPropagation();
-  e.preventDefault();
-
+function toggleModal() {
   modal.classList.toggle("flex");
   modal.classList.toggle("hidden");
 }
@@ -44,70 +41,102 @@ if (mobileNavBtns) {
 }
 
 const year = new Date().getFullYear();
-document.querySelector("#year").textContent = year;
+const yearEl = document.querySelector("#year");
+if (yearEl) yearEl.textContent = year;
 
-const navigation = document.querySelectorAll("nav");
-let lastScrollY = window.scrollY;
+const siteNav = document.querySelector("nav.is-transparent");
+if (siteNav) {
+  let lastScrollY = window.scrollY;
+  let scrollTicking = false;
 
-window.addEventListener("scroll", () => {
-  console.log(navigation);
-
-  const currentScrollY = window.scrollY;
-
-  navigation.forEach((nav) => {
-    if (currentScrollY > lastScrollY) {
-      nav.style.transform = "translateY(-300%)";
-    } else {
-      nav.style.transform = "translateY(0)";
-    }
-
-    if (currentScrollY < 30) {
-      nav.classList.add("is-transparent");
-    } else {
-      nav.classList.remove("is-transparent");
-    }
-  });
-
-  lastScrollY = currentScrollY;
-});
-
-window.addEventListener("load", () => {
-  const currentScrollY = window.scrollY;
-  const navigation = document.querySelector("nav");
-
-  if (currentScrollY < 30) {
-    navigation.classList.add("is-transparent");
-  } else {
-    navigation.classList.remove("is-transparent");
+  function getTransparentThreshold() {
+    const hero = document.getElementById("hero");
+    return hero ? Math.max(hero.offsetHeight - 100, 30) : 30;
   }
-});
+
+  function updateNavAppearance(currentScrollY) {
+    if (currentScrollY < getTransparentThreshold()) {
+      siteNav.classList.add("is-transparent");
+    } else {
+      siteNav.classList.remove("is-transparent");
+    }
+  }
+
+  function updateSiteNavOnScroll() {
+    const currentScrollY = window.scrollY;
+    const delta = currentScrollY - lastScrollY;
+
+    updateNavAppearance(currentScrollY);
+
+    if (currentScrollY < 80) {
+      siteNav.classList.remove("is-nav-hidden");
+    } else if (delta > 4) {
+      siteNav.classList.add("is-nav-hidden");
+    } else if (delta < -4) {
+      siteNav.classList.remove("is-nav-hidden");
+    }
+
+    lastScrollY = currentScrollY;
+    scrollTicking = false;
+  }
+
+  updateNavAppearance(window.scrollY);
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!scrollTicking) {
+        requestAnimationFrame(updateSiteNavOnScroll);
+        scrollTicking = true;
+      }
+    },
+    { passive: true }
+  );
+
+  window.addEventListener("resize", () => updateNavAppearance(window.scrollY), { passive: true });
+}
 
 // Search functionality for pricing page
 document.addEventListener("DOMContentLoaded", function () {
   const searchInput = document.querySelector("#searchInput");
+  console.log("DOM loaded, searching for input:", searchInput);
 
   if (searchInput) {
+    console.log("Search input found, adding event listener");
     searchInput.addEventListener("input", function () {
       const searchTerm = this.value.toLowerCase().trim();
+      console.log("Search term entered:", searchTerm);
 
       // Only filter if 2 or more characters are entered
       if (searchTerm.length >= 2) {
+        console.log("Filtering items for:", searchTerm);
         filterPricingItems(searchTerm);
       } else {
         // Show all items if less than 2 characters
+        console.log("Showing all items");
         showAllPricingItems();
       }
     });
+  } else {
+    console.log("Search input not found!");
   }
 });
 
+function dispatchPricingFilterChange() {
+  document.dispatchEvent(new CustomEvent("pricing-filter-change"));
+}
+
 function filterPricingItems(searchTerm) {
+  console.log("filterPricingItems called with:", searchTerm);
   // Get all pricing sections (sections with h2 titles and pricing items)
   const pricingSections = document.querySelectorAll("section[id]:not(#search):not(#hero)");
+  console.log("Found sections:", pricingSections.length);
 
   pricingSections.forEach((section) => {
+    console.log("Processing section:", section.id);
     const sectionTitle = section.querySelector("h2");
     const pricingItems = section.querySelectorAll(".mx-auto.max-w-3xl a, .mx-auto.max-w-3xl > div");
+    console.log("Found pricing items in section:", pricingItems.length);
     let hasVisibleItems = false;
 
     // Filter items within this section
@@ -142,6 +171,7 @@ function filterPricingItems(searchTerm) {
       }
     }
   });
+  dispatchPricingFilterChange();
 }
 
 function showAllPricingItems() {
@@ -156,6 +186,7 @@ function showAllPricingItems() {
       item.style.display = "";
     });
   });
+  dispatchPricingFilterChange();
 }
 
 // const navOffer = document.querySelector("#js-offer");

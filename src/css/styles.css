@@ -173,8 +173,17 @@ tr:hover {
   @apply after:bg-accent;
 }
 
+nav.is-transparent {
+  @apply fixed top-0 z-40 w-full transform duration-300;
+}
+
+nav.is-nav-hidden {
+  transform: translateY(-100%);
+  pointer-events: none;
+}
+
 .nav-section {
-  @apply fixed top-0 w-full bg-white py-1 shadow lg:top-10;
+  @apply relative w-full bg-white py-1 shadow;
 }
 
 .js-nav {
@@ -215,4 +224,160 @@ h3 {
 
 .content ul {
   @apply list-disc pl-6;
+}
+
+/* Pricing page – floating table of contents */
+.pricing-layout {
+  @apply mx-auto max-w-[1400px] px-4 pb-16 lg:grid lg:grid-cols-[minmax(11rem,15rem)_minmax(0,1fr)] lg:gap-10 xl:grid-cols-[16rem_minmax(0,1fr)] xl:gap-12;
+}
+
+.pricing-main {
+  @apply min-w-0;
+}
+
+.pricing-main section.pt-20[id] {
+  scroll-margin-top: 7.5rem;
+}
+
+.pricing-toc {
+  @apply relative z-20 min-h-0 lg:min-h-[1px];
+}
+
+.pricing-toc__inner {
+  @apply hidden rounded-lg bg-white/95 lg:block;
+  position: sticky;
+  top: 7.5rem;
+  max-height: calc(100vh - 8.5rem);
+  overflow-y: auto;
+  padding: 1rem 0.75rem 1.5rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  box-shadow: 0 4px 24px rgb(0 0 0 / 0.08);
+}
+
+.pricing-toc__inner::-webkit-scrollbar {
+  display: none;
+}
+
+.pricing-toc__heading {
+  @apply mb-3 font-heading text-sm uppercase tracking-wide text-accent;
+}
+
+.pricing-toc__nav {
+  @apply flex flex-col gap-0.5 border-l-2 border-stone-200 pl-0;
+}
+
+.pricing-toc__accordion {
+  @apply flex flex-col gap-0.5;
+}
+
+.pricing-toc__group-toggle {
+  @apply flex w-full items-center justify-between gap-2 border-l-2 border-transparent py-1.5 pl-3 pr-1 text-left text-sm font-medium leading-snug text-stone-700 no-underline transition duration-200;
+  margin-left: -2px;
+}
+
+.pricing-toc__group-toggle:hover {
+  @apply border-accent/40 bg-orange-50/80 text-accent;
+}
+
+.pricing-toc__group.is-open .pricing-toc__group-toggle,
+.pricing-toc__group.has-active .pricing-toc__group-toggle {
+  @apply border-accent/60 text-accent;
+}
+
+.pricing-toc__group-chevron {
+  @apply shrink-0 text-stone-400 transition-transform duration-200;
+}
+
+.pricing-toc__group.is-open .pricing-toc__group-chevron {
+  @apply rotate-180 text-accent;
+}
+
+.pricing-toc__group-panel {
+  @apply flex flex-col gap-0.5 pb-1;
+}
+
+.pricing-toc__group-panel[hidden] {
+  display: none;
+}
+
+.pricing-toc__link {
+  @apply block border-l-2 border-transparent py-1.5 pl-5 pr-2 text-sm leading-snug text-stone-600 no-underline transition duration-200;
+  margin-left: -2px;
+}
+
+.pricing-toc__link--top {
+  @apply pl-3 font-medium text-stone-700;
+}
+
+.pricing-toc__link:hover {
+  @apply border-accent/40 bg-orange-50/80 text-accent no-underline;
+}
+
+.pricing-toc__link.is-active {
+  @apply border-accent bg-orange-50 font-medium text-accent no-underline;
+}
+
+.pricing-toc__link.is-hidden {
+  display: none;
+}
+
+.pricing-toc__toggle {
+  @apply fixed bottom-6 left-4 z-40 rounded-full bg-accent px-4 py-2.5 font-heading text-sm text-white shadow-lg transition duration-300 hover:bg-opacity-90 lg:hidden;
+}
+
+.pricing-toc__toggle.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.pricing-toc__backdrop {
+  @apply fixed inset-0 z-40 hidden bg-black/40 lg:hidden;
+}
+
+.pricing-toc__panel {
+  @apply fixed bottom-0 left-0 top-0 z-50 flex w-[min(18rem,85vw)] flex-col bg-white shadow-2xl lg:hidden;
+}
+
+.pricing-toc__panel[hidden] {
+  display: none !important;
+}
+
+.pricing-toc__panel-heading {
+  @apply border-b border-stone-200 px-4 py-4 font-heading text-lg text-accent;
+}
+
+.pricing-toc__panel .pricing-toc__nav {
+  @apply flex-1 overflow-y-auto p-3;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.pricing-toc__panel .pricing-toc__nav::-webkit-scrollbar {
+  display: none;
+}
+
+.pricing-toc__close {
+  @apply absolute right-3 top-3 rounded p-1 text-stone-500 hover:bg-stone-100 hover:text-stone-800;
+}
+
+.pricing-toc.is-open .pricing-toc__backdrop {
+  @apply block;
+}
+
+.pricing-toc.is-open .pricing-toc__panel {
+  display: flex !important;
+}
+
+body.pricing-toc-open {
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .pricing-toc__toggle,
+  .pricing-toc__backdrop,
+  .pricing-toc__panel {
+    display: none !important;
+  }
 }

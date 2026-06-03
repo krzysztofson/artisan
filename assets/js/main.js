@@ -41,7 +41,60 @@ if (mobileNavBtns) {
 }
 
 const year = new Date().getFullYear();
-document.querySelector("#year").textContent = year;
+const yearEl = document.querySelector("#year");
+if (yearEl) yearEl.textContent = year;
+
+const siteNav = document.querySelector("nav.is-transparent");
+if (siteNav) {
+  let lastScrollY = window.scrollY;
+  let scrollTicking = false;
+
+  function getTransparentThreshold() {
+    const hero = document.getElementById("hero");
+    return hero ? Math.max(hero.offsetHeight - 100, 30) : 30;
+  }
+
+  function updateNavAppearance(currentScrollY) {
+    if (currentScrollY < getTransparentThreshold()) {
+      siteNav.classList.add("is-transparent");
+    } else {
+      siteNav.classList.remove("is-transparent");
+    }
+  }
+
+  function updateSiteNavOnScroll() {
+    const currentScrollY = window.scrollY;
+    const delta = currentScrollY - lastScrollY;
+
+    updateNavAppearance(currentScrollY);
+
+    if (currentScrollY < 80) {
+      siteNav.classList.remove("is-nav-hidden");
+    } else if (delta > 4) {
+      siteNav.classList.add("is-nav-hidden");
+    } else if (delta < -4) {
+      siteNav.classList.remove("is-nav-hidden");
+    }
+
+    lastScrollY = currentScrollY;
+    scrollTicking = false;
+  }
+
+  updateNavAppearance(window.scrollY);
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!scrollTicking) {
+        requestAnimationFrame(updateSiteNavOnScroll);
+        scrollTicking = true;
+      }
+    },
+    { passive: true }
+  );
+
+  window.addEventListener("resize", () => updateNavAppearance(window.scrollY), { passive: true });
+}
 
 // Search functionality for pricing page
 document.addEventListener("DOMContentLoaded", function () {
@@ -68,6 +121,10 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("Search input not found!");
   }
 });
+
+function dispatchPricingFilterChange() {
+  document.dispatchEvent(new CustomEvent("pricing-filter-change"));
+}
 
 function filterPricingItems(searchTerm) {
   console.log("filterPricingItems called with:", searchTerm);
@@ -114,6 +171,7 @@ function filterPricingItems(searchTerm) {
       }
     }
   });
+  dispatchPricingFilterChange();
 }
 
 function showAllPricingItems() {
@@ -128,6 +186,7 @@ function showAllPricingItems() {
       item.style.display = "";
     });
   });
+  dispatchPricingFilterChange();
 }
 
 // const navOffer = document.querySelector("#js-offer");
