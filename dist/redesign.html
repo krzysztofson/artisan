@@ -1,0 +1,2319 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artisan Clinic — Chirurgia plastyczna i medycyna estetyczna | Warszawa</title>
+    <meta
+      name="description"
+      content="Artisan Clinic — klinika chirurgii plastycznej i medycyny estetycznej w Warszawie. Deep Plane face lifting, chirurgia piersi, rekonstrukcje, medycyna estetyczna."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* ============================================================
+         ARTISAN CLINIC — "Atelier" redesign
+         Palette: warm bone ground, onyx bands, brass hairlines
+         Type:    Cormorant Garamond (display) / Jost (interface)
+         ============================================================ */
+
+      :root {
+        --onyx: #001300;
+        --onyx-2: #1d1913;
+        --onyx-3: #2a241c;
+        --bone: #f7f3ec;
+        --bone-2: #efe9de;
+        --sand: #e3dacb;
+        --brass: #a5834b;
+        --brass-lt: #c9a96b;
+        --brass-pale: #e6d7ba;
+        --ink: #241f19;
+        --muted: #6f6659;
+        --muted-2: #938a7c;
+
+        --gut: clamp(1.25rem, 5vw, 5.5rem);
+        --maxw: 1440px;
+        --rule: rgba(36, 31, 25, 0.14);
+        --rule-dk: rgba(230, 215, 186, 0.18);
+
+        --ease: cubic-bezier(0.22, 0.8, 0.3, 1);
+        --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        /* in-page anchors must clear the sticky header */
+        scroll-padding-top: calc(var(--navh, 89px) + 1.5rem);
+        -webkit-text-size-adjust: 100%;
+      }
+
+      section[id] {
+        scroll-margin-top: calc(var(--navh, 89px) + 1.5rem);
+      }
+
+      body {
+        margin: 0;
+        background: var(--bone);
+        color: var(--ink);
+        font-family: "Jost", "Helvetica Neue", Arial, sans-serif;
+        font-weight: 300;
+        font-size: clamp(0.95rem, 0.9rem + 0.2vw, 1.05rem);
+        line-height: 1.75;
+        letter-spacing: 0.005em;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      img,
+      video {
+        display: block;
+        max-width: 100%;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-weight: 300;
+        line-height: 1.04;
+        letter-spacing: -0.012em;
+        margin: 0;
+      }
+
+      ::selection {
+        background: var(--brass);
+        color: var(--bone);
+      }
+
+      /* ---------- film grain + vignette ---------- */
+      .grain {
+        position: fixed;
+        inset: -20%;
+        z-index: 9000;
+        pointer-events: none;
+        opacity: 0.4;
+        mix-blend-mode: multiply;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.36'/%3E%3C/svg%3E");
+        animation: grainShift 6s steps(6) infinite;
+      }
+      @keyframes grainShift {
+        0% { transform: translate(0, 0); }
+        20% { transform: translate(-3%, 2%); }
+        40% { transform: translate(2%, -3%); }
+        60% { transform: translate(-2%, -2%); }
+        80% { transform: translate(3%, 1%); }
+        100% { transform: translate(0, 0); }
+      }
+
+      /* ---------- scroll progress ---------- */
+      .progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        transform: scaleX(0);
+        transform-origin: 0 50%;
+        background: linear-gradient(90deg, var(--brass), var(--brass-lt));
+        z-index: 8000;
+      }
+
+      /* ---------- shared bits ---------- */
+      .wrap {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding-inline: var(--gut);
+      }
+
+      .eyebrow {
+        font-size: 0.66rem;
+        letter-spacing: 0.34em;
+        text-transform: uppercase;
+        font-weight: 400;
+        color: var(--brass);
+        display: inline-flex;
+        align-items: center;
+        gap: 0.9em;
+      }
+      .eyebrow::before {
+        content: "";
+        width: clamp(24px, 4vw, 52px);
+        height: 1px;
+        background: currentColor;
+        opacity: 0.55;
+      }
+      .eyebrow.no-rule::before { display: none; }
+
+      .sec-no {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 0.95rem;
+        letter-spacing: 0.22em;
+        color: var(--brass);
+        display: block;
+      }
+
+      .display {
+        font-size: clamp(2.6rem, 1.4rem + 5vw, 5.6rem);
+      }
+      .display em {
+        font-style: italic;
+        font-weight: 300;
+      }
+
+      .lede {
+        font-size: clamp(1.02rem, 0.95rem + 0.4vw, 1.2rem);
+        color: var(--muted);
+        line-height: 1.85;
+        font-weight: 300;
+      }
+
+      .hr {
+        height: 1px;
+        background: var(--rule);
+        border: 0;
+        margin: 0;
+      }
+
+      /* ---------- buttons ---------- */
+      .btn {
+        --bg: var(--onyx);
+        --fg: var(--bone);
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.9em;
+        padding: 1.05em 2.1em;
+        font-size: 0.7rem;
+        letter-spacing: 0.26em;
+        text-transform: uppercase;
+        font-weight: 400;
+        color: var(--fg);
+        background: var(--bg);
+        overflow: hidden;
+        isolation: isolate;
+        transition: color 0.45s var(--ease), border-color 0.45s var(--ease);
+      }
+      .btn::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: var(--brass);
+        transform: scaleY(0);
+        transform-origin: 50% 100%;
+        transition: transform 0.5s var(--ease-out);
+      }
+      .btn:hover::after { transform: scaleY(1); }
+      .btn .arw { transition: transform 0.45s var(--ease); }
+      .btn:hover .arw { transform: translateX(5px); }
+
+      .btn--ghost {
+        --bg: transparent;
+        --fg: var(--ink);
+        border: 1px solid rgba(36, 31, 25, 0.28);
+      }
+      .btn--ghost:hover { color: var(--bone); border-color: var(--brass); }
+
+      .btn--light {
+        --bg: transparent;
+        --fg: var(--bone);
+        border: 1px solid rgba(230, 215, 186, 0.35);
+      }
+      .btn--light:hover { border-color: var(--brass); }
+
+      /* underline-sweep text link */
+      .ulink {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.7em;
+        font-size: 0.7rem;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        padding-bottom: 0.55em;
+        color: var(--ink);
+      }
+      .ulink::before,
+      .ulink::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        width: 100%;
+      }
+      .ulink::before { background: var(--rule); }
+      .ulink::after {
+        background: var(--brass);
+        transform: scaleX(0);
+        transform-origin: 100% 50%;
+        transition: transform 0.55s var(--ease-out);
+      }
+      .ulink:hover::after { transform: scaleX(1); transform-origin: 0 50%; }
+      .ulink.on-dark { color: var(--bone); }
+      .ulink.on-dark::before { background: var(--rule-dk); }
+
+      /* ---------- top utility strip ---------- */
+      .strip {
+        position: relative;
+        z-index: 60;
+        background: var(--onyx);
+        color: rgba(247, 243, 236, 0.72);
+        font-size: 0.66rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+      .strip-in {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5rem;
+        height: 40px;
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding-inline: var(--gut);
+      }
+      .strip a { transition: color 0.3s var(--ease); }
+      .strip a:hover { color: var(--brass-lt); }
+      .strip-grp { display: flex; align-items: center; gap: 1.6rem; }
+      .strip .dot { color: var(--brass); }
+      .strip .soc { display: inline-flex; gap: 1rem; }
+      .strip svg { fill: currentColor; opacity: 0.8; transition: opacity 0.3s; }
+      .strip a:hover svg { opacity: 1; }
+      @media (max-width: 900px) {
+        .strip-hide { display: none; }
+        .strip-in { justify-content: center; gap: 1.2rem; }
+      }
+
+      /* ---------- nav ---------- */
+      .nav {
+        position: sticky;
+        top: 0;
+        z-index: 70;
+        background: rgba(247, 243, 236, 0);
+        border-bottom: 1px solid transparent;
+        transition: background 0.5s var(--ease), border-color 0.5s var(--ease),
+          backdrop-filter 0.5s var(--ease);
+      }
+      .nav-in {
+        position: relative;
+        z-index: 66; /* keep logo + burger above the mobile sheet */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: clamp(1rem, 2vw, 1.6rem) var(--gut);
+        transition: padding 0.5s var(--ease);
+      }
+      .brand img {
+        height: clamp(26px, 3.2vw, 38px);
+        width: auto;
+        filter: invert(1) brightness(2);
+        transition: filter 0.5s var(--ease), height 0.5s var(--ease);
+      }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: clamp(1.1rem, 2.2vw, 2.6rem);
+      }
+      .nav-links a {
+        position: relative;
+        font-size: 0.7rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: rgba(247, 243, 236, 0.85);
+        transition: color 0.4s var(--ease);
+        padding-block: 0.35em;
+      }
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background: var(--brass-lt);
+        transform: scaleX(0);
+        transform-origin: 0 50%;
+        transition: transform 0.45s var(--ease-out);
+      }
+      .nav-links a:hover::after { transform: scaleX(1); }
+      .nav-cta { display: flex; align-items: center; gap: 1.1rem; }
+      .nav-cta .btn { padding: 0.85em 1.6em; font-size: 0.64rem; }
+      .lang {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5em;
+        font-size: 0.64rem;
+        letter-spacing: 0.2em;
+        color: rgba(247, 243, 236, 0.7);
+        transition: color 0.4s;
+      }
+      .lang:hover { color: var(--brass-lt); }
+
+      /* scrolled state */
+      .nav.is-stuck {
+        background: rgba(247, 243, 236, 0.9);
+        backdrop-filter: saturate(140%) blur(14px);
+        -webkit-backdrop-filter: saturate(140%) blur(14px);
+        border-bottom-color: var(--rule);
+      }
+      .nav.is-stuck .nav-in { padding-block: 0.75rem; }
+      .nav.is-stuck .brand img { filter: none; height: clamp(24px, 2.6vw, 30px); }
+      .nav.is-stuck .nav-links a { color: var(--ink); }
+      .nav.is-stuck .lang { color: var(--muted); }
+      .nav.is-stuck .btn--light { --fg: var(--ink); border-color: rgba(36, 31, 25, 0.28); }
+      .nav.is-stuck .btn--light:hover { --fg: var(--bone); }
+
+      .burger {
+        display: none;
+        width: 44px;
+        height: 44px;
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+        padding: 0;
+        position: relative;
+      }
+      .burger span {
+        position: absolute;
+        left: 11px;
+        width: 22px;
+        height: 1px;
+        background: var(--bone);
+        transition: transform 0.45s var(--ease), opacity 0.3s, background 0.5s;
+      }
+      .burger span:nth-child(1) { top: 19px; }
+      .burger span:nth-child(2) { top: 25px; }
+      .nav.is-stuck .burger span { background: var(--ink); }
+      .is-open .burger span { background: var(--bone); }
+      body.is-open .nav { background: transparent; border-bottom-color: transparent; backdrop-filter: none; }
+      body.is-open .nav .brand img { filter: invert(1) brightness(2); }
+      .is-open .burger span:nth-child(1) { transform: translateY(3px) rotate(45deg); }
+      .is-open .burger span:nth-child(2) { transform: translateY(-3px) rotate(-45deg); }
+
+      /* mobile overlay */
+      .sheet {
+        position: fixed;
+        inset: 0;
+        z-index: 65;
+        background: var(--onyx);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 6rem var(--gut) 3rem;
+        clip-path: inset(0 0 100% 0);
+        transition: clip-path 0.7s var(--ease-out);
+        pointer-events: none;
+      }
+      .is-open .sheet { clip-path: inset(0 0 0 0); pointer-events: auto; }
+      .sheet a.big {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(2rem, 9vw, 3.2rem);
+        color: var(--bone);
+        line-height: 1.5;
+        opacity: 0;
+        transform: translateY(18px);
+        transition: opacity 0.5s var(--ease) var(--d, 0s), transform 0.6s var(--ease-out) var(--d, 0s),
+          color 0.3s;
+      }
+      .sheet a.big:hover { color: var(--brass-lt); }
+      .is-open .sheet a.big { opacity: 1; transform: none; }
+      .sheet-foot {
+        margin-top: 2.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--rule-dk);
+        color: rgba(247, 243, 236, 0.6);
+        font-size: 0.72rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        display: grid;
+        gap: 0.5rem;
+      }
+
+      @media (max-width: 1080px) {
+        .nav-links, .nav-cta .btn, .lang { display: none; }
+        .burger { display: block; }
+      }
+
+      /* ============================================================
+         HERO
+         ============================================================ */
+      .hero {
+        position: relative;
+        min-height: clamp(620px, 92svh, 1000px);
+        margin-top: calc(-1 * var(--navh, 89px));
+        padding-top: var(--navh, 89px);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        overflow: hidden;
+        background: var(--onyx);
+      }
+      .hero-media {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        /* poster paints instantly so there is never a black frame */
+        background: url("assets/imgs/poster.jpg") center / cover no-repeat var(--onyx);
+      }
+      .hero-media video,
+      .hero-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(1.06);
+        animation: heroDrift 24s var(--ease) infinite alternate;
+      }
+      @keyframes heroDrift {
+        from { transform: scale(1.06) translate3d(0, 0, 0); }
+        to { transform: scale(1.14) translate3d(-1.5%, -1.5%, 0); }
+      }
+      .hero-veil {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: linear-gradient(
+            180deg,
+            rgba(0, 19, 0, 0.39) 0%,
+            rgba(0, 19, 0, 0.21) 34%,
+            rgba(0, 19, 0, 0.29) 68%,
+            rgba(0, 19, 0, 0.45) 100%
+          ),
+          radial-gradient(120% 80% at 80% 20%, rgba(165, 131, 75, 0.2), transparent 60%);
+      }
+      .hero-body {
+        position: relative;
+        z-index: 2;
+        max-width: var(--maxw);
+        width: 100%;
+        margin: 0 auto;
+        padding: clamp(3rem, 8vh, 7rem) var(--gut) clamp(2rem, 4vh, 3rem);
+        color: var(--bone);
+      }
+      .hero .eyebrow {
+        color: var(--brass-pale);
+        opacity: 0;
+        animation: fadeUp 1s var(--ease-out) 0.35s forwards;
+      }
+      .hero h1 {
+        margin: clamp(1.4rem, 3vh, 2.4rem) 0 0;
+        font-size: clamp(3rem, 1rem + 9vw, 8.5rem);
+        line-height: 0.95;
+        letter-spacing: -0.02em;
+        max-width: 16ch;
+      }
+      .hero h1 .ln {
+        display: block;
+        overflow: hidden;
+      }
+      .hero h1 .ln > span {
+        display: block;
+        transform: translateY(105%);
+        animation: lineUp 1.25s var(--ease-out) forwards;
+      }
+      .hero h1 .ln:nth-child(1) > span { animation-delay: 0.45s; }
+      .hero h1 .ln:nth-child(2) > span { animation-delay: 0.6s; }
+      .hero h1 em {
+        font-style: italic;
+        color: var(--brass-pale);
+      }
+      @keyframes lineUp { to { transform: translateY(0); } }
+      @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(14px); }
+        to { opacity: 1; transform: none; }
+      }
+
+      .hero-sub {
+        margin: clamp(1.4rem, 3vh, 2.2rem) 0 0;
+        max-width: 46ch;
+        color: rgba(247, 243, 236, 0.76);
+        font-size: clamp(0.98rem, 0.92rem + 0.3vw, 1.12rem);
+        line-height: 1.8;
+        opacity: 0;
+        animation: fadeUp 1s var(--ease-out) 0.95s forwards;
+      }
+      .hero-acts {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.9rem;
+        margin-top: clamp(1.8rem, 4vh, 2.8rem);
+        opacity: 0;
+        animation: fadeUp 1s var(--ease-out) 1.1s forwards;
+      }
+      .hero-acts .btn:not(.btn--light) { --bg: var(--bone); --fg: var(--onyx); }
+      .hero-acts .btn:not(.btn--light):hover { --fg: var(--bone); }
+
+      .hero-meta {
+        position: relative;
+        z-index: 2;
+        border-top: 1px solid var(--rule-dk);
+        opacity: 0;
+        animation: fadeUp 1.1s var(--ease-out) 1.35s forwards;
+      }
+      .hero-meta-in {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 1.4rem var(--gut);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        color: rgba(247, 243, 236, 0.66);
+        font-size: 0.66rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+      }
+      .scroll-cue {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.8em;
+      }
+      .scroll-cue i {
+        display: block;
+        width: 34px;
+        height: 1px;
+        background: rgba(230, 215, 186, 0.45);
+        position: relative;
+        overflow: hidden;
+      }
+      .scroll-cue i::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: var(--brass-lt);
+        animation: cue 2.4s var(--ease) infinite;
+      }
+      @keyframes cue {
+        0% { transform: translateX(-100%); }
+        60%, 100% { transform: translateX(100%); }
+      }
+      @media (max-width: 1000px) {
+        .hero-meta-in { justify-content: center; }
+        .hero-meta-in .hero-meta-hide { display: none; }
+      }
+
+      /* ---------- marquee ---------- */
+      .ticker {
+        background: var(--onyx);
+        color: rgba(230, 215, 186, 0.6);
+        border-top: 1px solid var(--rule-dk);
+        overflow: hidden;
+        padding-block: 1.05rem;
+        white-space: nowrap;
+      }
+      .ticker-track {
+        display: inline-flex;
+        gap: 0;
+        animation: slide 46s linear infinite;
+      }
+      .ticker span {
+        font-size: 0.7rem;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        padding-inline: 1.8rem;
+      }
+      .ticker span::after {
+        content: "✦";
+        color: var(--brass);
+        margin-left: 3.6rem;
+        font-size: 0.6rem;
+        vertical-align: middle;
+      }
+      @keyframes slide { to { transform: translateX(-50%); } }
+
+      /* ============================================================
+         SECTION SCAFFOLD
+         ============================================================ */
+      section { position: relative; }
+
+      .sec {
+        padding-block: clamp(4.5rem, 10vw, 9.5rem);
+      }
+      .sec-head {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        gap: clamp(1.5rem, 4vw, 4rem);
+        align-items: end;
+        padding-bottom: clamp(2rem, 4vw, 3.5rem);
+      }
+      @media (max-width: 860px) {
+        .sec-head { grid-template-columns: 1fr; align-items: start; }
+      }
+
+      /* reveal */
+      .rv {
+        opacity: 0;
+        transform: translateY(26px);
+        transition: opacity 1s var(--ease-out) var(--d, 0s), transform 1.1s var(--ease-out) var(--d, 0s);
+      }
+      .rv.in { opacity: 1; transform: none; }
+      /* NB: never put clip-path on an observed element — Chrome clips its own
+         intersection rect and the observer never fires. Mask a child instead. */
+      .mask > * { clip-path: inset(0 0 100% 0); transition: clip-path 1.25s var(--ease-out) 0.12s; }
+      .mask.in > * { clip-path: inset(0 0 0 0); }
+
+      /* ============================================================
+         01 — O NAS
+         ============================================================ */
+      .about-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+        gap: clamp(2rem, 6vw, 6rem);
+        align-items: center;
+      }
+      .about-figure {
+        position: relative;
+        align-self: stretch;
+        min-height: 420px;
+      }
+      .about-figure img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: relative;
+        z-index: 1;
+      }
+      .about-figure::after {
+        content: "";
+        position: absolute;
+        inset: clamp(14px, 2vw, 26px) calc(-1 * clamp(14px, 2vw, 26px)) calc(-1 * clamp(14px, 2vw, 26px))
+          clamp(14px, 2vw, 26px);
+        border: 1px solid var(--brass);
+        opacity: 0.55;
+        z-index: 0;
+      }
+      .etym {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 0.5rem 1.6rem;
+        margin: 2rem 0 1.75rem;
+        padding: 1.4rem 0;
+        border-block: 1px solid var(--rule);
+      }
+      .etym b {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(1.5rem, 1rem + 1.6vw, 2.2rem);
+        font-weight: 400;
+        font-style: italic;
+        color: var(--ink);
+      }
+      .etym i {
+        font-style: normal;
+        font-size: 0.68rem;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: var(--brass);
+      }
+      .etym .plus { color: var(--brass); font-size: 1.2rem; }
+
+      .pill-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin: 1.75rem 0 2.25rem;
+      }
+      .pill {
+        font-size: 0.66rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        padding: 0.55em 1.05em;
+        border: 1px solid var(--rule);
+        color: var(--muted);
+        transition: border-color 0.4s var(--ease), color 0.4s var(--ease), background 0.4s var(--ease);
+      }
+      .pill:hover { border-color: var(--brass); color: var(--ink); background: rgba(165, 131, 75, 0.07); }
+
+      /* stats */
+      .stats {
+        border-top: 1px solid var(--rule);
+        margin-top: clamp(3rem, 7vw, 5.5rem);
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .stat {
+        padding: clamp(1.6rem, 3vw, 2.6rem) clamp(0.75rem, 2vw, 2rem);
+        border-right: 1px solid var(--rule);
+      }
+      .stat:last-child { border-right: 0; }
+      .stat b {
+        display: block;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-size: clamp(2.4rem, 1.5rem + 3vw, 4.2rem);
+        line-height: 1;
+        color: var(--ink);
+      }
+      .stat span {
+        display: block;
+        margin-top: 0.8rem;
+        font-size: 0.64rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--muted-2);
+      }
+      @media (max-width: 900px) {
+        .about-grid { grid-template-columns: 1fr; }
+        .about-figure { min-height: 320px; order: -1; }
+        .stats { grid-template-columns: repeat(2, 1fr); }
+        .stat:nth-child(2) { border-right: 0; }
+        .stat:nth-child(3), .stat:nth-child(4) { border-top: 1px solid var(--rule); }
+      }
+
+      /* ============================================================
+         02 — OFERTA (tabbed atelier)
+         ============================================================ */
+      .offer { background: var(--bone-2); }
+
+      .tabs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: clamp(1.2rem, 3vw, 3rem);
+        border-bottom: 1px solid var(--rule);
+        margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
+      }
+      .tab {
+        position: relative;
+        background: none;
+        border: 0;
+        padding: 0 0 1.1rem;
+        cursor: pointer;
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(1.4rem, 1rem + 1.4vw, 2.3rem);
+        font-weight: 300;
+        color: var(--muted-2);
+        letter-spacing: 0.01em;
+        transition: color 0.45s var(--ease);
+        display: inline-flex;
+        align-items: baseline;
+        gap: 0.6rem;
+      }
+      .tab sup {
+        font-family: "Jost", sans-serif;
+        font-size: 0.6rem;
+        letter-spacing: 0.14em;
+        color: var(--brass);
+        opacity: 0.6;
+        transition: opacity 0.4s;
+      }
+      .tab::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        height: 1px;
+        width: 100%;
+        background: var(--brass);
+        transform: scaleX(0);
+        transform-origin: 0 50%;
+        transition: transform 0.6s var(--ease-out);
+      }
+      .tab:hover { color: var(--ink); }
+      .tab[aria-selected="true"] { color: var(--ink); }
+      .tab[aria-selected="true"]::after { transform: scaleX(1); }
+      .tab[aria-selected="true"] sup { opacity: 1; }
+
+      .panel { display: none; }
+      .panel.is-active { display: block; animation: panelIn 0.8s var(--ease-out) both; }
+      @keyframes panelIn {
+        from { opacity: 0; transform: translateY(16px); }
+        to { opacity: 1; transform: none; }
+      }
+
+      .panel-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+        gap: clamp(2rem, 5vw, 5rem);
+        align-items: start;
+      }
+      .panel-media {
+        position: relative;
+        overflow: hidden;
+      }
+      .panel-media img {
+        width: 100%;
+        aspect-ratio: 3 / 4;
+        object-fit: cover;
+        transform: scale(1.02);
+        transition: transform 1.4s var(--ease);
+      }
+      .panel-media:hover img { transform: scale(1.07); }
+      .panel-media figcaption {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        padding: 2.4rem 1.6rem 1.3rem;
+        background: linear-gradient(transparent, rgba(0, 19, 0, 0.82));
+        color: var(--bone);
+        font-size: 0.64rem;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+      }
+      .panel-copy h3 {
+        font-size: clamp(2rem, 1.2rem + 2.6vw, 3.4rem);
+        margin-bottom: 1.2rem;
+      }
+      .panel-copy h3 em { font-style: italic; color: var(--brass); }
+      .panel-copy > p { max-width: 62ch; }
+      .panel-list {
+        list-style: none;
+        margin: 1.6rem 0 0;
+        padding: 0;
+        columns: 2;
+        column-gap: 2.5rem;
+      }
+      .panel-list li {
+        break-inside: avoid;
+        padding-left: 1.3em;
+        position: relative;
+        font-size: 0.94rem;
+        color: var(--muted);
+        margin-bottom: 0.35em;
+      }
+      .panel-list li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.85em;
+        width: 8px;
+        height: 1px;
+        background: var(--brass);
+      }
+
+      /* price ledger */
+      .ledger {
+        margin-top: clamp(2rem, 4vw, 3rem);
+        border-top: 1px solid var(--rule);
+      }
+      .ledger-row {
+        display: flex;
+        align-items: baseline;
+        gap: 0.9rem;
+        padding: 1.05rem 0.4rem 1.05rem 0;
+        border-bottom: 1px solid var(--rule);
+        transition: background 0.45s var(--ease), padding-left 0.45s var(--ease);
+      }
+      a.ledger-row:hover { background: rgba(165, 131, 75, 0.08); padding-left: 0.9rem; }
+      .ledger-row .nm {
+        font-size: 0.98rem;
+        color: var(--ink);
+        font-weight: 400;
+        flex: 0 1 auto;
+      }
+      .ledger-row .leader {
+        flex: 1 1 auto;
+        height: 1px;
+        min-width: 1.5rem;
+        border-bottom: 1px dotted rgba(36, 31, 25, 0.3);
+        transform: translateY(-4px);
+      }
+      .ledger-row .pr {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.12rem;
+        letter-spacing: 0.02em;
+        color: var(--ink);
+        white-space: nowrap;
+      }
+      .ledger-row .pr small {
+        font-family: "Jost", sans-serif;
+        font-size: 0.6rem;
+        letter-spacing: 0.18em;
+        color: var(--muted-2);
+        margin-left: 0.35em;
+      }
+      .panel-acts {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.2rem 2rem;
+        align-items: center;
+        margin-top: clamp(1.8rem, 3vw, 2.6rem);
+      }
+      @media (max-width: 900px) {
+        .panel-grid { grid-template-columns: 1fr; }
+        .panel-media img { aspect-ratio: 4 / 3; }
+        .panel-list { columns: 1; }
+      }
+      /* narrow: stack the ledger like a menu — name, then price beneath */
+      @media (max-width: 620px) {
+        .ledger-row { flex-wrap: wrap; row-gap: 0.1rem; padding-block: 0.95rem; }
+        .ledger-row .nm { flex: 1 1 100%; }
+        .ledger-row .leader { display: none; }
+        .ledger-row .pr { color: var(--brass); font-size: 1.05rem; }
+        a.ledger-row:hover { padding-left: 0; }
+      }
+
+      /* ============================================================
+         03 — ZESPÓŁ (dark band)
+         ============================================================ */
+      .team {
+        background: var(--onyx);
+        color: var(--bone);
+        overflow: hidden;
+      }
+      .team .sec-no, .team .eyebrow { color: var(--brass-lt); }
+      .team .lede { color: rgba(247, 243, 236, 0.66); }
+      .team .hr { background: var(--rule-dk); }
+
+      .lead-card {
+        display: grid;
+        grid-template-columns: minmax(0, 0.55fr) minmax(0, 1.45fr);
+        gap: clamp(1.75rem, 4vw, 4rem);
+        align-items: center;
+        padding-block: clamp(2.5rem, 5vw, 4rem);
+        border-block: 1px solid var(--rule-dk);
+      }
+      .lead-card .portrait {
+        position: relative;
+      }
+      .lead-card .portrait img {
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+        filter: grayscale(1) contrast(1.02) brightness(1.02);
+        transition: filter 1s var(--ease);
+      }
+      .lead-card:hover .portrait img { filter: grayscale(0); }
+      .lead-card .portrait::before {
+        content: "";
+        position: absolute;
+        inset: auto auto -14px -14px;
+        width: 60%;
+        height: 42%;
+        border-left: 1px solid var(--brass);
+        border-bottom: 1px solid var(--brass);
+        opacity: 0.6;
+      }
+      .lead-card h3 {
+        font-size: clamp(1.9rem, 1.2rem + 2.2vw, 3.1rem);
+        margin-bottom: 0.5rem;
+      }
+      .lead-role {
+        font-size: 0.66rem;
+        letter-spacing: 0.26em;
+        text-transform: uppercase;
+        color: var(--brass-lt);
+        margin-bottom: 1.4rem;
+        display: block;
+      }
+      .lead-card p { color: rgba(247, 243, 236, 0.7); max-width: 62ch; }
+      .quote {
+        font-family: "Cormorant Garamond", serif;
+        font-style: italic;
+        font-size: clamp(1.15rem, 0.95rem + 0.8vw, 1.6rem);
+        line-height: 1.55;
+        color: var(--brass-pale);
+        margin: 1.6rem 0 0;
+        padding-left: 1.4rem;
+        border-left: 1px solid var(--brass);
+      }
+
+      .rail-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5rem;
+        padding-block: clamp(2.2rem, 4vw, 3.4rem) 1.4rem;
+      }
+      .rail-nav { display: flex; gap: 0.6rem; }
+      .rail-btn {
+        width: 46px;
+        height: 46px;
+        border: 1px solid var(--rule-dk);
+        background: transparent;
+        color: var(--bone);
+        cursor: pointer;
+        display: grid;
+        place-items: center;
+        transition: border-color 0.4s var(--ease), background 0.4s var(--ease), color 0.4s;
+      }
+      .rail-btn:hover { border-color: var(--brass); background: var(--brass); color: var(--onyx); }
+      .rail-btn svg { width: 15px; height: 15px; }
+
+      .rail {
+        display: flex;
+        gap: clamp(1rem, 2vw, 1.75rem);
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 2rem;
+        scrollbar-width: none;
+        cursor: grab;
+      }
+      .rail::-webkit-scrollbar { display: none; }
+      .rail.dragging { cursor: grabbing; scroll-snap-type: none; }
+      .member {
+        flex: 0 0 clamp(210px, 23vw, 288px);
+        scroll-snap-align: start;
+        user-select: none;
+      }
+      .member .ph {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 1.1rem;
+      }
+      .member img {
+        width: 100%;
+        aspect-ratio: 3 / 4;
+        object-fit: cover;
+        object-position: center 18%;
+        filter: grayscale(1) brightness(1.03);
+        transform: scale(1.01);
+        transition: filter 0.9s var(--ease), transform 1.2s var(--ease);
+      }
+      .member:hover img { filter: grayscale(0); transform: scale(1.06); }
+      .member .ph::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(transparent 55%, rgba(0, 19, 0, 0.55));
+        opacity: 0;
+        transition: opacity 0.7s var(--ease);
+      }
+      .member:hover .ph::after { opacity: 1; }
+      .member h4 {
+        font-size: 1.32rem;
+        line-height: 1.25;
+        margin-bottom: 0.45rem;
+      }
+      .member span {
+        font-size: 0.62rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: rgba(230, 215, 186, 0.55);
+        line-height: 1.7;
+        display: block;
+      }
+      @media (max-width: 860px) {
+        .lead-card { grid-template-columns: 1fr; }
+        .lead-card .portrait { max-width: 320px; }
+      }
+
+      /* ============================================================
+         04 — ŚCIEŻKA
+         ============================================================ */
+      .path-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        border-top: 1px solid var(--rule);
+      }
+      .step {
+        padding: clamp(1.8rem, 3vw, 2.8rem) clamp(1rem, 2vw, 2rem) clamp(2rem, 4vw, 3rem) 0;
+        border-right: 1px solid var(--rule);
+        position: relative;
+      }
+      .step:last-child { border-right: 0; }
+      .step::before {
+        content: "";
+        position: absolute;
+        top: -1px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background: var(--brass);
+        transition: width 1.1s var(--ease-out) var(--d, 0s);
+      }
+      .step.in::before { width: 100%; }
+      .step b {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 0.9rem;
+        letter-spacing: 0.2em;
+        color: var(--brass);
+        font-weight: 400;
+        display: block;
+        margin-bottom: 1.2rem;
+      }
+      .step h4 {
+        font-size: clamp(1.4rem, 1.1rem + 1vw, 1.9rem);
+        margin-bottom: 0.8rem;
+      }
+      .step p { font-size: 0.92rem; color: var(--muted); margin: 0; }
+      @media (max-width: 900px) {
+        .path-grid { grid-template-columns: 1fr 1fr; }
+        .step:nth-child(2) { border-right: 0; }
+        .step:nth-child(3), .step:nth-child(4) { border-top: 1px solid var(--rule); }
+      }
+      @media (max-width: 560px) {
+        .path-grid { grid-template-columns: 1fr; }
+        .step { border-right: 0; border-top: 1px solid var(--rule); padding-right: 0; }
+        .step:first-child { border-top: 0; }
+      }
+
+      /* ============================================================
+         CTA BAND
+         ============================================================ */
+      .band {
+        position: relative;
+        background: var(--onyx);
+        color: var(--bone);
+        overflow: hidden;
+        isolation: isolate;
+      }
+      .band::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: url("assets/imgs/hero-big.jpg") center 55% / cover no-repeat;
+        opacity: 0.2;
+        filter: grayscale(1) contrast(0.85);
+      }
+      /* vignette keeps the headline off the building's bright facade */
+      .band::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: radial-gradient(
+            68% 86% at 50% 52%,
+            rgba(0, 19, 0, 0.82),
+            rgba(0, 19, 0, 0.5) 62%,
+            rgba(0, 19, 0, 0.88) 100%
+          ),
+          radial-gradient(90% 60% at 50% 0%, rgba(165, 131, 75, 0.18), transparent 65%);
+      }
+      .band-in {
+        text-align: center;
+        padding-block: clamp(4.5rem, 10vw, 8rem);
+        max-width: 60ch;
+        margin-inline: auto;
+      }
+      .band h2 {
+        font-size: clamp(2.3rem, 1.2rem + 4.4vw, 4.6rem);
+        margin: 1.4rem 0 1.4rem;
+      }
+      .band h2 em { font-style: italic; color: var(--brass-pale); }
+      .band p { color: rgba(247, 243, 236, 0.72); margin: 0 auto 2.4rem; max-width: 46ch; }
+      .band .eyebrow { color: var(--brass-lt); }
+      .band .eyebrow::before, .band .eyebrow::after { opacity: 0.5; }
+      .band-acts { display: flex; gap: 0.9rem; justify-content: center; flex-wrap: wrap; }
+      .band-acts .btn:first-child { --bg: var(--bone); --fg: var(--onyx); }
+      .band-acts .btn:first-child:hover { --fg: var(--bone); }
+
+      /* ============================================================
+         05 — KONTAKT
+         ============================================================ */
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: clamp(2rem, 4vw, 4rem);
+        border-top: 1px solid var(--rule);
+        padding-top: clamp(2.5rem, 5vw, 4rem);
+      }
+      .card h4 {
+        font-size: clamp(1.45rem, 1.1rem + 1vw, 1.9rem);
+        margin-bottom: 1.2rem;
+      }
+      .addr { margin-bottom: 1.8rem; }
+      .addr b {
+        display: block;
+        font-weight: 400;
+        font-size: 0.66rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--brass);
+        margin-bottom: 0.5rem;
+      }
+      .addr p { margin: 0; color: var(--muted); line-height: 1.7; }
+      .big-link {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(1.5rem, 1.1rem + 1.4vw, 2.1rem);
+        color: var(--ink);
+        display: inline-block;
+        position: relative;
+        line-height: 1.35;
+      }
+      .big-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0.1em;
+        width: 100%;
+        height: 1px;
+        background: var(--brass);
+        transform: scaleX(0);
+        transform-origin: 0 50%;
+        transition: transform 0.55s var(--ease-out);
+      }
+      .big-link:hover::after { transform: scaleX(1); }
+      .hours {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 0.7rem 0;
+        border-bottom: 1px solid var(--rule);
+        font-size: 0.86rem;
+        color: var(--muted);
+      }
+      .hours:first-of-type { border-top: 1px solid var(--rule); }
+      .recepcja { display: flex; align-items: center; gap: 0.75rem; margin-top: 1.6rem; }
+      .recepcja img {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        object-fit: cover;
+        filter: grayscale(1);
+        transition: filter 0.6s var(--ease);
+      }
+      .recepcja:hover img { filter: grayscale(0); }
+      .recepcja p { margin: 0; font-size: 0.8rem; color: var(--muted-2); line-height: 1.55; }
+      .zl-frame {
+        border: 1px solid var(--rule);
+        padding: 0.5rem;
+        background: #fff;
+      }
+      @media (max-width: 960px) {
+        .contact-grid { grid-template-columns: 1fr; }
+      }
+
+      /* ============================================================
+         FOOTER
+         ============================================================ */
+      .foot {
+        background: var(--onyx);
+        color: rgba(247, 243, 236, 0.66);
+        padding-block: clamp(3rem, 6vw, 5rem) 1.6rem;
+      }
+      .foot-top {
+        display: grid;
+        grid-template-columns: minmax(0, 1.6fr) repeat(3, minmax(0, 1fr));
+        gap: clamp(2rem, 4vw, 3.5rem);
+        padding-bottom: clamp(2.5rem, 5vw, 4rem);
+        border-bottom: 1px solid var(--rule-dk);
+      }
+      .foot img.mark {
+        height: 38px;
+        width: auto;
+        filter: invert(1) brightness(2);
+        margin-bottom: 1.6rem;
+      }
+      .foot-note {
+        font-family: "Cormorant Garamond", serif;
+        font-style: italic;
+        font-size: 1.3rem;
+        color: rgba(230, 215, 186, 0.8);
+        line-height: 1.5;
+        max-width: 26ch;
+      }
+      .foot h5 {
+        font-family: "Jost", sans-serif;
+        font-size: 0.64rem;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: var(--brass-lt);
+        margin: 0 0 1.2rem;
+        font-weight: 400;
+      }
+      .foot ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.6rem; }
+      .foot ul a {
+        font-size: 0.88rem;
+        transition: color 0.35s var(--ease), padding-left 0.35s var(--ease);
+        display: inline-block;
+      }
+      .foot ul a:hover { color: var(--brass-lt); padding-left: 6px; }
+      .foot-btm {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem 2rem;
+        justify-content: space-between;
+        padding-top: 1.6rem;
+        font-size: 0.7rem;
+        letter-spacing: 0.1em;
+      }
+      .foot-btm a:hover { color: var(--brass-lt); }
+      @media (max-width: 860px) {
+        .foot-top { grid-template-columns: 1fr 1fr; }
+      }
+
+      /* floating mobile CTA */
+      .float-cta {
+        position: fixed;
+        left: 1rem;
+        right: 1rem;
+        bottom: 1rem;
+        z-index: 55;
+        display: none;
+        justify-content: center;
+        transform: translateY(150%);
+        transition: transform 0.6s var(--ease-out);
+      }
+      .float-cta.show { transform: none; }
+      .float-cta .btn { width: 100%; justify-content: center; box-shadow: 0 10px 40px rgba(0, 19, 0, 0.35); }
+      @media (max-width: 1080px) {
+        .float-cta { display: flex; }
+      }
+
+      /* ---------- accessibility ---------- */
+      .skip {
+        position: absolute;
+        left: -9999px;
+        top: 0;
+        background: var(--onyx);
+        color: var(--bone);
+        padding: 0.8rem 1.2rem;
+        z-index: 9999;
+        font-size: 0.75rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+      .skip:focus { left: 0; }
+      :focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.001ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.001ms !important;
+          scroll-behavior: auto !important;
+        }
+        .rv { opacity: 1; transform: none; }
+        .rv-mask { clip-path: none; }
+        .hero h1 .ln > span { transform: none; }
+        .hero .eyebrow, .hero-sub, .hero-acts, .hero-meta { opacity: 1; }
+        .grain { display: none; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="skip" href="#main">Przejdź do treści</a>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="progress" id="progress" aria-hidden="true"></div>
+
+    <!-- ══════════════ UTILITY STRIP ══════════════ -->
+    <div class="strip">
+      <div class="strip-in">
+        <div class="strip-grp">
+          <span class="strip-hide">Pon–Pt&nbsp;&nbsp;8:00–20:00</span>
+          <span class="dot strip-hide">✦</span>
+          <a href="tel:+48221032122">+48 22 103 21 22</a>
+        </div>
+        <div class="strip-grp strip-hide">
+          <a href="mailto:klinika@artisanclinic.pl">klinika@artisanclinic.pl</a>
+        </div>
+        <div class="strip-grp">
+          <span class="soc">
+            <a href="https://www.instagram.com/artisan_clinic_/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.336 3.608 1.311.975.975 1.249 2.242 1.311 3.608.058 1.267.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.336 2.633-1.311 3.608-.975.975-2.242 1.249-3.608 1.311-1.267.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.336-3.608-1.311-.975-.975-1.249-2.242-1.311-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.336-2.633 1.311-3.608C4.519 2.567 5.786 2.293 7.152 2.231 8.418 2.175 8.797 2.163 12 2.163zm0 5.675A4.162 4.162 0 1 0 12 16.162 4.162 4.162 0 0 0 12 7.838zm0 6.862a2.7 2.7 0 1 1 0-5.4 2.7 2.7 0 0 1 0 5.4zm5.338-7.025a.972.972 0 1 1-1.944 0 .972.972 0 0 1 1.944 0z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.facebook.com/p/Artisan-Clinic-61556258492025/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Facebook"
+            >
+              <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M22.675 0h-21.35C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"
+                />
+              </svg>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════ NAV ══════════════ -->
+    <header class="nav" id="nav">
+      <div class="nav-in">
+        <a href="redesign.html" class="brand" aria-label="Artisan Clinic — strona główna">
+          <img src="assets/imgs/logo2.png" alt="Artisan Clinic" />
+        </a>
+
+        <nav class="nav-links" aria-label="Główna">
+          <a href="#onas">O nas</a>
+          <a href="#oferta">Oferta</a>
+          <a href="cennik.html">Cennik</a>
+          <a href="#zespol">Zespół</a>
+          <a href="konsultacja-online.html">Konsultacja online</a>
+          <a href="#kontakt">Kontakt</a>
+        </nav>
+
+        <div class="nav-cta">
+          <a href="en/index.html" class="lang" aria-label="English version">
+            <svg width="20" height="10" viewBox="0 0 60 30" aria-hidden="true">
+              <clipPath id="fs"><path d="M0,0 v30 h60 v-30 z" /></clipPath>
+              <clipPath id="ft"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z" /></clipPath>
+              <g clip-path="url(#fs)">
+                <path d="M0,0 v30 h60 v-30 z" fill="#012169" />
+                <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6" />
+                <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#ft)" stroke="#C8102E" stroke-width="4" />
+                <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10" />
+                <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6" />
+              </g>
+            </svg>
+            EN
+          </a>
+          <a href="https://www.znanylekarz.pl/z/ocgtMU" target="_blank" rel="noopener" class="btn btn--light">
+            Umów wizytę
+          </a>
+          <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="sheet">
+            <span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="sheet" id="sheet">
+        <a class="big" href="#onas" style="--d: 0.08s">O nas</a>
+        <a class="big" href="#oferta" style="--d: 0.14s">Oferta</a>
+        <a class="big" href="cennik.html" style="--d: 0.2s">Cennik</a>
+        <a class="big" href="#zespol" style="--d: 0.26s">Zespół</a>
+        <a class="big" href="konsultacja-online.html" style="--d: 0.32s">Konsultacja online</a>
+        <a class="big" href="#kontakt" style="--d: 0.38s">Kontakt</a>
+        <div class="sheet-foot">
+          <a href="tel:+48221032122">+48 22 103 21 22</a>
+          <a href="mailto:klinika@artisanclinic.pl">klinika@artisanclinic.pl</a>
+          <a href="en/index.html">English version</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ══════════════ HERO ══════════════ -->
+      <section class="hero" id="hero">
+        <div class="hero-media" aria-hidden="true">
+          <video
+            src="assets/imgs/Artisan.mp4"
+            poster="assets/imgs/poster.jpg"
+            autoplay
+            loop
+            muted
+            playsinline
+            preload="metadata"
+          ></video>
+        </div>
+        <div class="hero-veil" aria-hidden="true"></div>
+
+        <div class="hero-body">
+          <p class="eyebrow">Warszawa — od 2023</p>
+          <h1>
+            <span class="ln"><span>Sztuka piękna.</span></span>
+            <span class="ln"><span><em>Precyzja</em> leczenia.</span></span>
+          </h1>
+          <p class="hero-sub">
+            Klinika chirurgii plastycznej i medycyny estetycznej, w której o rezultacie decyduje warsztat —
+            doświadczenie zespołu, wybór techniki i uważność wobec proporcji.
+          </p>
+          <div class="hero-acts">
+            <a href="https://www.znanylekarz.pl/z/ocgtMU" target="_blank" rel="noopener" class="btn">
+              Umów konsultację <span class="arw">→</span>
+            </a>
+            <a href="#oferta" class="btn btn--light">Zobacz ofertę</a>
+          </div>
+        </div>
+
+        <div class="hero-meta">
+          <div class="hero-meta-in">
+            <span class="hero-meta-hide">Chirurgia plastyczna &nbsp;·&nbsp; Medycyna estetyczna</span>
+            <a href="#onas" class="scroll-cue"><i></i> Przewiń</a>
+            <span class="hero-meta-hide">ul. Nasturcjowa 6 &nbsp;·&nbsp; ul. Francuska 42</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════ TICKER ══════════════ -->
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <span>Deep Plane Face Lifting</span><span>Rynoplastyka</span><span>Chirurgia piersi</span
+          ><span>Rekonstrukcja po mastektomii</span><span>Plastyka brzucha</span><span>Lifting szyi</span
+          ><span>Medycyna estetyczna</span><span>Deep Plane Face Lifting</span><span>Rynoplastyka</span
+          ><span>Chirurgia piersi</span><span>Rekonstrukcja po mastektomii</span><span>Plastyka brzucha</span
+          ><span>Lifting szyi</span><span>Medycyna estetyczna</span>
+        </div>
+      </div>
+
+      <!-- ══════════════ 01 — O NAS ══════════════ -->
+      <section class="sec" id="onas">
+        <div class="wrap">
+          <div class="sec-head">
+            <div>
+              <span class="sec-no rv">01 / O nas</span>
+              <h2 class="display rv" style="--d: 0.06s">Klinika, <em>która zaczyna się</em> od nazwy</h2>
+            </div>
+            <p class="lede rv" style="--d: 0.12s">
+              Artisan Clinic to nowoczesna klinika chirurgii plastycznej i medycyny estetycznej w Warszawie. Nasza
+              nazwa nie jest przypadkowa — odzwierciedla poczucie estetyki, harmonii, piękna, precyzji i szacunku dla
+              zdrowia pacjenta.
+            </p>
+          </div>
+
+          <div class="about-grid">
+            <div>
+              <div class="etym rv">
+                <b>art</b><i>sztuka</i>
+                <span class="plus">+</span>
+                <b>sanatio</b><i>uzdrowienie</i>
+              </div>
+
+              <p class="rv" style="--d: 0.06s">
+                Wykonujemy zabiegi wysokospecjalistyczne z zakresu chirurgii plastycznej, a także zabiegi
+                chirurgiczno-onkologiczne — w tym rekonstrukcje piersi. Oferujemy również małoinwazyjne procedury
+                medycyny estetycznej: wypełniacze, botoks, biostymulatory, laseroterapię oraz modelowanie sylwetki.
+              </p>
+
+              <div class="pill-row rv" style="--d: 0.1s">
+                <span class="pill">Deep plane face lifting</span>
+                <span class="pill">Plastyka nosa</span>
+                <span class="pill">Plastyka brzucha</span>
+                <span class="pill">Powiększanie piersi</span>
+                <span class="pill">Plastyka powiek</span>
+                <span class="pill">Lifting szyi</span>
+                <span class="pill">Korekta uszu</span>
+              </div>
+
+              <a href="zespol.html" class="ulink rv" style="--d: 0.14s">Poznaj nasz zespół <span>→</span></a>
+            </div>
+
+            <figure class="about-figure rv mask" style="--d: 0.08s; margin: 0">
+              <img src="assets/imgs/o-nas.jpg" alt="Wizytówka Artisan Clinic obok bukietu piwonii" loading="lazy" />
+            </figure>
+          </div>
+
+          <div class="stats">
+            <div class="stat rv"><b data-count="11">11</b><span>Specjalistów w zespole</span></div>
+            <div class="stat rv" style="--d: 0.08s"><b data-count="70" data-suffix="+">70+</b><span>Procedur w ofercie</span></div>
+            <div class="stat rv" style="--d: 0.16s"><b data-count="20" data-suffix="+">20+</b><span>Lat praktyki lekarskiej</span></div>
+            <div class="stat rv" style="--d: 0.24s"><b data-count="2">2</b><span>Adresy w Warszawie</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════ 02 — OFERTA ══════════════ -->
+      <section class="sec offer" id="oferta">
+        <div class="wrap">
+          <div class="sec-head">
+            <div>
+              <span class="sec-no rv">02 / Oferta</span>
+              <h2 class="display rv" style="--d: 0.06s">Cztery <em>obszary</em> pracy</h2>
+            </div>
+            <p class="lede rv" style="--d: 0.12s">
+              Poniżej wybrane procedury wraz z orientacyjnym zakresem cen. Ostateczna wycena ustalana jest podczas
+              konsultacji — po kwalifikacji i doborze techniki do indywidualnych wskazań.
+            </p>
+          </div>
+
+          <div class="tabs" role="tablist" aria-label="Obszary oferty">
+            <button class="tab" role="tab" id="tab-twarz" aria-controls="p-twarz" aria-selected="true">
+              <sup>01</sup>Twarz
+            </button>
+            <button class="tab" role="tab" id="tab-cialo" aria-controls="p-cialo" aria-selected="false">
+              <sup>02</sup>Ciało
+            </button>
+            <button class="tab" role="tab" id="tab-piersi" aria-controls="p-piersi" aria-selected="false">
+              <sup>03</sup>Piersi
+            </button>
+            <button class="tab" role="tab" id="tab-skora" aria-controls="p-skora" aria-selected="false">
+              <sup>04</sup>Skóra
+            </button>
+          </div>
+
+          <!-- TWARZ -->
+          <div class="panel is-active" id="p-twarz" role="tabpanel" aria-labelledby="tab-twarz">
+            <div class="panel-grid">
+              <figure class="panel-media" style="margin: 0">
+                <img src="assets/imgs/oferta_twarz-2.jpg" alt="Zabiegi w obrębie twarzy" loading="lazy" />
+                <figcaption>01 — Twarz</figcaption>
+              </figure>
+              <div class="panel-copy">
+                <h3>Przywrócić <em>proporcje</em>, nie zmienić twarzy</h3>
+                <p>
+                  Szeroki zakres zabiegów chirurgii plastycznej i medycyny estetycznej, które pozwalają przywrócić
+                  młodszy wygląd, poprawić proporcje twarzy oraz podkreślić naturalne piękno.
+                </p>
+                <ul class="panel-list">
+                  <li>Lifting twarzy (facelift)</li>
+                  <li>Korekcja nosa</li>
+                  <li>Plastyka powiek, uszu i brody</li>
+                  <li>Lifting twarzy nićmi Aptos</li>
+                  <li>Lipofilling z komórkami macierzystymi</li>
+                </ul>
+
+                <div class="ledger">
+                  <a class="ledger-row" href="lifting-twarzy.html">
+                    <span class="nm">Lifting twarzy i szyi Deep Plane</span><span class="leader"></span>
+                    <span class="pr">60 000 – 85 000 <small>PLN</small></span>
+                  </a>
+                  <a class="ledger-row" href="face-lift-nicmi.html">
+                    <span class="nm">Lifting twarzy nićmi Aptos</span><span class="leader"></span>
+                    <span class="pr">14 000 <small>PLN</small></span>
+                  </a>
+                  <a class="ledger-row" href="korekcja-nosa.html">
+                    <span class="nm">Korekcja nosa — totalna</span><span class="leader"></span>
+                    <span class="pr">28 000 – 32 000 <small>PLN</small></span>
+                  </a>
+                  <a class="ledger-row" href="korekcja-nosa.html">
+                    <span class="nm">Korekcja nosa — część chrzęstna</span><span class="leader"></span>
+                    <span class="pr">22 000 – 25 000 <small>PLN</small></span>
+                  </a>
+                  <a class="ledger-row" href="korekcja-powiek.html">
+                    <span class="nm">Korekcja powiek górnych</span><span class="leader"></span>
+                    <span class="pr">10 000 – 12 000 <small>PLN</small></span>
+                  </a>
+                  <a class="ledger-row" href="plastyka-odstajacych-uszu.html">
+                    <span class="nm">Plastyka odstających uszu</span><span class="leader"></span>
+                    <span class="pr">10 000 – 12 000 <small>PLN</small></span>
+                  </a>
+                </div>
+
+                <div class="panel-acts">
+                  <a href="zabiegi.html#twarz" class="btn">Pełna oferta — twarz <span class="arw">→</span></a>
+                  <a href="https://www.znanylekarz.pl/z/ocgtMU" target="_blank" rel="noopener" class="ulink"
+                    >Umów wizytę</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CIAŁO -->
+          <div class="panel" id="p-cialo" role="tabpanel" aria-labelledby="tab-cialo" hidden>
+            <div class="panel-grid">
+              <figure class="panel-media" style="margin: 0">
+                <img src="assets/imgs/oferta_cialo.jpg" alt="Zabiegi modelujące sylwetkę" loading="lazy" />
+                <figcaption>02 — Ciało</figcaption>
+              </figure>
+              <div class="panel-copy">
+                <h3>Sylwetka — <em>modelowanie</em> i leczenie</h3>
+                <p>
+                  Zabiegi skoncentrowane na modelowaniu sylwetki, poprawie kondycji skóry oraz leczeniu wybranych
+                  schorzeń — od chirurgii plastycznej po flebologię i nowoczesne procedury estetyczne.
+                </p>
+                <ul class="panel-list">
+                  <li>Plastyka brzucha</li>
+                  <li>Plastyka ramion</li>
+                  <li>Liposukcja</li>
+                  <li>Flebologia — leczenie żył i naczyń</li>
+                  <li>Argo Plasma — obkurczanie skóry</li>
+                  <li>Infini Filler Body</li>
+                </ul>
+
+                <div class="ledger">
+                  <a class="ledger-row" href="liposukcja.html">
+                    <span class="nm">Liposukcja — brzuch</span><span class="leader"></span>
+                    <span class="pr">12 000 – 16 000 <small>PLN</small></span>
+                  </a>
+                  <a class="ledger-row" href="liposukcja.html">
+                    <span class="nm">Liposukcja — talia</span><span class="leader"></span>
+                    <span class="pr">10 000 – 12 000 <small>PLN</small></span>
+                  </a>
+                  <a class="ledger-row" href="plastyka-ud.html">
+                    <span class="nm">Plastyka ud</span><span class="leader"></span>
+                    <span class="pr">26 000 – 35 000 <small>PLN</small></span>
+                  </a>
+                  <a class="ledger-row" href="plastyka-lydek-powiekszenie-implantami.html">
+                    <span class="nm">Plastyka łydek (implanty)</span><span class="leader"></span>
+                    <span class="pr">19 000 <small>PLN</small></span>
+                  </a>
+                  <a class="ledger-row" href="plastyka-ramion.html">
+                    <span class="nm">Plastyka ramion</span><span class="leader"></span>
+                    <span class="pr">22 000 – 25 000 <small>PLN</small></span>
+                  </a>
+                  <a class="ledger-row" href="argo-plasma-obkurczanie-skory.html">
+                    <span class="nm">Obkurczanie skóry ud — Argo Plasma</span><span class="leader"></span>
+                    <span class="pr">6 000 <small>PLN</small></span>
+                  </a>
+                </div>
+
+                <div class="panel-acts">
+                  <a href="zabiegi.html#cialo" class="btn">Pełna oferta — ciało <span class="arw">→</span></a>
+                  <a href="https://www.znanylekarz.pl/z/ocgtMU" target="_blank" rel="noopener" class="ulink"
+                    >Umów wizytę</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PIERSI -->
+          <div class="panel" id="p-piersi" role="tabpanel" aria-labelledby="tab-piersi" hidden>
+            <div class="panel-grid">
+              <figure class="panel-media" style="margin: 0">
+                <img src="assets/imgs/oferta_piersi.jpg" alt="Chirurgia plastyczna piersi" loading="lazy" />
+                <figcaption>03 — Piersi</figcaption>
+              </figure>
+              <div class="panel-copy">
+                <h3>Kształt, <em>proporcja</em>, rekonstrukcja</h3>
+                <p>
+                  Pełen zakres procedur chirurgii plastycznej piersi — dostosowanych do indywidualnych potrzeb
+                  pacjentek i pacjentów, z zachowaniem naturalnych proporcji sylwetki.
+                </p>
+                <ul class="panel-list">
+                  <li>Powiększanie (implanty, lipotransfer)</li>
+                  <li>Redukcja piersi</li>
+                  <li>Lifting i modelowanie</li>
+                  <li>Rekonstrukcja po mastektomii</li>
+                  <li>Leczenie ginekomastii</li>
+                </ul>
+
+                <div class="ledger">
+                  <a class="ledger-row" href="powiekszanie-piersi.html">
+                    <span class="nm">Powiększenie piersi implantami</span><span class="leader"></span>
+                    <span class="pr">27 000 – 34 000 <small>PLN</small></span>
+                  </a>
+                  <a class="ledger-row" href="podniesienie-piersi.html">
+                    <span class="nm">Podniesienie piersi</span><span class="leader"></span>
+                    <span class="pr">27 000 – 33 000 <small>PLN</small></span>
+                  </a>
+                  <a class="ledger-row" href="podniesienie-piersi-nicmi-aptos-podskorny-biustonosz.html">
+                    <span class="nm">Podniesienie nićmi Aptos</span><span class="leader"></span>
+                    <span class="pr">24 000 – 26 000 <small>PLN</small></span>
+                  </a>
+                  <a class="ledger-row" href="redukcja-piersi.html">
+                    <span class="nm">Zmniejszenie piersi — redukcja</span><span class="leader"></span>
+                    <span class="pr">27 000 – 35 000 <small>PLN</small></span>
+                  </a>
+                  <div class="ledger-row">
+                    <span class="nm">Wymiana implantów (obie piersi)</span><span class="leader"></span>
+                    <span class="pr">29 000 – 34 000 <small>PLN</small></span>
+                  </div>
+                  <a class="ledger-row" href="plastyka-wciagnietych-brodawek.html">
+                    <span class="nm">Plastyka wciągniętych brodawek</span><span class="leader"></span>
+                    <span class="pr">8 000 <small>PLN</small></span>
+                  </a>
+                </div>
+
+                <div class="panel-acts">
+                  <a href="zabiegi.html#piersi" class="btn">Pełna oferta — piersi <span class="arw">→</span></a>
+                  <a href="https://www.znanylekarz.pl/z/ocgtMU" target="_blank" rel="noopener" class="ulink"
+                    >Umów wizytę</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SKÓRA -->
+          <div class="panel" id="p-skora" role="tabpanel" aria-labelledby="tab-skora" hidden>
+            <div class="panel-grid">
+              <figure class="panel-media" style="margin: 0">
+                <img src="assets/imgs/oferta_skora.jpg" alt="Zabiegi na skórę" loading="lazy" />
+                <figcaption>04 — Skóra</figcaption>
+              </figure>
+              <div class="panel-copy">
+                <h3>Kondycja skóry <em>i czystość</em> detalu</h3>
+                <p>
+                  Zabiegi ukierunkowane na odmłodzenie, rewitalizację i poprawę kondycji skóry, a także usuwanie zmian
+                  skórnych oraz korekcję niedoskonałości.
+                </p>
+                <ul class="panel-list">
+                  <li>Usuwanie znamion i blizn</li>
+                  <li>Botox, kwas hialuronowy, wypełniacze</li>
+                  <li>Biostymulatory</li>
+                  <li>Laseroterapia i fotoodmładzanie</li>
+                  <li>Depilacja laserowa</li>
+                  <li>Endermologia</li>
+                </ul>
+
+                <div class="ledger">
+                  <a class="ledger-row" href="korekcja-blizn-chirurgiczna.html">
+                    <span class="nm">Korekcja blizn (chirurgiczna)</span><span class="leader"></span>
+                    <span class="pr">od 2 200 <small>PLN</small></span>
+                  </a>
+                  <a class="ledger-row" href="wyciecie-znamienia.html">
+                    <span class="nm">Wycięcie znamienia</span><span class="leader"></span>
+                    <span class="pr">2 200 <small>PLN</small></span>
+                  </a>
+                  <a class="ledger-row" href="mezoterapia-mikroiglowa-micropen.html">
+                    <span class="nm">Mezoterapia mikroigłowa</span><span class="leader"></span>
+                    <span class="pr">od 800 <small>PLN</small></span>
+                  </a>
+                  <a class="ledger-row" href="fotoodmladzanie-laserowe-laser-ipl.html">
+                    <span class="nm">Laser IPL fotoodmładzanie — twarz</span><span class="leader"></span>
+                    <span class="pr">600 <small>PLN</small></span>
+                  </a>
+                  <a class="ledger-row" href="fotoodmladzanie-laserowe-laser-ipl.html">
+                    <span class="nm">Laser IPL fotoodmładzanie — szyja</span><span class="leader"></span>
+                    <span class="pr">400 <small>PLN</small></span>
+                  </a>
+                  <a class="ledger-row" href="argo-plasma-obkurczanie-skory.html">
+                    <span class="nm">Obkurczanie skóry — Argo Plasma</span><span class="leader"></span>
+                    <span class="pr">6 000 <small>PLN / okolica</small></span>
+                  </a>
+                </div>
+
+                <div class="panel-acts">
+                  <a href="zabiegi.html#skora" class="btn">Pełna oferta — skóra <span class="arw">→</span></a>
+                  <a href="https://www.znanylekarz.pl/z/ocgtMU" target="_blank" rel="noopener" class="ulink"
+                    >Umów wizytę</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════ 03 — ZESPÓŁ ══════════════ -->
+      <section class="sec team" id="zespol">
+        <div class="wrap">
+          <div class="sec-head">
+            <div>
+              <span class="sec-no rv">03 / Zespół</span>
+              <h2 class="display rv" style="--d: 0.06s">Ludzie, <em>którzy operują</em></h2>
+            </div>
+            <p class="lede rv" style="--d: 0.12s">
+              Chirurdzy plastyczni, chirurdzy onkologiczni, specjaliści medycyny estetycznej i kosmetolodzy —
+              jedenaścioro specjalistów, którzy prowadzą pacjenta od konsultacji po rekonwalescencję.
+            </p>
+          </div>
+
+          <article class="lead-card rv">
+            <div class="portrait">
+              <img src="assets/imgs/zespol/dr-Witwicki.jpg" alt="dr n. med. Tadeusz Witwicki" loading="lazy" />
+            </div>
+            <div>
+              <h3>dr n. med. Tadeusz&nbsp;Witwicki</h3>
+              <span class="lead-role">Chirurgia plastyczna, rekonstrukcyjna i estetyczna</span>
+              <p>
+                Kształcił się na warszawskiej Akademii Medycznej, odbywał szkolenia w Pekinie, Glasgow, Los Angeles i
+                Gandawie. Specjalizację zdobył w Klinice Chirurgii Plastycznej CMKP w Warszawie pod kierunkiem twórcy
+                polskiej chirurgii plastycznej, prof. Michała Kraussa. Członek założyciel Polskiego Towarzystwa
+                Medycyny Estetycznej i Anti-Aging, międzynarodowy trener technik APTOS, autor licznych publikacji.
+              </p>
+              <p class="quote">Od przeszło dwudziestu lat prowadzi własną praktykę lekarską.</p>
+              <div style="margin-top: 1.8rem">
+                <a href="zespol.html" class="ulink on-dark">Pełne biogramy zespołu <span>→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <div class="rail-head">
+            <span class="eyebrow">Pozostali specjaliści</span>
+            <div class="rail-nav">
+              <button class="rail-btn" id="railPrev" aria-label="Poprzedni">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                  <path d="M15 5l-7 7 7 7" />
+                </svg>
+              </button>
+              <button class="rail-btn" id="railNext" aria-label="Następny">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                  <path d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="wrap">
+          <div class="rail" id="rail">
+            <a class="member" href="zespol.html">
+              <div class="ph"><img src="assets/imgs/zespol/Dr-Maciej-Mazurek.jpg" alt="" loading="lazy" /></div>
+              <h4>dr n. med. Maciej Mazurek</h4>
+              <span>Chirurgia plastyczna</span>
+            </a>
+            <a class="member" href="zespol.html">
+              <div class="ph"><img src="assets/imgs/zespol/Pietruski_2-1-600x832.jpg" alt="" loading="lazy" /></div>
+              <h4>dr hab. n. med. Piotr Pietruski</h4>
+              <span>Chirurgia plastyczna i rekonstrukcyjna</span>
+            </a>
+            <a class="member" href="zespol.html">
+              <div class="ph"><img src="assets/imgs/zespol/Slawomir-Mazur.jpg" alt="" loading="lazy" /></div>
+              <h4>dr n. med. Sławomir Mazur</h4>
+              <span>Chirurgia onkologiczna</span>
+            </a>
+            <a class="member" href="zespol.html">
+              <div class="ph"><img src="assets/imgs/zespol/Justyna-Jonczyk.jpg" alt="" loading="lazy" /></div>
+              <h4>dr n. med. Justyna Jończyk</h4>
+              <span>Chirurgia plastyczna</span>
+            </a>
+            <a class="member" href="zespol.html">
+              <div class="ph"><img src="assets/imgs/zespol/Natalia-Winiarska.jpg" alt="" loading="lazy" /></div>
+              <h4>dr Natalia Winiarska</h4>
+              <span>Medycyna estetyczna</span>
+            </a>
+            <a class="member" href="zespol.html">
+              <div class="ph"><img src="assets/imgs/zespol/Mitrega-Korab.jpg" alt="" loading="lazy" /></div>
+              <h4>lek. Beata Mitręga-Korab</h4>
+              <span>Chirurgia ogólna, onkologiczna, otolaryngologia</span>
+            </a>
+            <a class="member" href="zespol.html">
+              <div class="ph"><img src="assets/imgs/zespol/Grous.jpg" alt="" loading="lazy" /></div>
+              <h4>dr n. med. Aleksander Grous</h4>
+              <span>Chirurgia ogólna i onkologiczna</span>
+            </a>
+            <a class="member" href="zespol.html">
+              <div class="ph"><img src="assets/imgs/zespol/Aleksandra-Latala.jpg" alt="" loading="lazy" /></div>
+              <h4>lek. Aleksandra Latała</h4>
+              <span>Medycyna estetyczna</span>
+            </a>
+            <a class="member" href="zespol.html">
+              <div class="ph"><img src="assets/imgs/zespol/mgr-krawczyk.png" alt="" loading="lazy" /></div>
+              <h4>mgr Martyna Krawczyk</h4>
+              <span>Kosmetologia</span>
+            </a>
+            <a class="member" href="zespol.html">
+              <div class="ph"><img src="assets/imgs/zespol/Andrzej-Kukwa.png" alt="" loading="lazy" /></div>
+              <h4>prof. dr hab. n. med. Andrzej Kukwa</h4>
+              <span>Otolaryngologia</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════ 04 — ŚCIEŻKA PACJENTA ══════════════ -->
+      <section class="sec" id="sciezka">
+        <div class="wrap">
+          <div class="sec-head">
+            <div>
+              <span class="sec-no rv">04 / Przebieg</span>
+              <h2 class="display rv" style="--d: 0.06s">Od rozmowy <em>do rezultatu</em></h2>
+            </div>
+            <p class="lede rv" style="--d: 0.12s">
+              Konsultacje odbywają się przy ul. Francuskiej 42, zabiegi — w klinice przy ul. Nasturcjowej 6.
+            </p>
+          </div>
+
+          <div class="path-grid">
+            <article class="step rv"><b>01</b><h4>Konsultacja</h4><p>Rozmowa i badanie. Omawiamy oczekiwania, wskazania oraz realne możliwości danej metody.</p></article>
+            <article class="step rv" style="--d: 0.1s"><b>02</b><h4>Plan leczenia</h4><p>Dobór techniki, kwalifikacja, zalecane badania, wycena oraz ustalenie terminu.</p></article>
+            <article class="step rv" style="--d: 0.2s"><b>03</b><h4>Zabieg</h4><p>Procedura prowadzona przez operującego specjalistę w klinice przy ul. Nasturcjowej 6.</p></article>
+            <article class="step rv" style="--d: 0.3s"><b>04</b><h4>Opieka</h4><p>Wizyty kontrolne i kontakt z zespołem na każdym etapie rekonwalescencji.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════ CTA BAND ══════════════ -->
+      <section class="band">
+        <div class="wrap">
+          <div class="band-in">
+            <span class="eyebrow no-rule rv">Konsultacja</span>
+            <h2 class="rv" style="--d: 0.06s">Zacznijmy od <em>rozmowy</em></h2>
+            <p class="rv" style="--d: 0.12s">
+              Wszystkie terminy dostępne są w rezerwacji telefonicznej. Wybrane terminy można zarezerwować online.
+            </p>
+            <div class="band-acts rv" style="--d: 0.18s">
+              <a href="https://www.znanylekarz.pl/z/ocgtMU" target="_blank" rel="noopener" class="btn"
+                >Umów wizytę online <span class="arw">→</span></a
+              >
+              <a href="tel:+48221032122" class="btn btn--light">+48 22 103 21 22</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════ 05 — KONTAKT ══════════════ -->
+      <section class="sec" id="kontakt">
+        <div class="wrap">
+          <div class="sec-head">
+            <div>
+              <span class="sec-no rv">05 / Kontakt</span>
+              <h2 class="display rv" style="--d: 0.06s">Dwa adresy <em>w Warszawie</em></h2>
+            </div>
+            <p class="lede rv" style="--d: 0.12s">
+              Recepcja czynna od poniedziałku do piątku, 8:00–20:00. Odpowiadamy również mailowo.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <div class="card rv">
+              <h4>Lokalizacje</h4>
+              <div class="addr">
+                <b>Artisan Clinic — zabiegi</b>
+                <p>ul. Nasturcjowa 6<br />03-989 Warszawa</p>
+              </div>
+              <div class="addr">
+                <b>Klinika Dr Witwicki — konsultacje</b>
+                <p>ul. Francuska 42<br />03-906 Warszawa</p>
+              </div>
+              <a href="mailto:klinika@artisanclinic.pl" class="ulink">klinika@artisanclinic.pl</a>
+            </div>
+
+            <div class="card rv" style="--d: 0.08s">
+              <h4>Rezerwacje</h4>
+              <a href="tel:+48221032122" class="big-link">+48 22 103 21 22</a>
+              <p style="color: var(--muted); margin-top: 0.6rem">
+                Wszystkie terminy dostępne są w rezerwacji telefonicznej.
+              </p>
+              <div class="hours"><span>Poniedziałek — Piątek</span><span>8:00 — 20:00</span></div>
+              <div class="hours"><span>Sobota — Niedziela</span><span>Kontakt mailowy</span></div>
+              <div class="recepcja">
+                <img src="assets/imgs/zespol/recepcja.jpg" alt="" loading="lazy" />
+                <img src="assets/imgs/zespol/recepcja2.jpg" alt="" loading="lazy" />
+                <p>Nasza recepcja pomoże dobrać termin i specjalistę.</p>
+              </div>
+            </div>
+
+            <div class="card rv" style="--d: 0.16s">
+              <h4>Opinie pacjentów</h4>
+              <div class="zl-frame">
+                <iframe
+                  width="100%"
+                  height="250"
+                  frameborder="0"
+                  scrolling="no"
+                  loading="lazy"
+                  title="Znany Lekarz — certyfikat Artisan Clinic"
+                  src="https://widgets.znanylekarz.pl/facility/widget/certificate/dr-witwicki-artisan-clinic?id=bwlqhjlk1c&amp;saas-only=true"
+                ></iframe>
+              </div>
+              <div style="margin-top: 1.4rem">
+                <a href="konsultacja-online.html" class="ulink">Konsultacja online <span>→</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ══════════════ FOOTER ══════════════ -->
+    <footer class="foot">
+      <div class="wrap">
+        <div class="foot-top">
+          <div>
+            <img class="mark" src="assets/imgs/logo2.png" alt="Artisan Clinic" />
+            <p class="foot-note">Art &amp; sanatio — sztuka i uzdrowienie.</p>
+          </div>
+          <div>
+            <h5>Na skróty</h5>
+            <ul>
+              <li><a href="zabiegi.html">Oferta</a></li>
+              <li><a href="cennik.html">Cennik</a></li>
+              <li><a href="konsultacja-online.html">Konsultacja online</a></li>
+              <li>
+                <a href="https://www.znanylekarz.pl/z/ocgtMU" target="_blank" rel="noopener">Umów wizytę</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h5>O klinice</h5>
+            <ul>
+              <li><a href="#onas">O nas</a></li>
+              <li><a href="zespol.html">Zespół</a></li>
+              <li><a href="#sciezka">Przebieg leczenia</a></li>
+              <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5>Kontakt</h5>
+            <ul>
+              <li><a href="tel:+48221032122">+48 22 103 21 22</a></li>
+              <li><a href="mailto:klinika@artisanclinic.pl">klinika@artisanclinic.pl</a></li>
+              <li><a href="https://www.instagram.com/artisan_clinic_/" target="_blank" rel="noopener">Instagram</a></li>
+              <li>
+                <a href="https://www.facebook.com/p/Artisan-Clinic-61556258492025/" target="_blank" rel="noopener"
+                  >Facebook</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="foot-btm">
+          <p style="margin: 0">© <span id="year"></span> Artisan Clinic. Wszelkie prawa zastrzeżone.</p>
+          <p style="margin: 0">
+            <a href="https://krzysztofd.netlify.app/" target="_blank" rel="noopener"
+              >Projekt strony — Krzysztof Dąbrowski</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="float-cta" id="floatCta">
+      <a href="https://www.znanylekarz.pl/z/ocgtMU" target="_blank" rel="noopener" class="btn">
+        Umów wizytę <span class="arw">→</span>
+      </a>
+    </div>
+
+    <script>
+      (function () {
+        "use strict";
+        var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        /* ---- year ---- */
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        /* ---- header height -> --navh (hero tucks under it) ---- */
+        var nav = document.getElementById("nav");
+        function measure() {
+          /* only the un-stuck header height is the one the hero tucks under */
+          if (nav.classList.contains("is-stuck")) return;
+          document.documentElement.style.setProperty("--navh", nav.offsetHeight + "px");
+        }
+        measure();
+        window.addEventListener("resize", measure, { passive: true });
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
+
+        /* ---- sticky nav + progress + floating cta ---- */
+        var bar = document.getElementById("progress");
+        var fcta = document.getElementById("floatCta");
+        var ticking = false;
+
+        function onScroll() {
+          var y = window.scrollY || window.pageYOffset;
+          var h = document.documentElement.scrollHeight - window.innerHeight;
+          nav.classList.toggle("is-stuck", y > 60);
+          bar.style.transform = "scaleX(" + (h > 0 ? y / h : 0) + ")";
+          fcta.classList.toggle("show", y > window.innerHeight * 0.85);
+          ticking = false;
+        }
+        window.addEventListener(
+          "scroll",
+          function () {
+            if (!ticking) {
+              ticking = true;
+              window.requestAnimationFrame(onScroll);
+            }
+          },
+          { passive: true }
+        );
+        onScroll();
+
+        /* ---- mobile sheet ---- */
+        var burger = document.getElementById("burger");
+        burger.addEventListener("click", function () {
+          var open = document.body.classList.toggle("is-open");
+          burger.setAttribute("aria-expanded", open ? "true" : "false");
+          document.body.style.overflow = open ? "hidden" : "";
+        });
+        document.querySelectorAll("#sheet a").forEach(function (a) {
+          a.addEventListener("click", function () {
+            document.body.classList.remove("is-open");
+            document.body.style.overflow = "";
+            burger.setAttribute("aria-expanded", "false");
+          });
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && document.body.classList.contains("is-open")) {
+            document.body.classList.remove("is-open");
+            document.body.style.overflow = "";
+            burger.setAttribute("aria-expanded", "false");
+          }
+        });
+
+        /* ---- scroll reveals ---- */
+        var targets = document.querySelectorAll(".rv, .mask, .step");
+        if (!("IntersectionObserver" in window) || reduce) {
+          targets.forEach(function (el) { el.classList.add("in"); });
+        } else {
+          var io = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (en) {
+                if (en.isIntersecting) {
+                  en.target.classList.add("in");
+                  io.unobserve(en.target);
+                }
+              });
+            },
+            { rootMargin: "0px 0px -12% 0px", threshold: 0.12 }
+          );
+          targets.forEach(function (el) { io.observe(el); });
+        }
+
+        /* ---- counters ---- */
+        var nums = document.querySelectorAll("[data-count]");
+        if (nums.length && "IntersectionObserver" in window && !reduce) {
+          var nio = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (en) {
+                if (!en.isIntersecting) return;
+                var el = en.target;
+                nio.unobserve(el);
+                var end = parseInt(el.getAttribute("data-count"), 10);
+                var sfx = el.getAttribute("data-suffix") || "";
+                var t0 = null;
+                var dur = 1300;
+                function tick(ts) {
+                  if (!t0) t0 = ts;
+                  var p = Math.min((ts - t0) / dur, 1);
+                  var eased = 1 - Math.pow(1 - p, 3);
+                  el.textContent = Math.round(end * eased) + (p === 1 ? sfx : "");
+                  if (p < 1) requestAnimationFrame(tick);
+                }
+                requestAnimationFrame(tick);
+              });
+            },
+            { threshold: 0.6 }
+          );
+          nums.forEach(function (n) { nio.observe(n); });
+        }
+
+        /* ---- offer tabs ---- */
+        var tabs = Array.prototype.slice.call(document.querySelectorAll(".tab"));
+        function select(tab) {
+          tabs.forEach(function (t) {
+            var on = t === tab;
+            t.setAttribute("aria-selected", on ? "true" : "false");
+            var panel = document.getElementById(t.getAttribute("aria-controls"));
+            panel.classList.toggle("is-active", on);
+            if (on) { panel.removeAttribute("hidden"); } else { panel.setAttribute("hidden", ""); }
+          });
+        }
+        tabs.forEach(function (t, i) {
+          t.addEventListener("click", function () { select(t); });
+          t.addEventListener("keydown", function (e) {
+            var dir = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
+            if (!dir) return;
+            e.preventDefault();
+            var next = tabs[(i + dir + tabs.length) % tabs.length];
+            next.focus();
+            select(next);
+          });
+        });
+
+        /* ---- team rail: drag + arrows ---- */
+        var rail = document.getElementById("rail");
+        if (rail) {
+          var step = function () {
+            var card = rail.querySelector(".member");
+            return card ? card.getBoundingClientRect().width + 20 : 300;
+          };
+          document.getElementById("railNext").addEventListener("click", function () {
+            rail.scrollBy({ left: step() * 2, behavior: reduce ? "auto" : "smooth" });
+          });
+          document.getElementById("railPrev").addEventListener("click", function () {
+            rail.scrollBy({ left: -step() * 2, behavior: reduce ? "auto" : "smooth" });
+          });
+
+          var down = false, startX = 0, startLeft = 0, moved = 0;
+          rail.addEventListener("pointerdown", function (e) {
+            if (e.pointerType === "touch") return;
+            down = true;
+            moved = 0;
+            startX = e.clientX;
+            startLeft = rail.scrollLeft;
+            rail.classList.add("dragging");
+          });
+          window.addEventListener("pointermove", function (e) {
+            if (!down) return;
+            var dx = e.clientX - startX;
+            moved = Math.abs(dx);
+            rail.scrollLeft = startLeft - dx;
+          });
+          window.addEventListener("pointerup", function () {
+            if (!down) return;
+            down = false;
+            rail.classList.remove("dragging");
+          });
+          rail.addEventListener("click", function (e) {
+            if (moved > 8) e.preventDefault();
+          }, true);
+        }
+      })();
+    </script>
+  </body>
+</html>
