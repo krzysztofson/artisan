@@ -1,0 +1,13 @@
+<section class="band">
+  <div class="wrap">
+    <div class="band-in">
+      <span class="eyebrow no-rule rv">{{ T.band.eyebrow }}</span>
+      <h2 class="rv" style="--d: 0.06s">{{ T.band.title | safe }}</h2>
+      <p class="rv" style="--d: 0.12s">{{ T.band.text | safe }}</p>
+      <div class="band-acts rv" style="--d: 0.18s">
+        <a href="{{ site.booking }}" target="_blank" rel="noopener" class="btn">{{ T.bookOnline }} <span class="arw">→</span></a>
+        <a href="{{ site.phoneHref }}" class="btn btn--light">{{ site.phone }}</a>
+      </div>
+    </div>
+  </div>
+</section>

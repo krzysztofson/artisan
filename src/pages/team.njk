@@ -1,0 +1,46 @@
+---
+pagination:
+  data: langs
+  size: 1
+  alias: lang
+key: team
+bodyClass: is-subpage
+layout: layouts/base.njk
+permalink: "{{ '' if lang == 'pl' else 'en/' }}{{ pages.team[lang] }}"
+eleventyComputed:
+  metaTitle: "{{ i18n[lang].pageCopy.team.metaTitle | safe }}"
+  metaDescription: "{{ i18n[lang].pageCopy.team.lead | replace('{team}', team.length) | safe }}"
+---
+{%- set T = i18n[lang] -%}
+{%- set C = T.pageCopy.team -%}
+{%- set heroTitle = C.title -%}
+{%- set heroLead = C.lead | replace("{team}", team.length) -%}
+{%- set heroImage = "imgs/hero-big.jpg" -%}
+{%- set crumbs = [{ label: C.title }] -%}
+{% include "partials/page-hero.njk" %}
+
+<section class="sec sec--tight">
+  <div class="wrap">
+    <nav class="jump" aria-label="{{ T.team.jump }}" style="margin-bottom: clamp(3rem, 6vw, 5rem)">
+      {%- for m in team %}
+      <a href="#{{ m.id }}">{{ m.name }}</a>
+      {%- endfor %}
+    </nav>
+
+    {%- for m in team %}
+    <article class="doc" id="{{ m.id }}">
+      <div class="doc-photo rv">
+        <img src="{{ root }}assets/{{ m.photo }}" alt="{{ m.name }}" loading="lazy" />
+      </div>
+      <div>
+        <h2 class="rv">{{ m.name }}</h2>
+        <span class="lead-role rv">{{ (m.role[lang] or m.specialty[lang]) | safe }}</span>
+        <div class="prose rv">{{ m.bio[lang] | safe }}</div>
+      </div>
+    </article>
+    {%- endfor %}
+  </div>
+</section>
+
+{% include "partials/band.njk" %}
+{% include "partials/contact.njk" %}

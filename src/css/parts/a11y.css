@@ -1,0 +1,32 @@
+
+/* ---------- accessibility ---------- */
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--onyx);
+  color: var(--bone);
+  padding: 0.8rem 1.2rem;
+  z-index: 9999;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.skip:focus { left: 0; }
+:focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .rv { opacity: 1; transform: none; }
+  .mask > * { clip-path: none; }
+  .hero h1 .ln > span { transform: none; }
+  .hero .eyebrow, .hero-sub, .hero-acts, .hero-meta { opacity: 1; }
+  .grain { display: none; }
+}

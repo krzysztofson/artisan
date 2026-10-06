@@ -1,0 +1,21 @@
+<section class="sec sec--tight reviews" aria-labelledby="reviews-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="sec-no rv">{{ T.reviews.no }}</span>
+        <h2 class="display rv" id="reviews-title" style="--d: 0.06s">{{ T.reviews.title | safe }}</h2>
+      </div>
+    </div>
+    <div class="grid-4">
+      {%- for r in reviews[lang] %}
+      <figure class="review rv" style="--d: {{ loop.index0 * 0.08 }}s">
+        <blockquote>„{{ r.text }}”</blockquote>
+        <figcaption>{{ r.name }}</figcaption>
+      </figure>
+      {%- endfor %}
+    </div>
+    <div class="reviews-acts">
+      <a href="{{ site.reviewsUrl }}" target="_blank" rel="noopener" class="ulink on-dark">{{ T.reviews.more }} <span>→</span></a>
+    </div>
+  </div>
+</section>

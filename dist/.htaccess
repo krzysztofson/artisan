@@ -3,9 +3,9 @@
 # Przekierowania ze starych adresów
 Redirect 301 /cennik/ /cennik.html
 Redirect 301 /kadra-chirurg-plastyk/ /zespol.html
-Redirect 301 /kontakt/ /kontakt.html
+Redirect 301 /kontakt/ /
 Redirect 301 /zaufali-nam/ /
-Redirect 301 /konsultacja-online/ /konsultacje-online.html
+Redirect 301 /konsultacja-online/ /konsultacja-online.html
 
 # Zabezpieczenie przed bezpośrednim dostępem do plików konfiguracyjnych
 <Files "config.php">

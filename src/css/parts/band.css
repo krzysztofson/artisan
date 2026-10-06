@@ -1,0 +1,53 @@
+
+/* ============================================================
+   CTA BAND
+   ============================================================ */
+.band {
+  position: relative;
+  background: var(--cashmere);
+  color: var(--ink);
+  overflow: hidden;
+  isolation: isolate;
+}
+.band::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: url("../imgs/hero-big.jpg") center 55% / cover no-repeat;
+  opacity: 0.2;
+  filter: grayscale(1) contrast(0.85);
+}
+/* vignette keeps the headline off the building's bright facade */
+.band::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(
+      68% 86% at 50% 52%,
+      rgba(198, 185, 168, 0.9),
+      rgba(198, 185, 168, 0.65) 62%,
+      rgba(198, 185, 168, 0.94) 100%
+    ),
+    radial-gradient(90% 60% at 50% 0%, rgba(110, 9, 8, 0.1), transparent 65%);
+}
+.band-in {
+  text-align: center;
+  padding-block: clamp(4.5rem, 10vw, 8rem);
+  max-width: 60ch;
+  margin-inline: auto;
+}
+.band h2 {
+  font-size: clamp(1.85rem, 1rem + 3.5vw, 3.7rem);
+  margin: 1.4rem 0 1.4rem;
+}
+.band h2 em { font-style: italic; color: var(--burgundy); }
+.band p { color: var(--muted); margin: 0 auto 2.4rem; max-width: 46ch; }
+.band .eyebrow { color: var(--burgundy); }
+.band .eyebrow::before, .band .eyebrow::after { opacity: 0.5; }
+.band-acts { display: flex; gap: 0.9rem; justify-content: center; flex-wrap: wrap; }
+.band-acts .btn:first-child { --bg: var(--burgundy); --fg: var(--bone); }
+.band-acts .btn:first-child:hover { --fg: var(--bone); }
+.band .btn--light { --fg: var(--ink); border-color: rgba(36, 31, 25, 0.28); }
+.band .btn--light:hover { --fg: var(--bone); border-color: var(--burgundy); }

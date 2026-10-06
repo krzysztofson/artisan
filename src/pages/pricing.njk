@@ -1,0 +1,81 @@
+---
+pagination:
+  data: langs
+  size: 1
+  alias: lang
+key: pricing
+bodyClass: is-subpage page-pricing
+layout: layouts/base.njk
+scripts: [pricing.js]
+permalink: "{{ '' if lang == 'pl' else 'en/' }}{{ pages.pricing[lang] }}"
+eleventyComputed:
+  metaTitle: "{{ i18n[lang].pageCopy.pricing.metaTitle | safe }}"
+  metaDescription: "{{ i18n[lang].pageCopy.pricing.lead | safe }}"
+---
+{%- set T = i18n[lang] -%}
+{%- set C = T.pageCopy.pricing -%}
+{%- set heroTitle = C.title -%}
+{%- set heroLead = C.lead -%}
+{%- set heroImage = "imgs/zabiegi2.jpg" -%}
+{%- set crumbs = [{ label: C.title }] -%}
+{% include "partials/page-hero.njk" %}
+
+<section class="sec sec--tight">
+  <div class="wrap pricing-layout">
+    <aside class="pricing-toc" aria-label="{{ T.pricing.toc }}">
+      <details open>
+        <summary class="toc-toggle"><span>{{ T.pricing.toc }}</span><span aria-hidden="true">+</span></summary>
+        <div class="toc-groups">
+          {%- for g in pricing.groups %}
+          <div class="toc-group">
+            <b>{{ g.name[lang] }}</b>
+            {%- for sid in g.sections %}
+            {%- set s = pricing.sections | findBy("id", sid) %}
+            <a href="#{{ s.id }}">{{ s.title[lang] }}</a>
+            {%- endfor %}
+          </div>
+          {%- endfor %}
+        </div>
+      </details>
+    </aside>
+
+    <div class="pricing-main">
+      <div class="price-search" role="search">
+        {% include "icons/search.svg" %}
+        <input type="search" id="price-search" placeholder="{{ T.pricing.search }}" aria-label="{{ T.pricing.searchLabel }}" autocomplete="off" />
+      </div>
+      <p class="price-search-empty" id="price-empty" hidden>{{ T.pricing.empty }}</p>
+
+      {%- for g in pricing.groups %}
+      <div class="price-group" data-group>
+        <h2>{{ g.name[lang] }}</h2>
+        {%- for sid in g.sections %}
+        {%- set s = pricing.sections | findBy("id", sid) %}
+        <section class="price-sec" id="{{ s.id }}" data-section>
+          {%- if s.title[lang] != g.name[lang] %}<h3>{{ s.title[lang] }}</h3>{% endif %}
+          <div class="ledger">
+            {%- for row in s.items %}
+            {%- if row.heading %}
+            <div class="ledger-sub" data-heading>{{ row.heading[lang] }}</div>
+            {%- else %}
+            {%- set href = row | rowHref(lang, treatments) %}
+            {%- set pp = row.price[lang] | priceParts %}
+            <{{ 'a' if href else 'div' }} class="ledger-row" data-row{% if href %} href="{{ href }}"{% if row.href %} target="_blank" rel="noopener"{% endif %}{% endif %}>
+              <span class="nm">{{ row.name[lang] }}</span><span class="leader"></span>
+              <span class="pr">{{ pp.num }} <small>{{ pp.unit }}</small></span>
+            </{{ 'a' if href else 'div' }}>
+            {%- endif %}
+            {%- endfor %}
+          </div>
+        </section>
+        {%- endfor %}
+      </div>
+      {%- endfor %}
+
+      <p class="price-note">{{ T.pricing.note }}</p>
+    </div>
+  </div>
+</section>
+
+{% include "partials/band.njk" %}
+{% include "partials/contact.njk" %}

@@ -1,0 +1,31 @@
+/* ============================================================
+   SECTION SCAFFOLD
+   ============================================================ */
+section { position: relative; }
+
+.sec {
+  padding-block: clamp(4.5rem, 10vw, 9.5rem);
+}
+.sec-head {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: end;
+  padding-bottom: clamp(2rem, 4vw, 3.5rem);
+}
+@media (max-width: 860px) {
+  .sec-head { grid-template-columns: 1fr; align-items: start; }
+}
+
+/* reveal */
+.rv {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 1s var(--ease-out) var(--d, 0s), transform 1.1s var(--ease-out) var(--d, 0s);
+}
+.rv.in { opacity: 1; transform: none; }
+/* NB: never put clip-path on an observed element — Chrome clips its own
+   intersection rect and the observer never fires. Mask a child instead. */
+.mask > * { clip-path: inset(0 0 100% 0); transition: clip-path 1.25s var(--ease-out) 0.12s; }
+.mask.in > * { clip-path: inset(0 0 0 0); }
+

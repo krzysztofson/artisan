@@ -1,0 +1,17 @@
+# Global site settings. Canonical / hreflang URLs are built from `url` — the only domain the site uses.
+url: https://artisanclinic.pl
+name: Artisan Clinic
+phone: "+48 22 103 21 22"
+phoneHref: "tel:+48221032122"
+email: klinika@artisanclinic.pl
+booking: https://www.znanylekarz.pl/z/ocgtMU
+reviewsUrl: https://www.znanylekarz.pl/placowki/artisan-clinic
+zlCertificate: https://widgets.znanylekarz.pl/facility/widget/certificate/dr-witwicki-artisan-clinic?id=bwlqhjlk1c&saas-only=true
+instagram: https://www.instagram.com/artisan_clinic_/
+facebook: https://www.facebook.com/p/Artisan-Clinic-61556258492025/
+gtm: GTM-PFBHS9QL
+designer:
+  name: Krzysztof Dąbrowski
+  url: https://krzysztofd.netlify.app/
+# Show "Poczytaj / Journal" in the nav and footer. Turn on once the first post is published.
+blogEnabled: false

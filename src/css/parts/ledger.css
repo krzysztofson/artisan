@@ -1,0 +1,49 @@
+/* price ledger */
+.ledger {
+  margin-top: clamp(2rem, 4vw, 3rem);
+  border-top: 1px solid var(--rule);
+}
+.ledger-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.9rem;
+  padding: 1.05rem 0.4rem 1.05rem 0;
+  border-bottom: 1px solid var(--rule);
+  transition: background 0.45s var(--ease), padding-left 0.45s var(--ease);
+}
+a.ledger-row:hover { background: rgba(165, 131, 75, 0.08); padding-left: 0.9rem; }
+.ledger-row .nm {
+  font-size: 0.98rem;
+  color: var(--ink);
+  font-weight: 400;
+  flex: 0 1 auto;
+}
+.ledger-row .leader {
+  flex: 1 1 auto;
+  height: 1px;
+  min-width: 1.5rem;
+  border-bottom: 1px dotted rgba(36, 31, 25, 0.3);
+  transform: translateY(-4px);
+}
+.ledger-row .pr {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.ledger-row .pr small {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  color: var(--muted-2);
+  margin-left: 0.35em;
+}
+/* narrow: stack the ledger like a menu — name, then price beneath */
+@media (max-width: 620px) {
+  .ledger-row { flex-wrap: wrap; row-gap: 0.1rem; padding-block: 0.95rem; }
+  .ledger-row .nm { flex: 1 1 100%; }
+  .ledger-row .leader { display: none; }
+  .ledger-row .pr { color: var(--burgundy); font-size: 1.25rem; }
+  a.ledger-row:hover { padding-left: 0; }
+}

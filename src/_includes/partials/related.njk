@@ -1,0 +1,25 @@
+{#- 3 related treatments (treatments.yaml `related`, falling back to the same category). -#}
+{%- set relIds = t.related if (t.related and t.related.length) else [] -%}
+{%- if not relIds.length -%}
+  {%- for o in treatments | inCategory(t.categories[0]) %}{% if o.id != id and o.id != t.twin and relIds.length < 3 %}{% set _ = relIds.push(o.id) %}{% endif %}{% endfor -%}
+{%- endif -%}
+{%- if relIds.length %}
+<section class="sec sec--tight alt" aria-labelledby="related-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="sec-no rv">{{ T.related.no }}</span>
+        <h2 class="display rv" id="related-title" style="--d: 0.06s">{{ T.related.title | safe }}</h2>
+      </div>
+    </div>
+    <div class="grid-3">
+      {%- set showCat = true %}
+      {%- for rid in relIds.slice(0, 3) %}
+      {%- set cardIndex = loop.index0 %}
+      {%- set r = rid | treatment(treatments) %}
+      {% include "partials/t-card.njk" %}
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- endif %}

@@ -1,0 +1,17 @@
+# Treatment categories. Order = order on the offer page and homepage tabs.
+- id: twarz
+  anchor: { pl: twarz, en: face }
+  name: { pl: Twarz, en: Face }
+  image: imgs/oferta_twarz-2.jpg
+- id: cialo
+  anchor: { pl: cialo, en: body }
+  name: { pl: Ciało, en: Body }
+  image: imgs/oferta_cialo.jpg
+- id: piersi
+  anchor: { pl: piersi, en: breasts }
+  name: { pl: Piersi, en: Breasts }
+  image: imgs/oferta_piersi.jpg
+- id: skora
+  anchor: { pl: skora, en: skin }
+  name: { pl: Skóra, en: Skin }
+  image: imgs/oferta_skora.jpg

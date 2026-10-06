@@ -1,0 +1,27 @@
+---
+layout: layouts/base.njk
+bodyClass: is-subpage page-treatment
+---
+{%- set T = i18n[lang] -%}
+{%- set t = id | treatment(treatments) -%}
+{%- set cat = categories | findBy("id", t.categories[0]) -%}
+{%- set heroTitle = t.title[lang] -%}
+{%- set heroLead = lead -%}
+{%- set heroImage = cat.image if cat else "imgs/zabiegi.jpg" -%}
+{%- set crumbs = [{ label: T.offerCrumb, href: pages.offer[lang] }] -%}
+{%- if cat %}{% set _ = crumbs.push({ label: cat.name[lang], href: pages.offer[lang] + "#" + cat.anchor[lang] }) %}{% endif -%}
+{% include "partials/page-hero.njk" %}
+
+<section class="sec sec--tight">
+  <div class="wrap treat-grid">
+    {% include "partials/summary.njk" %}
+    <article class="prose">
+      {{ content | safe }}
+    </article>
+  </div>
+</section>
+
+{% include "partials/related.njk" %}
+{% include "partials/reviews.njk" %}
+{% include "partials/band.njk" %}
+{% include "partials/contact.njk" %}

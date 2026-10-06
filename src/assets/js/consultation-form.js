@@ -30,11 +30,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Utwórz nowy komunikat
     const messageDiv = document.createElement("div");
-    messageDiv.className = `form-message p-4 rounded-lg mb-6 ${
-      type === "success"
-        ? "bg-green-100 text-green-800 border border-green-200"
-        : "bg-red-100 text-red-800 border border-red-200"
-    }`;
+    messageDiv.className = `form-message ${type === "success" ? "form-message--ok" : "form-message--err"}`;
+    messageDiv.style.whiteSpace = "pre-line";
     messageDiv.textContent = message;
 
     // Wstaw komunikat na początku formularza
@@ -65,57 +62,25 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Sprawdź czy dla wybranych zabiegów przesłano wymagane zdjęcia
+    // (pole, którego nie ma w formularzu, jest pomijane — nie blokuje wysyłki)
+    const noPhoto = (...names) =>
+      names.some((name) => {
+        const input = form.querySelector(`input[name="${name}"]`);
+        return input && !input.files.length;
+      });
+    const requiredPhotos = {
+      "deep-plane-facelift": [["deep_plane_front", "deep_plane_left", "deep_plane_right"], "Deep Plane Facelift - wymagane są wszystkie 3 zdjęcia twarzy"],
+      "upper-eyelid": [["upper_eyelid_closed", "upper_eyelid_open"], "Korekcja powiek górnych - wymagane są zdjęcia oczu zamkniętych i otwartych"],
+      "lower-eyelid": [["lower_eyelid_closed", "lower_eyelid_open"], "Korekcja powiek dolnych - wymagane są zdjęcia oczu zamkniętych i otwartych"],
+      "nose-correction": [["nose_left", "nose_right", "nose_front", "nose_bottom"], "Korekcja nosa - wymagane są wszystkie 4 zdjęcia nosa"],
+      "ear-correction": [["ears_left", "ears_right"], "Korekcja uszu - wymagane są zdjęcia lewego i prawego ucha"],
+    };
     let missingPhotos = [];
 
     selectedProcedures.forEach((procedureCheckbox) => {
-      const procedureValue = procedureCheckbox.value;
-
-      if (procedureValue === "deep-plane-facelift") {
-        const front = form.querySelector('input[name="deep_plane_front"]');
-        const left = form.querySelector('input[name="deep_plane_left"]');
-        const right = form.querySelector('input[name="deep_plane_right"]');
-
-        if (!front.files.length || !left.files.length || !right.files.length) {
-          missingPhotos.push("Deep Plane Facelift - wymagane są wszystkie 3 zdjęcia twarzy");
-        }
-      }
-
-      if (procedureValue === "upper-eyelid") {
-        const closed = form.querySelector('input[name="upper_eyelid_closed"]');
-        const open = form.querySelector('input[name="upper_eyelid_open"]');
-
-        if (!closed.files.length || !open.files.length) {
-          missingPhotos.push("Korekcja powiek górnych - wymagane są zdjęcia oczu zamkniętych i otwartych");
-        }
-      }
-
-      if (procedureValue === "lower-eyelid") {
-        const closed = form.querySelector('input[name="lower_eyelid_closed"]');
-        const open = form.querySelector('input[name="lower_eyelid_open"]');
-
-        if (!closed.files.length || !open.files.length) {
-          missingPhotos.push("Korekcja powiek dolnych - wymagane są zdjęcia oczu zamkniętych i otwartych");
-        }
-      }
-
-      if (procedureValue === "nose-correction") {
-        const left = form.querySelector('input[name="nose_left"]');
-        const right = form.querySelector('input[name="nose_right"]');
-        const front = form.querySelector('input[name="nose_front"]');
-        const bottom = form.querySelector('input[name="nose_bottom"]');
-
-        if (!left.files.length || !right.files.length || !front.files.length || !bottom.files.length) {
-          missingPhotos.push("Korekcja nosa - wymagane są wszystkie 4 zdjęcia nosa");
-        }
-      }
-
-      if (procedureValue === "ear-correction") {
-        const left = form.querySelector('input[name="ears_left"]');
-        const right = form.querySelector('input[name="ears_right"]');
-
-        if (!left.files.length || !right.files.length) {
-          missingPhotos.push("Korekcja uszu - wymagane są zdjęcia lewego i prawego ucha");
-        }
+      const required = requiredPhotos[procedureCheckbox.value];
+      if (required && noPhoto(...required[0])) {
+        missingPhotos.push(required[1]);
       }
     });
 
@@ -145,13 +110,12 @@ document.addEventListener("DOMContentLoaded", function () {
     // Zmień stan przycisku
     submitButton.disabled = true;
     submitButton.textContent = "Wysyłanie...";
-    submitButton.classList.add("opacity-50", "cursor-not-allowed");
 
     // Przygotuj dane formularza
     const formData = new FormData(form);
 
-    // Wyślij formularz - update 12082025-1415
-    fetch("process-form.php", {
+    // Wyślij formularz (adres z atrybutu action — działa także z /en/)
+    fetch(form.getAttribute("action") || "process-form.php", {
       method: "POST",
       body: formData,
     })
@@ -214,7 +178,6 @@ document.addEventListener("DOMContentLoaded", function () {
         // Przywróć stan przycisku
         submitButton.disabled = false;
         submitButton.textContent = originalButtonText;
-        submitButton.classList.remove("opacity-50", "cursor-not-allowed");
       });
   });
 
@@ -231,7 +194,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (this.value && (age < 18 || age > 120)) {
         const errorDiv = document.createElement("p");
-        errorDiv.className = "age-error mt-1 text-sm text-red-600";
+        errorDiv.className = "age-error field-msg field-msg--err";
         errorDiv.textContent = "Wiek musi być między 18 a 120 lat";
         this.parentNode.appendChild(errorDiv);
       }
@@ -251,7 +214,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (this.value && !emailRegex.test(this.value)) {
         const errorDiv = document.createElement("p");
-        errorDiv.className = "email-error mt-1 text-sm text-red-600";
+        errorDiv.className = "email-error field-msg field-msg--err";
         errorDiv.textContent = "Proszę podać prawidłowy adres email";
         this.parentNode.appendChild(errorDiv);
       }
@@ -275,7 +238,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Sprawdź rozmiar pliku
         if (file.size > maxFileSize) {
           const errorDiv = document.createElement("p");
-          errorDiv.className = "file-error mt-1 text-sm text-red-600";
+          errorDiv.className = "file-error field-msg field-msg--err";
           errorDiv.textContent = "Plik jest za duży. Maksymalny rozmiar to 8MB.";
           this.parentNode.appendChild(errorDiv);
           this.value = ""; // Wyczyść input
@@ -285,7 +248,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Sprawdź typ pliku
         if (!file.type.startsWith("image/")) {
           const errorDiv = document.createElement("p");
-          errorDiv.className = "file-error mt-1 text-sm text-red-600";
+          errorDiv.className = "file-error field-msg field-msg--err";
           errorDiv.textContent = "Proszę wybrać plik graficzny (JPG, PNG, itp.).";
           this.parentNode.appendChild(errorDiv);
           this.value = ""; // Wyczyść input
@@ -294,7 +257,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Pokaż informację o wybranym pliku
         const successDiv = document.createElement("p");
-        successDiv.className = "file-success mt-1 text-sm text-green-600";
+        successDiv.className = "file-success field-msg field-msg--ok";
         successDiv.textContent = `Wybrano: ${file.name} (${(file.size / 1024 / 1024).toFixed(2)}MB)`;
         this.parentNode.appendChild(successDiv);
       }

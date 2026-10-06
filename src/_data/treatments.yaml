@@ -1,0 +1,1631 @@
+# SSoT zabiegów. Klucz = id (slug PL). Ceny NIE tutaj — patrz pricing.yaml (treatment: id).
+lifting-twarzy:
+  slug:
+    pl: lifting-twarzy
+    en: face-lifting
+  title:
+    pl: Deep Plane Lifting twarzy
+    en: Deep Plane Face Lift
+  categories:
+    - twarz
+  excerpt:
+    pl: Lifting twarzy (operacyjny) przeznaczony dla osób dojrzałych, u których występuje wiotkość skóry twarzy, niekwalifikująca się do podniesienia przeszczepem tkanki tłuszczowej lub wszczepieniem nici.
+    en: A surgical face lift designed for mature patients experiencing facial skin laxity that does not qualify for correction with fat tissue transfer or thread insertion.
+  summary:
+    anesthesia:
+      pl: Dożylne + miejscowe
+      en: Intravenous + local
+    duration:
+      pl: 2,5–4 godz.
+      en: 2.5–4 hours
+    result:
+      pl: po 3–5 miesiącach
+      en: after 3–5 months
+  related:
+    - korekcja-powiek
+    - face-lift-nicmi
+    - wszczepienie-implantu-w-twarz
+face-lift-nicmi:
+  slug:
+    pl: face-lift-nicmi
+    en: thread-face-lift
+  title:
+    pl: Lifting nićmi stałymi lub rozpuszczalnymi Aptos
+    en: Thread Face Lift with Permanent or Absorbable Aptos Threads
+  categories:
+    - twarz
+  excerpt:
+    pl: Lifiting nićmi stałymi lub rozpuszczalnymi Aptos przeznaczony jest dla osób z nieznacznym opadaniem tkanek. Zabieg jest małoinwazyjny, krótki, najczęściej wykonywany w znieczuleniu miejscowym, z niewielkim obrzękiem pozabiegowym. Dzięki temu pacjent może szybko powrócić do normalnego funkcjonowania, uzyskując pewny i przewidywalny wynik. W zależności od potrzeb lub życzenia pacjenta, używane są nici Aptos o działaniu czasowym (ok. 2 lat) lub trwałym.
+    en: Thread lift with permanent or absorbable Aptos threads is designed for patients with mild tissue sagging. The procedure is minimally invasive, short, most often performed under local anesthesia, with minimal post-procedure swelling. This allows the patient to quickly return to normal activities while achieving a reliable and predictable result. Depending on the patient's needs or preferences, Aptos threads with temporary (approx. 2 years) or permanent effect are used.
+  summary:
+    anesthesia:
+      pl: Miejscowe lub dożylne
+      en: Local or intravenous
+    duration:
+      pl: 40–60 min
+      en: 40–60 min
+    recovery:
+      pl: Obrzęk do kilku dni
+      en: Swelling for a few days
+  related:
+    - lifting-twarzy
+    - wolumetria-twarzy-kwasem-hialuronowym
+    - porazenie-nerwu-twarzowego-nici-aptos
+korekcja-powiek:
+  slug:
+    pl: korekcja-powiek
+    en: eyelid-surgery
+  title:
+    pl: Plastyka powiek (korekcja powiek)
+    en: Eyelid Surgery (Blepharoplasty)
+  categories:
+    - twarz
+  excerpt:
+    pl: Korekcja powiek przeznaczona jest dla osób, które chcą odmłodzić twarz i spojrzenie. Zabieg pozwala na uzyskanie wyglądu lżejszych, młodszych, bardziej wypoczętych oczu.
+    en: Eyelid correction is designed for patients who wish to rejuvenate their face and gaze. The procedure achieves a lighter, younger, and more rested appearance of the eyes.
+  summary:
+    anesthesia:
+      pl: Miejscowe
+      en: Local
+    duration:
+      pl: ok. 1,5 godz.
+      en: approx. 1.5 hours
+    result:
+      pl: po kilku tygodniach
+      en: after a few weeks
+  related:
+    - lifting-twarzy
+    - face-lift-calkowity-czesciowy-4
+    - korekcja-nosa
+korekcja-nosa:
+  slug:
+    pl: korekcja-nosa
+    en: rhinoplasty
+  title:
+    pl: Korekcja nosa
+    en: Rhinoplasty
+  categories:
+    - twarz
+  excerpt:
+    pl: Korekcją nosa najczęściej zainteresowane są osoby niezadowolone z kształtu nosa. Zabieg dotyczyć może m.in. części chrzęstnej nosa, tworzącej czubek i skrzydełka. Pozwala na zmianę kształtu m.in. czubka nosa i wymodelowanie tej części. Operacja nosa w części chrzęstnej może być wykonana w znieczuleniu miejscowym, wtedy też przebieg pooperacyjny jest lżejszy i krótszy. W zależności od zakresu zabiegu i oczekiwanego efektu, dr Witwicki dobiera odpowiednią metodę operacyjną.
+    en: Rhinoplasty is most often sought by patients dissatisfied with the shape of their nosee. The procedure may involve the cartilaginous part of the nosee, which forms the tip and nosetrils. It allows reshaping of the nasal tip and contouring of this area. Surgery on the cartilaginous part can be performed under local anesthesia, resulting in an easier and shorter recovery. Depending on the scope of the procedure and the desired outcome, Dr. Witwicki selects the appropriate surgical method.
+  summary:
+    anesthesia:
+      pl: Miejscowe lub ogólne
+      en: Local or general
+    duration:
+      pl: 1–1,5 godz.
+      en: 1–1.5 hours
+    result:
+      pl: po 4–6 miesiącach
+      en: after 4–6 months
+  related:
+    - korekcja-nosa-nicmi-aptos
+    - korekcja-nosa-kwasem-hialuronowym
+    - korekcja-powiek
+korekcja-nosa-nicmi-aptos:
+  slug:
+    pl: korekcja-nosa-nicmi-aptos
+    en: nose-correction-aptos-threads
+  title:
+    pl: Korekcja nosa nićmi Aptos
+    en: Nose Correction with Aptos Threads
+  categories:
+    - twarz
+  excerpt:
+    pl: Zastosowowanie nici Aptos w medycynie estetycznej jest wynikiem wieloletniej pracy doświadczonych chirurgów plastykow. Co do zasady nici Aptos rekomendowane są, aby zapobiegać ptozie, czyli opadaniu tkanek (anti-ptosis, stąd nazwa Aptos). Metodą z wykorzystaniem nici można skorygować także czubek nosa.
+    en: The use of Aptos threads in aesthetic medicine is the result of many years of work by experienced plastic surgeons. As a rule, Aptos threads are recommended to prevent ptosis, i.e., tissue sagging (anti-ptosis, hence the name Aptos). The thread method can also be used to correct the nasal tip.
+  summary:
+    anesthesia:
+      pl: Miejscowe
+      en: Local
+    duration:
+      pl: ok. 1 godz.
+      en: approx. 1 hour
+    recovery:
+      pl: Obrzęk do 3–4 tygodni
+      en: Swelling up to 3–4 weeks
+    result:
+      pl: po ok. miesiącu
+      en: after approx. 1 month
+  related:
+    - korekcja-nosa
+    - korekcja-nosa-kwasem-hialuronowym
+    - face-lift-nicmi
+korekcja-nosa-kwasem-hialuronowym:
+  slug:
+    pl: korekcja-nosa-kwasem-hialuronowym
+    en: nose-correction-hyaluronic-acid
+  title:
+    pl: Korekcja nosa kwasem hialuronowym
+    en: Non-Surgical Nose Correction with Hyaluronic Acid
+  categories:
+    - twarz
+  excerpt:
+    pl: Ta metoda korekcji nosa przeznaczona jest dla osób, które zainteresowane są nieznaczną korekcją uzupełniającą objętość, jak również podnoszącą opadające tkanki – np. czubek nosa, kąt czołowo-nosowy. Zaletą korekcji nosa kwasem hialuronowym jest mała inwazyjność i możliwość modelowania nosa.
+    en: This method of nosee correction is designed for patients interested in a subtle correction that adds volume and lifts sagging tissues, such as the nasal tip or the nasofrontal angle. The advantage of nosee correction with hyaluronic acid is its minimal invasiveness and the ability to shape the nosee.
+  summary: {}
+  related:
+    - korekcja-nosa
+    - korekcja-nosa-nicmi-aptos
+    - wolumetria-twarzy-kwasem-hialuronowym
+face-lift-calkowity-czesciowy-4:
+  slug:
+    pl: face-lift-calkowity-czesciowy-4
+    en: full-partial-face-lift-4
+  title:
+    pl: Korekcja zmarszczek mimicznych toksyną botulinową
+    en: Expression Wrinkle Correction with Botulinum Toxin
+  categories:
+    - twarz
+  excerpt:
+    pl: Uznana i szeroko stosowana metoda usuwania zmarszczek związanych z mimiką twarzy. Jedną z zalet stosowania preparatu jest bezpieczeństwo i przewidywalność wyniku. Co ważne, zabieg ten nie wymaga rekonwalescencji, co oznacza, że do normalnego funkcjonowania można powrócić bezpośrednio po zabiegu.
+    en: A recognized and widely used method for eliminating wrinkles caused by facial expressions. One of the advantages of this treatment is its safety and predictability of results. Importantly, this procedure requires no recovery time, meaning you can return to normal activities immediately after treatment.
+  summary:
+    anesthesia:
+      pl: Brak lub maść znieczulająca
+      en: None or anaesthetic cream
+    duration:
+      pl: 20–40 min
+      en: 20–40 min
+    result:
+      pl: po 2–7 dniach, utrzymuje się 4–6 mies.
+      en: after 2–7 days, lasts 4–6 months
+  related:
+    - redukcja-zmarszczek
+    - wolumetria-twarzy-kwasem-hialuronowym
+    - botox-leczenie-bolow-migrenowych
+wolumetria-twarzy-kwasem-hialuronowym:
+  slug:
+    pl: wolumetria-twarzy-kwasem-hialuronowym
+    en: facial-volumetry-hyaluronic-acid
+  title:
+    pl: Wolumetria twarzy kwasem hialuronowym
+    en: Facial Volumetry with Hyaluronic Acid
+  categories:
+    - twarz
+  excerpt:
+    pl: Zabieg przeznaczony dla osób w średnim wieku, u których nastąpiło zmniejszenie objętości tkanki tłuszczowej, jak i nieznaczne opadnięcie tkanek i utrata napięcia. Efektem zabiegu jest uzyskanie młodszego wyglądu, poprawienie kształtu twarzy i przywrócenie objętości tkanek w pożądanych miejscach.
+    en: A procedure designed for middle-aged patients who have experienced a decrease in fat tissue volume, as well as mild tissue sagging and loss of firmness. The result is a younger appearance, improved facial contour, and restored tissue volume in the desired areas.
+  summary: {}
+  related:
+    - redukcja-zmarszczek
+    - modelowanie-twarzy-naturalnym-wypelniaczem-algeness-na-bazie-agarozy
+    - powiekszenie-ust-kwasem-hialuronowym
+powiekszenie-ust-kwasem-hialuronowym:
+  slug:
+    pl: powiekszenie-ust-kwasem-hialuronowym
+    en: lip-augmentation-hyaluronic-acid
+  title:
+    pl: Powiększenie ust kwasem hialuronowym
+    en: Lip Augmentation with Hyaluronic Acid
+  categories:
+    - twarz
+  excerpt:
+    pl: Zabieg przeznaczony jest dla osób chcących podkreślić, uwydatnić usta. Głównymi zaletami tej metody powiększenia ust są przewidywalność efektu, szybka rekonwalescencja i minimalna inwazyjność zabiegu.
+    en: This procedure is designed for patients who wish to enhance and accentuate their lips. The main advantages of this lip augmentation method are predictable results, quick recovery, and minimal invasiveness.
+  summary: {}
+  related:
+    - wolumetria-twarzy-kwasem-hialuronowym
+    - redukcja-zmarszczek
+    - face-lift-calkowity-czesciowy-4
+lipo-gems-innowacyjna-metoda-modelowania-tluszczem-bogatym-w-komorki-macierzyste:
+  slug:
+    pl: lipo-gems-innowacyjna-metoda-modelowania-tluszczem-bogatym-w-komorki-macierzyste
+    en: lipogems-fat-modelling-stem-cells
+  title:
+    pl: 'Komórki macierzyste: Lipogems® – odmładzanie oraz rewitalizacja twarzy'
+    en: 'Stem Cells: Lipogems® – Facial Rejuvenation & Revitalisation'
+  categories:
+    - twarz
+  excerpt:
+    pl: Lipogems® to innowacyjna metoda otrzymywania tkanki tłuszczowej z dużą zawartością komórek macierzystych pozwalająca na podawanie jej jak wypełniacza. Dla pacjenta oznacza to niewielki obrzęk pooperacyjny, poprawę objętości i usunięcie stanów zapalnych skóry, rewitalizację i poprawę krążenia. Zabiegi z wykorzystaniem Lipogems® w medycynie estetycznej wykonujemy jako pierwsi w Polsce.
+    en: Lipogems® is an innovative method for obtaining fat tissue with a high content of stem cells, allowing it to be administered as a filler. For the patient, this means minimal post-operative swelling, improved volume, reduction of skin inflammation, revitalization, and improved circulation. We were the first in Poland to perform Lipogems® procedures in aesthetic medicine.
+  summary: {}
+  related:
+    - przeszczep-tluszczu
+    - komorki-macierzyste-lipogems-odmladzanie-i-rewitalizacja-skory
+    - wolumetria-twarzy-kwasem-hialuronowym
+plastyka-odstajacych-uszu:
+  slug:
+    pl: plastyka-odstajacych-uszu
+    en: ear-correction
+  title:
+    pl: Plastyka odstających uszu
+    en: Ear Correction (Otoplasty)
+  categories:
+    - twarz
+  excerpt:
+    pl: Plastyka odstających uszu jest zabiegiem małoinwazyjnym, nie pozostawiającym widocznych blizn, korygującym bardzo widoczną wadę budowy małżowin usznych. Dzięki korekcie uszu można pozbyć się niekorzystnego wyglądu, a co za tym idzie, poprawić samoocenę. Do zabiegu kwalifikują się już nawet dzieci od 7. roku życia, mające poczucie wady i chcące się jej pozbyć.
+    en: Otoplasty is a minimally invasive procedure that leaves no visible scars and corrects a very noticeable defect in ear shape. Ear correction helps eliminate an unfavorable appearance and, consequently, improve self-esteem. Even children from the age of 7 who are aware of and wish to correct this condition may qualify for the procedure.
+  summary:
+    anesthesia:
+      pl: Miejscowe
+      en: Local
+    duration:
+      pl: 1–1,5 godz.
+      en: 1–1.5 hours
+    result:
+      pl: po 6 tygodniach
+      en: after 6 weeks
+  related:
+    - face-lift-calkowity-czesciowy-3
+    - korekcja-nosa
+    - korekcja-powiek
+face-lift-calkowity-czesciowy-3:
+  slug:
+    pl: face-lift-calkowity-czesciowy-3
+    en: full-partial-face-lift-3
+  title:
+    pl: Plastyka płatków usznych
+    en: Earlobe Plasty
+  categories:
+    - twarz
+  excerpt:
+    pl: Najczęstszą przyczyną poddawania się korekcji płatków usznych jest ich rozerwanie spowodowane noszeniem kolczyków lub zdecydowanie odbiegająca od normy wielkość lub kształt płatka. Jest to zabieg małoinwazyjny, dający dobre wyniki.
+    en: The most common reason for earlobe correction is tearing caused by wearing earrings, or a significantly abnormal size or shape of the earlobe. This is a minimally invasive procedure that delivers good results.
+  summary:
+    anesthesia:
+      pl: Miejscowe
+      en: Local
+    duration:
+      pl: 40–60 min
+      en: 40–60 min
+  related:
+    - plastyka-odstajacych-uszu
+    - korekcja-blizn-chirurgiczna
+    - wyciecie-znamienia
+botox-leczenie-bolow-migrenowych:
+  slug:
+    pl: botox-leczenie-bolow-migrenowych
+    en: botox-migraine-treatment
+  title:
+    pl: Botoks – leczenie bólów migrenowych
+    en: Botox – Migraine Pain Treatment
+  categories:
+    - twarz
+  excerpt:
+    pl: Oferujemy możliwość leczenia bólów migrenowych. Efekt kuracji (ostrzyknięcia punktów wrażliwych Botoxem) utrzymuje się kilka miesięcy. Warunkiem poddania się zabiegowi jest dokładne zdiagnozowanie schorzenia.
+    en: We offer migraine headache treatment. The effect of the therapy (injecting sensitive points with Botox) lasts several months. A thorough diagnoseis of the condition is required before undergoing the procedure.
+  summary:
+    duration:
+      pl: ok. 30 min
+      en: approx. 30 min
+  related:
+    - face-lift-calkowity-czesciowy-4
+    - redukcja-zmarszczek
+    - wolumetria-twarzy-kwasem-hialuronowym
+endermolift-2-zabiegi-przeciwzmarszczkowe:
+  slug:
+    pl: endermolift-2-zabiegi-przeciwzmarszczkowe
+    en: endermolift-anti-wrinkle
+  title:
+    pl: Endermolift™ 2 – zabiegi odmładzające
+    en: Endermolift™ 2 – Anti-Wrinkle Treatments
+  categories:
+    - twarz
+  excerpt:
+    pl: W 100% naturalna, przeciwzmarszczkowa i odmładzająca technika dla kobiet i mężczyzn w każdym wieku. Znacznie poprawia kondycję skóry, redukując zmarszczki i stymulując skórę do produkcji kolagenu.
+    en: A 100% natural, anti-wrinkle and rejuvenating technique for women and men of all ages. It significantly improves skin condition by reducing wrinkles and stimulating collagen production.
+  summary: {}
+  related:
+    - endermologia-lpg-lipomassage
+    - fotoodmladzanie
+    - redermalizacja
+  twin: endermolift-2-zabieg-odmladzajacy
+fotoodmladzanie-laserowe-laser-ipl:
+  slug:
+    pl: fotoodmladzanie-laserowe-laser-ipl
+    en: laser-photorejuvenation-ipl
+  title:
+    pl: Fotoodmładzanie laserowe (IPL)
+    en: Laser Photorejuvenation (IPL)
+  categories:
+    - twarz
+  excerpt:
+    pl: Jak zachować młody i zdrowy wygląd skóry na lata? Przez cały rok eksploatujemy naszą skórę poddając ją działaniu różnych warunków atmosferycznych. Szczególnie brzemienna w skutkach jest ekspozycja na słońce. Intensywne opalanie pozostawia z reguły ślady na twarzy czy dekolcie, które czasem trudno nawet zamaskować delikatnym makijażem. Podobne przebarwienia pojawiają się wraz z upływem czasu także na grzbietach dłoni. Jak sobie z nimi radzić? Fotoodmładzanie laserowe pozwala na wyrównanie kolorytu skóry i usunięcie nieestetycznych przebarwień, a także widoczne odmłodzenie skóry.
+    en: How can you maintain a youthful and healthy skin appearance for years? Throughout the year, we expose our skin to various weather conditions. Sun exposure is particularly damaging. Intensive tanning usually leaves marks on the face and decolletage that can sometimes be difficult to conceal even with light makeup. Similar discolorations also appear over time on the backs of the hands. How to deal with them? Laser photorejuvenation helps even out skin tone, remove unsightly discolorations, and visibly rejuvenate the skin.
+  summary:
+    duration:
+      pl: do 20 min (twarz)
+      en: up to 20 min (face)
+    sessions:
+      pl: 1–3 zabiegi
+      en: 1–3 sessions
+  related:
+    - resurfacing
+    - pajaczki-teleangiektazje
+    - endermolift-2-zabieg-odmladzajacy
+  twin: fotoodmladzanie
+lipoliza-podbrodek:
+  slug:
+    pl: lipoliza-podbrodek
+    en: chin-lipolysis
+  title:
+    pl: Lipoliza – podbródek
+    en: Chin Lipolysis - Double Chin Reduction
+  categories:
+    - twarz
+  excerpt:
+    pl: Lipolizę podbródka wykonuje się u osób z nadmiernie rozwiniętą tkanką tłuszczową podbródka. Jest to idealne rozwiązanie dla tych pacjentów, którzy obawiają się interwencji chirurgicznej (liposukcji).
+    en: Chin lipolysis is performed on patients with excessive chin fat tissue. It is an ideal solution for those who are hesitant about surgical intervention (liposuction).
+  summary: {}
+  related:
+    - lifting-twarzy
+    - miejscowe-modelowanie-sylwetki-preparatem-aqualyx
+    - liposukcja
+mezoterapia-iglowa:
+  slug:
+    pl: mezoterapia-iglowa
+    en: needle-mesotherapy
+  title:
+    pl: Mezoterapia igłowa
+    en: Needle Mesotherapy
+  categories:
+    - twarz
+    - skora
+  excerpt:
+    pl: Mezoterapia igłowa bywa nazywana „zastrzykiem młodości” – jest jednym z najbardziej cenionych zabiegów medycyny estetycznej. W zależności od wskazań, m.in. odżywia i rewitalizuje skórę twarzy i ciała, działa antycellulitowo i redukuje zmarszczki.
+    en: Needle mesotherapy is often called the “youth injection” — it is one of the most valued aesthetic medicine procedures. Depending on the indications, it nourishes and revitalizes the skin of the face and body, has anti-cellulite effects, and reduces wrinkles.
+  summary:
+    anesthesia:
+      pl: Krem znieczulający
+      en: Anaesthetic cream
+    sessions:
+      pl: Seria kilku, co 2–3 tygodnie
+      en: Series of several, every 2–3 weeks
+  related:
+    - mezoterapia-mikroiglowa-micropen
+    - mezoterapia-osoczem-bogatoplytkowym-prp
+    - redermalizacja
+mezoterapia-komorkami-macierzystymi:
+  slug:
+    pl: mezoterapia-komorkami-macierzystymi
+    en: stem-cell-mesotherapy
+  title:
+    pl: Mezoterapia komórkami macierzystymi
+    en: Stem Cell Mesotherapy
+  categories:
+    - twarz
+  excerpt:
+    pl: Zabieg przeznaczony dla osób chcących w nieinwazyjny sposób znacznie poprawić kondycję i wygląd skóry twarzy.
+    en: A procedure designed for patients who wish to significantly improve the condition and appearance of their facial skin in a non-invasive way.
+  summary:
+    anesthesia:
+      pl: Miejscowe
+      en: Local
+    duration:
+      pl: 60–90 min
+      en: 60–90 min
+    recovery:
+      pl: Kilka dni
+      en: A few days
+  related:
+    - rewitalizacja-skory-komorkami-macierzystymi
+    - komorki-macierzyste-lipogems-odmladzanie-i-rewitalizacja-skory
+    - mezoterapia-osoczem-bogatoplytkowym-prp
+mezoterapia-mikroiglowa-micropen:
+  slug:
+    pl: mezoterapia-mikroiglowa-micropen
+    en: microneedling-mesotherapy-micropen
+  title:
+    pl: Mezoterapia migroigłowa microPen
+    en: Microneedling Mesotherapy microPen
+  categories:
+    - twarz
+  excerpt:
+    pl: Terapia mikroigłowa microPen wpływa na stymulację naturalnego procesu regeneracji dzięki tworzeniu mikroskopijnej wielkości nakłuć, co powoduje przyspieszone procesy naprawcze tkanek. Pozwala także na wchłanianie składników aktywnych w podawanych preparatach o właściwościach nawilżających, odżywczych, napinających (aminokwasy, peptydy, anyoksydanty, witaminy, mikroelementy)
+    en: MicroPen microneedling therapy stimulates the natural regeneration process by creating microscopic punctures, which accelerates tissue repair. It also enables absorption of active ingredients in applied preparations with moisturizing, nourishing, and firming properties (amino acids, peptides, antioxidants, vitamins, microelements).
+  summary: {}
+  related:
+    - mezoterapia-iglowa
+    - resurfacing
+    - mezoterapia-osoczem-bogatoplytkowym-prp
+podanie-osocza-bogatoplytkowego2:
+  slug:
+    pl: podanie-osocza-bogatoplytkowego2
+    en: prp-treatment
+  title:
+    pl: Podanie osocza bogatopłytkowego (PRP) – twarz/szyja/dekolt
+    en: Platelet-Rich Plasma (PRP) – Face / Neck / Décolletage
+  categories:
+    - twarz
+  excerpt:
+    pl: Terapia regeneracyjna PRP jest nowoczesną, odmładzającą skórę procedurą anti-aging, która stymuluje własny potencjał organizmu pacjenta do odbudowy tkanek. Zabieg ma na celu napięcie, wygładzenie skóry i poprawę jej tekstury oraz kolorytu.
+    en: PRP regenerative therapy is a modern, skin-rejuvenating anti-aging procedure that stimulates the patient's own tissue regeneration potential. The procedure aims to tighten, smooth the skin, and improve its texture and tone.
+  summary:
+    duration:
+      pl: 20–60 min
+      en: 20–60 min
+  related:
+    - mezoterapia-iglowa
+    - mezoterapia-komorkami-macierzystymi
+    - redermalizacja
+redermalizacja:
+  slug:
+    pl: redermalizacja
+    en: redermalization
+  title:
+    pl: Redermalizacja – nowy zabieg anti-aging
+    en: Redermalization – a new anti-aging treatment
+  categories:
+    - twarz
+  excerpt:
+    pl: Redermalizacja to nowa metoda prewencji starzenia się i odnowy skóry. Dzięki zastosowaniu innowacyjnych preparatów Xela Rederm® szwajcarskiej firmy Hyalual zawierających bursztynian sodu oraz kwas hialuronowy, następuje regulacja biochemicznych i fizjologicznych procesów w komórkach. Zabieg skutecznie blokuje powstawanie wolnych rodników i zapobiega odwodnieniu skóry. Redermalizację stosuje się na twarz, szyję, dekolt, dłonie oraz pod oczy.
+    en: Redermalization is a new method of aging prevention and skin renewal. Thanks to innovative Xela Rederm® preparations by the Swiss company Hyalual, containing sodium succinate and hyaluronic acid, biochemical and physiological processes in cells are regulated. The procedure effectively blocks free radical formation and prevents skin dehydration. Redermalization is applied to the face, neck, decolletage, hands, and under the eyes.
+  summary: {}
+  related:
+    - mezoterapia-iglowa
+    - redukcja-zmarszczek
+    - mezoterapia-osoczem-bogatoplytkowym-prp
+resurfacing:
+  slug:
+    pl: resurfacing
+    en: resurfacing
+  title:
+    pl: Resurfacing (laser FRAX 1550) – zagęszczenie skóry
+    en: Resurfacing (FRAX 1550 laser) – skin densification
+  categories:
+    - twarz
+  excerpt:
+    pl: Resurfacing to zabieg, który dzięki działaniu lasera, pozwala na bezpieczne pozbycie się wierzchniej warstwy skóry, czyli naskórka. Celem zabiegu jest odmłodzenie skóry, pozbycie się „zniszczonej” warstwy.
+    en: Resurfacing is a procedure that, through laser action, safely removes the outer layer of skin (the epidermis). The goal is to rejuvenate the skin by removing the damaged layer.
+  summary:
+    anesthesia:
+      pl: Krem znieczulający
+      en: Anaesthetic cream
+    result:
+      pl: po kilku tygodniach
+      en: after a few weeks
+  related:
+    - fotoodmladzanie
+    - mezoterapia-mikroiglowa-micropen
+    - korekcja-blizn-chirurgiczna
+wszczepienie-implantu-w-twarz:
+  slug:
+    pl: wszczepienie-implantu-w-twarz
+    en: facial-implant
+  title:
+    pl: Wszczepienie implantu w twarz
+    en: Facial Implant
+  categories:
+    - twarz
+  excerpt:
+    pl: Zabieg przeznaczony jest dla osób wymagających uzupełnienia objętości kości lub tkanek, najczęściej w obrębie łuków jarzmowych, okolic podstawy nosa lub bródki.
+    en: This procedure is designed for patients requiring augmentation of bone or tissue volume, most commonly in the area of the zygomatic arches, around the base of the nosee, or the chin.
+  summary:
+    anesthesia:
+      pl: Ogólne lub miejscowe
+      en: General or local
+    duration:
+      pl: 1,5–2 godz.
+      en: 1.5–2 hours
+    recovery:
+      pl: Obrzęk ok. 2 tygodni
+      en: Swelling approx. 2 weeks
+    result:
+      pl: po 4–6 tygodniach
+      en: after 4–6 weeks
+  related:
+    - lifting-twarzy
+    - modelowanie-twarzy-naturalnym-wypelniaczem-algeness-na-bazie-agarozy
+    - wolumetria-twarzy-kwasem-hialuronowym
+wyciecie-zmiany-nowotworowej:
+  slug:
+    pl: wyciecie-zmiany-nowotworowej
+    en: tumor-excision
+  title:
+    pl: Wycięcie zmiany nowotworowej
+    en: Tumor / Neoplastic Lesion Excision
+  categories:
+    - twarz
+    - cialo
+    - skora
+  excerpt:
+    pl: 'Zmiany zakwalifikowane do wycięcia po badaniu dermoskopowym powinny być usunięte. W przypadkach trudnych zapewniamy zespół: onkolog + chirurg plastyk. Specjalista onkolog zadba, aby zmiana była dobrze oceniona i wycięta z odpowiednim, bezpiecznym marginesem, a chirurg plastyk starannie zamknie ranę, mając na uwadze efekt estetyczny zabiegu.'
+    en: 'Lesions qualified for excision after dermoscopic examination should be removed. In difficult cases, we provide a team: oncologist + plastic surgeon. The oncologist ensures the lesion is properly assessed and excised with an appropriate, safe margin, while the plastic surgeon carefully closes the wound with attention to the aesthetic outcome.'
+  summary:
+    anesthesia:
+      pl: Miejscowe
+      en: Local
+    duration:
+      pl: 40–60 min
+      en: 40–60 min
+    recovery:
+      pl: Zdjęcie szwów po 7–14 dniach
+      en: Stitches removed after 7–14 days
+  related:
+    - wyciecie-znamienia
+    - wyciecie-znamienia-z-plastyka-miejscowa
+    - korekcja-blizn-chirurgiczna
+vectus-depilacja-laserowa-twarzy:
+  slug:
+    pl: vectus-depilacja-laserowa-twarzy
+    en: vectus-laser-hair-removal-face
+  title:
+    pl: VECTUS™ – depilacja laserowa twarzy (dla kobiet i mężczyzn)
+    en: VECTUS™ – Facial Laser Hair Removal (for women and men)
+  categories:
+    - twarz
+  excerpt:
+    pl: VECTUS™ to najbezpieczniejsza dostępna na rynku metoda depilacji laserowej. Efekty widoczne są już po pierwszym zabiegu. W końcu można bezpiecznie i bezboleśnie pozbyć się niechcianego owłosienia.
+    en: VECTUS™ is the safest laser hair removal method available on the market. Results are visible after the very first treatment. Finally, you can safely and painlessly get rid of unwanted hair.
+  summary:
+    anesthesia:
+      pl: Nie jest wymagane (chłodzenie)
+      en: Not required (contact cooling)
+    duration:
+      pl: Od kilku minut, zależnie od okolicy
+      en: From a few minutes, depending on area
+  related:
+    - vectus-bezpieczna-depilacja-laserowa-np-nogi-pachy-plecy
+    - fotoodmladzanie
+    - resurfacing
+porazenie-nerwu-twarzowego-nici-aptos:
+  slug:
+    pl: porazenie-nerwu-twarzowego-nici-aptos
+    en: facial-nerve-palsy-aptos-threads
+  title:
+    pl: Porażenie nerwu twarzowego – nici Aptos
+    en: Facial Nerve Palsy - Aptos Threads
+  categories:
+    - twarz
+  excerpt:
+    pl: Zabieg korekcji asymetrii twarzy w wyniku porażenia nerwu twarzowego nićmi Aptos jest skuteczną metodą poprawy estetyki tkanek twarzy po przebytym porażeniu nerwu twarzowego. Może być wykonany w przypadku braku rokowań samoistnej poprawy, po 2 latach od uszkodzenia.
+    en: Correction of facial asymmetry resulting from facial nerve palsy using Aptos threads is an effective method for improving facial tissue aesthetics after facial nerve palsy. It can be performed when there is no prospect of spontaneous improvement, at least 2 years after the injury.
+  summary: {}
+  related:
+    - face-lift-nicmi
+    - lifting-twarzy
+    - wszczepienie-implantu-w-twarz
+redukcja-zmarszczek:
+  slug:
+    pl: redukcja-zmarszczek
+    en: wrinkle-reduction
+  title:
+    pl: Redukcja zmarszczek kwasem hialuronowym
+    en: Wrinkle Reduction with Hyaluronic Acid
+  categories:
+    - twarz
+  excerpt:
+    pl: Zapraszamy do skorzystania z zabiegów z użyciem kwasu hialuronowego, który nazywany jest „eliksirem młodości”. Wstrzykiwanie preparatu, od wielu lat z powodzeniem stosowanego w medycynie estetycznej, daje dobre i przewidywalne rezultaty już po kilku dniach od iniekcji, a rekonwalescencja po zabiegu jest z reguły bardzo krótka (1-2 dni) i mało uciążliwa. Kwasem hialuronowym można modelować kształt i wielkość ust, owal twarzy, wypełniać zmarszczki statyczne.
+    en: We invite you to take advantage of treatments using hyaluronic acid, often called the “elixir of youth.” Injection of this preparation, successfully used in aesthetic medicine for many years, delivers good and predictable results within just a few days, and recovery is usually very short (1-2 days) and mild. Hyaluronic acid can be used to shape and enhance the lips, contour the face, and fill static wrinkles.
+  summary: {}
+  related:
+    - face-lift-calkowity-czesciowy-4
+    - wolumetria-twarzy-kwasem-hialuronowym
+    - redermalizacja
+face-lift-nicmi-2:
+  slug:
+    pl: face-lift-nicmi-2
+    en: thread-face-lift-2
+  title:
+    pl: Lifting nićmi stałymi lub rozpuszczalnymi Aptos
+    en: Thread Face Lift with Permanent or Absorbable Aptos Threads
+  categories:
+    - twarz
+  excerpt:
+    pl: Lifiting nićmi stałymi lub rozpuszczalnymi Aptos, tzw. lifting bez skalpela, przeznaczony jest dla osób z nieznacznym opadaniem tkanek. Zabieg jest małoinwazyjny, krótki, wykonywany w znieczuleniu miejscowym, z niewielkim obrzękiem pozabiegowym. Dzięki temu pacjent może szybko powrócić do normalnego funkcjonowania, uzyskując pewny i przewidywalny wynik. W zależności od potrzeb lub życzenia pacjenta, używane są nici Aptos o działaniu czasowym (ok. 2 lat) lub trwałym.
+    en: Thread lift with permanent or absorbable Aptos threads, the so-called scalpel-free lift, is designed for patients with mild tissue sagging. The procedure is minimally invasive, short, performed under local anesthesia, with minimal post-procedure swelling. This allows the patient to quickly return to normal activities while achieving a reliable and predictable result. Depending on the patient's needs or preferences, Aptos threads with temporary (approx. 2 years) or permanent effect are used.
+  summary:
+    anesthesia:
+      pl: Miejscowe lub dożylne
+      en: Local or intravenous
+    duration:
+      pl: 40–60 min
+      en: 40–60 min
+    recovery:
+      pl: Obrzęk do kilku dni
+      en: Swelling for a few days
+  related:
+    - lifting-twarzy
+    - wolumetria-twarzy-kwasem-hialuronowym
+    - porazenie-nerwu-twarzowego-nici-aptos
+  twin: face-lift-nicmi
+modelowanie-twarzy-naturalnym-wypelniaczem-algeness-na-bazie-agarozy:
+  slug:
+    pl: modelowanie-twarzy-naturalnym-wypelniaczem-algeness-na-bazie-agarozy
+    en: facial-modelling-algeness
+  title:
+    pl: Modelowanie twarzy naturalnym wypełniaczem Algeness na bazie agarozy
+    en: Facial Modelling with Algeness Natural Agarose-Based Filler
+  categories:
+    - twarz
+  excerpt:
+    pl: Algeness to innowacyjny, w 100% naturalny wypełniacz, składający się z agarozy – substancji pochodzenia roślinnego. Jest w pełni biodegradowalny, bezpieczny i nie zawiera syntetycznych dodatków, takich jak BDDE czy PEG. Dzięki temu zmniejsza ryzyko obrzęków i reakcji alergicznych.
+    en: Algeness is an innovative, 100% natural filler composed of agarose, a plant-derived substance. It is fully biodegradable, safe, and free of synthetic additives such as BDDE or PEG. This reduces the risk of swelling and allergic reactions.
+  summary: {}
+  related:
+    - wolumetria-twarzy-kwasem-hialuronowym
+    - lipo-gems-innowacyjna-metoda-modelowania-tluszczem-bogatym-w-komorki-macierzyste
+    - redukcja-zmarszczek
+liposukcja-laserowa-slimlipo-3d:
+  slug:
+    pl: liposukcja-laserowa-slimlipo-3d
+    en: laser-liposuction-slimlipo
+  title:
+    pl: Liposukcja z obkurczaniem skóry – laserowe odsysanie tłuszczu
+    en: Laser Liposuction with Skin Tightening – SlimLipo 3D
+  categories:
+    - cialo
+  excerpt:
+    pl: Liposukcja z jednoczasowym obkurczaniem skóry to nowoczesna metoda modelowania sylwetki, polegająca na laserowej redukcji tkanki tłuszczowej. Jest to zabieg mniej inwazyjny w stosunku do tradycyjnej liposukcji, a przy tym całkowicie skuteczny. Zastosowanie różnych długości fal oddziałowujących selektywnie na tkankę tłuszczową i skórną pozwala na uzyskanie równomiernego i skutecznego efektu.
+    en: Liposuction with simultaneous skin tightening is a modern body contouring method based on laser fat tissue reduction. It is less invasive than traditional liposuction while being equally effective. The use of different wavelengths that selectively target fat and skin tissue achieves an even and effective result.
+  summary:
+    anesthesia:
+      pl: Miejscowe lub dożylne
+      en: Local or intravenous
+    duration:
+      pl: do 1 godz.
+      en: up to 1 hour
+    recovery:
+      pl: Od razu lub 1–3 dni
+      en: Immediate or 1–3 days
+    result:
+      pl: po kilku miesiącach
+      en: after a few months
+  related:
+    - liposukcja
+    - argo-plasma-obkurczanie-skory
+    - miejscowe-modelowanie-sylwetki-preparatem-aqualyx
+argo-plasma-obkurczanie-skory:
+  slug:
+    pl: argo-plasma-obkurczanie-skory
+    en: argo-plasma-skin-tightening
+  title:
+    pl: Argo Plasma – obkurczanie skóry
+    en: Argo Plasma – Skin Tightening
+  categories:
+    - cialo
+  excerpt:
+    pl: Po znacznej utracie wagi lub liposukcji, może pojawić się problem wiotkiej skóry. Dzięki przełomowej technologii plazmy argonowej, możemy bezpiecznie i skutecznie obkurczyć, zwiększyć napięcie i poprawić jędrność skóry.
+    en: After significant weight loss or liposuction, loose skin can become an issue. Thanks to breakthrough argon plasma technology, we can safely and effectively tighten, increase tension, and improve skin firmness.
+  summary:
+    anesthesia:
+      pl: Miejscowe lub dożylne
+      en: Local or intravenous
+    duration:
+      pl: 40–60 min
+      en: 40–60 min
+  related:
+    - liposukcja
+    - liposukcja-laserowa-slimlipo-3d
+    - plastyka-ramion
+plastyka-brzucha:
+  slug:
+    pl: plastyka-brzucha
+    en: tummy-tuck
+  title:
+    pl: Plastyka brzucha (abdominoplastyka)
+    en: Tummy Tuck / Abdominoplasty
+  categories:
+    - cialo
+  excerpt:
+    pl: Plastyka brzucha (abdominoplastyka) to zabieg, który pozwala odzyskać pożądany wygląd brzucha np. po przebytej ciąży bądź po znacznej utracie wagi. Ma na celu m.in. usunięcie nadmiaru obwisłej skóry, a przy zastosowaniu jednoczesnej liposukcji, redukuje także ilość tkanki tłuszczowej zlokalizowanej w okolicy brzucha.
+    en: A tummy tuck (abdominoplasty) is a procedure that restores the desired abdominal appearance, for example after pregnancy or significant weight loss. It aims to remove excess sagging skin, and when combined with simultaneous liposuction, also reduces the amount of fat tissue in the abdominal area.
+  summary:
+    anesthesia:
+      pl: Ogólne
+      en: General
+    duration:
+      pl: 2–3 godz.
+      en: 2–3 hours
+    result:
+      pl: po 4–6 miesiącach
+      en: after 4–6 months
+  related:
+    - liposukcja
+    - chirurgia-przepukliny-brzuszne
+    - plastyka-ud
+przeszczep-tluszczu:
+  slug:
+    pl: przeszczep-tluszczu
+    en: fat-transfer
+  title:
+    pl: Przeszczep tłuszczu (lipotransfer)
+    en: Fat Transfer / Lipofilling
+  categories:
+    - cialo
+  excerpt:
+    pl: Wraz z wiekiem czy też w następstwie chorób/wypadków, niektórym miejscom ciała lub twarzy może brakować objętości i kształtu. Doskonałym rozwiązaniem w tym przypadku jest przeszczep tłuszczu (tzw. lipotransfer) lub wypełnianie tłuszczem (lipofilling) z wykorzystaniem różnych metod – np. metody Puregraft.
+    en: With age or as a result of illness/accidents, certain areas of the body or face may lack volume and shape. An excellent solution in such cases is fat transfer (lipotransfer) or fat filling (lipofilling) using various methods, such as the Puregraft method.
+  summary:
+    anesthesia:
+      pl: Miejscowe lub dożylne
+      en: Local or intravenous
+    duration:
+      pl: 2–3 godz.
+      en: 2–3 hours
+    result:
+      pl: po 3 miesiącach
+      en: after 3 months
+  related:
+    - lipo-gems-innowacyjna-metoda-modelowania-tluszczem-bogatym-w-komorki-macierzyste
+    - powiekszanie-piersi-wlasnym-tluszczem
+    - liposukcja
+plastyka-lydek-powiekszenie-implantami:
+  slug:
+    pl: plastyka-lydek-powiekszenie-implantami
+    en: calf-augmentation-implants
+  title:
+    pl: Plastyka łydek (powiększanie implantami)
+    en: Calf Augmentation with Implants
+  categories:
+    - cialo
+  excerpt:
+    pl: Plastykę łydek wykonuje się u osób z asymetrią łydek lub znacznym niedorozwojem mięśni. Pozwala na zwiększenie objętości lub/i wyrównanie symetrii.
+    en: Calf augmentation is performed on patients with calf asymmetry or significant muscle underdevelopment. It allows for increased volume and/or symmetry correction.
+  summary:
+    anesthesia:
+      pl: Miejscowe lub dożylne
+      en: Local or intravenous
+    duration:
+      pl: ok. 1 godz.
+      en: approx. 1 hour
+    recovery:
+      pl: 7–10 dni
+      en: 7–10 days
+  related:
+    - przeszczep-tluszczu
+    - plastyka-ud
+    - liposukcja
+plastyka-ramion:
+  slug:
+    pl: plastyka-ramion
+    en: arm-lift
+  title:
+    pl: Plastyka ramion
+    en: Arm Lift / Brachioplasty
+  categories:
+    - cialo
+  excerpt:
+    pl: Zabieg dla osób, u których nastąpiła znaczna utrata wagi lub/i zwiotczenie tkanek ramion. Pozwala odzyskać prawidłowy zarys ramion i napięcie skóry.
+    en: A procedure for patients who have experienced significant weight loss and/or sagging arm tissue. It restores proper arm contour and skin firmness.
+  summary:
+    anesthesia:
+      pl: Ogólne
+      en: General
+    duration:
+      pl: 2–3 godz.
+      en: 2–3 hours
+    result:
+      pl: po 4–6 miesiącach
+      en: after 4–6 months
+  related:
+    - plastyka-ud
+    - liposukcja
+    - argo-plasma-obkurczanie-skory
+plastyka-ud:
+  slug:
+    pl: plastyka-ud
+    en: thigh-lift
+  title:
+    pl: Plastyka ud
+    en: Thigh Lift
+  categories:
+    - cialo
+  excerpt:
+    pl: Zabieg przeznaczony jest dla osób, u których wystąpiła znaczna utrata wagi lub po rozległych zabiegach liposukcji w obrębie kończyn dolnych. Pozwala odzyskać prawidłowy zarys ud i napięcie skóry.
+    en: This procedure is designed for patients who have experienced significant weight loss or after extensive liposuction of the lower limbs. It restores proper thigh contour and skin firmness.
+  summary:
+    anesthesia:
+      pl: Ogólne
+      en: General
+    duration:
+      pl: ok. 3 godz.
+      en: approx. 3 hours
+    result:
+      pl: po 4–6 miesiącach
+      en: after 4–6 months
+  related:
+    - plastyka-ramion
+    - plastyka-brzucha
+    - liposukcja
+zmniejszenie-warg-sromowych:
+  slug:
+    pl: zmniejszenie-warg-sromowych
+    en: labiaplasty
+  title:
+    pl: Zmniejszenie warg sromowych
+    en: Labiaplasty
+  categories:
+    - cialo
+  excerpt:
+    pl: Zbyt duże wargi sromowe bywają powodem do kompleksów dla wielu kobiet. Dzięki temu zabiegowi wykonywanemu w znieczuleniu miejscowym, można szybko i skutecznie rozwiązać ten intymny problem.
+    en: Enlarged labia can be a source of insecurity for many women. This procedure, performed under local anesthesia, quickly and effectively resolves this intimate concern.
+  summary:
+    anesthesia:
+      pl: Miejscowe
+      en: Local
+    duration:
+      pl: ok. 1 godz.
+      en: approx. 1 hour
+    recovery:
+      pl: 7–10 dni
+      en: 7–10 days
+    forWhom:
+      pl: Kobiety
+      en: Women
+  related:
+    - plastyka-brzucha
+    - liposukcja
+    - przeszczep-tluszczu
+leczenie-bolow-migrenowych-botox:
+  slug:
+    pl: leczenie-bolow-migrenowych-botox
+    en: migraine-treatment-botox
+  title:
+    pl: Botoks – leczenie bólów migrenowych
+    en: Migraine Treatment with Botox
+  categories:
+    - cialo
+  excerpt:
+    pl: Oferujemy możliwość leczenia bólów migrenowych. Efekt kuracji (ostrzyknięcia punktów wrażliwych Botoxem) utrzymuje się kilka miesięcy. Warunkiem poddania się zabiegowi jest dokładne zdiagnozowanie schorzenia.
+    en: We offer migraine headache treatment. The effect of the therapy (injecting sensitive points with Botox) lasts several months. A thorough diagnoseis of the condition is required before undergoing the procedure.
+  summary:
+    duration:
+      pl: ok. 30 min
+      en: approx. 30 min
+  related:
+    - face-lift-calkowity-czesciowy-4
+    - redukcja-zmarszczek
+    - wolumetria-twarzy-kwasem-hialuronowym
+  twin: botox-leczenie-bolow-migrenowych
+endermologia-lpg-lipomassage:
+  slug:
+    pl: endermologia-lpg-lipomassage
+    en: endermologie-lpg-lipomassage
+  title:
+    pl: 'Endermologia: LPG® Lipomassage™'
+    en: 'Endermologie: LPG® Lipomassage™'
+  categories:
+    - cialo
+  excerpt:
+    pl: 'Endermologia: LPG® Lipomassage™ to innowacyjna metoda redukcji tkanki tłuszczowej, która naturalnie eliminuje miejscowe złogi tłuszczu. Zabiegi endermologii stymulują lipolizę oraz pobudzają skórę do produkcji kolagenu, co sprawia że nie tylko traci się zbędne centymetry, ale zyskuje także jędrną skórę.'
+    en: 'Endermologie: LPG® Lipomassage™ is an innovative fat tissue reduction method that naturally eliminates localized fat deposits. Endermologie treatments stimulate lipolysis and encourage collagen production, resulting in not only losing excess centimeters but also gaining firmer skin.'
+  summary:
+    anesthesia:
+      pl: Nie jest wymagane
+      en: Not required
+    duration:
+      pl: ok. 35 min
+      en: approx. 35 min
+    recovery:
+      pl: Natychmiastowa
+      en: Immediate
+    sessions:
+      pl: Seria ok. 15 (efekty po 3)
+      en: Series of approx. 15 (effects after 3)
+  related:
+    - endermolift-2-zabieg-odmladzajacy
+    - miejscowe-modelowanie-sylwetki-preparatem-aqualyx
+    - liposukcja
+flebologia:
+  slug:
+    pl: flebologia
+    en: phlebology
+  title:
+    pl: Flebologia
+    en: Phlebology
+  categories:
+    - cialo
+  excerpt:
+    pl: 'Źylaki i pajączki to częsta dolegliwość wielu ludzi, niezaleźnie od płci. Pacjentom zaproponować możemy szereg metod pozwalających na bezpieczne rozwiązanie tego uciążliwego problemu. W ofercie: laseroterapia, skleroterapia, miniflebektomia lub leczenie operacyjne żylaków'
+    en: 'Varicose veins and spider veins are a common condition affecting many people, regardless of gender. We offer a range of methods for safely resolving this troublesome problem. Available treatments include: laser therapy, sclerotherapy, miniphlebectomy, and surgical treatment of varicose veins.'
+  summary: {}
+  related:
+    - pajaczki-teleangiektazje
+    - endermologia-lpg-lipomassage
+    - fotoodmladzanie
+komorki-macierzyste-lipogems-odmladzanie-grzbietow-rak:
+  slug:
+    pl: komorki-macierzyste-lipogems-odmladzanie-grzbietow-rak
+    en: stem-cells-lipogems-hand-rejuvenation
+  title:
+    pl: 'Komórki regeneracyjne: Lipogems®'
+    en: 'Regenerative Cells: Lipogems®'
+  categories:
+    - cialo
+  excerpt:
+    pl: Lipogems® to innowacyjna metoda otrzymywania tkanki tłuszczowej z dużą zawartością komórek regeneracyjnych pozwalająca na podawanie jej jak wypełniacza. Dla pacjenta oznacza to niewielki obrzęk pooperacyjny, poprawę objętości i usunięcie stanów zapalnych skóry, rewitalizację i poprawę krążenia. Zabiegi z wykorzystaniem Lipogems® w medycynie estetycznej zaczęliśmy wykonywać jako pierwsi w Polsce.
+    en: Lipogems® is an innovative method for obtaining fat tissue with a high content of regenerative cells, allowing it to be administered as a filler. For the patient, this means minimal post-operative swelling, improved volume, reduction of skin inflammation, revitalization, and improved circulation. We were the first in Poland to perform Lipogems® procedures in aesthetic medicine.
+  summary: {}
+  related:
+    - komorki-macierzyste-lipogems-odmladzanie-i-rewitalizacja-skory
+    - przeszczep-tluszczu
+    - rewitalizacja-skory-komorkami-macierzystymi
+miejscowe-modelowanie-sylwetki-preparatem-aqualyx:
+  slug:
+    pl: miejscowe-modelowanie-sylwetki-preparatem-aqualyx
+    en: body-contouring-aqualyx
+  title:
+    pl: Modelowanie sylwetki preparatem Aqualyx
+    en: Local Body Contouring with Aqualyx
+  categories:
+    - cialo
+  excerpt:
+    pl: Preparat Aqualyx służy do miejscowego modelowania sylwetki. Jeśli pacjentka posiada gdzieś nieznaczne naddatki tkanki tłuszczowej, z powodzeniem może skorzystać z tego rozwiązania. Zastosowanie znajdzie on w przypadku np. zbyt wydatnego podbródka lub lokalnego otłuszczenia na brzuchu. „Zgubić” można nawet kilka centrymetrów.
+    en: Aqualyx is used for localized body contouring. If the patient has minor excess fat deposits, this solution can be very effective. It is applicable for issues such as an overly prominent chin or localized abdominal fat. You can lose even several centimeters.
+  summary:
+    anesthesia:
+      pl: Nie jest wymagane
+      en: Not required
+    recovery:
+      pl: Natychmiastowa
+      en: Immediate
+  related:
+    - liposukcja-laserowa-slimlipo-3d
+    - lipoliza-podbrodek
+    - endermologia-lpg-lipomassage
+chirurgia-przepukliny-brzuszne:
+  slug:
+    pl: chirurgia-przepukliny-brzuszne
+    en: abdominal-hernia-surgery
+  title:
+    pl: Leczenie przepukliny brzusznej
+    en: Abdominal Hernia Surgery
+  categories:
+    - cialo
+  excerpt:
+    pl: Przepuklina to uwypuklenie otrzewnej (błony otaczającej narządy jamy brzusznej) w postaci „worka” widocznego w powłokach brzucha. Powstają w miejscach gdzie inne tkanki (mięśnie, powięź) są zbyt wiotkie, aby utrzymać narządy wewnętrzne, przede wszystkim jelita, na swoim miejscu w jamie brzusznej. Operacyjne leczenie przepuklin pozwala na rozwiązanie problemu.
+    en: A hernia is a protrusion of the peritoneum (the membrane surrounding the abdominal organs) in the form of a visible “sac” in the abdominal wall. They develop in areas where other tissues (muscles, fascia) are too weak to keep the internal organs, primarily the intestines, in place within the abdominal cavity. Surgical hernia treatment resolves the problem.
+  summary:
+    anesthesia:
+      pl: Ogólne lub dolędźwiowe
+      en: General or spinal
+    stay:
+      pl: 1 doba
+      en: 1 day
+  related:
+    - plastyka-brzucha
+    - liposukcja
+    - chirurgia-reki
+regeneracja-stawow-komorkami-macierzystymi:
+  slug:
+    pl: regeneracja-stawow-komorkami-macierzystymi
+    en: joint-regeneration-stem-cells
+  title:
+    pl: 'Ortopedia: regeneracja stawów komórkami macierzystymi'
+    en: 'Orthopaedics: Joint Regeneration with Stem Cells'
+  categories:
+    - cialo
+  excerpt:
+    pl: Zabieg przeznaczony dla osób ze stwierdzoną chorobą zwyrodnieniową stawów. Służy regeneracji i naprawie uszkodzonych chrząstek stawowych i tkanek oraz zmniejszeniu stanu zapalnego i bólów stawów.
+    en: A procedure designed for patients diagnoseed with degenerative joint disease. It serves to regenerate and repair damaged joint cartilage and tissues, and to reduce inflammation and joint pain.
+  summary: {}
+  related:
+    - chirurgia-reki
+    - lipo-gems-innowacyjna-metoda-modelowania-tluszczem-bogatym-w-komorki-macierzyste
+    - mezoterapia-komorkami-macierzystymi
+chirurgia-reki:
+  slug:
+    pl: chirurgia-reki
+    en: hand-surgery
+  title:
+    pl: Chirurgia ręki
+    en: Hand Surgery
+  categories:
+    - cialo
+  excerpt:
+    pl: W Gabinecie oferujemy również zabiegi z zakresu chirurgii ręki. Leczymy operacyjnie często występujące schorzenia np. zespołu cieśni nadgrastka powodujące drętwienie palców i bóle nocne ręki.
+    en: At our clinic, we also offer hand surgery procedures. We surgically treat common conditions such as carpal tunnel syndrome, which causes finger numbness and nighttime hand pain.
+  summary: {}
+  related:
+    - regeneracja-stawow-komorkami-macierzystymi
+    - korekcja-blizn-chirurgiczna
+    - chirurgia-przepukliny-brzuszne
+vectus-bezpieczna-depilacja-laserowa-np-nogi-pachy-plecy:
+  slug:
+    pl: vectus-bezpieczna-depilacja-laserowa-np-nogi-pachy-plecy
+    en: vectus-laser-hair-removal-body
+  title:
+    pl: Depilacja laserowa – VECTUS™
+    en: Laser Hair Removal – VECTUS™
+  categories:
+    - cialo
+    - skora
+  excerpt:
+    pl: Depilacja VECTUS™ to zabieg wykonywany za pomocą najbardziej nowoczesnego, skutecznego i bezpiecznego lasera diodowego. Laser Vectus™ to maksimum bezpieczeństwa, skuteczności i wygody. Dzięki temu nowoczesnemu urządzeniu depilacja laserowa jest łatwiejsza i szybsza niż kiedykolwiek wcześniej.
+    en: VECTUS™ hair removal is a procedure performed using the most advanced, effective, and safe diode laser. The Vectus™ laser offers maximum safety, effectiveness, and comfort. Thanks to this modern device, laser hair removal is easier and faster than ever before.
+  summary:
+    anesthesia:
+      pl: Nie jest wymagane (chłodzenie)
+      en: Not required (contact cooling)
+    duration:
+      pl: Od kilku minut, zależnie od okolicy
+      en: From a few minutes, depending on area
+    sessions:
+      pl: Seria kilku zabiegów
+      en: A series of several
+  related:
+    - vectus-depilacja-laserowa-twarzy
+    - endermologia-lpg-lipomassage
+    - pajaczki-teleangiektazje
+pajaczki-teleangiektazje:
+  slug:
+    pl: pajaczki-teleangiektazje
+    en: spider-veins-telangiectasia
+  title:
+    pl: „Pajączki”
+    en: Spider Veins / Telangiectasia
+  categories:
+    - cialo
+  excerpt:
+    pl: „Pajączki”, czyli teleangiektazje, to częsta dolegliwość wielu ludzi, niezaleźnie od płci. Pacjentom zaproponować możemy szereg metod pozwalających na bezpieczne rozwiązanie tego uciążliwego problemu. W naszej ofercie posiadamy zabiegi laserowe mające na celu redukcję zmian naczyniowych lub skleroterapię. Zabiegi flebologiczne wykonuje u nas doświadczony chirurg naczyniowy, dr n. med. Andrzej Cichocki.
+    en: Spider veins (telangiectasia) are a common condition affecting many people, regardless of gender. We offer a range of methods for safely resolving this troublesome problem. Our services include laser treatments for vascular lesion reduction and sclerotherapy. Phlebological procedures at our clinic are performed by an experienced vascular surgeon, Dr. Andrzej Cichocki, MD, PhD.
+  summary: {}
+  related:
+    - flebologia
+    - fotoodmladzanie
+    - resurfacing
+powiekszanie-piersi:
+  slug:
+    pl: powiekszanie-piersi
+    en: breast-augmentation
+  title:
+    pl: Powiększanie piersi implantami
+    en: Breast Augmentation with Implants
+  categories:
+    - piersi
+  excerpt:
+    pl: Powiększanie piersi implantami to najbardziej popularny zabieg z zakresu chirurgii plastycznej. Dzięki szerokiej gamie implantów, którymi dysponujemy, można osiągnąć bardzo dobre i estetyczne wyniki, zachowując maksimum bezpieczeństwa. Korzystamy z implantów wyłącznie sprawdzonych producentów, którzy spełniają najbardziej surowe kryteria dotyczące jakości i trwałości implantów (dożywotnia gwarancja producenta etc.).
+    en: Breast augmentation with implants is the most popular plastic surgery procedure. Thanks to the wide range of implants we offer, excellent and aesthetic results can be achieved while maintaining maximum safety. We use implants exclusively from proven manufacturers who meet the strictest quality and durability criteria (lifetime manufacturer warranty, etc.).
+  summary:
+    anesthesia:
+      pl: Ogólne
+      en: General
+    duration:
+      pl: 1,5–2 godz.
+      en: 1.5–2 hours
+    result:
+      pl: po ok. 3 miesiącach
+      en: after approx. 3 months
+  related:
+    - powiekszanie-piersi-wlasnym-tluszczem
+    - podniesienie-piersi
+    - plastyka-wciagnietych-brodawek
+powiekszanie-piersi-wlasnym-tluszczem:
+  slug:
+    pl: powiekszanie-piersi-wlasnym-tluszczem
+    en: breast-augmentation-fat-transfer
+  title:
+    pl: Powiększanie piersi własną tkanką tłuszczową / lipofilling
+    en: Breast Augmentation with Own Fat / Lipofilling
+  categories:
+    - piersi
+  excerpt:
+    pl: Metoda ta jest alternatywą dla powiększenia piersi implantami. Decydują się na nią najczęściej kobiety, które nie chcą bądź nie mogą „nosić” w sobie ciała obcego w postaci implantu lub pacjentki chcące nieznacznie, naturalnie powiększyć biust.
+    en: This method is an alternative to breast augmentation with implants. It is most often chosen by women who do not want or cannot carry a foreign body in the form of an implant, or patients who wish to slightly and naturally enlarge their breasts.
+  summary:
+    anesthesia:
+      pl: Miejscowe, dożylne lub ogólne
+      en: Local, intravenous or general
+    duration:
+      pl: 2–3 godz.
+      en: 2–3 hours
+    result:
+      pl: po kilku miesiącach
+      en: after a few months
+  related:
+    - powiekszanie-piersi
+    - przeszczep-tluszczu
+    - rekonstrukcja-piersi-wlasnym-tluszczem
+podniesienie-piersi:
+  slug:
+    pl: podniesienie-piersi
+    en: breast-lift
+  title:
+    pl: Podniesienie (mastopeksja) piersi
+    en: Breast Lift (Mastopexy)
+  categories:
+    - piersi
+  excerpt:
+    pl: Zabieg ten pozwala na odzyskanie ładnego kształtu piersi, np. po przebytej ciąży i karmieniu.
+    en: This procedure restores a beautiful breast shape, for example after pregnancy and breastfeeding.
+  summary:
+    anesthesia:
+      pl: Ogólne lub miejscowe
+      en: General or local
+    duration:
+      pl: ok. 3 godz.
+      en: approx. 3 hours
+    result:
+      pl: po kilku miesiącach
+      en: after a few months
+  related:
+    - podniesienie-piersi-nicmi-aptos-podskorny-biustonosz
+    - powiekszanie-piersi
+    - redukcja-piersi
+podniesienie-piersi-nicmi-aptos-podskorny-biustonosz:
+  slug:
+    pl: podniesienie-piersi-nicmi-aptos-podskorny-biustonosz
+    en: breast-lift-aptos-threads
+  title:
+    pl: Podniesienie biustu nićmi APTOS (podskórny biustonosz)
+    en: Breast Lift with APTOS Threads (Subcutaneous Bra)
+  categories:
+    - piersi
+  excerpt:
+    pl: Zabieg podniesienia biustu nićmi APTOS pozwala na odzyskanie ładnego kształtu piersi, np. po przebytej ciąży i karmieniu. Można go wykonać u kobiet z rozmiarami do niedużego C. Zastosowanie nici APTOS w liftingu piersi daje przewidywalny efekt oraz jest bezpieczne, pomaga przywrócić przy tym młody wygląd biustu bez użycia skalpela.
+    en: Breast lift with APTOS threads restores a beautiful breast shape, for example after pregnancy and breastfeeding. It can be performed on women with cup sizes up to a small C. The use of APTOS threads in breast lifting provides a predictable and safe result, helping to restore a youthful breast appearance without a scalpel.
+  summary:
+    anesthesia:
+      pl: Miejscowe lub ogólne
+      en: Local or general
+    duration:
+      pl: ok. 3 godz.
+      en: approx. 3 hours
+    result:
+      pl: po 3 miesiącach
+      en: after 3 months
+  related:
+    - podniesienie-piersi
+    - powiekszanie-piersi
+    - face-lift-nicmi
+redukcja-piersi:
+  slug:
+    pl: redukcja-piersi
+    en: breast-reduction
+  title:
+    pl: Redukcja (zmniejszanie) piersi
+    en: Breast Reduction (Mammoplasty)
+  categories:
+    - piersi
+  excerpt:
+    pl: Zabieg zmniejszania piersi (redukcji piersi) przeznaczony jest dla kobiet ze zbyt obfitym biustem. Pozwala bezpiecznie zmniejszyć biust, zachowując jego naturalne kształty.
+    en: Breast reduction is designed for women with overly large breasts. It safely reduces breast size while preserving their natural shape.
+  summary:
+    anesthesia:
+      pl: Ogólne
+      en: General
+    duration:
+      pl: ok. 3 godz.
+      en: approx. 3 hours
+    result:
+      pl: po ok. 3 miesiącach
+      en: after approx. 3 months
+  related:
+    - podniesienie-piersi
+    - dla-mezczyzn-ginekomastia
+    - plastyka-wciagnietych-brodawek
+plastyka-wciagnietych-brodawek:
+  slug:
+    pl: plastyka-wciagnietych-brodawek
+    en: inverted-nipple-correction
+  title:
+    pl: Plastyka wciągniętych brodawek
+    en: Inverted Nipple Correction
+  categories:
+    - piersi
+  excerpt:
+    pl: Zabieg ten rozwiązuje problem wciągniętych brodawek. Wykonywany jest w znieczuleniu miejscowym, co pozwala na bardzo szybką rekonwalescencję i natychmiastowy powrót do codziennych czynności.
+    en: This procedure resolves the problem of inverted nipples. It is performed under local anesthesia, allowing for very quick recovery and an immediate return to daily activities.
+  summary:
+    anesthesia:
+      pl: Miejscowe
+      en: Local
+    duration:
+      pl: ok. 1 godz.
+      en: approx. 1 hour
+  related:
+    - powiekszanie-piersi
+    - podniesienie-piersi
+    - redukcja-piersi
+rekonstrukcja-piersi:
+  slug:
+    pl: rekonstrukcja-piersi
+    en: breast-reconstruction
+  title:
+    pl: Rekonstrukcja piersi
+    en: Breast Reconstruction
+  categories:
+    - piersi
+  excerpt:
+    pl: Rekonstrukcja piersi po przebytym nowotworze stanowi ważny element powrotu pacjentki do codziennego życia. Istnieje wiele metod rekonstrukcji piersi. Celem rekonstrukcji jest odzyskanie naturalnie wyglądającej piersi w jednym lub, zależnie od metody, kilku zabiegach rekonstrukcyjnych.
+    en: Breast reconstruction after cancer is an important part of a patient's return to daily life. There are many methods of breast reconstruction. The goal is to restore a natural-looking breast in one or, depending on the method, several reconstructive procedures.
+  summary:
+    anesthesia:
+      pl: Ogólne lub dożylne
+      en: General or intravenous
+    duration:
+      pl: 1,5–4 godz.
+      en: 1.5–4 hours
+    recovery:
+      pl: 3–8 tygodni
+      en: 3–8 weeks
+  related:
+    - rekonstrukcja-piersi-ekspanderoproteza
+    - rekonstrukcja-piersi-tkankami-wlasnymi
+    - rekonstrukcja-piersi-wlasnym-tluszczem
+natychmiastowa-rekonstrukcja-piersi-po-amputacji:
+  slug:
+    pl: natychmiastowa-rekonstrukcja-piersi-po-amputacji
+    en: immediate-breast-reconstruction
+  title:
+    pl: Amputacja piersi (mastektomia) z natychmiastową rekonstrukcją
+    en: Mastectomy with Immediate Breast Reconstruction
+  categories:
+    - piersi
+  excerpt:
+    pl: Natychmiastowa rekonstrukcja piersi po amputacji piersi z zaoszczędzeniem skóry z powodu obciążenia genem BRCA1,BRCA2 wykonywana jest u osób obciążonych genem zwiększającym ryzyko wystąpienia raka piersi.
+    en: Immediate breast reconstruction after skin-sparing mastectomy due to BRCA1/BRCA2 gene mutation is performed on patients carrying a gene that increases the risk of breast cancer.
+  summary:
+    anesthesia:
+      pl: Ogólne
+      en: General
+    duration:
+      pl: 3–5 godz.
+      en: 3–5 hours
+    stay:
+      pl: 1 doba
+      en: 1 day
+    recovery:
+      pl: 3–4 tygodnie
+      en: 3–4 weeks
+  related:
+    - rekonstrukcja-piersi
+    - rekonstrukcja-piersi-ekspanderoproteza
+    - rekonstrukcja-piersi-tkankami-wlasnymi
+rekonstrukcja-piersi-ekspanderoproteza:
+  slug:
+    pl: rekonstrukcja-piersi-ekspanderoproteza
+    en: breast-reconstruction-expander
+  title:
+    pl: Rekonstrukcja piersi ekspanderoprotezą
+    en: Breast Reconstruction with Expander-Prosthesis
+  categories:
+    - piersi
+  excerpt:
+    pl: Rekonstrukcja piersi ekspanderoprotezą pozwala na zrekonstruowanie piersi w jednym zabiegu operacyjnym.
+    en: Breast reconstruction with an expander-prosthesis allows the breast to be reconstructed in a single surgical procedure.
+  summary:
+    anesthesia:
+      pl: Ogólne
+      en: General
+    duration:
+      pl: 1,5–4 godz.
+      en: 1.5–4 hours
+    stay:
+      pl: 2–5 dni
+      en: 2–5 days
+    recovery:
+      pl: 3–8 tygodni
+      en: 3–8 weeks
+  related:
+    - natychmiastowa-rekonstrukcja-piersi-po-amputacji
+    - rekonstrukcja-piersi-tkankami-wlasnymi
+    - rekonstrukcja-piersi-wlasnym-tluszczem
+rekonstrukcja-piersi-tkankami-wlasnymi:
+  slug:
+    pl: rekonstrukcja-piersi-tkankami-wlasnymi
+    en: breast-reconstruction-own-tissue
+  title:
+    pl: Rekonstrukcja piersi tkankami własnymi
+    en: Breast Reconstruction with Own Tissues
+  categories:
+    - piersi
+  excerpt:
+    pl: Zdarza się, że rekonstrukcja tkankami własnymi (płatem z pleców lub z brzucha) jest jedyną metodą rekonstrukcji. Jest to rozwiązanie dla kobiet po przebytej radioterapii. Pozwala uzyskać bardzo dobre rezultaty i naturalnie wyglądającą pierś.
+    en: In some cases, reconstruction with the patient's own tissue (a flap from the back or abdomen) is the only reconstruction method available. This is a solution for women who have undergone radiotherapy. It achieves excellent results and a natural-looking breast.
+  summary: {}
+  related:
+    - rekonstrukcja-piersi-ekspanderoproteza
+    - rekonstrukcja-piersi-wlasnym-tluszczem
+    - natychmiastowa-rekonstrukcja-piersi-po-amputacji
+rekonstrukcja-piersi-wlasnym-tluszczem:
+  slug:
+    pl: rekonstrukcja-piersi-wlasnym-tluszczem
+    en: breast-reconstruction-fat-transfer
+  title:
+    pl: Rekonstrukcja piersi własnym tłuszczem
+    en: Breast Reconstruction with Own Fat
+  categories:
+    - piersi
+  excerpt:
+    pl: Rekonstrukcja piersi własnym tłuszczem jest alternatywą dla kobiet, które obawiają się poważnej operacji plastycznej, nie chcą ciała obcego w postaci silikonowych implantów lub ze względu na przebytą radioterapię nie mogą w celu rekonstrukcji wszczepić implantu.
+    en: Breast reconstruction with the patient's own fat is an alternative for women who are concerned about major plastic surgery, do not want a foreign body in the form of silicone implants, or cannot have an implant inserted due to previous radiotherapy.
+  summary:
+    anesthesia:
+      pl: Dożylne lub miejscowe
+      en: Intravenous or local
+    duration:
+      pl: 1,5–3 godz.
+      en: 1.5–3 hours
+    stay:
+      pl: Kilka godzin
+      en: A few hours
+    result:
+      pl: po 4–6 tygodniach
+      en: after 4–6 weeks
+  related:
+    - rekonstrukcja-piersi-tkankami-wlasnymi
+    - powiekszanie-piersi-wlasnym-tluszczem
+    - rekonstrukcja-piersi-ekspanderoproteza
+dla-mezczyzn-ginekomastia:
+  slug:
+    pl: dla-mezczyzn-ginekomastia
+    en: gynecomastia
+  title:
+    pl: Ginekomastia
+    en: Gynecomastia
+  categories:
+    - piersi
+  excerpt:
+    pl: Dla wielu mężczyzn przerost gruczołu piersiowego czy tłuszczowy przerost męskiej piersi to duży problem. Zabieg ginekomastii pozwala rozwiązać go raz na zawsze i odzyskać płaską klatkę piersiową.
+    en: For many men, breast gland enlargement or fatty male breast enlargement is a significant problem. Gynecomastia surgery resolves the issue once and for all, restoring a flat chest.
+  summary:
+    anesthesia:
+      pl: Ogólne
+      en: General
+    duration:
+      pl: 60–90 min
+      en: 60–90 min
+    stay:
+      pl: 1 doba
+      en: 1 day
+    result:
+      pl: po ok. miesiącu
+      en: after approx. 1 month
+    forWhom:
+      pl: Mężczyźni
+      en: Men
+  related:
+    - liposukcja
+    - redukcja-piersi
+    - plastyka-brzucha
+rewitalizacja-skory-komorkami-macierzystymi:
+  slug:
+    pl: rewitalizacja-skory-komorkami-macierzystymi
+    en: skin-revitalization-stem-cells
+  title:
+    pl: Rewitalizacja skóry komórkami macierzystymi
+    en: Skin Revitalisation with Stem Cells
+  categories:
+    - skora
+  excerpt:
+    pl: Komórki macierzyste pozwalają odzyskać skórze świeżość i witalność. Zabiegi z ich wykorzystaniem w celu rewitalizacji skóry dają bardzo dobre rezultaty.
+    en: Stem cells help the skin regain freshness and vitality. Treatments using stem cells for skin revitalization deliver excellent results.
+  summary: {}
+  related:
+    - mezoterapia-komorkami-macierzystymi
+    - komorki-macierzyste-lipogems-odmladzanie-i-rewitalizacja-skory
+    - lipo-gems-innowacyjna-metoda-modelowania-tluszczem-bogatym-w-komorki-macierzyste
+wyciecie-znamienia:
+  slug:
+    pl: wyciecie-znamienia
+    en: mole-removal
+  title:
+    pl: Wycięcie znamienia
+    en: Mole Removal
+  categories:
+    - skora
+  excerpt:
+    pl: Znamiona często szpecą lub przeszkadzają, będąc dodatkowo narażone na uszkodzenia mechaniczne (np. na granicy spodni itp.). Dzięki temu prostemu zabiegowi można odzyskać pewność siebie i swobodę.
+    en: Moles often disfigure or cause discomfort, being additionally prone to mechanical damage (e.g., at the waistband, etc.). This simple procedure helps restore confidence and comfort.
+  summary:
+    anesthesia:
+      pl: Miejscowe
+      en: Local
+    duration:
+      pl: 40–60 min
+      en: 40–60 min
+    recovery:
+      pl: Zdjęcie szwów po 5–14 dniach
+      en: Stitches removed after 5–14 days
+  related:
+    - wyciecie-znamienia-z-plastyka-miejscowa
+    - wyciecie-zmiany-nowotworowej
+    - korekcja-blizn-chirurgiczna
+wyciecie-znamienia-z-plastyka-miejscowa:
+  slug:
+    pl: wyciecie-znamienia-z-plastyka-miejscowa
+    en: mole-removal-local-flap
+  title:
+    pl: Wycięcie znamienia z plastyką miejscową
+    en: Mole Removal with Local Flap Repair
+  categories:
+    - skora
+  excerpt:
+    pl: Przy usuwaniu większych zmian, należy zastosować plastykę miejscową, w celu uzyskania maksymalnie estetycznego miejsca operowanego.
+    en: When removing larger lesions, local flap repair is necessary to achieve the most aesthetically pleasing surgical site.
+  summary:
+    anesthesia:
+      pl: Miejscowe
+      en: Local
+    duration:
+      pl: ok. 1 godz.
+      en: approx. 1 hour
+    recovery:
+      pl: Do zagojenia rany
+      en: Until the wound heals
+  related:
+    - wyciecie-znamienia
+    - wyciecie-zmiany-nowotworowej
+    - korekcja-blizn-chirurgiczna
+fotoodmladzanie:
+  slug:
+    pl: fotoodmladzanie
+    en: photorejuvenation
+  title:
+    pl: Fotoodmładzanie laserowe (laser IPL)
+    en: Laser Photorejuvenation (IPL laser)
+  categories:
+    - skora
+  excerpt:
+    pl: Jak zachować młody i zdrowy wygląd skóry na lata? Przez cały rok eksploatujemy naszą skórę poddając ją działaniu różnych warunków atmosferycznych. Szczególnie brzemienna w skutkach jest ekspozycja na słońce. Intensywne opalanie pozostawia z reguły ślady na twarzy czy dekolcie, które czasem trudno nawet zamaskować delikatnym makijażem. Podobne przebarwienia pojawiają się wraz z upływem czasu także na grzbietach dłoni. Jak sobie z nimi radzić? Fotoodmładzanie laserowe pozwala na wyrównanie kolorytu skóry i usunięcie nieestetycznych przebarwień, a także widoczne odmłodzenie skóry.
+    en: How can you maintain a youthful and healthy skin appearance for years? Throughout the year, we expose our skin to various weather conditions. Sun exposure is particularly damaging. Intensive tanning usually leaves marks on the face and decolletage that can sometimes be difficult to conceal even with light makeup. Similar discolorations also appear over time on the backs of the hands. How to deal with them? Laser photorejuvenation helps even out skin tone, remove unsightly discolorations, and visibly rejuvenate the skin.
+  summary:
+    duration:
+      pl: do 20 min (twarz)
+      en: up to 20 min (face)
+    sessions:
+      pl: 1–3 zabiegi
+      en: 1–3 sessions
+  related:
+    - resurfacing
+    - pajaczki-teleangiektazje
+    - endermolift-2-zabieg-odmladzajacy
+endermolift-2-zabieg-odmladzajacy:
+  slug:
+    pl: endermolift-2-zabieg-odmladzajacy
+    en: endermolift-rejuvenation
+  title:
+    pl: Endermolift® – zabieg odmładzający
+    en: Endermolift® – Rejuvenation Treatment
+  categories:
+    - skora
+  excerpt:
+    pl: W 100% naturalna, przeciwzmarszczkowa i odmładzająca technika dla kobiet i mężczyzn w każdym wieku. Znacznie poprawia kondycję skóry, redukując zmarszczki i stymulując skórę do produkcji kolagenu.
+    en: A 100% natural, anti-wrinkle and rejuvenating technique for women and men of all ages. It significantly improves skin condition by reducing wrinkles and stimulating collagen production.
+  summary: {}
+  related:
+    - endermologia-lpg-lipomassage
+    - fotoodmladzanie
+    - redermalizacja
+flebologia-laseroterapia:
+  slug:
+    pl: flebologia-laseroterapia
+    en: phlebology-laser-therapy
+  title:
+    pl: 'Flebologia: pajączki, żylaki'
+    en: 'Phlebology: Spider Veins & Varicose Veins'
+  categories:
+    - skora
+  excerpt:
+    pl: 'Źylaki i pajączki to częsta dolegliwość wielu ludzi, niezaleźnie od płci. Pacjentom zaproponować możemy szereg metod pozwalających na bezpieczne rozwiązanie tego uciążliwego problemu. W ofercie: laseroterapia, skleroterapia, miniflebektomia lub leczenie operacyjne żylaków'
+    en: 'Varicose veins and spider veins are a common condition affecting many people, regardless of gender. We offer a range of methods for safely resolving this troublesome problem. Available treatments include: laser therapy, sclerotherapy, miniphlebectomy, and surgical treatment of varicose veins.'
+  summary: {}
+  related:
+    - pajaczki-teleangiektazje
+    - endermologia-lpg-lipomassage
+    - fotoodmladzanie
+  twin: flebologia
+komorki-macierzyste-lipogems-odmladzanie-i-rewitalizacja-skory:
+  slug:
+    pl: komorki-macierzyste-lipogems-odmladzanie-i-rewitalizacja-skory
+    en: stem-cells-lipogems-skin-rejuvenation
+  title:
+    pl: 'Komórki macierzyste: Lipogems® – rewitalizacja skóry'
+    en: 'Stem Cells: Lipogems® – Skin Revitalisation & Rejuvenation'
+  categories:
+    - skora
+  excerpt:
+    pl: Technologię Lipogems® w zabiegach w chirurgii plastycznej i medycynie estetycznej stosujemy jako pierwsi w Polsce. Sposób otrzymywania tkanki tłuszczowej z dużą zawartością komórek macierzystych pozwala na znaczną rewitalizację i odmłodzenie poddawanych zabiegowi obszarów – np. rąk czy skóry twarzy. Zabieg jest małoinwazyjny, a efekt widać od razu.
+    en: We were the first in Poland to use Lipogems® technology in plastic surgery and aesthetic medicine procedures. The method of obtaining fat tissue with a high content of stem cells enables significant revitalization and rejuvenation of treated areas, such as the hands or facial skin. The procedure is minimally invasive, and results are visible immediately.
+  summary: {}
+  related:
+    - komorki-macierzyste-lipogems-odmladzanie-grzbietow-rak
+    - rewitalizacja-skory-komorkami-macierzystymi
+    - lipo-gems-innowacyjna-metoda-modelowania-tluszczem-bogatym-w-komorki-macierzyste
+korekcja-blizn-chirurgiczna:
+  slug:
+    pl: korekcja-blizn-chirurgiczna
+    en: surgical-scar-correction
+  title:
+    pl: Korekcja blizn (chirurgiczna)
+    en: Surgical Scar Correction
+  categories:
+    - skora
+  excerpt:
+    pl: Chirurgiczna korekcja blizny polega na wycięciu starej blizny, w której miejscu powstaje nowa, bardziej estetyczna.
+    en: Surgical scar correction involves excising the old scar, in place of which a new, more aesthetically pleasing one forms.
+  summary:
+    anesthesia:
+      pl: Miejscowe
+      en: Local
+    duration:
+      pl: ok. 1 godz.
+      en: approx. 1 hour
+    recovery:
+      pl: Do zagojenia rany
+      en: Until the wound heals
+  related:
+    - wyciecie-znamienia-z-plastyka-miejscowa
+    - resurfacing
+    - wyciecie-znamienia
+mezoterapia-microiglowa-micropen:
+  slug:
+    pl: mezoterapia-microiglowa-micropen
+    en: microneedle-mesotherapy-micropen
+  title:
+    pl: Mezoterapia mikroigłowa
+    en: Microneedle Mesotherapy
+  categories:
+    - skora
+  excerpt:
+    pl: Terapia mikroigłowa microPen wpływa na stymulację naturalnego procesu regeneracji dzięki tworzeniu mikroskopijnej wielkości nakłuć, co powoduje przyspieszone procesy naprawcze tkanek. Pozwala także na wchłanianie składników aktywnych w podawanych preparatach o właściwościach nawilżających, odżywczych, napinających (aminokwasy, peptydy, anyoksydanty, witaminy, mikroelementy)
+    en: MicroPen microneedling therapy stimulates the natural regeneration process by creating microscopic punctures, which accelerates tissue repair. It also enables absorption of active ingredients in applied preparations with moisturizing, nourishing, and firming properties (amino acids, peptides, antioxidants, vitamins, microelements).
+  summary: {}
+  related:
+    - mezoterapia-iglowa
+    - resurfacing
+    - mezoterapia-osoczem-bogatoplytkowym-prp
+  twin: mezoterapia-mikroiglowa-micropen
+mezoterapia-osoczem-bogatoplytkowym-prp:
+  slug:
+    pl: mezoterapia-osoczem-bogatoplytkowym-prp
+    en: prp-mesotherapy
+  title:
+    pl: Mezoterapia osoczem bogatopłytkowym (PRP)
+    en: Platelet-Rich Plasma Mesotherapy (PRP)
+  categories:
+    - skora
+  excerpt:
+    pl: Terapia regeneracyjna PRP jest nowoczesną, odmładzającą skórę procedurą anti-aging, która stymuluje własny potencjał organizmu pacjenta do odbudowy tkanek. Zabieg ma na celu napięcie, wygładzenie skóry i poprawę jej tekstury oraz kolorytu.
+    en: PRP regenerative therapy is a modern, skin-rejuvenating anti-aging procedure that stimulates the patient's own tissue regeneration potential. The procedure aims to tighten, smooth the skin, and improve its texture and tone.
+  summary:
+    duration:
+      pl: 20–60 min
+      en: 20–60 min
+  related:
+    - mezoterapia-iglowa
+    - mezoterapia-komorkami-macierzystymi
+    - redermalizacja
+  twin: podanie-osocza-bogatoplytkowego2
+redermalizacja-nowy-zabieg-anti-aging:
+  slug:
+    pl: redermalizacja-nowy-zabieg-anti-aging
+    en: redermalization-anti-aging
+  title:
+    pl: Redermalizacja – nowy zabieg anti-aging
+    en: Redermalization – a new anti-aging treatment
+  categories:
+    - skora
+  excerpt:
+    pl: Redermalizacja to nowa metoda prewencji starzenia się i odnowy skóry. Dzięki zastosowaniu innowacyjnych preparatów Xela Rederm® szwajcarskiej firmy Hyalual zawierających bursztynian sodu oraz kwas hialuronowy, następuje regulacja biochemicznych i fizjologicznych procesów w komórkach. Zabieg skutecznie blokuje powstawanie wolnych rodników i zapobiega odwodnieniu skóry. Redermalizację stosuje się na twarz, szyję, dekolt, dłonie oraz pod oczy.
+    en: Redermalization is a new method of aging prevention and skin renewal. Thanks to innovative Xela Rederm® preparations by the Swiss company Hyalual, containing sodium succinate and hyaluronic acid, biochemical and physiological processes in cells are regulated. The procedure effectively blocks free radical formation and prevents skin dehydration. Redermalization is applied to the face, neck, decolletage, hands, and under the eyes.
+  summary: {}
+  related:
+    - mezoterapia-iglowa
+    - redukcja-zmarszczek
+    - mezoterapia-osoczem-bogatoplytkowym-prp
+  twin: redermalizacja
+liposukcja:
+  slug:
+    pl: liposukcja
+    en: liposuction
+  title:
+    pl: Liposukcja
+    en: Liposuction
+  categories:
+    - cialo
+  excerpt:
+    pl: Liposukcja polega na redukcji tkanki tłuszczowej poprzez jej odessanie.
+    en: Liposuction involves reducing adipose tissue by suctioning it out.
+  summary:
+    anesthesia:
+      pl: Miejscowe lub dożylne
+      en: Local or intravenous
+    duration:
+      pl: 1–2 godz.
+      en: 1–2 hours
+    recovery:
+      pl: Od razu lub 1–3 dni
+      en: Immediate or 1–3 days
+    result:
+      pl: po kilku miesiącach
+      en: after a few months
+  related:
+    - liposukcja-laserowa-slimlipo-3d
+    - argo-plasma-obkurczanie-skory
+    - plastyka-brzucha

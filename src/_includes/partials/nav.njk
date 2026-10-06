@@ -1,0 +1,37 @@
+{#- Main navigation. On the homepage the section links are in-page anchors, elsewhere they point at pages. -#}
+{%- macro navHref(item) -%}{{ (item.home if isHome else item.sub) or item.href }}{%- endmacro -%}
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a href="{{ '#main' if isHome else 'index.html' }}" class="brand" aria-label="{{ T.homeLabel }}">
+      <img src="{{ root }}assets/imgs/logo2.png" alt="{{ site.name }}" width="178" height="38" />
+    </a>
+
+    <nav class="nav-links" aria-label="{{ T.navLabel }}">
+      {%- for item in T.nav %}{% if not item.blog or site.blogEnabled %}
+      <a href="{{ navHref(item) }}">{{ item.label | safe }}</a>
+      {%- endif %}{% endfor %}
+    </nav>
+
+    <div class="nav-cta">
+      <a href="{{ altHref }}" class="lang" hreflang="{{ 'pl' if lang == 'en' else 'en' }}" aria-label="{{ T.langSwitch.aria }}">
+        {% include ("icons/flag-pl.svg" if lang == "en" else "icons/flag-uk.svg") %}
+        {{ T.langSwitch.label }}
+      </a>
+      <a href="{{ site.booking }}" target="_blank" rel="noopener" class="btn btn--light">{{ T.book }}</a>
+      <button class="burger" id="burger" aria-label="{{ T.menu }}" aria-expanded="false" aria-controls="sheet">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="sheet" id="sheet">
+    {%- for item in T.nav %}{% if not item.blog or site.blogEnabled %}
+    <a class="big" href="{{ navHref(item) }}" style="--d: {{ (0.08 + loop.index0 * 0.05) | round(2) }}s">{{ item.label | safe }}</a>
+    {%- endif %}{% endfor %}
+    <div class="sheet-foot">
+      <a href="{{ site.phoneHref }}">{{ site.phone }}</a>
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+      <a href="{{ altHref }}" hreflang="{{ 'pl' if lang == 'en' else 'en' }}">{{ T.langSwitch.long }}</a>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,232 @@
+---
+pagination:
+  data: langs
+  size: 1
+  alias: lang
+key: home
+isHome: true
+bodyClass: is-home
+layout: layouts/base.njk
+permalink: "{{ '' if lang == 'pl' else 'en/' }}index.html"
+eleventyComputed:
+  metaTitle: "{{ home[lang].title | safe }}"
+  metaDescription: "{{ home[lang].description | safe }}"
+---
+{%- set T = i18n[lang] -%}
+{%- set H = home[lang] -%}
+<!-- ══════════════ HERO ══════════════ -->
+<section class="hero" id="hero">
+  <div class="hero-media" aria-hidden="true">
+    <video src="{{ root }}assets/imgs/artisan.mp4" poster="{{ root }}assets/imgs/poster.jpg" autoplay loop muted playsinline preload="metadata"></video>
+  </div>
+  <div class="hero-veil" aria-hidden="true"></div>
+
+  <div class="hero-body">
+    <p class="eyebrow">{{ H.hero.eyebrow }}</p>
+    <h1>
+      {%- for l in H.hero.lines %}
+      <span class="ln"><span>{{ l | safe }}</span></span>
+      {%- endfor %}
+    </h1>
+    <p class="hero-sub">{{ H.hero.sub | safe }}</p>
+    <div class="hero-acts">
+      <a href="{{ site.booking }}" target="_blank" rel="noopener" class="btn">{{ H.hero.cta }} <span class="arw">→</span></a>
+      <a href="#{{ H.ids.offer }}" class="btn btn--light">{{ H.hero.offer }}</a>
+    </div>
+  </div>
+
+  <div class="hero-meta">
+    <div class="hero-meta-in">
+      <span class="hero-meta-hide">{{ H.hero.metaLeft | safe }}</span>
+      <a href="#{{ H.ids.about }}" class="scroll-cue"><i></i> {{ H.hero.scroll }}</a>
+      <span class="hero-meta-hide">{{ H.hero.metaRight | safe }}</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ TICKER ══════════════ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    {%- for _ in [1, 2] %}{% for item in H.ticker %}<span>{{ item }}</span>{% endfor %}{% endfor -%}
+  </div>
+</div>
+
+<!-- ══════════════ 01 — ABOUT ══════════════ -->
+<section class="sec" id="{{ H.ids.about }}">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="sec-no rv">{{ H.about.no | safe }}</span>
+        <h2 class="display rv" style="--d: 0.06s">{{ H.about.title | safe }}</h2>
+      </div>
+      <p class="lede rv" style="--d: 0.12s">{{ H.about.lede | safe }}</p>
+    </div>
+
+    <div class="about-grid">
+      <div>
+        <div class="etym rv">
+          {%- for e in H.about.etym %}
+          {% if not loop.first %}<span class="plus">+</span>{% endif %}
+          <b>{{ e[0] }}</b><i>{{ e[1] }}</i>
+          {%- endfor %}
+        </div>
+
+        <p class="rv" style="--d: 0.06s">{{ H.about.text | safe }}</p>
+
+        <div class="pill-row rv" style="--d: 0.1s">
+          {%- for p in H.about.pills %}
+          <span class="pill">{{ p }}</span>
+          {%- endfor %}
+        </div>
+
+        <a href="{{ pages.team[lang] }}" class="ulink rv" style="--d: 0.14s">{{ H.about.teamLink }} <span>→</span></a>
+      </div>
+
+      <figure class="about-figure rv mask" style="--d: 0.08s; margin: 0">
+        <img src="{{ root }}assets/imgs/o-nas.jpg" alt="{{ H.about.imageAlt }}" loading="lazy" />
+      </figure>
+    </div>
+
+    <div class="stats">
+      {%- for s in H.about.stats %}
+      {%- set n = team.length if s.n == "team" else s.n %}
+      <div class="stat rv"{% if not loop.first %} style="--d: {{ loop.index0 * 0.08 }}s"{% endif %}><b data-count="{{ n }}"{% if s.suffix %} data-suffix="{{ s.suffix }}"{% endif %}>{{ n }}{{ s.suffix }}</b><span>{{ s.label | safe }}</span></div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 02 — OFFER ══════════════ -->
+<section class="sec offer" id="{{ H.ids.offer }}">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="sec-no rv">{{ H.offer.no }}</span>
+        <h2 class="display rv" style="--d: 0.06s">{{ H.offer.title | safe }}</h2>
+      </div>
+      <p class="lede rv" style="--d: 0.12s">{{ H.offer.lede | safe }}</p>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="{{ H.offer.tabsLabel }}">
+      {%- for c in categories %}
+      <button class="tab" role="tab" id="tab-{{ c.id }}" aria-controls="p-{{ c.id }}" aria-selected="{{ 'true' if loop.first else 'false' }}">
+        <sup>{{ loop.index | pad2 }}</sup>{{ c.name[lang] }}
+      </button>
+      {%- endfor %}
+    </div>
+
+    {%- for c in categories %}
+    {%- set P = H.offer.panels[c.id] %}
+    <div class="panel{{ ' is-active' if loop.first }}" id="p-{{ c.id }}" role="tabpanel" aria-labelledby="tab-{{ c.id }}"{{ '' if loop.first else ' hidden' }}>
+      <div class="panel-grid">
+        <figure class="panel-media" style="margin: 0">
+          <img src="{{ root }}assets/{{ c.image }}" alt="{{ P.imageAlt }}" loading="lazy" />
+          <figcaption>{{ loop.index | pad2 }} — {{ c.name[lang] }}</figcaption>
+        </figure>
+        <div class="panel-copy">
+          <h3>{{ P.title | safe }}</h3>
+          <p>{{ P.text | safe }}</p>
+          <ul class="panel-list">
+            {%- for li in P.list %}
+            <li>{{ li | safe }}</li>
+            {%- endfor %}
+          </ul>
+
+          <div class="ledger">
+            {%- for ref in home.ledger[c.id] %}
+            {%- set row = ref | priceRef(pricing) %}
+            {%- set href = row | rowHref(lang, treatments) %}
+            {%- set pp = row.price[lang] | priceParts %}
+            <{{ 'a' if href else 'div' }} class="ledger-row"{% if href %} href="{{ href }}"{% endif %}>
+              <span class="nm">{{ ref.label[lang] if ref.label else row.name[lang] }}</span><span class="leader"></span>
+              <span class="pr">{{ pp.num }} <small>{{ pp.unit }}</small></span>
+            </{{ 'a' if href else 'div' }}>
+            {%- endfor %}
+          </div>
+
+          <div class="panel-acts">
+            <a href="{{ pages.offer[lang] }}#{{ c.anchor[lang] }}" class="btn">{{ H.offer.full }} — {{ c.name[lang] | lower }} <span class="arw">→</span></a>
+            <a href="{{ site.booking }}" target="_blank" rel="noopener" class="ulink">{{ T.book }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {%- endfor %}
+  </div>
+</section>
+
+<!-- ══════════════ 03 — TEAM ══════════════ -->
+{%- set leadDoc = team | first %}
+<section class="sec team" id="{{ H.ids.team }}">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="sec-no rv">{{ H.team.no }}</span>
+        <h2 class="display rv" style="--d: 0.06s">{{ H.team.title | safe }}</h2>
+      </div>
+      <p class="lede rv" style="--d: 0.12s">{{ H.team.lede | replace("{team}", team.length) | safe }}</p>
+    </div>
+
+    <article class="lead-card rv">
+      <div class="portrait">
+        <img src="{{ root }}assets/{{ leadDoc.photo }}" alt="{{ leadDoc.name }}" loading="lazy" />
+      </div>
+      <div>
+        <h3>{{ H.team.leadName | safe }}</h3>
+        <span class="lead-role">{{ leadDoc.specialty[lang] | safe }}</span>
+        <p>{{ H.team.leadBio | safe }}</p>
+        <p class="quote">{{ H.team.leadQuote }}</p>
+        <div style="margin-top: 1.8rem">
+          <a href="{{ pages.team[lang] }}" class="ulink on-dark">{{ H.team.bios }} <span>→</span></a>
+        </div>
+      </div>
+    </article>
+
+    <div class="rail-head">
+      <span class="eyebrow">{{ H.team.others }}</span>
+      <div class="rail-nav">
+        <button class="rail-btn" id="railPrev" aria-label="{{ H.team.prev }}">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M15 5l-7 7 7 7" /></svg>
+        </button>
+        <button class="rail-btn" id="railNext" aria-label="{{ H.team.next }}">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M9 5l7 7-7 7" /></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="rail" id="rail">
+      {%- for m in team %}{% if not loop.first %}
+      <a class="member" href="{{ pages.team[lang] }}#{{ m.id }}">
+        <div class="ph"><img src="{{ root }}assets/{{ m.photo }}" alt="" loading="lazy" /></div>
+        <h4>{{ m.name }}</h4>
+        <span>{{ m.specialty[lang] | safe }}</span>
+      </a>
+      {%- endif %}{% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 04 — PATH ══════════════ -->
+<section class="sec" id="{{ H.ids.path }}">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="sec-no rv">{{ H.path.no }}</span>
+        <h2 class="display rv" style="--d: 0.06s">{{ H.path.title | safe }}</h2>
+      </div>
+      <p class="lede rv" style="--d: 0.12s">{{ H.path.lede | safe }}</p>
+    </div>
+
+    <div class="path-grid">
+      {%- for s in H.path.steps %}
+      <article class="step rv"{% if not loop.first %} style="--d: {{ loop.index0 * 0.1 }}s"{% endif %}><b>{{ loop.index | pad2 }}</b><h4>{{ s.t }}</h4><p>{{ s.p | safe }}</p></article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+{% include "partials/band.njk" %}
+{% set contactNo = H.contactNo %}
+{% include "partials/contact.njk" %}

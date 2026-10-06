@@ -1,0 +1,3058 @@
+# SSoT cennika. Wiersz z `treatment: <id>` zasila sidebar „Koszt” (minimum `from`).
+groups:
+  - name:
+      pl: Konsultacje
+      en: Consultations
+    sections:
+      - konsultacje
+  - name:
+      pl: Twarz
+      en: Face
+    sections:
+      - twarz
+      - podbrodek
+      - nos
+      - powieki
+      - uszy
+      - broda
+  - name:
+      pl: Ciało
+      en: Body
+    sections:
+      - liposukcja
+      - brzuch
+      - lydki
+      - ramiona
+      - uda
+      - posladki
+      - wargi-sromowe
+      - chirurgia-reki
+  - name:
+      pl: Piersi
+      en: Breasts
+    sections:
+      - powiekszanie-piersi
+      - usuniecie-wymiana-implantow-piersi
+      - podniesienie-piersi
+      - zmniejszenie-piersi-redukcja
+      - plastyka-brodawek-sutkowych
+      - rekonstrukcja-piersi
+      - mezczyzni
+  - name:
+      pl: Skóra
+      en: Skin
+    sections:
+      - skora-zabiegi-chirurgiczne
+      - skora-botox
+      - skora-wypelniacze
+      - skora-stymulatory-tkankowe
+      - skora-mezoterapia
+      - skora-dermapen
+      - skora-peelingi
+      - skora-laseroterapia
+      - skora-masaz-ciala
+      - skora-endermologia-lpg
+      - skora-depilacja-laserowa
+sections:
+  - id: konsultacje
+    title:
+      pl: Konsultacje
+      en: Consultations
+    items:
+      - name:
+          pl: dr Witwicki
+          en: dr Witwicki
+        price:
+          pl: 600 PLN
+          en: 600 PLN
+        from: 600
+        href: https://www.znanylekarz.pl/placowki/artisan-clinic
+      - name:
+          pl: dr Mazurek
+          en: dr Mazurek
+        price:
+          pl: 500 PLN
+          en: 500 PLN
+        from: 500
+        href: https://www.znanylekarz.pl/placowki/artisan-clinic
+      - name:
+          pl: dr hab. Pietruski
+          en: dr hab. Pietruski
+        price:
+          pl: 450 PLN
+          en: 450 PLN
+        from: 450
+        href: https://www.znanylekarz.pl/placowki/artisan-clinic
+      - name:
+          pl: dr Jończyk
+          en: dr Jończyk
+        price:
+          pl: 450 PLN
+          en: 450 PLN
+        from: 450
+        href: https://www.znanylekarz.pl/placowki/artisan-clinic
+      - name:
+          pl: dr Winiarska
+          en: dr Winiarska
+        price:
+          pl: 300 PLN
+          en: 300 PLN
+        from: 300
+        href: https://www.znanylekarz.pl/placowki/artisan-clinic
+      - name:
+          pl: dr Mazur
+          en: dr Mazur
+        price:
+          pl: 450 PLN
+          en: 450 PLN
+        from: 450
+        href: https://www.znanylekarz.pl/placowki/artisan-clinic
+      - name:
+          pl: dr Grous
+          en: dr Grous
+        price:
+          pl: 400 PLN
+          en: 400 PLN
+        from: 400
+        href: https://www.znanylekarz.pl/placowki/artisan-clinic
+      - name:
+          pl: lek. Latała
+          en: lek. Latała
+        price:
+          pl: 300 PLN
+          en: 300 PLN
+        from: 300
+        href: https://www.znanylekarz.pl/placowki/artisan-clinic
+      - name:
+          pl: prof. dr hab. n. med. Kukwa
+          en: prof. dr hab. n. med. Kukwa
+        price:
+          pl: 500 PLN
+          en: 500 PLN
+        from: 500
+        href: https://www.znanylekarz.pl/placowki/artisan-clinic
+      - name:
+          pl: Mgr. Krawczyk
+          en: Mgr. Krawczyk
+        price:
+          pl: 200 PLN
+          en: 200 PLN
+        from: 200
+        href: https://www.znanylekarz.pl/placowki/artisan-clinic
+  - id: twarz
+    title:
+      pl: Twarz
+      en: Face
+    items:
+      - name:
+          pl: Lifting twarzy i szyi Deep Plane
+          en: Deep Plane face and neck lift
+        price:
+          pl: 60 000 – 85 000 PLN
+          en: 60 000 – 85 000 PLN
+        from: 60000
+        treatment: lifting-twarzy
+        primary: true
+      - name:
+          pl: Endoskopowy lifting twarzy
+          en: Endoscopic facelift
+        price:
+          pl: 60 000 – 85 000 PLN
+          en: 60 000 – 85 000 PLN
+        from: 60000
+      - name:
+          pl: Lifting twarzy wtórny Deep Plane
+          en: Revision Deep Plane facelift
+        price:
+          pl: od 70 000 PLN
+          en: from 70 000 PLN
+        from: 70000
+        treatment: lifting-twarzy
+      - name:
+          pl: Lifting czoła
+          en: Forehead lift
+        price:
+          pl: 22 000 – 25 000 PLN
+          en: 22 000 – 25 000 PLN
+        from: 22000
+        treatment: lifting-twarzy
+      - name:
+          pl: Lifting czoła endoskopowy
+          en: Endoscopic forehead lift
+        price:
+          pl: 23 000 - 26 000 PLN
+          en: 23 000 - 26 000 PLN
+        from: 23000
+        treatment: lifting-twarzy
+      - name:
+          pl: Lifting skroniowy
+          en: Temporal lift
+        price:
+          pl: 22 000 - 25 000 PLN
+          en: 22 000 - 25 000 PLN
+        from: 22000
+        treatment: lifting-twarzysta
+      - name:
+          pl: Lifting brwi – podniesienie
+          en: Brow lift
+        price:
+          pl: 16 000 – 20 000 PLN
+          en: 16 000 – 20 000 PLN
+        from: 16000
+        treatment: lifting-twarzy
+      - name:
+          pl: Lifitng brwi endoskopowy
+          en: Endoscopic brow lift
+        price:
+          pl: 22 000 - 25 000 PLN
+          en: 17 000 - 21 000 PLN
+        from: 22000
+        treatment: lifting-twarzy
+      - name:
+          pl: Lip Lift
+          en: Lip Lift
+        price:
+          pl: 10 000 – 12 000 PLN
+          en: 10 000 – 12 000 PLN
+        from: 10000
+      - name:
+          pl: Lipofilling twarzy
+          en: Facial fat grafting
+        price:
+          pl: od 7 000 PLN
+          en: from 7 000 PLN
+        from: 7000
+      - name:
+          pl: Lifting twarzy nićmi Aptos
+          en: Aptos thread facelift
+        price:
+          pl: 14 000 PLN
+          en: 14 000 PLN
+        from: 14000
+        treatment: face-lift-nicmi
+      - name:
+          pl: Lifting nićmi Aptos – twarz + podbródek
+          en: Aptos thread lift – face + chin
+        price:
+          pl: 16 000 PLN
+          en: 16 000 PLN
+        from: 16000
+        treatment: face-lift-nicmi
+      - name:
+          pl: Lifting nićmi Aptos – brwi
+          en: Aptos thread lift – brows
+        price:
+          pl: 10 000 PLN
+          en: 10 000 PLN
+        from: 10000
+        treatment: face-lift-nicmi
+      - name:
+          pl: Lifting nićmi Aptos – szyja
+          en: Aptos thread lift – neck
+        price:
+          pl: 10 000 PLN
+          en: 10 000 PLN
+        from: 10000
+        treatment: face-lift-nicmi
+      - name:
+          pl: Korekcja twarzy nićmi Aptos po porażeniu nerwu twarzowego
+          en: Aptos thread facial correction after facial nerve palsy
+        price:
+          pl: od 7 000 PLN
+          en: from 7 000 PLN
+        from: 7000
+        treatment: porazenie-nerwu-twarzowego-nici-aptos
+      - name:
+          pl: Wszczepienie implantu w twarz
+          en: Facial implant insertion
+        price:
+          pl: od 14 000 PLN
+          en: from 14 000 PLN
+        from: 14000
+        treatment: wszczepienie-implantu-w-twarz
+      - name:
+          pl: Usunięcie poduszek Bichata
+          en: Buccal fat pad removal
+        price:
+          pl: 9 000 PLN
+          en: 9 000 PLN
+        from: 9000
+      - name:
+          pl: Wycięcie zmiany skórnej
+          en: Skin lesion excision
+        price:
+          pl: od 2 200 PLN
+          en: from 2 200 PLN
+        from: 2200
+        treatment: wyciecie-zmiany-nowotworowej
+      - name:
+          pl: Wycięcie zmiany skórnej z plastyką miejscową
+          en: Skin lesion excision with local flap
+        price:
+          pl: od 4 500 PLN
+          en: from 4 500 PLN
+        from: 4500
+        treatment: wyciecie-znamienia-z-plastyka-miejscowa
+      - name:
+          pl: Komórki macierzyste przy lipotransferze
+          en: Stem cells with fat transfer
+        price:
+          pl: 3000 PLN
+          en: 3000 PLN
+        from: 3000
+  - id: podbrodek
+    title:
+      pl: Podbródek
+      en: Chin
+    items:
+      - name:
+          pl: Obkurczanie i napinanie skóry podbródka – Argo Plasma
+          en: Chin skin tightening – Argo Plasma
+        price:
+          pl: 6 000 PLN
+          en: 6 000 PLN
+        from: 6000
+        treatment: argo-plasma-obkurczanie-skory
+      - name:
+          pl: Liposukcja podbródka
+          en: Chin liposuction
+        price:
+          pl: 7 000 – 8 000 PLN
+          en: 7 000 – 8 000 PLN
+        from: 7000
+      - name:
+          pl: Lifting podbródka nićmi Aptos
+          en: Aptos thread chin lift
+        price:
+          pl: 10 000 PLN
+          en: 10 000 PLN
+        from: 10000
+        treatment: face-lift-nicmi
+  - id: nos
+    title:
+      pl: Nos
+      en: Nose
+    items:
+      - name:
+          pl: Korekcja nosa – totalna
+          en: Rhinoplasty – total
+        price:
+          pl: 28 000 – 32 000 PLN
+          en: 28 000 – 32 000 PLN
+        from: 28000
+        treatment: korekcja-nosa
+      - name:
+          pl: Korekcja nosa – wtórna
+          en: Rhinoplasty – revision
+        price:
+          pl: 34 000 – 38 000 PLN
+          en: 34 000 – 38 000 PLN
+        from: 34000
+        treatment: korekcja-nosa
+      - name:
+          pl: Korekcja nosa – część chrzęstna
+          en: Rhinoplasty – cartilage
+        price:
+          pl: 22 000 – 25 000 PLN
+          en: 22 000 – 25 000 PLN
+        from: 22000
+        treatment: korekcja-nosa
+      - name:
+          pl: Korekcja nosa – nos kostny
+          en: Rhinoplasty – bony nosee
+        price:
+          pl: 22 000 – 25 000 PLN
+          en: 22 000 – 25 000 PLN
+        from: 22000
+        treatment: korekcja-nosa
+      - name:
+          pl: Septoplastyka (korekta przegrody nosowej)
+          en: Septoplasty (nasal septum correction)
+        price:
+          pl: 18 000 – 20 000 PLN
+          en: 18 000 – 20 000 PLN
+        from: 18000
+      - name:
+          pl: Operacja zatok
+          en: Sinus surgery
+        price:
+          pl: 17 000 – 19 000 PLN
+          en: 17 000 – 19 000 PLN
+        from: 17000
+      - name:
+          pl: Konchoplastyka
+          en: Conchoplasty
+        price:
+          pl: 5 000 – 7 000 PLN
+          en: 5 000 – 7 000 PLN
+        from: 5000
+      - name:
+          pl: Korekcja nosa nićmi Aptos
+          en: Nose correction with Aptos threads
+        price:
+          pl: od 10 000 PLN
+          en: from 10 000 PLN
+        from: 10000
+        treatment: korekcja-nosa-nicmi-aptos
+      - name:
+          pl: Korekcja skrzydełek nosa
+          en: Alar (nasal wing) correction
+        price:
+          pl: 9 000 – 11 000 PLN
+          en: 9 000 – 11 000 PLN
+        from: 9000
+      - name:
+          pl: Korekcja nosa kwasem hialuronowym
+          en: Non-surgical rhinoplasty with hyaluronic acid
+        price:
+          pl: od 1 800 PLN
+          en: from 1 800 PLN
+        from: 1800
+        treatment: korekcja-nosa-kwasem-hialuronowym
+  - id: powieki
+    title:
+      pl: Powieki
+      en: Eyelids
+    items:
+      - name:
+          pl: Korekcja powiek górnych
+          en: Upper eyelid correction
+        price:
+          pl: 10 000 – 12 000 PLN
+          en: 10 000 – 12 000 PLN
+        from: 10000
+        treatment: korekcja-powiek
+      - name:
+          pl: Korekcja powiek dolnych
+          en: Lower eyelid correction
+        price:
+          pl: 13 000 – 15 000 PLN
+          en: 13 000 – 15 000 PLN
+        from: 13000
+        treatment: korekcja-powiek
+      - name:
+          pl: Plastyka powiek dolnych przezspojówkowo
+          en: Transconjunctival lower eyelid surgery
+        price:
+          pl: od 15 000 PLN
+          en: from 15 000 PLN
+        from: 15000
+  - id: uszy
+    title:
+      pl: Uszy
+      en: Ears
+    items:
+      - name:
+          pl: Plastyka odstających uszu (jedno ucho)
+          en: Protruding ear correction (one ear)
+        price:
+          pl: 6 000 PLN
+          en: 6 000 PLN
+        from: 6000
+        treatment: plastyka-odstajacych-uszu
+      - name:
+          pl: Plastyka odstających uszu
+          en: Protruding ear correction
+        price:
+          pl: 10 000 - 12 000 PLN
+          en: 10 000 - 12 000 PLN
+        from: 10000
+        treatment: plastyka-odstajacych-uszu
+      - name:
+          pl: Korekcja uszu nićmi Aptos
+          en: Ear correction with Aptos threads
+        price:
+          pl: od 10 000 PLN
+          en: from 10 000 PLN
+        from: 10000
+      - name:
+          pl: Plastyka płatków usznych
+          en: Earlobe surgery
+        price:
+          pl: 4 000 – 5 000 PLN
+          en: 4 000 – 5 000 PLN
+        from: 4000
+        treatment: face-lift-calkowity-czesciowy-3
+  - id: broda
+    title:
+      pl: Broda
+      en: Chin
+    items:
+      - name:
+          pl: Implant bródki
+          en: Chin implant
+        price:
+          pl: od 14 000 PLN
+          en: from 14 000 PLN
+        from: 14000
+      - name:
+          pl: Korekcja bródki własnym tłuszczem – Lipofilling
+          en: Chin correction with own fat – Lipofilling
+        price:
+          pl: 7 000 PLN
+          en: 7 000 PLN
+        from: 7000
+  - id: liposukcja
+    title:
+      pl: Liposukcja
+      en: Liposuction
+    items:
+      - name:
+          pl: Liposukcja – brzuch
+          en: Liposuction – abdomen
+        price:
+          pl: 12 000 – 16 000 PLN
+          en: 12 000 – 16 000 PLN
+        from: 12000
+        treatment: liposukcja
+      - name:
+          pl: Liposukcja – talia
+          en: Liposuction – waist
+        price:
+          pl: 10 000 – 12 000 PLN
+          en: 10 000 – 12 000 PLN
+        from: 10000
+        treatment: liposukcja
+      - name:
+          pl: Liposukcja – uda wewnętrzne
+          en: Liposuction – inner thighs
+        price:
+          pl: 8 000 – 10 000 PLN
+          en: 8 000 – 10 000 PLN
+        from: 8000
+        treatment: liposukcja
+      - name:
+          pl: Liposukcja – uda zewnętrzne
+          en: Liposuction – outer thighs
+        price:
+          pl: 8 000 – 12 000 PLN
+          en: 8 000 – 12 000 PLN
+        from: 8000
+        treatment: liposukcja
+      - name:
+          pl: Liposukcja – łydki
+          en: Liposuction – calves
+        price:
+          pl: 14 000 PLN
+          en: 14 000 PLN
+        from: 14000
+        treatment: liposukcja
+      - name:
+          pl: Liposukcja – kolana
+          en: Liposuction – knees
+        price:
+          pl: 6 000 – 8 000 PLN
+          en: 6 000 – 8 000 PLN
+        from: 6000
+        treatment: liposukcja
+      - name:
+          pl: Liposukcja – ramiona
+          en: Liposuction – arms
+        price:
+          pl: 8 000 – 12 000 PLN
+          en: 8 000 – 12 000 PLN
+        from: 8000
+        treatment: liposukcja
+      - name:
+          pl: Liposukcja – krętarzy
+          en: Liposuction – trochanters
+        price:
+          pl: 10 000 – 13 000 PLN
+          en: 10 000 – 13 000 PLN
+        from: 10000
+        treatment: liposukcja
+      - name:
+          pl: Obkurczanie i napinanie skóry – Argo Plasma
+          en: Skin tightening – Argo Plasma
+        price:
+          pl: 6 000 PLN
+          en: 6 000 PLN
+        from: 6000
+        treatment: argo-plasma-obkurczanie-skory
+  - id: brzuch
+    title:
+      pl: Brzuch
+      en: Abdomen
+    items:
+      - name:
+          pl: Plastyka powłok brzusznych (abdominoplastyka)
+          en: Tummy tuck (abdominoplasty)
+        price:
+          pl: 30 000 – 43 000 PLN
+          en: 30 000 – 43 000 PLN
+        from: 30000
+        treatment: plastyka-brzucha
+      - name:
+          pl: Mini – plastyka powłok brzusznych
+          en: Mini tummy tuck
+        price:
+          pl: od 25 000 PLN
+          en: from 25 000 PLN
+        from: 25000
+      - name:
+          pl: Liposukcja brzucha
+          en: Abdominal liposuction
+        price:
+          pl: 12 000 – 16 000 PLN
+          en: 12 000 – 16 000 PLN
+        from: 12000
+        treatment: liposukcja
+      - name:
+          pl: Obkurczanie i napinanie skóry brzucha – Argo Plasma
+          en: Abdominal skin tightening – Argo Plasma
+        price:
+          pl: 6 000
+          en: 6 000
+        from: 6000
+        treatment: argo-plasma-obkurczanie-skory
+      - name:
+          pl: Korekcja brzucha nićmi Aptos
+          en: Abdominal correction with Aptos threads
+        price:
+          pl: od 12 000 PLN
+          en: from 12 000 PLN
+        from: 12000
+  - id: lydki
+    title:
+      pl: Łydki
+      en: Calves
+    items:
+      - name:
+          pl: Plastyka łydek (powiększenie implantami)
+          en: Calf augmentation with implants
+        price:
+          pl: 19 000 PLN
+          en: 19 000 PLN
+        from: 19000
+        treatment: plastyka-lydek-powiekszenie-implantami
+      - name:
+          pl: Plastyka łydek (powiększenie implantami) – jedna łydka
+          en: Calf augmentation with implants – one calf
+        price:
+          pl: 14 000 PLN
+          en: 14 000 PLN
+        from: 14000
+        treatment: plastyka-lydek-powiekszenie-implantami
+      - name:
+          pl: Liposukcja łydek
+          en: Calf liposuction
+        price:
+          pl: 14 000 PLN
+          en: 14 000 PLN
+        from: 14000
+        treatment: liposukcja
+      - name:
+          pl: Powiększenie łydek własnym tłuszczem – lipotransfer
+          en: Calf augmentation with own fat – fat transfer
+        price:
+          pl: 19 000 – 25 000PLN
+          en: 19 000 – 25 000PLN
+        from: 19000
+      - name:
+          pl: Komórki macierzyste przy lipotransferze
+          en: Stem cells with fat transfer
+        price:
+          pl: 3000 PLN
+          en: 3000 PLN
+        from: 3000
+  - id: ramiona
+    title:
+      pl: Ramiona
+      en: Arms
+    items:
+      - name:
+          pl: Plastyka ramion
+          en: Arm lift
+        price:
+          pl: 22 000 - 25 000 PLN
+          en: 22 000 - 25 000 PLN
+        from: 22000
+        treatment: plastyka-ramion
+      - name:
+          pl: Liposukcja ramion
+          en: Arm liposuction
+        price:
+          pl: 8 000 – 12 000 PLN
+          en: 8 000 – 12 000 PLN
+        from: 8000
+        treatment: liposukcja
+      - name:
+          pl: Obkurczanie i napinanie skóry ramion – Argo Plasma
+          en: Arm skin tightening – Argo Plasma
+        price:
+          pl: 6 000
+          en: 6 000
+        from: 6000
+        treatment: argo-plasma-obkurczanie-skory
+      - name:
+          pl: Lifting ramion nićmi Aptos
+          en: Arm lift with Aptos threads
+        price:
+          pl: od 12 000 PLN
+          en: from 12 000 PLN
+        from: 12000
+  - id: uda
+    title:
+      pl: Uda
+      en: Thighs
+    items:
+      - name:
+          pl: Plastyka ud
+          en: Thigh lift
+        price:
+          pl: 26 000 – 35 000 PLN
+          en: 26 000 – 35 000 PLN
+        from: 26000
+        treatment: plastyka-ud
+      - name:
+          pl: Liposukcja – uda wewnętrzne
+          en: Liposuction – inner thighs
+        price:
+          pl: 8 000 – 10 000 PLN
+          en: 8 000 – 10 000 PLN
+        from: 8000
+        treatment: liposukcja
+      - name:
+          pl: Liposukcja – uda zewnętrzne
+          en: Liposuction – outer thighs
+        price:
+          pl: 8 000 – 12 000 PLN
+          en: 8 000 – 12 000 PLN
+        from: 8000
+        treatment: liposukcja
+      - name:
+          pl: Obkurczanie i napinanie skóry ud – Argo Plasma
+          en: Thigh skin tightening – Argo Plasma
+        price:
+          pl: 6 000 PLN
+          en: 6 000 PLN
+        from: 6000
+        treatment: argo-plasma-obkurczanie-skory
+      - name:
+          pl: Lifting ud nićmi Aptos
+          en: Thigh lift with Aptos threads
+        price:
+          pl: od 12 000 PLN
+          en: from 12 000 PLN
+        from: 12000
+  - id: posladki
+    title:
+      pl: Pośladki
+      en: Buttocks
+    items:
+      - name:
+          pl: Powiększanie pośladków własnym tłuszczem
+          en: Buttock augmentation with own fat
+        price:
+          pl: 19 000 – 25 000 PLN
+          en: 19 000 – 25 000 PLN
+        from: 19000
+      - name:
+          pl: Komórki macierzyste przy lipotransferze
+          en: Stem cells with fat transfer
+        price:
+          pl: 3000 PLN
+          en: 3000 PLN
+        from: 3000
+  - id: wargi-sromowe
+    title:
+      pl: Wargi sromowe
+      en: Labia
+    items:
+      - name:
+          pl: Zmniejszenie warg sromowych
+          en: Labiaplasty
+        price:
+          pl: 10 000 – 12 000 PLN
+          en: 10 000 – 12 000 PLN
+        from: 10000
+        treatment: zmniejszenie-warg-sromowych
+  - id: chirurgia-reki
+    title:
+      pl: Chirurgia ręki
+      en: Hand Surgery
+    items:
+      - name:
+          pl: 'Chirurgia ręki: choroba de Quervaina'
+          en: 'Hand surgery: De Quervain''s disease'
+        price:
+          pl: od 6 000 PLN
+          en: from 6 000 PLN
+        from: 6000
+        treatment: chirurgia-reki
+      - name:
+          pl: 'Chirurgia ręki: choroba Dupuytrena'
+          en: 'Hand surgery: Dupuytren''s disease'
+        price:
+          pl: od 8 500 PLN
+          en: from 8 500 PLN
+        from: 8500
+        treatment: chirurgia-reki
+      - name:
+          pl: 'Chirurgia ręki: leczenie palca trzaskającego'
+          en: 'Hand surgery: trigger finger treatment'
+        price:
+          pl: od 4 000 PLN
+          en: from 4 000 PLN
+        from: 4000
+        treatment: chirurgia-reki
+      - name:
+          pl: 'Chirurgia ręki: zespół cieśni nadgarstka'
+          en: 'Hand surgery: carpal tunnel syndrome'
+        price:
+          pl: od 6 000 PLN
+          en: from 6 000 PLN
+        from: 6000
+        treatment: chirurgia-reki
+      - name:
+          pl: Lipofilling grzbietu dłoni
+          en: Hand dorsum fat grafting
+        price:
+          pl: 7000 PLN
+          en: 7000 PLN
+        from: 7000
+      - name:
+          pl: Usunięcie torbieli galaretowatej – ganglionu
+          en: Ganglion cyst removal
+        price:
+          pl: 3 000 – 7 000 PLN
+          en: 3 000 – 7 000 PLN
+        from: 3000
+  - id: powiekszanie-piersi
+    title:
+      pl: Powiększanie piersi
+      en: Breast Augmentation
+    items:
+      - name:
+          pl: Powiększenie piersi implantami
+          en: Breast augmentation with implants
+        price:
+          pl: 27 000 – 34 000 PLN
+          en: 27 000 – 34 000 PLN
+        from: 27000
+        treatment: powiekszanie-piersi
+      - name:
+          pl: Powiększeni piersi implantami + podniesienie piersi
+          en: Breast augmentation with implants + breast lift
+        price:
+          pl: 36 000 - 45 000 PLN
+          en: 36 000 - 45 000 PLN
+        from: 36000
+      - name:
+          pl: Powiększeni piersi implantami + podniesienie piersi okołootoczkowe
+          en: Breast augmentation with implants + periareolar breast lift
+        price:
+          pl: 33 000 - 39 000 PLN
+          en: 33 000 - 39 000 PLN
+        from: 33000
+      - name:
+          pl: Powiększenie piersi HYBRYDOWE
+          en: HYBRID breast augmentation
+        price:
+          pl: 34 000 – 38 000 PLN
+          en: 34 000 – 38 000 PLN
+        from: 34000
+      - name:
+          pl: Powiększenie piersi własnym tłuszczem – Lipotransfer
+          en: Breast augmentation with own fat – Fat transfer
+        price:
+          pl: 21 000 – 26 000 PLN
+          en: 21 000 – 26 000 PLN
+        from: 21000
+        treatment: powiekszanie-piersi-wlasnym-tluszczem
+      - name:
+          pl: Komórki macierzyste przy lipotransferze
+          en: Stem cells with fat transfer
+        price:
+          pl: 3000 PLN
+          en: 3000 PLN
+        from: 3000
+  - id: usuniecie-wymiana-implantow-piersi
+    title:
+      pl: Usunięcie i wymiana implantów piersi
+      en: Breast Implant Removal and Replacement
+    items:
+      - name:
+          pl: Wymiana implantów (obie piersi)
+          en: Implant replacement (both breasts)
+        price:
+          pl: 29 000 – 34 000 PLN
+          en: 29 000 – 34 000 PLN
+        from: 29000
+      - name:
+          pl: Wymiana implantów (2) z pełną kapsulektomią
+          en: Implant replacement (both) with full capsulectomy
+        price:
+          pl: 35 000 – 39 000 PLN
+          en: 35 000 – 39 000 PLN
+        from: 35000
+      - name:
+          pl: Usunięcie implantów piersi
+          en: Breast implant removal
+        price:
+          pl: od 22 000 PLN
+          en: from 22 000 PLN
+        from: 22000
+      - name:
+          pl: Usunięcie implantów piersi z podniesieniem
+          en: Breast implant removal with lift
+        price:
+          pl: 35 000 – 39 000 PLN
+          en: 35 000 – 39 000 PLN
+        from: 35000
+  - id: podniesienie-piersi
+    title:
+      pl: Podniesienie piersi
+      en: Breast Lift
+    items:
+      - name:
+          pl: Podniesienie piersi
+          en: Breast lift
+        price:
+          pl: 27 000 – 33 000 PLN
+          en: 27 000 – 33 000 PLN
+        from: 27000
+        treatment: podniesienie-piersi
+      - name:
+          pl: Podniesienie piersi nićmi Aptos (podskórny biustonosz)
+          en: Breast lift with Aptos threads (subcutaneous bra)
+        price:
+          pl: 24 000 – 26 000 PLN
+          en: 24 000 – 26 000 PLN
+        from: 24000
+        treatment: podniesienie-piersi-nicmi-aptos-podskorny-biustonosz
+      - name:
+          pl: Podniesienie piersi okołootoczkowe
+          en: Periareolar breast lift
+        price:
+          pl: 15 000 – 19 000 PLN
+          en: 15 000 – 19 000 PLN
+        from: 15000
+  - id: zmniejszenie-piersi-redukcja
+    title:
+      pl: Zmniejszenie piersi – redukcja
+      en: Breast Reduction
+    items:
+      - name:
+          pl: Zmniejszenie piersi – redukcja (dwie piersi)
+          en: Breast reduction (both breasts)
+        price:
+          pl: 27 000 – 35 000 PLN
+          en: 27 000 – 35 000 PLN
+        from: 27000
+        treatment: redukcja-piersi
+      - name:
+          pl: Symetryzacja jednej piersi
+          en: Single breast symmetrisation
+        price:
+          pl: od 18 000 PLN
+          en: from 18 000 PLN
+        from: 18000
+  - id: plastyka-brodawek-sutkowych
+    title:
+      pl: Plastyka brodawek sutkowych
+      en: Nipple Surgery
+    items:
+      - name:
+          pl: Plastyka wciągniętych brodawek
+          en: Inverted nipple correction
+        price:
+          pl: 8 000 PLN
+          en: 8 000 PLN
+        from: 8000
+        treatment: plastyka-wciagnietych-brodawek
+      - name:
+          pl: Plastyka wciągniętych brodawek – jedna pierś
+          en: Inverted nipple correction – one breast
+        price:
+          pl: 5 000 PLN
+          en: 5 000 PLN
+        from: 5000
+        treatment: plastyka-wciagnietych-brodawek
+      - name:
+          pl: Zmniejszenie brodawek sutkowych
+          en: Nipple reduction
+        price:
+          pl: 4 000 – 6 000 PLN
+          en: 4 000 – 6 000 PLN
+        from: 4000
+      - name:
+          pl: Rekonstrukcja kompleksu otoczka-brodawka – obie piersi
+          en: Nipple-areola complex reconstruction – both breasts
+        price:
+          pl: 12 500 PLN
+          en: 12 500 PLN
+        from: 12500
+      - name:
+          pl: Zmniejszenie otoczki brodawki sutkowej
+          en: Areola reduction – one breast
+        price:
+          pl: 5 000 PLN
+          en: 5 000 PLN
+        from: 5000
+      - name:
+          pl: Zmniejszenie otoczek brodawek sutkowych
+          en: Areola reduction – both breasts
+        price:
+          pl: 8 000 PLN
+          en: 8 000 PLN
+        from: 8000
+  - id: rekonstrukcja-piersi
+    title:
+      pl: Rekonstrukcja piersi
+      en: Breast Reconstruction
+    items:
+      - name:
+          pl: Rekonstrukcja piersi ekspanderoprotezą – jedna pierś
+          en: Breast reconstruction with expander-prosthesis – one breast
+        price:
+          pl: 14 000 PLN + koszt ekspanderoprotezy
+          en: 14 000 PLN + expander-prosthesis cost
+        from: 14000
+        treatment:
+          - rekonstrukcja-piersi-ekspanderoproteza
+          - rekonstrukcja-piersi
+      - name:
+          pl: Rekonstrukcja piersi ekspanderoprotezą – obie piersi
+          en: Breast reconstruction with expander-prosthesis – both breasts
+        price:
+          pl: 25 000 PLN + koszt ekspanderoprotezy
+          en: 25 000 PLN + expander-prosthesis cost
+        from: 25000
+        treatment:
+          - rekonstrukcja-piersi-ekspanderoproteza
+          - rekonstrukcja-piersi
+      - name:
+          pl: Rekonstrukcja piersi – wymiana ekspandera na implant
+          en: Breast reconstruction – expander to implant exchange
+        price:
+          pl: 14 000 PLN + cena implantu
+          en: 14 000 PLN + implant cost
+        from: 14000
+      - name:
+          pl: Rekonstrukcja piersi własnym tłuszczem – jedna pierś
+          en: Breast reconstruction with own fat – one breast
+        price:
+          pl: od 5 000 PLN + koszt liposukcji
+          en: from 5 000 PLN + liposuction cost
+        from: 5000
+        treatment:
+          - rekonstrukcja-piersi-wlasnym-tluszczem
+          - rekonstrukcja-piersi
+      - name:
+          pl: Rekonstrukcja piersi tk. własnymi (LD) – jedna pierś
+          en: Breast reconstruction with own tissue (LD flap) – one breast
+        price:
+          pl: od 30 000 PLN + cena implantu
+          en: from 30 000 PLN + implant cost
+        from: 30000
+        treatment:
+          - rekonstrukcja-piersi-tkankami-wlasnymi
+          - rekonstrukcja-piersi
+      - name:
+          pl: Rekonstrukcja piersi tk. własnymi (Tram) – jedna pierś
+          en: Breast reconstruction with own tissue (TRAM flap) – one breast
+        price:
+          pl: 'I etap: 10 000 PLN; II etap: 40 000 PLN'
+          en: 'Stage I: 10 000 PLN; Stage II: 40 000 PLN'
+        from: 10000
+        treatment:
+          - rekonstrukcja-piersi-tkankami-wlasnymi
+          - rekonstrukcja-piersi
+      - name:
+          pl: Rekonstrukcja piersi – wyjęcie portów – jedna pierś
+          en: Breast reconstruction – port removal – one breast
+        price:
+          pl: 2 500 PLN
+          en: 2 500 PLN
+        from: 2500
+      - name:
+          pl: Rekonstrukcja piersi – wyjęcie portów – obie piersi
+          en: Breast reconstruction – port removal – both breasts
+        price:
+          pl: 4 500 PLN
+          en: 4 500 PLN
+        from: 4500
+      - name:
+          pl: Natychmiastowa rekonstrukcja piersi z amputacją – jedna pierś
+          en: Immediate breast reconstruction with mastectomy – one breast
+        price:
+          pl: od 25 000 PLN
+          en: from 25 000 PLN
+        from: 25000
+      - name:
+          pl: Natychmiastowa rekonstrukcja piersi z amputacją – obie piersi
+          en: Immediate breast reconstruction with mastectomy – both breasts
+        price:
+          pl: 35 000 – 50 000 PLN
+          en: 35 000 – 50 000 PLN
+        from: 35000
+  - id: mezczyzni
+    title:
+      pl: Dla mężczyzn
+      en: For Men
+    items:
+      - name:
+          pl: 'Dla mężczyzn: ginekomastia'
+          en: 'For men: gynecomastia'
+        price:
+          pl: 22 000 – 25 000 PLN
+          en: 22 000 – 25 000 PLN
+        from: 22000
+        treatment: dla-mezczyzn-ginekomastia
+      - name:
+          pl: Lipomastia – liposukcja gruczołów sutkowych
+          en: Lipomastia – breast gland liposuction
+        price:
+          pl: 18 000 PLN
+          en: 18 000 PLN
+        from: 18000
+  - id: skora-zabiegi-chirurgiczne
+    title:
+      pl: Zabiegi chirurgiczne
+      en: Surgical Procedures
+    items:
+      - name:
+          pl: Korekcja blizn (chirurgiczna)
+          en: Scar correction (surgical)
+        price:
+          pl: od 2 200 PLN
+          en: from 2 200 PLN
+        from: 2200
+        treatment: korekcja-blizn-chirurgiczna
+      - name:
+          pl: Wycięcie znamienia
+          en: Mole excision
+        price:
+          pl: 2 200 PLN
+          en: 2 200 PLN
+        from: 2200
+        treatment: wyciecie-znamienia
+      - name:
+          pl: Wycięcie tłuszczaka
+          en: Lipoma excision
+        price:
+          pl: od 3 000 PLN
+          en: from 3 000 PLN
+        from: 3000
+      - name:
+          pl: Usunięcie tłuszczaka (liposukcja)
+          en: Lipoma removal (liposuction)
+        price:
+          pl: od 5 000 PLN
+          en: from 5 000 PLN
+        from: 5000
+      - name:
+          pl: Wycięcie znamienia z plastyką miejscową
+          en: Mole excision with local flap
+        price:
+          pl: od 4 500 PLN
+          en: from 4 500 PLN
+        from: 4500
+        treatment: wyciecie-znamienia-z-plastyka-miejscowa
+  - id: skora-botox
+    title:
+      pl: Botox – Toksyna Botulinowa
+      en: Botox – Botulinum Toxin
+    items:
+      - heading:
+          pl: Korekta zmarszczek mimicznych, czoło, kurze łapki, lwia zmarszczka
+          en: 'Expression wrinkle correction: forehead, crow''s feet, frown lines'
+      - name:
+          pl: Botox – jedna okolica
+          en: Botox – one area
+        price:
+          pl: 700 PLN
+          en: 700 PLN
+        from: 700
+        treatment: face-lift-calkowity-czesciowy-4
+      - name:
+          pl: Botox – dwie okolice
+          en: Botox – two areas
+        price:
+          pl: 1 300 PLN
+          en: 1 300 PLN
+        from: 1300
+        treatment: face-lift-calkowity-czesciowy-4
+      - name:
+          pl: Botox – trzy okolice
+          en: Botox – three areas
+        price:
+          pl: 1 900 PLN
+          en: 1 900 PLN
+        from: 1900
+        treatment: face-lift-calkowity-czesciowy-4
+      - name:
+          pl: Leczenie bruksizmu
+          en: Bruxism treatment
+        price:
+          pl: od 1 800 PLN
+          en: from 1 800 PLN
+        from: 1800
+      - name:
+          pl: Leczenie nadpotliwości pach
+          en: Underarm hyperhidrosis treatment
+        price:
+          pl: od 1 800 PLN
+          en: from 1 800 PLN
+        from: 1800
+      - name:
+          pl: Leczenie nadpotliwości dłoni
+          en: Hand hyperhidrosis treatment
+        price:
+          pl: od 1 800 PLN
+          en: from 1 800 PLN
+        from: 1800
+      - name:
+          pl: Leczenie migreny
+          en: Migraine treatment
+        price:
+          pl: od 1 800 PLN
+          en: from 1 800 PLN
+        from: 1800
+        treatment: botox-leczenie-bolow-migrenowych
+  - id: skora-wypelniacze
+    title:
+      pl: Wypełniacze
+      en: Fillers
+    items:
+      - name:
+          pl: Powiększanie ust kwasem hialuronowym – 1 ampułka
+          en: Lip augmentation with hyaluronic acid – 1 vial
+        price:
+          pl: 1 200 – 1 400 PLN
+          en: 1 200 – 1 400 PLN
+        from: 1200
+        treatment: powiekszenie-ust-kwasem-hialuronowym
+      - name:
+          pl: Konturowanie i nawilżanie ust kwasem hialuronowym – 1 ampułka
+          en: Lip contouring and hydration with hyaluronic acid – 1 vial
+        price:
+          pl: 1 200 – 1 400 PLN
+          en: 1 200 – 1 400 PLN
+        from: 1200
+      - name:
+          pl: Wolumetria twarzy kwasem hialuronowym – 1 ampułka
+          en: Facial volumetry with hyaluronic acid – 1 vial
+        price:
+          pl: 1 200 – 1 400 PLN
+          en: 1 200 – 1 400 PLN
+        from: 1200
+        treatment: wolumetria-twarzy-kwasem-hialuronowym
+      - name:
+          pl: Wypełnianie bruzd i zmarszczek kwasem hialuronowym – 1 ampułka
+          en: Wrinkle and fold filling with hyaluronic acid – 1 vial
+        price:
+          pl: 1 200 – 1 400 PLN
+          en: 1 200 – 1 400 PLN
+        from: 1200
+        treatment: redukcja-zmarszczek
+      - name:
+          pl: Wypełnienie fałdów nosowo – wargowych kwasem hialuronowym – 1 ampułka
+          en: Nasolabial fold filling with hyaluronic acid – 1 vial
+        price:
+          pl: 1 200 – 1 400 PLN
+          en: 1 200 – 1 400 PLN
+        from: 1200
+      - name:
+          pl: Korekta nosa kwasem hialuronowym- 1 ampułka
+          en: Nose correction with hyaluronic acid – 1 vial
+        price:
+          pl: 1 400 PLN
+          en: 1 400 PLN
+        from: 1400
+      - name:
+          pl: Wypełnienie kwasem hialuronowym – dolina łez
+          en: Hyaluronic acid filler – tear troughs
+        price:
+          pl: 1 200 – 1 400 PLN
+          en: 1 200 – 1 400 PLN
+        from: 1200
+      - name:
+          pl: Wolumetria twarzy własnym tłuszczem – lipofilling
+          en: Facial volumetry with own fat – lipofilling
+        price:
+          pl: od 6 000 PLN
+          en: from 6 000 PLN
+        from: 6000
+      - name:
+          pl: Wolumetria twarzy własnym tłuszczem – lipofilling
+          en: Facial volumetry with own fat – lipofilling
+        price:
+          pl: 6 000 – 8 000 PLN
+          en: 6 000 – 8 000 PLN
+        from: 6000
+      - name:
+          pl: Komórki macierzyste przy lipotransferze
+          en: Stem cells with fat transfer
+        price:
+          pl: 3000 PLN
+          en: 3000 PLN
+        from: 3000
+  - id: skora-stymulatory-tkankowe
+    title:
+      pl: Stymulatory tkankowe
+      en: Tissue stimulators
+    items:
+      - heading:
+          pl: Jalupro Young Eye
+          en: Jalupro Young Eye
+      - name:
+          pl: Okolica oczu
+          en: Eye area
+        price:
+          pl: 1 000 PLN
+          en: 1 000 PLN
+        from: 1000
+      - heading:
+          pl: Jalupro Super Hydro
+          en: Jalupro Super Hydro
+      - name:
+          pl: Twarz
+          en: Face
+        price:
+          pl: 1 500 PLN
+          en: 1 500 PLN
+        from: 1500
+      - heading:
+          pl: Jalupro HMW
+          en: Jalupro HMW
+      - name:
+          pl: Twarz
+          en: Face
+        price:
+          pl: 1 100 PLN
+          en: 1 100 PLN
+        from: 1100
+      - heading:
+          pl: Jalupro Classic
+          en: Jalupro Classic
+      - name:
+          pl: Twarz
+          en: Face
+        price:
+          pl: 800 PLN
+          en: 800 PLN
+        from: 800
+      - name:
+          pl: Twarz w serii 2 zabiegów
+          en: Face – series of 2 treatments
+        price:
+          pl: 1 300 PLN
+          en: 1 300 PLN
+        from: 1300
+      - heading:
+          pl: Pakiet Jalupro Full Face (Super Hydro + Young Eye + HMW)
+          en: Jalupro Full Face package (Super Hydro + Young Eye + HMW)
+      - name:
+          pl: Twarz
+          en: Face
+        price:
+          pl: 3 000 PLN
+          en: 3 000 PLN
+        from: 3000
+      - heading:
+          pl: Nucleofill Soft Eyes – biostymulacja okolicy oczu
+          en: Nucleofill Soft Eyes – eye area biostimulation
+      - name:
+          pl: Okolica oczu lub dowolna 1 okolica
+          en: Eye area or any single area
+        price:
+          pl: 1 100 PLN
+          en: 1 100 PLN
+        from: 1100
+      - name:
+          pl: Okolica oczu lub dowolna 1 okolica w serii 3 zabiegów
+          en: Eye area or any single area – series of 3 treatments
+        price:
+          pl: 2 700 PLN
+          en: 2 700 PLN
+        from: 2700
+      - name:
+          pl: Maska do zabiegu
+          en: Treatment mask
+        price:
+          pl: 200 PLN
+          en: 200 PLN
+        from: 200
+      - heading:
+          pl: Nucleofill Medium – biostymulacja polinukleotydami
+          en: Nucleofill Medium – polynucleotide biostimulation
+      - name:
+          pl: Twarz
+          en: Face
+        price:
+          pl: 1 200 PLN
+          en: 1 200 PLN
+        from: 1200
+      - name:
+          pl: Twarz w serii 3 zabiegów
+          en: Face – series of 3 treatments
+        price:
+          pl: 3 000 PLN
+          en: 3 000 PLN
+        from: 3000
+      - name:
+          pl: Maska do zabiegu
+          en: Treatment mask
+        price:
+          pl: 200 PLN
+          en: 200 PLN
+        from: 200
+      - heading:
+          pl: Nucleofill Strong – intensywna biostymulacja polinukleotydami
+          en: Nucleofill Strong – intensive polynucleotide biostimulation
+      - name:
+          pl: Twarz
+          en: Face
+        price:
+          pl: 1 300 PLN
+          en: 1 300 PLN
+        from: 1300
+      - name:
+          pl: Twarz w serii 3 zabiegów
+          en: Face – series of 3 treatments
+        price:
+          pl: 3 300 PLN
+          en: 3 300 PLN
+        from: 3300
+      - name:
+          pl: Maska do zabiegu
+          en: Treatment mask
+        price:
+          pl: 200 PLN
+          en: 200 PLN
+        from: 200
+      - heading:
+          pl: Linerase – kolagenowa odbudowa skóry
+          en: Linerase – collagen skin reconstruction
+      - name:
+          pl: Twarz
+          en: Face
+        price:
+          pl: 1 300 PLN
+          en: 1 300 PLN
+        from: 1300
+      - name:
+          pl: Twarz + szyja
+          en: Face + neck
+        price:
+          pl: 1 500 PLN
+          en: 1 500 PLN
+        from: 1500
+      - name:
+          pl: Twarz + szyja + dekolt
+          en: Face + neck + decolletage
+        price:
+          pl: 1 700 PLN
+          en: 1 700 PLN
+        from: 1700
+      - name:
+          pl: Twarz w serii 3 zabiegów
+          en: Face – series of 3 treatments
+        price:
+          pl: 3 200 PLN
+          en: 3 200 PLN
+        from: 3200
+      - name:
+          pl: Maska do zabiegu
+          en: Treatment mask
+        price:
+          pl: 200 PLN
+          en: 200 PLN
+        from: 200
+      - heading:
+          pl: Tropokolagen GUNA – MD-Tissue, MD-Matrix i MD-Lumbar
+          en: Tropocollagen GUNA – MD-Tissue, MD-Matrix and MD-Lumbar
+      - name:
+          pl: 1 ampułka (okolica oczu)
+          en: 1 vial (eye area)
+        price:
+          pl: 600 PLN
+          en: 600 PLN
+        from: 600
+      - name:
+          pl: 2 ampułki
+          en: 2 vials
+        price:
+          pl: 800 PLN
+          en: 800 PLN
+        from: 800
+      - name:
+          pl: 3 ampułki
+          en: 3 vials
+        price:
+          pl: 1 000 PLN
+          en: 1 000 PLN
+        from: 1000
+      - name:
+          pl: Każda dodatkowa ampułka (2 ml)
+          en: Each additional vial (2 ml)
+        price:
+          pl: 200 PLN
+          en: 200 PLN
+        from: 200
+      - heading:
+          pl: Profhilo – bioremodeling skóry
+          en: Profhilo – skin bioremodeling
+      - name:
+          pl: Twarz
+          en: Face
+        price:
+          pl: 1 500 PLN
+          en: 1 500 PLN
+        from: 1500
+      - name:
+          pl: Twarz w serii 2 zabiegów
+          en: Face – series of 2 treatments
+        price:
+          pl: 2 600 PLN
+          en: 2 600 PLN
+        from: 2600
+      - name:
+          pl: Maska do zabiegu
+          en: Treatment mask
+        price:
+          pl: 200 PLN
+          en: 200 PLN
+        from: 200
+      - heading:
+          pl: Profhilo Structura
+          en: Profhilo Structura
+      - name:
+          pl: Twarz
+          en: Face
+        price:
+          pl: 1 900 PLN
+          en: 1 900 PLN
+        from: 1900
+      - name:
+          pl: Twarz w serii 2 zabiegów
+          en: Face – series of 2 treatments
+        price:
+          pl: 3 200 PLN
+          en: 3 200 PLN
+        from: 3200
+      - heading:
+          pl: Sunekos 1200 – intensywna odbudowa i lifting skóry
+          en: Sunekos 1200 – intensive skin reconstruction and lifting
+      - name:
+          pl: Twarz
+          en: Face
+        price:
+          pl: 1 500 PLN
+          en: 1 500 PLN
+        from: 1500
+      - name:
+          pl: Twarz + szyja
+          en: Face + neck
+        price:
+          pl: 2 100 PLN
+          en: 2 100 PLN
+        from: 2100
+      - name:
+          pl: Twarz + szyja + dekolt
+          en: Face + neck + decolletage
+        price:
+          pl: 2 600 PLN
+          en: 2 600 PLN
+        from: 2600
+      - name:
+          pl: Maska do zabiegu
+          en: Treatment mask
+        price:
+          pl: 200 PLN
+          en: 200 PLN
+        from: 200
+      - heading:
+          pl: Sunekos 200 – regeneracja i odbudowa skóry
+          en: Sunekos 200 – skin regeneration and reconstruction
+      - name:
+          pl: Twarz
+          en: Face
+        price:
+          pl: 1 000 PLN
+          en: 1 000 PLN
+        from: 1000
+      - name:
+          pl: Twarz w serii 4 zabiegów
+          en: Face – series of 4 treatments
+        price:
+          pl: 3 400 PLN
+          en: 3 400 PLN
+        from: 3400
+      - name:
+          pl: Twarz + szyja
+          en: Face + neck
+        price:
+          pl: 1 500 PLN
+          en: 1 500 PLN
+        from: 1500
+      - name:
+          pl: Twarz + szyja + dekolt
+          en: Face + neck + decolletage
+        price:
+          pl: 1 900 PLN
+          en: 1 900 PLN
+        from: 1900
+      - name:
+          pl: Maska do zabiegu
+          en: Treatment mask
+        price:
+          pl: 200 PLN
+          en: 200 PLN
+        from: 200
+      - heading:
+          pl: Sunekos 1200 + 200 – kompleksowa odbudowa i odmłodzenie skóry
+          en: Sunekos 1200 + 200 – comprehensive skin reconstruction and rejuvenation
+      - name:
+          pl: Twarz
+          en: Face
+        price:
+          pl: 1 800 PLN
+          en: 1 800 PLN
+        from: 1800
+      - name:
+          pl: Pełna seria zabiegowa (Sunekos 1200 i 3× Sunekos 200)
+          en: Full treatment series (Sunekos 1200 and 3× Sunekos 200)
+        price:
+          pl: 4 200 PLN
+          en: 4 200 PLN
+        from: 4200
+      - name:
+          pl: Maska do zabiegu
+          en: Treatment mask
+        price:
+          pl: 200 PLN
+          en: 200 PLN
+        from: 200
+      - heading:
+          pl: Kwas polimlekowy
+          en: Poly-L-lactic acid
+      - name:
+          pl: 1 ampułka
+          en: 1 vial
+        price:
+          pl: 2 200 PLN
+          en: 2 200 PLN
+        from: 2200
+      - heading:
+          pl: Hydroxyapatyt wapnia
+          en: Calcium hydroxyapatite
+      - name:
+          pl: 1 ampułka
+          en: 1 vial
+        price:
+          pl: od 1 800 PLN
+          en: from 1 800 PLN
+        from: 1800
+  - id: skora-mezoterapia
+    title:
+      pl: Mezoterapia
+      en: Mesotherapy
+    items:
+      - heading:
+          pl: Viscoderm Hydrobooster
+          en: Viscoderm Hydrobooster
+      - name:
+          pl: Twarz
+          en: Face
+        price:
+          pl: 1 500 PLN
+          en: 1 500 PLN
+        from: 1500
+      - name:
+          pl: Twarz w serii 2 zabiegów
+          en: Face – series of 2 treatments
+        price:
+          pl: 2 300 PLN
+          en: 2 300 PLN
+        from: 2300
+      - heading:
+          pl: Electri – zagęszczenie i odmłodzenie skóry
+          en: Electri – skin densification and rejuvenation
+      - name:
+          pl: Twarz
+          en: Face
+        price:
+          pl: 800 PLN
+          en: 800 PLN
+        from: 800
+      - name:
+          pl: Twarz + szyja
+          en: Face + neck
+        price:
+          pl: 1 300 PLN
+          en: 1 300 PLN
+        from: 1300
+      - name:
+          pl: Twarz + szyja + dekolt
+          en: Face + neck + decolletage
+        price:
+          pl: 1 800 PLN
+          en: 1 800 PLN
+        from: 1800
+      - name:
+          pl: Maska do zabiegu
+          en: Treatment mask
+        price:
+          pl: 200 PLN
+          en: 200 PLN
+        from: 200
+      - heading:
+          pl: Xela Rederm 1.1% – intensywna regeneracja i odmłodzenie skóry
+          en: Xela Rederm 1.1% – intensive skin regeneration and rejuvenation
+      - name:
+          pl: Twarz
+          en: Face
+        price:
+          pl: 900 PLN
+          en: 900 PLN
+        from: 900
+        treatment: redermalizacja
+      - name:
+          pl: Twarz + szyja
+          en: Face + neck
+        price:
+          pl: 1 500 PLN
+          en: 1 500 PLN
+        from: 1500
+        treatment: redermalizacja
+      - name:
+          pl: Twarz + szyja + dekolt
+          en: Face + neck + decolletage
+        price:
+          pl: 2 000 PLN
+          en: 2 000 PLN
+        from: 2000
+        treatment: redermalizacja
+      - name:
+          pl: Maska do zabiegu
+          en: Treatment mask
+        price:
+          pl: 200 PLN
+          en: 200 PLN
+        from: 200
+      - heading:
+          pl: Xela Rederm 1.8% – intensywna odbudowa i lifting skóry
+          en: Xela Rederm 1.8% – intensive skin reconstruction and lifting
+      - name:
+          pl: Twarz
+          en: Face
+        price:
+          pl: 1 000 PLN
+          en: 1 000 PLN
+        from: 1000
+        treatment: redermalizacja
+      - name:
+          pl: Twarz + szyja
+          en: Face + neck
+        price:
+          pl: 1 600 PLN
+          en: 1 600 PLN
+        from: 1600
+        treatment: redermalizacja
+      - name:
+          pl: Twarz + szyja + dekolt
+          en: Face + neck + decolletage
+        price:
+          pl: 2 100 PLN
+          en: 2 100 PLN
+        from: 2100
+        treatment: redermalizacja
+      - name:
+          pl: Maska do zabiegu
+          en: Treatment mask
+        price:
+          pl: 200 PLN
+          en: 200 PLN
+        from: 200
+      - heading:
+          pl: Xela Rederm 2.2% – odbudowa i zagęszczenie
+          en: Xela Rederm 2.2% – reconstruction and densification
+      - name:
+          pl: Twarz
+          en: Face
+        price:
+          pl: 1 100 PLN
+          en: 1 100 PLN
+        from: 1100
+        treatment: redermalizacja
+      - name:
+          pl: Twarz + szyja
+          en: Face + neck
+        price:
+          pl: 1 700 PLN
+          en: 1 700 PLN
+        from: 1700
+        treatment: redermalizacja
+      - name:
+          pl: Twarz + szyja + dekolt
+          en: Face + neck + decolletage
+        price:
+          pl: 2 200 PLN
+          en: 2 200 PLN
+        from: 2200
+        treatment: redermalizacja
+      - name:
+          pl: Maska do zabiegu
+          en: Treatment mask
+        price:
+          pl: 200 PLN
+          en: 200 PLN
+        from: 200
+      - heading:
+          pl: Neauvia Hydro Delux – nawilżanie i rewitalizacja
+          en: Neauvia Hydro Delux – hydration and revitalization
+      - name:
+          pl: Twarz
+          en: Face
+        price:
+          pl: 800 PLN
+          en: 800 PLN
+        from: 800
+      - name:
+          pl: Twarz + szyja
+          en: Face + neck
+        price:
+          pl: 1 300 PLN
+          en: 1 300 PLN
+        from: 1300
+      - name:
+          pl: Twarz + szyja + dekolt
+          en: Face + neck + decolletage
+        price:
+          pl: 1 700 PLN
+          en: 1 700 PLN
+        from: 1700
+      - name:
+          pl: Maska do zabiegu
+          en: Treatment mask
+        price:
+          pl: 200 PLN
+          en: 200 PLN
+        from: 200
+      - heading:
+          pl: Mezoterapia igłowa okolic oczu
+          en: Needle mesotherapy – eye area
+      - name:
+          pl: RRS HA Eyes
+          en: RRS HA Eyes
+        price:
+          pl: 500 PLN
+          en: 500 PLN
+        from: 500
+        treatment: mezoterapia-iglowa
+      - name:
+          pl: Nucleofill Soft Eyes
+          en: Nucleofill Soft Eyes
+        price:
+          pl: 1 100 PLN
+          en: 1 100 PLN
+        from: 1100
+        treatment: mezoterapia-iglowa
+      - heading:
+          pl: Mezoterapia igłowa skóry głowy – regeneracja i stymulacja wzrostu włosów
+          en: Needle mesotherapy – scalp regeneration and hair growth stimulation
+      - name:
+          pl: RRS XL Hair
+          en: RRS XL Hair
+        price:
+          pl: 600 PLN
+          en: 600 PLN
+        from: 600
+        treatment: mezoterapia-iglowa
+      - name:
+          pl: DR.CYJ
+          en: DR.CYJ
+        price:
+          pl: 800 PLN
+          en: 800 PLN
+        from: 800
+        treatment: mezoterapia-iglowa
+      - heading:
+          pl: Mezoterapia preparatami autologicznymi
+          en: Autologous mesotherapy
+      - name:
+          pl: Osocze bogatopłytkowe – jeden obszar
+          en: Platelet-rich plasma – one area
+        price:
+          pl: 900 PLN
+          en: 900 PLN
+        from: 900
+        treatment: podanie-osocza-bogatoplytkowego2
+      - name:
+          pl: Osocze bogatopłytkowe – dwa obszary
+          en: Platelet-rich plasma – two areas
+        price:
+          pl: 1 200 PLN
+          en: 1 200 PLN
+        from: 1200
+        treatment: podanie-osocza-bogatoplytkowego2
+      - name:
+          pl: Osocze bogatopłytkowe – okolica skóry głowy
+          en: Platelet-rich plasma – scalp area
+        price:
+          pl: 900 PLN
+          en: 900 PLN
+        from: 900
+        treatment: podanie-osocza-bogatoplytkowego2
+      - name:
+          pl: Fibryna bogatopłytkowa – twarz
+          en: Platelet-rich fibrin – face
+        price:
+          pl: 900 – 1 500 PLN
+          en: 900 – 1 500 PLN
+        from: 900
+  - id: skora-dermapen
+    title:
+      pl: Dermapen 4.0 – mikronakłuwanie skóry
+      en: Dermapen 4.0 – skin microneedling
+    items:
+      - heading:
+          pl: Dermapen 4.0 z mezokoktajlem DP Dermaceuticals
+          en: Dermapen 4.0 with DP Dermaceuticals meso cocktail
+      - name:
+          pl: Twarz
+          en: Face
+        price:
+          pl: 800 PLN
+          en: 800 PLN
+        from: 800
+        treatment: mezoterapia-mikroiglowa-micropen
+      - name:
+          pl: Twarz + szyja
+          en: Face + neck
+        price:
+          pl: 1 000 PLN
+          en: 1 000 PLN
+        from: 1000
+        treatment: mezoterapia-mikroiglowa-micropen
+      - name:
+          pl: Twarz + szyja + dekolt
+          en: Face + neck + decolletage
+        price:
+          pl: 1 200 PLN
+          en: 1 200 PLN
+        from: 1200
+        treatment: mezoterapia-mikroiglowa-micropen
+      - name:
+          pl: Twarz w serii 3 zabiegów
+          en: Face in a series of 3 treatments
+        price:
+          pl: 2 100 PLN
+          en: 2 100 PLN
+        from: 2100
+        treatment: mezoterapia-mikroiglowa-micropen
+      - name:
+          pl: Twarz + szyja w serii 3 zabiegów
+          en: Face + neck in a series of 3 treatments
+        price:
+          pl: 2 700 PLN
+          en: 2 700 PLN
+        from: 2700
+        treatment: mezoterapia-mikroiglowa-micropen
+      - name:
+          pl: Twarz + szyja + dekolt w serii 3 zabiegów
+          en: Face + neck + decolletage in a series of 3 treatments
+        price:
+          pl: 3 300 PLN
+          en: 3 300 PLN
+        from: 3300
+        treatment: mezoterapia-mikroiglowa-micropen
+      - name:
+          pl: Maska do zabiegu
+          en: Treatment mask
+        price:
+          pl: 200 PLN
+          en: 200 PLN
+        from: 200
+      - heading:
+          pl: Dermapen 4.0 – zabieg z użyciem kwasów
+          en: Dermapen 4.0 – treatment with acids
+      - name:
+          pl: Twarz
+          en: Face
+        price:
+          pl: 950 PLN
+          en: 950 PLN
+        from: 950
+      - name:
+          pl: Twarz + szyja
+          en: Face + neck
+        price:
+          pl: 1 250 PLN
+          en: 1 250 PLN
+        from: 1250
+      - name:
+          pl: Twarz + szyja + dekolt
+          en: Face + neck + decolletage
+        price:
+          pl: 1 550 PLN
+          en: 1 550 PLN
+        from: 1550
+      - name:
+          pl: Twarz w serii 3 zabiegów
+          en: Face in a series of 3 treatments
+        price:
+          pl: 2 400 PLN
+          en: 2 400 PLN
+        from: 2400
+      - name:
+          pl: Twarz + szyja w serii 3 zabiegów
+          en: Face + neck in a series of 3 treatments
+        price:
+          pl: 3 300 PLN
+          en: 3 300 PLN
+        from: 3300
+      - name:
+          pl: Twarz + szyja + dekolt w serii 3 zabiegów
+          en: Face + neck + decolletage in a series of 3 treatments
+        price:
+          pl: 3 900 PLN
+          en: 3 900 PLN
+        from: 3900
+      - name:
+          pl: Maska do zabiegu
+          en: Treatment mask
+        price:
+          pl: 200 PLN
+          en: 200 PLN
+        from: 200
+  - id: skora-peelingi
+    title:
+      pl: Peelingi
+      en: Peels
+    items:
+      - heading:
+          pl: Monopeelingi Peel Mission
+          en: Peel Mission monopeels
+      - name:
+          pl: Fitowy – oczyszczający i antybakteryjny
+          en: Phytic – cleansing and antibacterial
+        price:
+          pl: 400 PLN
+          en: 400 PLN
+        from: 400
+      - name:
+          pl: Azelainowy – redukcja niedoskonałości
+          en: Azelaic – imperfection reduction
+        price:
+          pl: 400 PLN
+          en: 400 PLN
+        from: 400
+      - name:
+          pl: Ferulowy – antyoksydacyjny i rozświetlający
+          en: Ferulic – antioxidant and brightening
+        price:
+          pl: 400 PLN
+          en: 400 PLN
+        from: 400
+      - name:
+          pl: Laktobionowy – nawilżenie i blask
+          en: Lactobionic – hydration and glow
+        price:
+          pl: 400 PLN
+          en: 400 PLN
+        from: 400
+      - name:
+          pl: Migdałowy – rozjaśniający i delikatny
+          en: Almond – brightening and gentle
+        price:
+          pl: 400 PLN
+          en: 400 PLN
+        from: 400
+      - heading:
+          pl: Biorepeel
+          en: Biorepeel
+      - name:
+          pl: Peeling rewitalizujący
+          en: Revitalizing peel
+        price:
+          pl: 400 PLN
+          en: 400 PLN
+        from: 400
+      - heading:
+          pl: Peeling kawitacyjny – oczyszczanie ultradźwiękami
+          en: Ultrasonic cavitation peel
+      - name:
+          pl: Wersja podstawowa
+          en: Basic version
+        price:
+          pl: 300 PLN
+          en: 300 PLN
+        from: 300
+      - name:
+          pl: Wersja rozszerzona – z peelingiem chemicznym
+          en: Extended version – with chemical peel
+        price:
+          pl: 450 PLN
+          en: 450 PLN
+        from: 450
+      - name:
+          pl: Maska do zabiegu
+          en: Treatment mask
+        price:
+          pl: 200 PLN
+          en: 200 PLN
+        from: 200
+  - id: skora-laseroterapia
+    title:
+      pl: Laseroterapia
+      en: Laser therapy
+    items:
+      - heading:
+          pl: Laser Nordlys™ Ellipse PR530/Vl 555 – laserowe usuwanie przebarwień
+          en: Nordlys™ Ellipse PR530/Vl 555 laser – pigmentation removal
+      - name:
+          pl: Twarz
+          en: Face
+        price:
+          pl: 600 PLN
+          en: 600 PLN
+        from: 600
+      - name:
+          pl: Szyja
+          en: Neck
+        price:
+          pl: 400 PLN
+          en: 400 PLN
+        from: 400
+      - name:
+          pl: Dekolt
+          en: Decolletage
+        price:
+          pl: 500 PLN
+          en: 500 PLN
+        from: 500
+      - name:
+          pl: Twarz + szyja
+          en: Face + neck
+        price:
+          pl: 800 PLN
+          en: 800 PLN
+        from: 800
+      - name:
+          pl: Twarz + dekolt
+          en: Face + decolletage
+        price:
+          pl: 900 PLN
+          en: 900 PLN
+        from: 900
+      - name:
+          pl: Twarz + szyja + dekolt
+          en: Face + neck + decolletage
+        price:
+          pl: 1 100 PLN
+          en: 1 100 PLN
+        from: 1100
+      - name:
+          pl: Pojedyncze przebarwienie
+          en: Single pigmentation spot
+        price:
+          pl: 200 PLN
+          en: 200 PLN
+        from: 200
+      - name:
+          pl: Maska do zabiegu
+          en: Treatment mask
+        price:
+          pl: 200 PLN
+          en: 200 PLN
+        from: 200
+      - heading:
+          pl: Laser Nordlys™ Ellipse PR530/Vl555 – laserowe usuwanie naczynek i rumienia
+          en: Nordlys™ Ellipse PR530/Vl555 laser – vessel and redness removal
+      - name:
+          pl: Twarz
+          en: Face
+        price:
+          pl: 600 PLN
+          en: 600 PLN
+        from: 600
+      - name:
+          pl: Szyja
+          en: Neck
+        price:
+          pl: 400 PLN
+          en: 400 PLN
+        from: 400
+      - name:
+          pl: Dekolt
+          en: Decolletage
+        price:
+          pl: 500 PLN
+          en: 500 PLN
+        from: 500
+      - name:
+          pl: Twarz + szyja
+          en: Face + neck
+        price:
+          pl: 800 PLN
+          en: 800 PLN
+        from: 800
+      - name:
+          pl: Twarz + dekolt
+          en: Face + decolletage
+        price:
+          pl: 900 PLN
+          en: 900 PLN
+        from: 900
+      - name:
+          pl: Twarz + szyja + dekolt
+          en: Face + neck + decolletage
+        price:
+          pl: 1 100 PLN
+          en: 1 100 PLN
+        from: 1100
+      - name:
+          pl: Pojedyncze naczynko / rubinek
+          en: Single vessel / ruby spot
+        price:
+          pl: 200 PLN
+          en: 200 PLN
+        from: 200
+      - name:
+          pl: Maska do zabiegu
+          en: Treatment mask
+        price:
+          pl: 200 PLN
+          en: 200 PLN
+        from: 200
+      - heading:
+          pl: Laser Nordlys™ Ellipse PR530 – fotoodmładzanie laserowe
+          en: Nordlys™ Ellipse PR530 laser – laser photorejuvenation
+      - name:
+          pl: Twarz
+          en: Face
+        price:
+          pl: 600 PLN
+          en: 600 PLN
+        from: 600
+        treatment: fotoodmladzanie
+      - name:
+          pl: Szyja
+          en: Neck
+        price:
+          pl: 400 PLN
+          en: 400 PLN
+        from: 400
+        treatment: fotoodmladzanie
+      - name:
+          pl: Dekolt
+          en: Decolletage
+        price:
+          pl: 500 PLN
+          en: 500 PLN
+        from: 500
+        treatment: fotoodmladzanie
+      - name:
+          pl: Twarz + szyja
+          en: Face + neck
+        price:
+          pl: 800 PLN
+          en: 800 PLN
+        from: 800
+        treatment: fotoodmladzanie
+      - name:
+          pl: Twarz + dekolt
+          en: Face + decolletage
+        price:
+          pl: 900 PLN
+          en: 900 PLN
+        from: 900
+        treatment: fotoodmladzanie
+      - name:
+          pl: Twarz + szyja + dekolt
+          en: Face + neck + decolletage
+        price:
+          pl: 1 100 PLN
+          en: 1 100 PLN
+        from: 1100
+        treatment: fotoodmladzanie
+      - name:
+          pl: Pojedyncze naczynko / rubinek
+          en: Single vessel / ruby spot
+        price:
+          pl: 200 PLN
+          en: 200 PLN
+        from: 200
+      - name:
+          pl: Maska do zabiegu
+          en: Treatment mask
+        price:
+          pl: 200 PLN
+          en: 200 PLN
+        from: 200
+      - heading:
+          pl: Laser Nordlys™ Ellipse Frax 1550 – resurfacing, odmładzenie skóry
+          en: Nordlys™ Ellipse Frax 1550 laser – resurfacing, skin rejuvenation
+      - name:
+          pl: Twarz
+          en: Face
+        price:
+          pl: 1 100 PLN
+          en: 1 100 PLN
+        from: 1100
+        treatment: resurfacing
+      - name:
+          pl: Szyja
+          en: Neck
+        price:
+          pl: 500 PLN
+          en: 500 PLN
+        from: 500
+        treatment: resurfacing
+      - name:
+          pl: Dekolt
+          en: Decolletage
+        price:
+          pl: 800 PLN
+          en: 800 PLN
+        from: 800
+        treatment: resurfacing
+      - name:
+          pl: Twarz + szyja
+          en: Face + neck
+        price:
+          pl: 1 400 PLN
+          en: 1 400 PLN
+        from: 1400
+        treatment: resurfacing
+      - name:
+          pl: Twarz + szyja + dekolt
+          en: Face + neck + decolletage
+        price:
+          pl: 1 700 PLN
+          en: 1 700 PLN
+        from: 1700
+        treatment: resurfacing
+      - name:
+          pl: Dłonie
+          en: Hands
+        price:
+          pl: 500 PLN
+          en: 500 PLN
+        from: 500
+        treatment: resurfacing
+      - name:
+          pl: Ramiona
+          en: Arms
+        price:
+          pl: 1 500 PLN
+          en: 1 500 PLN
+        from: 1500
+        treatment: resurfacing
+      - name:
+          pl: Brzuch
+          en: Abdomen
+        price:
+          pl: 2 000 PLN
+          en: 2 000 PLN
+        from: 2000
+        treatment: resurfacing
+      - name:
+          pl: Maska do zabiegu
+          en: Treatment mask
+        price:
+          pl: 200 PLN
+          en: 200 PLN
+        from: 200
+      - heading:
+          pl: Laser Nordlys™ Ellipse – procedura łączona (Frax + IPL), zaawansowane odmładzanie skóry
+          en: Nordlys™ Ellipse – combined procedure (Frax + IPL), advanced skin rejuvenation
+      - name:
+          pl: Twarz
+          en: Face
+        price:
+          pl: 1 500 PLN
+          en: 1 500 PLN
+        from: 1500
+      - name:
+          pl: Twarz + szyja
+          en: Face + neck
+        price:
+          pl: 2 000 PLN
+          en: 2 000 PLN
+        from: 2000
+      - name:
+          pl: Twarz + szyja + dekolt
+          en: Face + neck + decolletage
+        price:
+          pl: 2 400 PLN
+          en: 2 400 PLN
+        from: 2400
+      - heading:
+          pl: Laser Nordlys™ Ellipse Nd:YAG – zamykanie naczynek na nogach
+          en: Nordlys™ Ellipse Nd:YAG laser – leg vein closure
+      - name:
+          pl: Pojedyncze naczynko
+          en: Single vessel
+        price:
+          pl: 200 PLN
+          en: 200 PLN
+        from: 200
+        treatment:
+          - flebologia
+          - pajaczki-teleangiektazje
+      - name:
+          pl: Mini zabieg (2–5 zmian)
+          en: Mini treatment (2–5 lesions)
+        price:
+          pl: 400 PLN
+          en: 400 PLN
+        from: 400
+        treatment:
+          - flebologia
+          - pajaczki-teleangiektazje
+      - name:
+          pl: Mały zabieg (6–10 zmian)
+          en: Small treatment (6–10 lesions)
+        price:
+          pl: 700 PLN
+          en: 700 PLN
+        from: 700
+        treatment:
+          - flebologia
+          - pajaczki-teleangiektazje
+      - name:
+          pl: Średni zabieg (11–20 zmian)
+          en: Medium treatment (11–20 lesions)
+        price:
+          pl: 1 200 PLN
+          en: 1 200 PLN
+        from: 1200
+        treatment:
+          - flebologia
+          - pajaczki-teleangiektazje
+      - name:
+          pl: Duży zabieg (21–30 zmian)
+          en: Large treatment (21–30 lesions)
+        price:
+          pl: 1 600 PLN
+          en: 1 600 PLN
+        from: 1600
+        treatment:
+          - flebologia
+          - pajaczki-teleangiektazje
+      - heading:
+          pl: Laser Nordlys™ Ellipse – laserowa redukcja blizn (Frax 1550, IPL)
+          en: Nordlys™ Ellipse laser – scar reduction (Frax 1550, IPL)
+      - name:
+          pl: Blizny chirurgiczne do 2 cm²
+          en: Surgical scars up to 2 cm
+        price:
+          pl: 200 PLN
+          en: 200 PLN
+        from: 200
+      - name:
+          pl: Blizny chirurgiczne 2–5 cm²
+          en: Surgical scars 2–5 cm
+        price:
+          pl: 250 PLN
+          en: 250 PLN
+        from: 250
+      - name:
+          pl: Blizny chirurgiczne 5–10 cm²
+          en: Surgical scars 5–10 cm
+        price:
+          pl: 350 PLN
+          en: 350 PLN
+        from: 350
+      - name:
+          pl: Blizny chirurgiczne powyżej 10 cm²
+          en: Surgical scars over 10 cm
+        price:
+          pl: 400 PLN
+          en: 400 PLN
+        from: 400
+      - heading:
+          pl: Laser Nordlys™ Ellipse – laserowa redukcja rozstępów (Frax 1550, IPL)
+          en: Nordlys™ Ellipse laser – stretch mark reduction (Frax 1550, IPL)
+      - name:
+          pl: Pojedynczy rozstęp
+          en: Single stretch mark
+        price:
+          pl: 250 PLN
+          en: 250 PLN
+        from: 250
+      - name:
+          pl: Obszar 10 cm × 10 cm
+          en: Area 10 cm × 10 cm
+        price:
+          pl: 600 PLN
+          en: 600 PLN
+        from: 600
+      - name:
+          pl: Ramiona
+          en: Arms
+        price:
+          pl: 1 200 PLN
+          en: 1 200 PLN
+        from: 1200
+      - name:
+          pl: Biodra
+          en: Hips
+        price:
+          pl: 1 200 PLN
+          en: 1 200 PLN
+        from: 1200
+      - name:
+          pl: Brzuch
+          en: Abdomen
+        price:
+          pl: 1 200 PLN
+          en: 1 200 PLN
+        from: 1200
+      - name:
+          pl: Piersi
+          en: Breasts
+        price:
+          pl: 1 200 PLN
+          en: 1 200 PLN
+        from: 1200
+      - name:
+          pl: Pośladki
+          en: Buttocks
+        price:
+          pl: 1 200 PLN
+          en: 1 200 PLN
+        from: 1200
+      - name:
+          pl: Uda (obszar 20 cm × 20 cm)
+          en: Thighs (20 cm × 20 cm area)
+        price:
+          pl: 1 200 PLN
+          en: 1 200 PLN
+        from: 1200
+  - id: skora-masaz-ciala
+    title:
+      pl: Masaż ciała pozabiegowy
+      en: Post-procedure body massage
+    items:
+      - name:
+          pl: Masaż ciała manualny 40 min
+          en: Manual body massage 40 min
+        price:
+          pl: 320 PLN
+          en: 320 PLN
+        from: 320
+      - name:
+          pl: Masaż manualny po zabiegu liposukcji 40 min
+          en: Manual massage after liposuction 40 min
+        price:
+          pl: 320 PLN
+          en: 320 PLN
+        from: 320
+      - name:
+          pl: Masaż manualny po zabiegach chirurgicznych 40 min
+          en: Manual massage after surgical procedures 40 min
+        price:
+          pl: 320 PLN
+          en: 320 PLN
+        from: 320
+      - name:
+          pl: Terapia blizny manualna 30 min
+          en: Manual scar therapy 30 min
+        price:
+          pl: 320 PLN
+          en: 320 PLN
+        from: 320
+  - id: skora-endermologia-lpg
+    title:
+      pl: Endermologia LPG®
+      en: LPG® Endermologie
+    items:
+      - name:
+          pl: Zabieg na ciało 40 minut
+          en: Body treatment 40 minutes
+        price:
+          pl: 290 PLN
+          en: 290 PLN
+        from: 290
+        treatment: endermologia-lpg-lipomassage
+      - name:
+          pl: Zabieg na ciało 50 minut
+          en: Body treatment 50 minutes
+        price:
+          pl: 340 PLN
+          en: 340 PLN
+        from: 340
+        treatment: endermologia-lpg-lipomassage
+      - name:
+          pl: Zabieg na ciało 60 minut
+          en: Body treatment 60 minutes
+        price:
+          pl: 390 PLN
+          en: 390 PLN
+        from: 390
+        treatment: endermologia-lpg-lipomassage
+      - name:
+          pl: Endermolift – zabieg na twarz 40 minut
+          en: Endermolift – facial treatment 40 minutes
+        price:
+          pl: 290 PLN
+          en: 290 PLN
+        from: 290
+        treatment: endermolift-2-zabieg-odmladzajacy
+      - name:
+          pl: Ubranko do zabiegu na ciało (do pakietu GRATIS)
+          en: Bodysuit for body treatment (FREE with package)
+        price:
+          pl: 120 PLN
+          en: 120 PLN
+        from: 120
+      - heading:
+          pl: Endermologia (Lipomassage™) – terapia wspomagająca
+          en: Endermologie (Lipomassage™) – supportive therapy
+      - name:
+          pl: Endermologia – przygotowanie do operacji chirurgicznej – 40 minut
+          en: Endermologie – preparation for surgical procedure – 40 minutes
+        price:
+          pl: 290 PLN
+          en: 290 PLN
+        from: 290
+        treatment: endermologia-lpg-lipomassage
+      - name:
+          pl: Endermologia regeneracyjna po operacji chirurgicznej – 40 minut
+          en: Regenerative endermologie after surgical procedure – 40 minutes
+        price:
+          pl: 290 PLN
+          en: 290 PLN
+        from: 290
+        treatment: endermologia-lpg-lipomassage
+      - name:
+          pl: Endermologia – przygotowanie do zabiegu liposukcji – 40 minut
+          en: Endermologie – preparation for liposuction – 40 minutes
+        price:
+          pl: 290 PLN
+          en: 290 PLN
+        from: 290
+        treatment: endermologia-lpg-lipomassage
+      - name:
+          pl: Endermologia regeneracyjna po zabiegu liposukcji – 40 minut
+          en: Regenerative endermologie after liposuction – 40 minutes
+        price:
+          pl: 290 PLN
+          en: 290 PLN
+        from: 290
+        treatment: endermologia-lpg-lipomassage
+      - name:
+          pl: Endermolift – przygotowanie do operacji twarzy 40 minut
+          en: Endermolift – preparation for facial surgery 40 minutes
+        price:
+          pl: 290 PLN
+          en: 290 PLN
+        from: 290
+        treatment: endermolift-2-zabieg-odmladzajacy
+      - name:
+          pl: Endermolift regeneracyjny po zabiegu na twarz 40 minut
+          en: Regenerative endermolift after facial procedure 40 minutes
+        price:
+          pl: 290 PLN
+          en: 290 PLN
+        from: 290
+        treatment: endermolift-2-zabieg-odmladzajacy
+      - heading:
+          pl: Pakiety Endermologia LPG®
+          en: LPG® Endermologie packages
+      - name:
+          pl: Zabieg na ciało 40 minut w serii 5 zabiegów (270 PLN/zabieg)
+          en: Body treatment 40 min – series of 5 (270 PLN/treatment)
+        price:
+          pl: 1 350 PLN
+          en: 1 350 PLN
+        from: 1350
+        treatment: endermologia-lpg-lipomassage
+      - name:
+          pl: Zabieg na ciało 40 minut w serii 10 zabiegów (250 PLN/zabieg)
+          en: Body treatment 40 min – series of 10 (250 PLN/treatment)
+        price:
+          pl: 2 500 PLN
+          en: 2 500 PLN
+        from: 2500
+        treatment: endermologia-lpg-lipomassage
+      - name:
+          pl: Zabieg na ciało 40 minut w serii 15 zabiegów (225 PLN/zabieg)
+          en: Body treatment 40 min – series of 15 (225 PLN/treatment)
+        price:
+          pl: 3 375 PLN
+          en: 3 375 PLN
+        from: 3375
+        treatment: endermologia-lpg-lipomassage
+      - name:
+          pl: Zabieg na ciało 50 minut w serii 5 zabiegów (325 PLN/zabieg)
+          en: Body treatment 50 min – series of 5 (325 PLN/treatment)
+        price:
+          pl: 1 625 PLN
+          en: 1 625 PLN
+        from: 1625
+        treatment: endermologia-lpg-lipomassage
+      - name:
+          pl: Zabieg na ciało 50 minut w serii 10 zabiegów (300 PLN/zabieg)
+          en: Body treatment 50 min – series of 10 (300 PLN/treatment)
+        price:
+          pl: 3 000 PLN
+          en: 3 000 PLN
+        from: 3000
+        treatment: endermologia-lpg-lipomassage
+      - name:
+          pl: Zabieg na ciało 50 minut w serii 15 zabiegów (275 PLN/zabieg)
+          en: Body treatment 50 min – series of 15 (275 PLN/treatment)
+        price:
+          pl: 4 125 PLN
+          en: 4 125 PLN
+        from: 4125
+        treatment: endermologia-lpg-lipomassage
+      - name:
+          pl: Zabieg na ciało 60 minut w serii 5 zabiegów (370 PLN/zabieg)
+          en: Body treatment 60 min – series of 5 (370 PLN/treatment)
+        price:
+          pl: 1 850 PLN
+          en: 1 850 PLN
+        from: 1850
+        treatment: endermologia-lpg-lipomassage
+      - name:
+          pl: Zabieg na ciało 60 minut w serii 10 zabiegów (350 PLN/zabieg)
+          en: Body treatment 60 min – series of 10 (350 PLN/treatment)
+        price:
+          pl: 3 500 PLN
+          en: 3 500 PLN
+        from: 3500
+        treatment: endermologia-lpg-lipomassage
+      - name:
+          pl: Zabieg na ciało 60 minut w serii 15 zabiegów (325 PLN/zabieg)
+          en: Body treatment 60 min – series of 15 (325 PLN/treatment)
+        price:
+          pl: 4 875 PLN
+          en: 4 875 PLN
+        from: 4875
+        treatment: endermologia-lpg-lipomassage
+  - id: skora-depilacja-laserowa
+    title:
+      pl: Depilacja laserowa Vectus Palomar
+      en: Vectus Palomar laser hair removal
+    items:
+      - name:
+          pl: Twarz
+          en: Face
+        price:
+          pl: 350 PLN
+          en: 350 PLN
+        from: 350
+        treatment: vectus-depilacja-laserowa-twarzy
+      - name:
+          pl: Górna warga
+          en: Upper lip
+        price:
+          pl: 200 PLN
+          en: 200 PLN
+        from: 200
+        treatment: vectus-depilacja-laserowa-twarzy
+      - name:
+          pl: Baki
+          en: Sideburns
+        price:
+          pl: 200 PLN
+          en: 200 PLN
+        from: 200
+        treatment: vectus-depilacja-laserowa-twarzy
+      - name:
+          pl: Broda
+          en: Chin
+        price:
+          pl: 200 PLN
+          en: 200 PLN
+        from: 200
+        treatment: vectus-depilacja-laserowa-twarzy
+      - name:
+          pl: Szyja
+          en: Neck
+        price:
+          pl: 300 PLN
+          en: 300 PLN
+        from: 300
+        treatment: vectus-depilacja-laserowa-twarzy
+      - name:
+          pl: Kark
+          en: Nape
+        price:
+          pl: 300 PLN
+          en: 300 PLN
+        from: 300
+        treatment: vectus-bezpieczna-depilacja-laserowa-np-nogi-pachy-plecy
+      - name:
+          pl: Brzuch
+          en: Abdomen
+        price:
+          pl: 400 PLN
+          en: 400 PLN
+        from: 400
+        treatment: vectus-bezpieczna-depilacja-laserowa-np-nogi-pachy-plecy
+      - name:
+          pl: Klatka piersiowa
+          en: Chest
+        price:
+          pl: 400 PLN
+          en: 400 PLN
+        from: 400
+        treatment: vectus-bezpieczna-depilacja-laserowa-np-nogi-pachy-plecy
+      - name:
+          pl: Plecy
+          en: Back
+        price:
+          pl: 500 PLN
+          en: 500 PLN
+        from: 500
+        treatment: vectus-bezpieczna-depilacja-laserowa-np-nogi-pachy-plecy
+      - name:
+          pl: Pachy
+          en: Underarms
+        price:
+          pl: 300 PLN
+          en: 300 PLN
+        from: 300
+        treatment: vectus-bezpieczna-depilacja-laserowa-np-nogi-pachy-plecy
+      - name:
+          pl: Sutki
+          en: Nipples
+        price:
+          pl: 200 PLN
+          en: 200 PLN
+        from: 200
+        treatment: vectus-bezpieczna-depilacja-laserowa-np-nogi-pachy-plecy
+      - name:
+          pl: Przedramiona
+          en: Forearms
+        price:
+          pl: 300 PLN
+          en: 300 PLN
+        from: 300
+        treatment: vectus-bezpieczna-depilacja-laserowa-np-nogi-pachy-plecy
+      - name:
+          pl: Ramiona
+          en: Arms
+        price:
+          pl: 300 PLN
+          en: 300 PLN
+        from: 300
+        treatment: vectus-bezpieczna-depilacja-laserowa-np-nogi-pachy-plecy
+      - name:
+          pl: Całe ręce
+          en: Full arms
+        price:
+          pl: 500 PLN
+          en: 500 PLN
+        from: 500
+        treatment: vectus-bezpieczna-depilacja-laserowa-np-nogi-pachy-plecy
+      - name:
+          pl: Bikini
+          en: Bikini
+        price:
+          pl: 500 PLN
+          en: 500 PLN
+        from: 500
+        treatment: vectus-bezpieczna-depilacja-laserowa-np-nogi-pachy-plecy
+      - name:
+          pl: Pośladki
+          en: Buttocks
+        price:
+          pl: 400 PLN
+          en: 400 PLN
+        from: 400
+        treatment: vectus-bezpieczna-depilacja-laserowa-np-nogi-pachy-plecy
+      - name:
+          pl: Szpara pośladkowa
+          en: Intergluteal cleft
+        price:
+          pl: 300 PLN
+          en: 300 PLN
+        from: 300
+        treatment: vectus-bezpieczna-depilacja-laserowa-np-nogi-pachy-plecy
+      - name:
+          pl: Uda
+          en: Thighs
+        price:
+          pl: 400 PLN
+          en: 400 PLN
+        from: 400
+        treatment: vectus-bezpieczna-depilacja-laserowa-np-nogi-pachy-plecy
+      - name:
+          pl: Łydki
+          en: Calves
+        price:
+          pl: 400 PLN
+          en: 400 PLN
+        from: 400
+        treatment: vectus-bezpieczna-depilacja-laserowa-np-nogi-pachy-plecy
+      - name:
+          pl: Całe nogi
+          en: Full legs
+        price:
+          pl: 600 PLN
+          en: 600 PLN
+        from: 600
+        treatment: vectus-bezpieczna-depilacja-laserowa-np-nogi-pachy-plecy
+      - heading:
+          pl: Pakiety – Vectus Palomar
+          en: Packages – Vectus Palomar
+      - name:
+          pl: Twarz w serii 4 zabiegów (250 PLN/zabieg)
+          en: Face in a series of 4 treatments (250 PLN/treatment)
+        price:
+          pl: 1 000 PLN
+          en: 1 000 PLN
+        from: 1000
+        treatment: vectus-depilacja-laserowa-twarzy
+      - name:
+          pl: Górna warga w serii 4 zabiegów (150 PLN/zabieg)
+          en: Upper lip in a series of 4 treatments (150 PLN/treatment)
+        price:
+          pl: 600 PLN
+          en: 600 PLN
+        from: 600
+        treatment: vectus-depilacja-laserowa-twarzy
+      - name:
+          pl: Baki w serii 4 zabiegów (150 PLN/zabieg)
+          en: Sideburns in a series of 4 treatments (150 PLN/treatment)
+        price:
+          pl: 600 PLN
+          en: 600 PLN
+        from: 600
+        treatment: vectus-depilacja-laserowa-twarzy
+      - name:
+          pl: Broda w serii 4 zabiegów (150 PLN/zabieg)
+          en: Chin in a series of 4 treatments (150 PLN/treatment)
+        price:
+          pl: 600 PLN
+          en: 600 PLN
+        from: 600
+        treatment: vectus-depilacja-laserowa-twarzy
+      - name:
+          pl: Szyja w serii 4 zabiegów (200 PLN/zabieg)
+          en: Neck in a series of 4 treatments (200 PLN/treatment)
+        price:
+          pl: 800 PLN
+          en: 800 PLN
+        from: 800
+        treatment: vectus-depilacja-laserowa-twarzy
+      - name:
+          pl: Kark w serii 4 zabiegów (200 PLN/zabieg)
+          en: Nape in a series of 4 treatments (200 PLN/treatment)
+        price:
+          pl: 800 PLN
+          en: 800 PLN
+        from: 800
+        treatment: vectus-bezpieczna-depilacja-laserowa-np-nogi-pachy-plecy
+      - name:
+          pl: Brzuch w serii 4 zabiegów (300 PLN/zabieg)
+          en: Abdomen in a series of 4 treatments (300 PLN/treatment)
+        price:
+          pl: 1 200 PLN
+          en: 1 200 PLN
+        from: 1200
+        treatment: vectus-bezpieczna-depilacja-laserowa-np-nogi-pachy-plecy
+      - name:
+          pl: Klatka piersiowa w serii 4 zabiegów (300 PLN/zabieg)
+          en: Chest in a series of 4 treatments (300 PLN/treatment)
+        price:
+          pl: 1 200 PLN
+          en: 1 200 PLN
+        from: 1200
+        treatment: vectus-bezpieczna-depilacja-laserowa-np-nogi-pachy-plecy
+      - name:
+          pl: Plecy w serii 4 zabiegów (400 PLN/zabieg)
+          en: Back in a series of 4 treatments (400 PLN/treatment)
+        price:
+          pl: 1 600 PLN
+          en: 1 600 PLN
+        from: 1600
+        treatment: vectus-bezpieczna-depilacja-laserowa-np-nogi-pachy-plecy
+      - name:
+          pl: Pachy w serii 4 zabiegów (200 PLN/zabieg)
+          en: Underarms in a series of 4 treatments (200 PLN/treatment)
+        price:
+          pl: 800 PLN
+          en: 800 PLN
+        from: 800
+        treatment: vectus-bezpieczna-depilacja-laserowa-np-nogi-pachy-plecy
+      - name:
+          pl: Sutki w serii 4 zabiegów (150 PLN/zabieg)
+          en: Nipples in a series of 4 treatments (150 PLN/treatment)
+        price:
+          pl: 600 PLN
+          en: 600 PLN
+        from: 600
+        treatment: vectus-bezpieczna-depilacja-laserowa-np-nogi-pachy-plecy
+      - name:
+          pl: Przedramiona w serii 4 zabiegów (200 PLN/zabieg)
+          en: Forearms in a series of 4 treatments (200 PLN/treatment)
+        price:
+          pl: 800 PLN
+          en: 800 PLN
+        from: 800
+        treatment: vectus-bezpieczna-depilacja-laserowa-np-nogi-pachy-plecy
+      - name:
+          pl: Ramiona w serii 4 zabiegów (200 PLN/zabieg)
+          en: Arms in a series of 4 treatments (200 PLN/treatment)
+        price:
+          pl: 800 PLN
+          en: 800 PLN
+        from: 800
+        treatment: vectus-bezpieczna-depilacja-laserowa-np-nogi-pachy-plecy
+      - name:
+          pl: Całe ręce w serii 4 zabiegów (400 PLN/zabieg)
+          en: Full arms in a series of 4 treatments (400 PLN/treatment)
+        price:
+          pl: 1 600 PLN
+          en: 1 600 PLN
+        from: 1600
+        treatment: vectus-bezpieczna-depilacja-laserowa-np-nogi-pachy-plecy
+      - name:
+          pl: Bikini w serii 4 zabiegów (400 PLN/zabieg)
+          en: Bikini in a series of 4 treatments (400 PLN/treatment)
+        price:
+          pl: 1 600 PLN
+          en: 1 600 PLN
+        from: 1600
+        treatment: vectus-bezpieczna-depilacja-laserowa-np-nogi-pachy-plecy
+      - name:
+          pl: Pośladki w serii 4 zabiegów (300 PLN/zabieg)
+          en: Buttocks in a series of 4 treatments (300 PLN/treatment)
+        price:
+          pl: 1 200 PLN
+          en: 1 200 PLN
+        from: 1200
+        treatment: vectus-bezpieczna-depilacja-laserowa-np-nogi-pachy-plecy
+      - name:
+          pl: Szpara pośladkowa w serii 4 zabiegów (200 PLN/zabieg)
+          en: Intergluteal cleft in a series of 4 treatments (200 PLN/treatment)
+        price:
+          pl: 800 PLN
+          en: 800 PLN
+        from: 800
+        treatment: vectus-bezpieczna-depilacja-laserowa-np-nogi-pachy-plecy
+      - name:
+          pl: Uda w serii 4 zabiegów (300 PLN/zabieg)
+          en: Thighs in a series of 4 treatments (300 PLN/treatment)
+        price:
+          pl: 1 200 PLN
+          en: 1 200 PLN
+        from: 1200
+        treatment: vectus-bezpieczna-depilacja-laserowa-np-nogi-pachy-plecy
+      - name:
+          pl: Łydki w serii 4 zabiegów (300 PLN/zabieg)
+          en: Calves in a series of 4 treatments (300 PLN/treatment)
+        price:
+          pl: 1 200 PLN
+          en: 1 200 PLN
+        from: 1200
+        treatment: vectus-bezpieczna-depilacja-laserowa-np-nogi-pachy-plecy
+      - name:
+          pl: Całe nogi w serii 4 zabiegów (450 PLN/zabieg)
+          en: Full legs in a series of 4 treatments (450 PLN/treatment)
+        price:
+          pl: 1 800 PLN
+          en: 1 800 PLN
+        from: 1800
+        treatment: vectus-bezpieczna-depilacja-laserowa-np-nogi-pachy-plecy

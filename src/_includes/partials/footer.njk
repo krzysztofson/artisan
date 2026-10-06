@@ -1,0 +1,42 @@
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <img class="foot-logo" src="{{ root }}assets/imgs/logo2.png" alt="{{ site.name }}" width="178" height="38" loading="lazy" />
+        <p class="foot-note">{{ T.footer.note | safe }}</p>
+      </div>
+      <div>
+        <h5>{{ T.footer.shortcuts }}</h5>
+        <ul>
+          {%- for l in T.footer.links1 %}
+          <li><a href="{{ l.href }}">{{ l.label | safe }}</a></li>
+          {%- endfor %}
+          <li><a href="{{ site.booking }}" target="_blank" rel="noopener">{{ T.book }}</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>{{ T.footer.clinic | safe }}</h5>
+        <ul>
+          {%- for l in T.footer.links2 %}{% if not l.blog or site.blogEnabled %}
+          <li><a href="{{ l.href | replace('index.html#', '#') if isHome else l.href }}">{{ l.label | safe }}</a></li>
+          {%- endif %}{% endfor %}
+        </ul>
+      </div>
+      <div>
+        <h5>{{ T.footer.contact }}</h5>
+        <ul>
+          <li><a href="{{ site.phoneHref }}">{{ site.phone }}</a></li>
+          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          <li><a href="{{ site.instagram }}" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="{{ site.facebook }}" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-btm">
+      <p style="margin: 0">© <span id="year">{{ "" | year }}</span> {{ T.footer.rights }}</p>
+      <p style="margin: 0">
+        <a href="{{ site.designer.url }}" target="_blank" rel="noopener">{{ T.footer.design }} — {{ site.designer.name }}</a>
+      </p>
+    </div>
+  </div>
+</footer>

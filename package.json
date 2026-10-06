@@ -1,36 +1,31 @@
 {
-  "name": "tailwindcss-boilerplate",
-  "version": "2.0.0",
-  "description": "A tailwindcss boilerplate that makes development easy.",
-  "main": "index.js",
+  "name": "artisan-clinic",
+  "version": "3.0.0",
+  "description": "Artisan Clinic website — Eleventy sources in src/, static HTML built to dist/ (deployed via FTP).",
   "scripts": {
-    "build": "postcss src/css/tailwind.css -o dist/assets/css/main.css",
-    "watch": "postcss src/css/tailwind.css -o dist/assets/css/main.css --watch",
-    "serve": "cross-env NODE_ENV=development concurrently \"postcss src/css/tailwind.css -o dist/assets/css/main.css --watch\"  \"live-server ./dist\"",
-    "dev": "cross-env NODE_ENV=development postcss src/css/tailwind.css -o dist/assets/css/main.css",
-    "prod": "cross-env NODE_ENV=production postcss src/css/tailwind.css -o dist/assets/css/main.css",
-    "start": "npm run serve"
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
+    "build": "npm run clean && eleventy && npm run css",
+    "css": "cross-env NODE_ENV=production postcss src/css/main.css -o dist/assets/css/artisan.css --no-map",
+    "start": "concurrently -k -n html,css \"eleventy --serve\" \"postcss src/css/main.css -o dist/assets/css/artisan.css --watch\"",
+    "check": "node scripts/check-site.js"
   },
-  "keywords": [
-    "tailwindcss",
-    "tailwind",
-    "tailwindUI"
-  ],
-  "author": "Emmanuel Raymond",
-  "license": "MIT",
+  "keywords": [],
+  "author": "Krzysztof Dąbrowski",
+  "license": "UNLICENSED",
   "dependencies": {
-    "autoprefixer": "^10.4.14",
-    "tailwindcss": "^3.3.1"
+    "autoprefixer": "^10.4.14"
   },
   "devDependencies": {
+    "@11ty/eleventy": "^3.1.6",
+    "cheerio": "^1.2.0",
     "concurrently": "^8.0.1",
     "cross-env": "^7.0.3",
     "cssnano": "^6.0.0",
-    "live-server": "^1.2.2",
+    "js-yaml": "^5.4.3",
     "postcss": "^8.4.21",
     "postcss-cli": "^10.1.0",
     "postcss-import": "^15.1.0",
-    "prettier": "^2.8.8",
-    "prettier-plugin-tailwindcss": "^0.2.8"
-  }
+    "prettier": "^2.8.8"
+  },
+  "private": true
 }

@@ -1,0 +1,7 @@
+# Output file of every regular page per language (treatment pages take theirs from treatments.yaml).
+home: { pl: index.html, en: index.html }
+offer: { pl: zabiegi.html, en: services.html }
+pricing: { pl: cennik.html, en: pricing.html }
+team: { pl: zespol.html, en: team.html }
+consult: { pl: konsultacja-online.html, en: online-consultation.html }
+blog: { pl: blog.html, en: blog.html }

@@ -1,12 +1,9 @@
-const cssnano = require('cssnano')({
-  preset: 'default',
-});
+const cssnano = require("cssnano")({ preset: "default" });
 
 module.exports = {
   plugins: [
-    require('postcss-import'),
-    require('tailwindcss'),
-    require('autoprefixer'),
-    ...(process.env.NODE_ENV === 'production' ? [cssnano] : []),
+    require("postcss-import"),
+    require("autoprefixer"),
+    ...(process.env.NODE_ENV === "production" ? [cssnano] : []),
   ],
 };

@@ -1,0 +1,57 @@
+{#- Contact section; `contactNo` (e.g. "05 / Kontakt") is optional. -#}
+<section class="sec" id="{{ T.contactAnchor }}">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="sec-no rv">{{ contactNo or T.contact.no }}</span>
+        <h2 class="display rv" style="--d: 0.06s">{{ T.contact.title | safe }}</h2>
+      </div>
+      <p class="lede rv" style="--d: 0.12s">{{ T.contact.lede | safe }}</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="card rv">
+        <h4>{{ T.contact.locations }}</h4>
+        <div class="addr">
+          <b>{{ T.contact.addr1.label }}</b>
+          <p>{{ T.contact.addr1.lines | safe }}</p>
+        </div>
+        <div class="addr">
+          <b>{{ T.contact.addr2.label }}</b>
+          <p>{{ T.contact.addr2.lines | safe }}</p>
+        </div>
+        <a href="mailto:{{ site.email }}" class="ulink">{{ site.email }}</a>
+      </div>
+
+      <div class="card rv" style="--d: 0.08s">
+        <h4>{{ T.contact.booking }}</h4>
+        <a href="{{ site.phoneHref }}" class="big-link">{{ site.phone }}</a>
+        <p style="color: var(--muted); margin-top: 0.6rem">{{ T.contact.bookingNote | safe }}</p>
+        <div class="hours"><span>{{ T.contact.weekdays[0] }}</span><span>{{ T.contact.weekdays[1] }}</span></div>
+        <div class="hours"><span>{{ T.contact.weekend[0] }}</span><span>{{ T.contact.weekend[1] }}</span></div>
+        <div class="recepcja">
+          <img src="{{ root }}assets/imgs/zespol/recepcja.jpg" alt="" loading="lazy" />
+          <p>{{ T.contact.reception | safe }}</p>
+        </div>
+      </div>
+
+      <div class="card rv" style="--d: 0.16s">
+        <h4>{{ T.contact.reviews }}</h4>
+        <div class="zl-frame">
+          <iframe
+            width="100%"
+            height="250"
+            frameborder="0"
+            scrolling="no"
+            loading="lazy"
+            title="{{ T.contact.zlTitle }}"
+            src="{{ site.zlCertificate }}"
+          ></iframe>
+        </div>
+        <div style="margin-top: 1.4rem">
+          <a href="{{ pages.consult[lang] }}" class="ulink">{{ T.contact.consult }} <span>→</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

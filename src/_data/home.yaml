@@ -1,0 +1,186 @@
+# Homepage copy (PL = approved redesign). Prices are NOT here: `ledger` entries point at rows of pricing.yaml
+# by section + Polish row name (+ optional heading), so the homepage always shows the current price list.
+pl:
+  title: Artisan Clinic — Chirurgia plastyczna i medycyna estetyczna | Warszawa
+  description: Artisan Clinic — klinika chirurgii plastycznej i medycyny estetycznej w Warszawie. Deep Plane face lifting, chirurgia piersi, rekonstrukcje, medycyna estetyczna.
+  hero:
+    eyebrow: Warszawa
+    lines: ["Sztuka piękna.", "<em>Precyzja</em> leczenia."]
+    sub: Klinika chirurgii plastycznej i&nbsp;medycyny estetycznej, w&nbsp;której o&nbsp;rezultacie decyduje warsztat — doświadczenie zespołu, wybór techniki i&nbsp;uważność wobec proporcji.
+    cta: Umów konsultację
+    offer: Zobacz ofertę
+    metaLeft: "Chirurgia plastyczna &nbsp;·&nbsp; Medycyna estetyczna"
+    scroll: Przewiń
+    metaRight: "ul. Nasturcjowa 6 &nbsp;·&nbsp; ul. Francuska 42"
+  ticker: [Deep Plane Face Lifting, Rynoplastyka, Chirurgia piersi, Rekonstrukcja po mastektomii, Plastyka brzucha, Lifting szyi, Medycyna estetyczna]
+  ids: { about: onas, offer: oferta, team: zespol, path: sciezka }
+  about:
+    no: "01 / O&nbsp;nas"
+    title: Klinika, <em>która zaczyna się</em> od nazwy
+    lede: Artisan Clinic to nowoczesna klinika chirurgii plastycznej i&nbsp;medycyny estetycznej w&nbsp;Warszawie. Nasza nazwa nie jest przypadkowa — odzwierciedla poczucie estetyki, harmonii, piękna, precyzji i&nbsp;szacunku dla zdrowia pacjenta.
+    etym: [[art, sztuka], [sanatio, uzdrowienie]]
+    text: "Wykonujemy zabiegi wysokospecjalistyczne z&nbsp;zakresu chirurgii plastycznej, a&nbsp;także zabiegi chirurgiczno-onkologiczne — w&nbsp;tym rekonstrukcje piersi. Oferujemy również małoinwazyjne procedury medycyny estetycznej: wypełniacze, botoks, biostymulatory, laseroterapię oraz modelowanie sylwetki."
+    pills: [Deep plane face lifting, Plastyka nosa, Plastyka brzucha, Powiększanie piersi, Plastyka powiek, Lifting szyi, Korekta uszu]
+    teamLink: Poznaj nasz zespół
+    imageAlt: Wizytówka Artisan Clinic obok bukietu piwonii
+    stats:
+      - { n: team, label: "Specjalistów w&nbsp;zespole" }
+      - { n: 70, suffix: "+", label: "Procedur w&nbsp;ofercie" }
+      - { n: 20, suffix: "+", label: "Lat praktyki lekarskiej" }
+      - { n: 2, label: "Adresy w&nbsp;Warszawie" }
+  offer:
+    no: 02 / Oferta
+    title: Cztery <em>obszary</em> pracy
+    lede: Poniżej wybrane procedury wraz z&nbsp;orientacyjnym zakresem cen. Ostateczna wycena ustalana jest podczas konsultacji — po kwalifikacji i&nbsp;doborze techniki do indywidualnych wskazań.
+    tabsLabel: Obszary oferty
+    full: Pełna oferta
+    panels:
+      twarz:
+        imageAlt: Zabiegi w obrębie twarzy
+        title: Przywrócić <em>proporcje</em>, nie zmienić twarzy
+        text: Szeroki zakres zabiegów chirurgii plastycznej i&nbsp;medycyny estetycznej, które pozwalają przywrócić młodszy wygląd, poprawić proporcje twarzy oraz podkreślić naturalne piękno.
+        list: ["Lifting twarzy (facelift)", Korekcja nosa, "Plastyka powiek, uszu i&nbsp;brody", Lifting twarzy nićmi Aptos, "Lipofilling z&nbsp;komórkami macierzystymi"]
+      cialo:
+        imageAlt: Zabiegi modelujące sylwetkę
+        title: Sylwetka — <em>modelowanie</em> i&nbsp;leczenie
+        text: Zabiegi skoncentrowane na modelowaniu sylwetki, poprawie kondycji skóry oraz leczeniu wybranych schorzeń — od chirurgii plastycznej po flebologię i&nbsp;nowoczesne procedury estetyczne.
+        list: [Plastyka brzucha, Plastyka ramion, Liposukcja, "Flebologia — leczenie żył i&nbsp;naczyń", Argo Plasma — obkurczanie skóry, Infini Filler Body]
+      piersi:
+        imageAlt: Chirurgia plastyczna piersi
+        title: Kształt, <em>proporcja</em>, rekonstrukcja
+        text: Pełen zakres procedur chirurgii plastycznej piersi — dostosowanych do indywidualnych potrzeb pacjentek i&nbsp;pacjentów, z&nbsp;zachowaniem naturalnych proporcji sylwetki.
+        list: ["Powiększanie (implanty, lipotransfer)", Redukcja piersi, "Lifting i&nbsp;modelowanie", Rekonstrukcja po mastektomii, Leczenie ginekomastii]
+      skora:
+        imageAlt: Zabiegi na skórę
+        title: Kondycja skóry <em>i&nbsp;czystość</em> detalu
+        text: Zabiegi ukierunkowane na odmłodzenie, rewitalizację i&nbsp;poprawę kondycji skóry, a&nbsp;także usuwanie zmian skórnych oraz korekcję niedoskonałości.
+        list: ["Usuwanie znamion i&nbsp;blizn", "Botox, kwas hialuronowy, wypełniacze", Biostymulatory, "Laseroterapia i&nbsp;fotoodmładzanie", Depilacja laserowa, Endermologia]
+  team:
+    no: 03 / Zespół
+    title: Ludzie, <em>którzy operują</em>
+    lede: Chirurdzy plastyczni, chirurdzy onkologiczni, specjaliści medycyny estetycznej i&nbsp;kosmetolodzy — {team} specjalistów, którzy prowadzą pacjenta od konsultacji po rekonwalescencję.
+    leadName: dr n. med. Tadeusz&nbsp;Witwicki
+    leadBio: Kształcił się na warszawskiej Akademii Medycznej, odbywał szkolenia w&nbsp;Pekinie, Glasgow, Los Angeles i&nbsp;Gandawie. Specjalizację zdobył w&nbsp;Klinice Chirurgii Plastycznej CMKP w&nbsp;Warszawie pod kierunkiem twórcy polskiej chirurgii plastycznej, prof. Michała Kraussa. Członek założyciel Polskiego Towarzystwa Medycyny Estetycznej i&nbsp;Anti-Aging, międzynarodowy trener technik APTOS, autor licznych publikacji.
+    leadQuote: Od przeszło dwudziestu lat prowadzi własną praktykę lekarską.
+    bios: Pełne biogramy zespołu
+    others: Pozostali specjaliści
+    prev: Poprzedni
+    next: Następny
+  path:
+    no: 04 / Przebieg
+    title: Od rozmowy <em>do rezultatu</em>
+    lede: Konsultacje odbywają się przy ul. Francuskiej 42, zabiegi — w&nbsp;klinice przy ul. Nasturcjowej 6.
+    steps:
+      - { t: Konsultacja, p: "Rozmowa i&nbsp;badanie. Omawiamy oczekiwania, wskazania oraz realne możliwości danej metody." }
+      - { t: Plan leczenia, p: "Dobór techniki, kwalifikacja, zalecane badania, wycena oraz ustalenie terminu." }
+      - { t: Zabieg, p: "Procedura prowadzona przez operującego specjalistę w&nbsp;klinice przy ul. Nasturcjowej 6." }
+      - { t: Opieka, p: "Wizyty kontrolne i&nbsp;kontakt z&nbsp;zespołem na każdym etapie rekonwalescencji." }
+  contactNo: 05 / Kontakt
+
+en:
+  title: Artisan Clinic — Plastic surgery and aesthetic medicine | Warsaw
+  description: Artisan Clinic — a plastic surgery and aesthetic medicine clinic in Warsaw. Deep Plane face lifting, breast surgery, reconstruction and aesthetic medicine.
+  hero:
+    eyebrow: Warsaw
+    lines: ["The art of beauty.", "The <em>precision</em> of care."]
+    sub: A plastic surgery and aesthetic medicine clinic where results come from craft — the team’s experience, the choice of technique and a careful eye for proportion.
+    cta: Book a consultation
+    offer: See treatments
+    metaLeft: "Plastic surgery &nbsp;·&nbsp; Aesthetic medicine"
+    scroll: Scroll
+    metaRight: "ul. Nasturcjowa 6 &nbsp;·&nbsp; ul. Francuska 42"
+  ticker: [Deep Plane Face Lifting, Rhinoplasty, Breast surgery, Post-mastectomy reconstruction, Tummy tuck, Neck lift, Aesthetic medicine]
+  ids: { about: about, offer: offer, team: team, path: process }
+  about:
+    no: 01 / About
+    title: A clinic <em>that begins</em> with its name
+    lede: Artisan Clinic is a modern plastic surgery and aesthetic medicine clinic in Warsaw. Our name is no accident — it reflects our sense of aesthetics, harmony, beauty, precision and respect for the patient’s health.
+    etym: [[art, art], [sanatio, healing]]
+    text: "We perform highly specialised plastic surgery as well as surgical oncology procedures — including breast reconstruction. We also offer minimally invasive aesthetic medicine: fillers, botox, biostimulators, laser therapy and body contouring."
+    pills: [Deep plane face lifting, Rhinoplasty, Tummy tuck, Breast augmentation, Eyelid surgery, Neck lift, Ear correction]
+    teamLink: Meet our team
+    imageAlt: Artisan Clinic business card next to a bouquet of peonies
+    stats:
+      - { n: team, label: Specialists on the team }
+      - { n: 70, suffix: "+", label: Procedures offered }
+      - { n: 20, suffix: "+", label: Years of medical practice }
+      - { n: 2, label: Addresses in Warsaw }
+  offer:
+    no: 02 / Treatments
+    title: Four <em>areas</em> of practice
+    lede: Below are selected procedures with indicative price ranges. The final quote is set during the consultation — after qualification and choosing the technique for your individual needs.
+    tabsLabel: Treatment areas
+    full: All treatments
+    panels:
+      twarz:
+        imageAlt: Facial treatments
+        title: Restore <em>proportion</em>, not change the face
+        text: A wide range of plastic surgery and aesthetic medicine procedures that restore a younger look, improve facial proportions and enhance natural beauty.
+        list: ["Face lift (facelift)", Rhinoplasty, "Eyelid, ear and chin surgery", Aptos thread face lift, Lipofilling with stem cells]
+      cialo:
+        imageAlt: Body contouring treatments
+        title: The body — <em>contouring</em> and treatment
+        text: Treatments focused on body contouring, skin condition and the treatment of selected conditions — from plastic surgery to phlebology and modern aesthetic procedures.
+        list: [Tummy tuck, Arm lift, Liposuction, "Phlebology — vein treatment", Argo Plasma — skin tightening, Infini Filler Body]
+      piersi:
+        imageAlt: Breast plastic surgery
+        title: Shape, <em>proportion</em>, reconstruction
+        text: The full range of breast plastic surgery — tailored to each patient’s needs while keeping the natural proportions of the figure.
+        list: ["Augmentation (implants, fat transfer)", Breast reduction, Lift and reshaping, Post-mastectomy reconstruction, Gynecomastia treatment]
+      skora:
+        imageAlt: Skin treatments
+        title: Skin condition <em>and clarity</em> of detail
+        text: Treatments that rejuvenate, revitalise and improve the skin, as well as removal of skin lesions and correction of imperfections.
+        list: [Mole and scar removal, "Botox, hyaluronic acid, fillers", Biostimulators, Laser therapy and photorejuvenation, Laser hair removal, Endermologie]
+  team:
+    no: 03 / Team
+    title: The people <em>who operate</em>
+    lede: Plastic surgeons, oncological surgeons, aesthetic medicine specialists and cosmetologists — {team} specialists who guide each patient from consultation to recovery.
+    leadName: Tadeusz&nbsp;Witwicki, MD, PhD
+    leadBio: He studied at the Medical Academy in Warsaw and trained in Beijing, Glasgow, Los Angeles and Ghent. He completed his specialisation at the Department of Plastic Surgery of the Medical Centre for Postgraduate Education in Warsaw under the founder of Polish plastic surgery, Prof. Michał Krauss. Founding member of the Polish Society of Aesthetic and Anti-Aging Medicine, international APTOS trainer and author of numerous publications.
+    leadQuote: He has run his own medical practice for more than twenty years.
+    bios: Full team biographies
+    others: Other specialists
+    prev: Previous
+    next: Next
+  path:
+    no: 04 / Process
+    title: From conversation <em>to result</em>
+    lede: Consultations take place at ul. Francuska 42, procedures — at the clinic at ul. Nasturcjowa 6.
+    steps:
+      - { t: Consultation, p: "A conversation and examination. We discuss expectations, indications and what the method can realistically achieve." }
+      - { t: Treatment plan, p: "Choice of technique, qualification, recommended tests, quote and scheduling." }
+      - { t: Procedure, p: "Performed by the operating specialist at the clinic at ul. Nasturcjowa 6." }
+      - { t: Aftercare, p: "Follow-up visits and contact with the team at every stage of recovery." }
+  contactNo: 05 / Contact
+
+# Price rows shown in each homepage tab (shared by both languages).
+ledger:
+  twarz:
+    - { section: twarz, name: Lifting twarzy i szyi Deep Plane }
+    - { section: twarz, name: Lifting twarzy nićmi Aptos }
+    - { section: nos, name: Korekcja nosa – totalna }
+    - { section: nos, name: Korekcja nosa – część chrzęstna }
+    - { section: powieki, name: Korekcja powiek górnych }
+    - { section: uszy, name: Plastyka odstających uszu }
+  cialo:
+    - { section: liposukcja, name: Liposukcja – brzuch }
+    - { section: liposukcja, name: Liposukcja – talia }
+    - { section: uda, name: Plastyka ud }
+    - { section: lydki, name: Plastyka łydek (powiększenie implantami) }
+    - { section: ramiona, name: Plastyka ramion }
+    - { section: uda, name: Obkurczanie i napinanie skóry ud – Argo Plasma }
+  piersi:
+    - { section: powiekszanie-piersi, name: Powiększenie piersi implantami }
+    - { section: podniesienie-piersi, name: Podniesienie piersi }
+    - { section: podniesienie-piersi, name: Podniesienie piersi nićmi Aptos (podskórny biustonosz) }
+    - { section: zmniejszenie-piersi-redukcja, name: Zmniejszenie piersi – redukcja (dwie piersi) }
+    - { section: usuniecie-wymiana-implantow-piersi, name: Wymiana implantów (obie piersi) }
+    - { section: plastyka-brodawek-sutkowych, name: Plastyka wciągniętych brodawek }
+  skora:
+    - { section: skora-zabiegi-chirurgiczne, name: Korekcja blizn (chirurgiczna) }
+    - { section: skora-zabiegi-chirurgiczne, name: Wycięcie znamienia }
+    - { section: skora-dermapen, heading: Dermapen 4.0 z mezokoktajlem, name: Twarz, label: { pl: Mezoterapia mikroigłowa — Dermapen, en: Microneedling — Dermapen } }
+    - { section: skora-laseroterapia, heading: fotoodmładzanie laserowe, name: Twarz, label: { pl: Laser IPL fotoodmładzanie — twarz, en: IPL photorejuvenation — face } }
+    - { section: skora-laseroterapia, heading: fotoodmładzanie laserowe, name: Szyja, label: { pl: Laser IPL fotoodmładzanie — szyja, en: IPL photorejuvenation — neck } }
+    - { section: liposukcja, name: Obkurczanie i napinanie skóry – Argo Plasma, label: { pl: Obkurczanie skóry — Argo Plasma, en: Skin tightening — Argo Plasma } }

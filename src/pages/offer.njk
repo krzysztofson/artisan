@@ -1,0 +1,58 @@
+---
+pagination:
+  data: langs
+  size: 1
+  alias: lang
+key: offer
+bodyClass: is-subpage
+layout: layouts/base.njk
+permalink: "{{ '' if lang == 'pl' else 'en/' }}{{ pages.offer[lang] }}"
+eleventyComputed:
+  metaTitle: "{{ i18n[lang].pageCopy.offer.metaTitle | safe }}"
+  metaDescription: "{{ i18n[lang].pageCopy.offer.lead | safe }}"
+---
+{%- set T = i18n[lang] -%}
+{%- set C = T.pageCopy.offer -%}
+{%- set heroTitle = C.title -%}
+{%- set heroLead = C.lead -%}
+{%- set heroImage = "imgs/zabiegi.jpg" -%}
+{%- set crumbs = [{ label: C.title }] -%}
+{% include "partials/page-hero.njk" %}
+
+<section class="sec sec--tight">
+  <div class="wrap">
+    <div class="cat-tiles">
+      {%- for c in categories %}
+      <a class="cat-tile rv" href="#{{ c.anchor[lang] }}" style="--d: {{ loop.index0 * 0.08 }}s">
+        <img src="{{ root }}assets/{{ c.image }}" alt="" loading="lazy" />
+        <span><sup>{{ loop.index | pad2 }}</sup>{{ c.name[lang] }}</span>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+{%- for c in categories %}
+{%- set P = home[lang].offer.panels[c.id] %}
+<section class="sec sec--tight{{ ' alt' if loop.index0 % 2 == 0 }}" id="{{ c.anchor[lang] }}">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="sec-no rv">{{ loop.index | pad2 }} / {{ c.name[lang] }}</span>
+        <h2 class="display rv" style="--d: 0.06s">{{ P.title | safe }}</h2>
+      </div>
+      <p class="lede rv" style="--d: 0.12s">{{ P.text | safe }}</p>
+    </div>
+    <div class="grid-3">
+      {%- for r in treatments | inCategory(c.id) %}
+      {%- set cardIndex = loop.index0 %}
+      {%- set showCat = false %}
+      {% include "partials/t-card.njk" %}
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- endfor %}
+
+{% include "partials/band.njk" %}
+{% include "partials/contact.njk" %}

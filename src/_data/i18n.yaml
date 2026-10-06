@@ -1,0 +1,224 @@
+# Interface copy shared by all pages. In templates: {% set T = i18n[lang] %} … {{ T.book }}
+pl:
+  skip: Przejdź do treści
+  hours: "Pon–Pt&nbsp;&nbsp;8:00–20:00"
+  home: Strona główna
+  homeLabel: Artisan Clinic — strona główna
+  navLabel: Główna
+  menu: Menu
+  book: Umów wizytę
+  bookOnline: Umów wizytę online
+  bookVisit: Umów się na wizytę
+  langSwitch: { label: EN, aria: English version, long: English version }
+  # `home`: link used on the homepage itself, `sub`: link used on every other page
+  nav:
+    - { label: "O&nbsp;nas", home: "#onas", sub: "index.html#onas" }
+    - { label: Oferta, home: "#oferta", sub: zabiegi.html }
+    - { label: Cennik, href: cennik.html }
+    - { label: Zespół, home: "#zespol", sub: zespol.html }
+    - { label: Poczytaj, href: blog.html, blog: true }
+    - { label: Konsultacja online, href: konsultacja-online.html }
+    - { label: Kontakt, href: "#kontakt" }
+  contactAnchor: kontakt
+  footer:
+    note: "Art &amp; sanatio — sztuka i&nbsp;uzdrowienie."
+    shortcuts: Na skróty
+    clinic: "O&nbsp;klinice"
+    contact: Kontakt
+    links1:
+      - { label: Oferta, href: zabiegi.html }
+      - { label: Cennik, href: cennik.html }
+      - { label: Konsultacja online, href: konsultacja-online.html }
+    links2:
+      - { label: "O&nbsp;nas", href: "index.html#onas" }
+      - { label: Zespół, href: zespol.html }
+      - { label: Poczytaj, href: blog.html, blog: true }
+      - { label: Przebieg leczenia, href: "index.html#sciezka" }
+      - { label: Kontakt, href: "#kontakt" }
+    rights: Artisan Clinic. Wszelkie prawa zastrzeżone.
+    design: Projekt strony
+  summary:
+    title: W skrócie
+    price: Koszt
+    duration: Czas zabiegu
+    anesthesia: Znieczulenie
+    recovery: Rekonwalescencja
+    result: Efekt końcowy
+    stay: Pobyt w klinice
+    sessions: Liczba zabiegów
+    area: Obszar
+    forWhom: Dla kogo
+    call: Zadzwoń
+    write: Napisz e-mail
+    note: Ceny orientacyjne — ostateczna wycena ustalana jest podczas konsultacji.
+  related:
+    no: Zobacz także
+    title: Powiązane <em>zabiegi</em>
+    more: Więcej
+  offerCrumb: Oferta
+  readMore: Dowiedz się więcej
+  reviews:
+    no: Opinie
+    title: Słowa <em>naszych pacjentek</em>
+    more: Więcej opinii na ZnanyLekarz
+  band:
+    eyebrow: Konsultacja
+    title: Zacznijmy od <em>rozmowy</em>
+    text: Wszystkie terminy dostępne są w&nbsp;rezerwacji telefonicznej. Wybrane terminy można zarezerwować online.
+  contact:
+    no: Kontakt
+    title: Dwa adresy <em>w&nbsp;Warszawie</em>
+    lede: Recepcja czynna od poniedziałku do piątku, 8:00–20:00. Odpowiadamy również mailowo.
+    locations: Lokalizacje
+    addr1: { label: "Artisan Clinic — zabiegi", lines: "ul. Nasturcjowa 6<br />03-989 Warszawa" }
+    addr2: { label: "Klinika Dr Witwicki — konsultacje", lines: "ul. Francuska 42<br />03-906 Warszawa" }
+    booking: Rezerwacje
+    bookingNote: Wszystkie terminy dostępne są w&nbsp;rezerwacji telefonicznej.
+    weekdays: [Poniedziałek — Piątek, "8:00 — 20:00"]
+    weekend: [Sobota — Niedziela, Kontakt mailowy]
+    reception: Nasza recepcja pomoże dobrać termin i&nbsp;specjalistę.
+    reviews: Opinie pacjentów
+    zlTitle: Znany Lekarz — certyfikat Artisan Clinic
+    consult: Konsultacja online
+  pricing:
+    toc: Spis treści
+    search: Szukaj zabiegu lub ceny…
+    searchLabel: Szukaj w cenniku
+    empty: Brak pozycji pasujących do wyszukiwania.
+    note: Podane ceny mają charakter orientacyjny. Ostateczna wycena ustalana jest podczas konsultacji, po kwalifikacji do zabiegu.
+  team:
+    jump: Specjaliści
+  blog:
+    title: Poczytaj
+    lead: Artykuły i&nbsp;poradniki zespołu Artisan Clinic — o&nbsp;zabiegach, przygotowaniu i&nbsp;rekonwalescencji.
+    empty: Pierwsze artykuły pojawią się wkrótce.
+    back: Wszystkie artykuły
+    relatedTitle: Zabiegi <em>z&nbsp;artykułu</em>
+  pageCopy:
+    offer:
+      title: Zabiegi
+      lead: Artisan Clinic to nowoczesna klinika chirurgii plastycznej i&nbsp;medycyny estetycznej w&nbsp;Warszawie. Nasza nazwa nie jest przypadkowa, pochodzi od dwóch ważnych dla nas słów — art, czyli sztuka i&nbsp;sanatio oznaczające uzdrowienie. Artisan to nazwa odzwierciedlająca nasze poczucie estetyki, harmonii, piękna, precyzji i&nbsp;szacunku dla zdrowia pacjenta.
+      metaTitle: Zabiegi — chirurgia plastyczna i medycyna estetyczna | Artisan Clinic Warszawa
+    pricing:
+      title: Cennik
+      lead: Cennik w&nbsp;Artisan Clinic został opracowany z&nbsp;myślą o&nbsp;przejrzystości i&nbsp;komforcie naszych pacjentów. Starannie dobraliśmy zakres usług i&nbsp;ich wyceny, aby odpowiadały najwyższej jakości zabiegom oraz indywidualnym potrzebom. Uważamy, że dostęp do profesjonalnej opieki medycznej i&nbsp;estetycznej powinien być jasny i&nbsp;zrozumiały już od pierwszego kontaktu — dlatego cenimy uczciwość, komunikację i&nbsp;transparentność.
+      metaTitle: Cennik zabiegów | Artisan Clinic Warszawa
+    team:
+      title: Zespół
+      lead: Chirurdzy plastyczni, chirurdzy onkologiczni, specjaliści medycyny estetycznej i&nbsp;kosmetolodzy — {team} specjalistów, którzy prowadzą pacjenta od konsultacji po rekonwalescencję.
+      metaTitle: Zespół — lekarze i specjaliści | Artisan Clinic Warszawa
+    consult:
+      title: Bezpłatna konsultacja online
+      lead: "Skorzystaj z&nbsp;bezpłatnej konsultacji online. Wypełnij formularz z&nbsp;dowolnego miejsca w&nbsp;Polsce lub za granicą. Wybierz interesujący cię zabieg (Deep Plane Facelift, korekcja powiek górnych, korekcja powiek dolnych, korekta uszu, korekcja nosa) i&nbsp;dołącz zdjęcia zgodne z&nbsp;wytycznymi.<br /><br />Chirurg oceni zgłoszenie pod kątem kwalifikacji do zabiegu i&nbsp;przedstawi orientacyjną wycenę. To pierwszy krok do Twojej metamorfozy – bez zobowiązań i&nbsp;bez wychodzenia z&nbsp;domu!"
+      metaTitle: Bezpłatna konsultacja online | Artisan Clinic Warszawa
+en:
+  skip: Skip to content
+  hours: "Mon–Fri&nbsp;&nbsp;8:00–20:00"
+  home: Home
+  homeLabel: Artisan Clinic — home page
+  navLabel: Main
+  menu: Menu
+  book: Book a visit
+  bookOnline: Book online
+  bookVisit: Book a visit
+  langSwitch: { label: PL, aria: Wersja polska, long: Wersja polska }
+  nav:
+    - { label: About, home: "#about", sub: "index.html#about" }
+    - { label: Treatments, home: "#offer", sub: services.html }
+    - { label: Pricing, href: pricing.html }
+    - { label: Team, home: "#team", sub: team.html }
+    - { label: Journal, href: blog.html, blog: true }
+    - { label: Online consultation, href: online-consultation.html }
+    - { label: Contact, href: "#contact" }
+  contactAnchor: contact
+  footer:
+    note: "Art &amp; sanatio — the art of healing."
+    shortcuts: Shortcuts
+    clinic: The clinic
+    contact: Contact
+    links1:
+      - { label: Treatments, href: services.html }
+      - { label: Pricing, href: pricing.html }
+      - { label: Online consultation, href: online-consultation.html }
+    links2:
+      - { label: About, href: "index.html#about" }
+      - { label: Team, href: team.html }
+      - { label: Journal, href: blog.html, blog: true }
+      - { label: Your treatment path, href: "index.html#process" }
+      - { label: Contact, href: "#contact" }
+    rights: Artisan Clinic. All rights reserved.
+    design: Website design
+  summary:
+    title: At a glance
+    price: Cost
+    duration: Procedure time
+    anesthesia: Anaesthesia
+    recovery: Recovery
+    result: Final result
+    stay: Hospital stay
+    sessions: Sessions
+    area: Area
+    forWhom: For
+    call: Call us
+    write: Send an e-mail
+    note: Prices are indicative — the final quote is set during the consultation.
+  related:
+    no: See also
+    title: Related <em>treatments</em>
+    more: More
+  offerCrumb: Treatments
+  readMore: Learn more
+  reviews:
+    no: Reviews
+    title: In our <em>patients’ words</em>
+    more: More reviews on ZnanyLekarz
+  band:
+    eyebrow: Consultation
+    title: Let’s start with <em>a conversation</em>
+    text: All appointments can be booked by phone. Selected dates are also available online.
+  contact:
+    no: Contact
+    title: Two addresses <em>in&nbsp;Warsaw</em>
+    lede: Reception is open Monday to Friday, 8:00–20:00. We also answer by e-mail.
+    locations: Locations
+    addr1: { label: "Artisan Clinic — procedures", lines: "ul. Nasturcjowa 6<br />03-989 Warsaw" }
+    addr2: { label: "Klinika Dr Witwicki — consultations", lines: "ul. Francuska 42<br />03-906 Warsaw" }
+    booking: Appointments
+    bookingNote: All appointments can be booked by phone.
+    weekdays: [Monday — Friday, "8:00 — 20:00"]
+    weekend: [Saturday — Sunday, By e-mail]
+    reception: Our reception will help you choose a date and a specialist.
+    reviews: Patient reviews
+    zlTitle: ZnanyLekarz — Artisan Clinic certificate
+    consult: Online consultation
+  pricing:
+    toc: Contents
+    search: Search for a treatment or price…
+    searchLabel: Search the price list
+    empty: No items match your search.
+    note: Prices are indicative. The final quote is set during the consultation, after qualification for the procedure.
+  team:
+    jump: Specialists
+  blog:
+    title: Journal
+    lead: Articles and guides from the Artisan Clinic team — on procedures, preparation and recovery.
+    empty: The first articles are coming soon.
+    back: All articles
+    relatedTitle: Treatments <em>in this article</em>
+  pageCopy:
+    offer:
+      title: Treatments
+      lead: Artisan Clinic is a modern plastic surgery and aesthetic medicine clinic in Warsaw. Our name is no coincidence — it derives from two words important to us&#58; art, and sanatio, meaning healing. Artisan is a name that reflects our sense of aesthetics, harmony, beauty, precision and respect for patient health.
+      metaTitle: Treatments — plastic surgery and aesthetic medicine | Artisan Clinic Warsaw
+    pricing:
+      title: Pricing
+      lead: The pricing at Artisan Clinic has been designed with transparency and our patients’ comfort in mind. We have carefully selected the range of services and their pricing to match the highest quality procedures and individual needs. We believe that access to professional medical and aesthetic care should be clear and understandable from the very first contact — that is why we value honesty, communication and transparency.
+      metaTitle: Treatment prices | Artisan Clinic Warsaw
+    team:
+      title: Team
+      lead: Plastic surgeons, oncological surgeons, aesthetic medicine specialists and cosmetologists — {team} specialists who guide each patient from consultation to recovery.
+      metaTitle: Team — doctors and specialists | Artisan Clinic Warsaw
+    consult:
+      title: Free online consultation
+      lead: "Take advantage of a free online consultation. Fill out the form from anywhere in Poland or abroad. Choose the procedure you are interested in (Deep Plane Facelift, upper eyelid correction, lower eyelid correction, ear correction, nose correction) and attach photos according to the guidelines.<br /><br />A surgeon will evaluate your submission for procedure eligibility and provide an estimated quote. This is the first step toward your transformation — with no obligations and without leaving your home!"
+      metaTitle: Free online consultation | Artisan Clinic Warsaw

@@ -1,0 +1,77 @@
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.foot {
+  background: var(--burgundy);
+  color: rgba(247, 243, 236, 0.66);
+  padding-block: clamp(3rem, 6vw, 5rem) 1.6rem;
+}
+.foot-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) repeat(3, minmax(0, 1fr));
+  gap: clamp(2rem, 4vw, 3.5rem);
+  padding-bottom: clamp(2.5rem, 5vw, 4rem);
+  border-bottom: 1px solid var(--rule-dk);
+}
+.foot .foot-logo {
+  height: 38px;
+  width: auto;
+  filter: invert(1) brightness(2);
+  margin-bottom: 1.6rem;
+}
+.foot-note {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: rgba(230, 215, 186, 0.8);
+  line-height: 1.5;
+  max-width: 26ch;
+}
+.foot h5 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.64rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--cashmere);
+  margin: 0 0 1.2rem;
+  font-weight: 600;
+}
+.foot ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.6rem; }
+.foot ul a {
+  font-size: 0.88rem;
+  transition: color 0.35s var(--ease), padding-left 0.35s var(--ease);
+  display: inline-block;
+}
+.foot ul a:hover { color: var(--brass-lt); padding-left: 6px; }
+.foot-btm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 2rem;
+  justify-content: space-between;
+  padding-top: 1.6rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+}
+.foot-btm a:hover { color: var(--brass-lt); }
+@media (max-width: 860px) {
+  .foot-top { grid-template-columns: 1fr 1fr; }
+}
+
+/* floating mobile CTA */
+.float-cta {
+  position: fixed;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 55;
+  display: none;
+  justify-content: center;
+  transform: translateY(150%);
+  transition: transform 0.6s var(--ease-out);
+}
+.float-cta.show { transform: none; }
+.float-cta .btn { width: 100%; justify-content: center; box-shadow: 0 10px 40px rgba(0, 19, 0, 0.35); }
+@media (max-width: 1080px) {
+  .float-cta { display: flex; }
+}

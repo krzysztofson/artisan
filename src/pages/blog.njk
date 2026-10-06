@@ -1,0 +1,46 @@
+---
+pagination:
+  data: langs
+  size: 1
+  alias: lang
+key: blog
+bodyClass: is-subpage
+layout: layouts/base.njk
+eleventyComputed:
+  metaTitle: "{{ i18n[lang].blog.title | safe }} — Artisan Clinic"
+  metaDescription: "{{ i18n[lang].blog.lead | safe }}"
+---
+{%- set T = i18n[lang] -%}
+{%- set posts = collections["posts_" + lang] -%}
+{%- set heroTitle = T.blog.title -%}
+{%- set heroLead = T.blog.lead -%}
+{%- set heroImage = "imgs/o-nas.jpg" -%}
+{%- set crumbs = [{ label: T.blog.title }] -%}
+{% include "partials/page-hero.njk" %}
+
+<section class="sec sec--tight">
+  <div class="wrap">
+    {%- if posts.length %}
+    <div class="grid-3">
+      {%- for p in posts %}
+      <a class="t-card post-card rv" href="{{ p.url | replace('/en/', '') | replace('/', '') }}" style="--d: {{ (loop.index0 % 3) * 0.08 }}s">
+        {%- if p.data.cover %}
+        <span class="post-cover"><img src="{{ root }}assets/{{ p.data.cover }}" alt="" loading="lazy" /></span>
+        {%- endif %}
+        <span class="post-body">
+          <time class="post-date" datetime="{{ p.date | isoDate }}">{{ p.date | plDate(lang) }}</time>
+          <h3>{{ p.data.title }}</h3>
+          <p>{{ p.data.excerpt }}</p>
+          <span class="t-card-foot"><span></span><span class="ulink">{{ T.readMore }} <span>→</span></span></span>
+        </span>
+      </a>
+      {%- endfor %}
+    </div>
+    {%- else %}
+    <p class="empty-note">{{ T.blog.empty }}</p>
+    {%- endif %}
+  </div>
+</section>
+
+{% include "partials/band.njk" %}
+{% include "partials/contact.njk" %}

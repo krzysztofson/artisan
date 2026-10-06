@@ -1,0 +1,330 @@
+{#- Consultation form markup (migrated from the old konsultacja-online.html). Logic: assets/js/consultation-form.js -#}
+<form id="consultation-form" class="cform" action="{{ root }}process-form.php" method="POST" enctype="multipart/form-data">
+          <h2>Formularz zgłoszeniowy</h2>
+          <div class="cform-note">
+            <div>
+              
+              <div>
+                <p>
+                  <strong>Informacja o zdjęciach:</strong> Wybierz interesujący Cię zabieg i prześlij odpowiednie
+                  zdjęcia zgodnie z wytycznymi. Wszystkie zdjęcia są bezpiecznie przesyłane i używane wyłącznie do celów
+                  konsultacji medycznej.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Personal Information -->
+          <div class="cform-stack">
+            <div>
+              <input type="text" name="name" placeholder="Imię, Nazwisko" required="">
+              <p class="cform-hint">Twoje imię i nazwisko</p>
+            </div>
+
+            <div>
+              <input type="email" name="email" placeholder="Twój adres e-mail" required="">
+              <p class="cform-hint">Podaj adres e-mail do kontaktu z nami</p>
+            </div>
+
+            <div>
+              <input type="tel" name="phone" placeholder="Numer telefonu">
+              <p class="cform-hint">Podaj swój numer telefonu (opcjonalnie)</p>
+            </div>
+          </div>
+
+          <!-- Treatment Selection -->
+          <div class="cform-stack">
+            <h3 class="cform-h">Jaki zabieg Cię interesuje</h3>
+
+            <!-- Deep Plane Facelift -->
+            <div class="procedure-option">
+              <label class="cform-opt">
+                <input type="checkbox" name="procedures[]" value="deep-plane-facelift">
+                <img src="https://artisanclinic.pl/wp-content/uploads/2024/11/Twarz_Main_FRC-1.png" alt="Deep Plane Facelift" class="cform-thumb">
+                <div>
+                  <span class="cform-opt-name">Deep Plane Facelift</span>
+                  <div class="cform-uploads hidden" data-uploads="deep-plane">
+                    <p class="cform-hint">Prześlij zdjęcia twarzy zgodnie z wytycznymi:</p>
+                    <div class="cform-grid">
+                      <div>
+                        <label class="cform-label">Zdjęcie twarzy - en face *</label>
+                        <input type="file" name="deep_plane_front" accept="image/*">
+                      </div>
+                      <div>
+                        <label class="cform-label">Zdjęcie twarzy - lewy profil *</label>
+                        <input type="file" name="deep_plane_left" accept="image/*">
+                      </div>
+                      <div>
+                        <label class="cform-label">Zdjęcie twarzy - prawy profil *</label>
+                        <input type="file" name="deep_plane_right" accept="image/*">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </label>
+            </div>
+
+            <!-- Upper Eyelid Correction -->
+            <div class="procedure-option">
+              <label class="cform-opt">
+                <input type="checkbox" name="procedures[]" value="upper-eyelid">
+                <img src="https://artisanclinic.pl/wp-content/uploads/2023/10/closeup-image-beautiful-female-eyes-natural-beauty-cosmetology-concept-2.800x0.jpg" alt="Korekcja powiek górnych" class="cform-thumb">
+                <div>
+                  <span class="cform-opt-name">Korekcja powiek górnych</span>
+                  <div class="cform-uploads hidden" data-uploads="upper-eyelid">
+                    <p class="cform-hint">Prześlij zdjęcia oczu zgodnie z wytycznymi:</p>
+                    <div class="cform-grid">
+                      <div>
+                        <label class="cform-label">Zdjęcie oczu zamkniętych *</label>
+                        <input type="file" name="upper_eyelid_closed" accept="image/*">
+                      </div>
+                      <div>
+                        <label class="cform-label">Zdjęcie oczu otwartych *</label>
+                        <input type="file" name="upper_eyelid_open" accept="image/*">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </label>
+            </div>
+
+            <!-- Lower Eyelid Correction -->
+            <div class="procedure-option">
+              <label class="cform-opt">
+                <input type="checkbox" name="procedures[]" value="lower-eyelid">
+                <img src="https://artisanclinic.pl/wp-content/uploads/2023/10/elder-woman-using-injection-her-eye-wrinkles.800x0.jpg" alt="Korekcja powiek dolnych" class="cform-thumb">
+                <div>
+                  <span class="cform-opt-name">Korekcja powiek dolnych</span>
+                  <div class="cform-uploads hidden" data-uploads="lower-eyelid">
+                    <p class="cform-hint">Prześlij zdjęcia oczu zgodnie z wytycznymi:</p>
+                    <div class="cform-grid">
+                      <div>
+                        <label class="cform-label">Zdjęcie oczu zamkniętych *</label>
+                        <input type="file" name="lower_eyelid_closed" accept="image/*">
+                      </div>
+                      <div>
+                        <label class="cform-label">Zdjęcie oczu otwartych *</label>
+                        <input type="file" name="lower_eyelid_open" accept="image/*">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </label>
+            </div>
+
+            <!-- Nose Correction -->
+            <div class="procedure-option">
+              <label class="cform-opt">
+                <input type="checkbox" name="procedures[]" value="nose-correction">
+                <img src="https://artisanclinic.pl/wp-content/uploads/2023/10/depositphotos_322960970_l-2015.751x0.jpg" alt="Korekcja nosa" class="cform-thumb">
+                <div>
+                  <span class="cform-opt-name">Korekcja nosa</span>
+                  <div class="cform-uploads hidden" data-uploads="nose">
+                    <p class="cform-hint">Prześlij zdjęcia nosa zgodnie z wytycznymi:</p>
+                    <div class="cform-grid">
+                      <div>
+                        <label class="cform-label">Zdjęcie nosa - lewy profil *</label>
+                        <input type="file" name="nose_left" accept="image/*">
+                      </div>
+                      <div>
+                        <label class="cform-label">Zdjęcie nosa - prawy profil *</label>
+                        <input type="file" name="nose_right" accept="image/*">
+                      </div>
+                      <div>
+                        <label class="cform-label">Zdjęcie nosa - z przodu *</label>
+                        <input type="file" name="nose_front" accept="image/*">
+                      </div>
+                      <div>
+                        <label class="cform-label">Zdjęcie nosa - z dołu *</label>
+                        <input type="file" name="nose_bottom" accept="image/*">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </label>
+            </div>
+
+            <!-- Ear Correction -->
+            <div class="procedure-option">
+              <label class="cform-opt">
+                <input type="checkbox" name="procedures[]" value="ear-correction">
+                <img src="https://artisanclinic.pl/wp-content/uploads/2023/10/depositphotos_106306944_l-2015.751x0.jpg" alt="Korekcja uszu" class="cform-thumb">
+                <div>
+                  <span class="cform-opt-name">Korekcja uszu</span>
+                  <div class="cform-uploads hidden" data-uploads="ears">
+                    <p class="cform-hint">Prześlij zdjęcia uszu zgodnie z wytycznymi:</p>
+                    <div class="cform-grid">
+                      <div>
+                        <label class="cform-label">Zdjęcie lewego ucha *</label>
+                        <input type="file" name="ears_left" accept="image/*">
+                      </div>
+                      <div>
+                        <label class="cform-label">Zdjęcie prawego ucha *</label>
+                        <input type="file" name="ears_right" accept="image/*">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </label>
+            </div>
+
+            <!-- Other Procedure -->
+            <div class="procedure-option">
+              <label class="cform-opt">
+                <input type="checkbox" name="procedures[]" value="other">
+                <img src="https://artisanclinic.pl/wp-content/uploads/2023/10/flat-lay-health-still-life-arrangement-with-copy-space.251x0.jpg" alt="Inny zabieg" class="cform-thumb">
+                <div>
+                  <span class="cform-opt-name">Inny zabieg</span>
+                  <div class="cform-uploads hidden" data-uploads="other">
+                    <textarea name="other_procedure" placeholder="Jaki zabieg Cię interesuje" rows="3"></textarea>
+                    <p class="cform-hint">Prześlij zdjęcia zgodnie z rodzajem zabiegu:</p>
+                    <div class="cform-grid">
+                      <div>
+                        <label class="cform-label">Zdjęcie 1</label>
+                        <input type="file" name="other_photo_1" accept="image/*">
+                      </div>
+                      <div>
+                        <label class="cform-label">Zdjęcie 2</label>
+                        <input type="file" name="other_photo_2" accept="image/*">
+                      </div>
+                      <div>
+                        <label class="cform-label">Zdjęcie 3</label>
+                        <input type="file" name="other_photo_3" accept="image/*">
+                      </div>
+                      <div>
+                        <label class="cform-label">Zdjęcie 4</label>
+                        <input type="file" name="other_photo_4" accept="image/*">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Doctor Selection -->
+          <div class="cform-stack">
+            <h3 class="cform-h">U którego Specjalisty chcesz mieć konsultację:</h3>
+            <div class="cform-grid">
+              <label class="cform-doc">
+                <input type="radio" name="doctor" value="dr-witwicki">
+                <img src="assets/imgs/zespol/dr-Witwicki-avatar.jpg" alt="Dr Witwicki" class="cform-avatar">
+                <span>dr n. med. Tadeusz St. Witwicki</span>
+              </label>
+              <label class="cform-doc">
+                <input type="radio" name="doctor" value="dr-mazurek">
+                <img src="assets/imgs/zespol/dr-Maciej-Mazurek-avatar.jpg" alt="Dr Mazurek" class="cform-avatar">
+                <span>dr n. med. Maciej Mazurek</span>
+              </label>
+              <label class="cform-doc">
+                <input type="radio" name="doctor" value="dr-pietruski">
+                <img src="assets/imgs/zespol/Pietruski_2-1-600x832-avatar.jpg" alt="Dr Pietruski" class="cform-avatar">
+                <span>dr hab. n. med. Piotr Pietruski</span>
+              </label>
+              <label class="cform-doc">
+                <input type="radio" name="doctor" value="dr-jonczyk">
+                <img src="assets/imgs/zespol/Justyna-Jonczyk-avatar.jpg" alt="Dr Jończyk" class="cform-avatar">
+                <span>dr n. med. Justyna Jończyk</span>
+              </label>
+              <label class="cform-doc">
+                <input type="radio" name="doctor" value="any-specialist">
+                <img src="https://artisanclinic.pl/wp-content/uploads/2024/11/LogoBlack_NoBackground_FRC.png" alt="Artisan Clinic" class="cform-avatar">
+                <span>Dowolny Specjalista Artisan Clinic</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Additional Information -->
+          <div class="cform-stack">
+            <div>
+              <label for="age">Podaj swój wiek *</label>
+              <input type="number" id="age" name="age" min="18" max="120" required="">
+            </div>
+
+            <div>
+              <textarea name="expectations" placeholder="Jakiego efektu oczekujesz po zabiegu?" rows="4"></textarea>
+            </div>
+
+            <!-- Previous Procedures -->
+            <div>
+              <p class="cform-q">
+                Czy w przeszłości korzystałeś(-aś) z zabiegów chirurgii plastycznej lub medycyny estetycznej? *
+              </p>
+              <div class="cform-radios">
+                <label>
+                  <input type="radio" name="previous_procedures" value="yes" required="">
+                  <span>Tak</span>
+                </label>
+                <label>
+                  <input type="radio" name="previous_procedures" value="no" required="">
+                  <span>Nie</span>
+                </label>
+              </div>
+              <textarea name="previous_procedures_details" placeholder="Jeśli tak, jakich?" rows="3"></textarea>
+            </div>
+
+            <!-- Chronic Diseases -->
+            <div>
+              <p class="cform-q">Czy chorujesz przewlekle? *</p>
+              <div class="cform-radios">
+                <label>
+                  <input type="radio" name="chronic_diseases" value="yes" required="">
+                  <span>Tak</span>
+                </label>
+                <label>
+                  <input type="radio" name="chronic_diseases" value="no" required="">
+                  <span>Nie</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Medications -->
+            <div>
+              <p class="cform-q">Czy na stałe przyjmujesz jakieś leki? *</p>
+              <div class="cform-radios">
+                <label>
+                  <input type="radio" name="medications" value="yes" required="">
+                  <span>Tak</span>
+                </label>
+                <label>
+                  <input type="radio" name="medications" value="no" required="">
+                  <span>Nie</span>
+                </label>
+              </div>
+              <textarea name="medications_details" placeholder="Jeśli tak, jakie?" rows="3"></textarea>
+            </div>
+
+            <div>
+              <textarea name="additional_comments" placeholder="Wpisz swoje uwagi i dodatkowe informacje (opcjonalnie)" rows="4"></textarea>
+            </div>
+          </div>
+
+          <!-- Terms and Conditions -->
+          <div class="cform-stack">
+            <h3 class="cform-q">Pola obowiązkowe *</h3>
+            <div class="cform-stack">
+              <label class="cform-check">
+                <input type="checkbox" name="terms[]" value="adult" required="">
+                <span>Jestem osobą pełnoletnią *</span>
+              </label>
+              <label class="cform-check">
+                <input type="checkbox" name="terms[]" value="regulations" required="">
+                <span>Akceptuję
+                  <a href="{{ root }}assets/REGULAMIN-KONSULTACJI-ONLINE-PRZED-ZABIEGAMI-W-ARTISAN-CLINIC.pdf" target="_blank">'Regulamin'</a>
+                  *</span>
+              </label>
+              <label class="cform-check">
+                <input type="checkbox" name="terms[]" value="privacy" required="">
+                <span>Akceptuję
+                  <a href="{{ root }}assets/INFORMACJE-DOTYCZACE-PRZETWARZANIA-DANYCH-OSOBOWYCH.pdf" target="_blank">'Politykę Prywatności'</a>
+                  *</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <div>
+            <button type="submit" class="btn cform-submit">
+              Wyślij wiadomość
+            </button>
+          </div>
+        </form>

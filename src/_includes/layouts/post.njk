@@ -1,0 +1,44 @@
+---
+layout: layouts/base.njk
+bodyClass: is-subpage page-post
+---
+{%- set T = i18n[lang] -%}
+{%- set heroTitle = title -%}
+{%- set heroLead = excerpt -%}
+{%- set heroImage = cover or "imgs/o-nas.jpg" -%}
+{%- set heroMeta = page.date | plDate(lang) -%}
+{%- set crumbs = [{ label: T.blog.title, href: pages.blog[lang] }] -%}
+{% include "partials/page-hero.njk" %}
+
+<section class="sec sec--tight">
+  <div class="wrap post-layout">
+    <article class="prose">
+      {{ content | safe }}
+    </article>
+    <p style="margin-top: 3rem"><a class="ulink" href="{{ pages.blog[lang] }}">← {{ T.blog.back }}</a></p>
+  </div>
+</section>
+
+{%- if related_treatments and related_treatments.length %}
+<section class="sec sec--tight alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="sec-no rv">{{ T.related.no }}</span>
+        <h2 class="display rv" style="--d: 0.06s">{{ T.blog.relatedTitle | safe }}</h2>
+      </div>
+    </div>
+    <div class="grid-3">
+      {%- for rid in related_treatments.slice(0, 3) %}
+      {%- set cardIndex = loop.index0 %}
+      {%- set showCat = true %}
+      {%- set r = rid | treatment(treatments) %}
+      {% include "partials/t-card.njk" %}
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- endif %}
+
+{% include "partials/band.njk" %}
+{% include "partials/contact.njk" %}

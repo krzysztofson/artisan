@@ -1,0 +1,30 @@
+{#- "At a glance" sidebar of a treatment page. Rows with no data are not rendered. Cost comes from pricing.yaml. -#}
+{%- set price = id | priceFrom(lang, treatments, pricing) -%}
+{%- set S = t.summary or {} -%}
+{%- set areas = [] -%}
+{%- for c in categories %}{% if c.id in t.categories %}{% set _ = areas.push(c.name[lang]) %}{% endif %}{% endfor -%}
+<aside class="summary" aria-label="{{ T.summary.title }}">
+  <p class="eyebrow">{{ T.summary.title }}</p>
+  <dl>
+    {%- if price %}
+    <div class="summary-row summary-row--price"><dt>{{ T.summary.price }}</dt><dd>{{ price }}</dd></div>
+    {%- endif %}
+    {%- for key in ["duration", "anesthesia", "recovery", "result", "stay", "sessions"] %}{% if S[key] %}
+    <div class="summary-row"><dt>{{ T.summary[key] }}</dt><dd>{{ S[key][lang] }}</dd></div>
+    {%- endif %}{% endfor %}
+    {%- if areas.length %}
+    <div class="summary-row"><dt>{{ T.summary.area }}</dt><dd>{{ areas | join(", ") }}</dd></div>
+    {%- endif %}
+    {%- if S.forWhom %}
+    <div class="summary-row"><dt>{{ T.summary.forWhom }}</dt><dd>{{ S.forWhom[lang] }}</dd></div>
+    {%- endif %}
+  </dl>
+  <div class="summary-acts">
+    <a href="{{ site.phoneHref }}" class="icon-btn" aria-label="{{ T.summary.call }}: {{ site.phone }}" title="{{ site.phone }}">{% include "icons/phone.svg" %}</a>
+    <a href="mailto:{{ site.email }}" class="icon-btn" aria-label="{{ T.summary.write }}: {{ site.email }}" title="{{ site.email }}">{% include "icons/mail.svg" %}</a>
+    <a href="{{ site.booking }}" target="_blank" rel="noopener" class="btn">{{ T.bookVisit }}</a>
+  </div>
+  {%- if price %}
+  <p class="summary-note">{{ T.summary.note }}</p>
+  {%- endif %}
+</aside>

@@ -1,0 +1,30 @@
+---
+pagination:
+  data: langs
+  size: 1
+  alias: lang
+key: consult
+bodyClass: is-subpage
+layout: layouts/base.njk
+scripts: [consultation-form.js]
+permalink: "{{ '' if lang == 'pl' else 'en/' }}{{ pages.consult[lang] }}"
+eleventyComputed:
+  metaTitle: "{{ i18n[lang].pageCopy.consult.metaTitle | safe }}"
+  metaDescription: "{{ i18n[lang].pageCopy.consult.lead | safe }}"
+---
+{%- set T = i18n[lang] -%}
+{%- set C = T.pageCopy.consult -%}
+{%- set heroTitle = C.title -%}
+{%- set heroLead = C.lead -%}
+{%- set heroImage = "imgs/oferta_twarz.jpg" -%}
+{%- set crumbs = [{ label: C.title }] -%}
+{% include "partials/page-hero.njk" %}
+
+<section class="sec sec--tight alt">
+  <div class="wrap form-wrap">
+    {% include "forms/consultation-" + lang + ".html" %}
+  </div>
+</section>
+
+{% include "partials/reviews.njk" %}
+{% include "partials/contact.njk" %}

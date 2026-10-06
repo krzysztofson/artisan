@@ -1,0 +1,72 @@
+{%- set T = i18n[lang] -%}
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "{{ site.gtm }}");
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ metaTitle }}</title>
+    <meta name="description" content="{{ metaDescription | stripTags | truncateWords(160) }}" />
+    <link rel="canonical" href="{{ canonical }}" />
+    {%- if hreflang.pl and hreflang.en %}
+    <link rel="alternate" hreflang="pl" href="{{ hreflang.pl }}" />
+    <link rel="alternate" hreflang="en" href="{{ hreflang.en }}" />
+    <link rel="alternate" hreflang="x-default" href="{{ hreflang.pl }}" />
+    {%- endif %}
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ metaTitle }}" />
+    <meta property="og:url" content="{{ canonical }}" />
+    <meta property="og:locale" content="{{ 'en_GB' if lang == 'en' else 'pl_PL' }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ root }}assets/css/artisan.css?v={{ "src/css" | assetHash }}" />
+  </head>
+  <body class="{{ bodyClass }}">
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id={{ site.gtm }}"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <a class="skip" href="#main">{{ T.skip }}</a>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="progress" id="progress" aria-hidden="true"></div>
+
+    {% include "partials/strip.njk" %}
+    {% include "partials/nav.njk" %}
+
+    <main id="main">
+      {{ content | safe }}
+    </main>
+
+    {% include "partials/footer.njk" %}
+
+    <div class="float-cta" id="floatCta">
+      <a href="{{ site.booking }}" target="_blank" rel="noopener" class="btn">{{ T.book }} <span class="arw">→</span></a>
+    </div>
+
+    <script src="{{ root }}assets/js/site.js?v={{ "src/assets/js/site.js" | assetHash }}" defer></script>
+    {%- for s in scripts %}
+    <script src="{{ root }}assets/js/{{ s }}?v={{ ("src/assets/js/" + s) | assetHash }}" defer></script>
+    {%- endfor %}
+  </body>
+</html>

@@ -1,0 +1,12 @@
+{#- Treatment card. Expects `r` = treatment object (with id) and `T`, `lang`. -#}
+{%- set rcat = categories | findBy("id", r.categories[0]) -%}
+{%- set rprice = r.id | priceFrom(lang, treatments, pricing) -%}
+<a class="t-card rv" href="{{ r.slug[lang] }}.html" style="--d: {{ ((cardIndex or 0) % 3) * 0.08 }}s">
+  {%- if rcat and showCat %}<span class="eyebrow no-rule">{{ rcat.name[lang] }}</span>{% endif %}
+  <h3>{{ r.title[lang] }}</h3>
+  <p>{{ r.excerpt[lang] | truncateWords(170) }}</p>
+  <span class="t-card-foot">
+    <span class="t-card-price">{{ rprice }}</span>
+    <span class="ulink">{{ T.related.more }} <span>→</span></span>
+  </span>
+</a>

@@ -1,0 +1,18 @@
+<div class="strip">
+  <div class="strip-in">
+    <div class="strip-grp">
+      <span class="strip-hide">{{ T.hours | safe }}</span>
+      <span class="dot strip-hide">✦</span>
+      <a href="{{ site.phoneHref }}">{{ site.phone }}</a>
+    </div>
+    <div class="strip-grp strip-hide">
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+    </div>
+    <div class="strip-grp">
+      <span class="soc">
+        <a href="{{ site.instagram }}" target="_blank" rel="noopener" aria-label="Instagram">{% include "icons/instagram.svg" %}</a>
+        <a href="{{ site.facebook }}" target="_blank" rel="noopener" aria-label="Facebook">{% include "icons/facebook.svg" %}</a>
+      </span>
+    </div>
+  </div>
+</div>
