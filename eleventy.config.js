@@ -50,7 +50,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("rowHref", (row, lang, treatments) => {
     if (row.href) return row.href;
     const id = [].concat(row.treatment || [])[0];
-    return id ? `${treatments[id].slug[lang]}.html` : "";
+    if (!id) return "";
+    if (!treatments[id]) throw new Error(`rowHref: unknown treatment "${id}" in price-list row "${row.name.pl}"`);
+    return `${treatments[id].slug[lang]}.html`;
   });
 
   /** Splits "60 000 – 85 000 PLN" into the number part and the trailing unit for the ledger. */

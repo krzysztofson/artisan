@@ -191,7 +191,7 @@ sections:
           pl: 22 000 - 25 000 PLN
           en: 22 000 - 25 000 PLN
         from: 22000
-        treatment: lifting-twarzysta
+        treatment: lifting-twarzy
       - name:
           pl: Lifting brwi – podniesienie
           en: Brow lift
