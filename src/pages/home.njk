@@ -176,7 +176,8 @@ eleventyComputed:
         <span class="lead-role">{{ leadDoc.specialty[lang] | safe }}</span>
         <p>{{ H.team.leadBio | safe }}</p>
         <p class="quote">{{ H.team.leadQuote }}</p>
-        <div style="margin-top: 1.8rem">
+        <div class="lead-acts">
+          <a href="{{ site.booking }}" target="_blank" rel="noopener" class="btn btn--light">{{ T.book }} <span class="arw">→</span></a>
           <a href="{{ pages.team[lang] }}" class="ulink on-dark">{{ H.team.bios }} <span>→</span></a>
         </div>
       </div>
@@ -198,11 +199,14 @@ eleventyComputed:
   <div class="wrap">
     <div class="rail" id="rail">
       {%- for m in team %}{% if not loop.first %}
-      <a class="member" href="{{ pages.team[lang] }}#{{ m.id }}">
-        <div class="ph"><img src="{{ root }}assets/{{ m.photo }}" alt="" loading="lazy" /></div>
-        <h4>{{ m.name }}</h4>
-        <span>{{ m.specialty[lang] | safe }}</span>
-      </a>
+      <div class="member">
+        <a href="{{ pages.team[lang] }}#{{ m.id }}">
+          <div class="ph"><img src="{{ root }}assets/{{ m.photo }}" alt="" loading="lazy" /></div>
+          <h4>{{ m.name }}</h4>
+          <span>{{ m.specialty[lang] | safe }}</span>
+        </a>
+        <a href="{{ site.booking }}" target="_blank" rel="noopener" class="btn btn--light">{{ T.book }}</a>
+      </div>
       {%- endif %}{% endfor %}
     </div>
   </div>

@@ -477,6 +477,13 @@
   display: block;
 }
 .lead-card p { color: rgba(247, 243, 236, 0.7); max-width: 62ch; }
+.lead-acts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.2rem 2rem;
+  margin-top: 1.8rem;
+}
 .quote {
   font-family: "Cormorant Garamond", serif;
   font-style: italic;
@@ -555,6 +562,9 @@
   line-height: 1.25;
   margin-bottom: 0.45rem;
 }
+.member { display: flex; flex-direction: column; }
+.member > a:first-child { display: block; padding-bottom: 1.3rem; }
+.member .btn { margin-top: auto; align-self: flex-start; }
 .member span {
   font-size: 0.62rem;
   letter-spacing: 0.2em;

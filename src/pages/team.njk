@@ -36,6 +36,7 @@ eleventyComputed:
         <h2 class="rv">{{ m.name }}</h2>
         <span class="lead-role rv">{{ (m.role[lang] or m.specialty[lang]) | safe }}</span>
         <div class="prose rv">{{ m.bio[lang] | safe }}</div>
+        <a href="{{ site.booking }}" target="_blank" rel="noopener" class="btn doc-book rv">{{ T.book }} <span class="arw">→</span></a>
       </div>
     </article>
     {%- endfor %}

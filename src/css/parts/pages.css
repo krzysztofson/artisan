@@ -187,6 +187,7 @@
 .doc h2 { font-size: clamp(1.5rem, 1rem + 1.75vw, 2.4rem); margin-bottom: 0.6rem; }
 .doc .lead-role { color: var(--brass); }
 .doc .prose { margin-top: 1.4rem; }
+.doc-book { margin-top: 2rem; }
 @media (max-width: 860px) {
   .doc { grid-template-columns: 1fr; }
   .doc-photo { max-width: 320px; }
