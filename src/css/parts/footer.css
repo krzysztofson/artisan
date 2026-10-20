@@ -71,7 +71,7 @@
   transition: transform 0.6s var(--ease-out);
 }
 .float-cta.show { transform: none; }
-.float-cta .btn { width: 100%; justify-content: center; box-shadow: 0 10px 40px rgba(0, 19, 0, 0.35); }
+.float-cta .btn { width: 100%; justify-content: center; box-shadow: 0 10px 40px rgba(43, 5, 4, 0.4); }
 @media (max-width: 1080px) {
   .float-cta { display: flex; }
 }
