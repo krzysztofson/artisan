@@ -1633,9 +1633,9 @@ sections:
           pl: 1 ampułka
           en: 1 vial
         price:
-          pl: 2 200 PLN
-          en: 2 200 PLN
-        from: 2200
+          pl: 2 500 PLN
+          en: 2 500 PLN
+        from: 2500
       - heading:
           pl: Hydroxyapatyt wapnia
           en: Calcium hydroxyapatite
